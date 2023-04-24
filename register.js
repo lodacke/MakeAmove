@@ -2,7 +2,7 @@
 
 let mainDom = document.querySelector("main");
 
-let request = "PHP/register.php";
+let request = "register.php";
 
 mainDom.innerHTML = `
 <lable for "name"> Username: </lable>

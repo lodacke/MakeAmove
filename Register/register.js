@@ -5,14 +5,17 @@ let mainDom = document.querySelector("main");
 let request = "register.php";
 
 mainDom.innerHTML = `
-<lable for "name"> Username: </lable>
-<input type="username" name="username"> 
+<lable for "name"> Name: </lable>
+<input type="username" name="name" minlength="2" required> 
+
+<lable for "email"> Email-adress: </lable>
+<input type="email" name="email" required> 
 
 <lable for "password"> Password: </lable>
-<input type="password" name="password"> 
+<input type="password" name="password" minlength="10" required> 
 
 <lable for "age"> Age: </lable>
-<input type="number" name="age">
+<input type="number" name="age" required>
 
 <lable for "image"> Profile photo: </lable>
 <input type="file" name="image">
@@ -24,20 +27,24 @@ mainDom.innerHTML = `
 <option value="male"> Male </option>
 <option value="None">Dont want to say</option>
 </select>
-<button id="pageOne">Next page</button>`;
+<button id="pageOne">Next page</button>
+`;
 
-let usernameDom = mainDom.querySelector("input[name='username']");
+let nameDom = mainDom.querySelector("input[name='name']");
 let passwordDom = mainDom.querySelector("input[name='password']");
 let ageDom = mainDom.querySelector("input[name='age']");
 //let imageDom = mainDom.querySelector("input[name='image']");
 let genderDom = mainDom.querySelector("select[name='gender']");
+let emailDom = mainDom.querySelector("input[name='email']");
+
 
 mainDom.querySelector("#pageOne").addEventListener("click", e => { 
 
-    if(usernameDom.value != "" && passwordDom.value != "" && ageDom != null && genderDom != "none"){
+   // if(nameDom.value != "" && emailDom.value != "" && passwordDom.value != "" && ageDom != null && genderDom != "none"){
 
     let userData = { 
-        username: usernameDom.value,
+        name: nameDom.value,
+        email: emailDom.value,
         password: passwordDom.value,
         age: ageDom.value,
         gender: genderDom.value,
@@ -51,28 +58,46 @@ mainDom.querySelector("#pageOne").addEventListener("click", e => {
 
     function pageTwo(userData){
         mainDom.innerHTML = `
-        <lable for "userInfo">Tell people about yourself:</lable>
+        <lable for "userQuestionOne"> Sweet or salty snacks</lable>
+        <input name="userQuestionOne">
+
+        <lable for "userQuestionTwo"> Do you have siblings?:</lable>
+        <input name="userQuestionTwo">
+
+        <lable for "userQuestionThree"> How old were you when you lost you're first tooth:</lable>
+        <input name="userQuestionThree">
+  
+        <lable for "userInfo"> Anything else you'd like to add:</lable>
         <input name="userInfo">
 
-        <lable for "contact">How do you want people to contact you?</lable>
-        <input name="contact" placeholder="email or phonenumber">
+        <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile </p>
+
+        <lable for "contact">How do you want people to contact you?</lable> 
+        <input name="contact" type="tel" placeholder="phonenumber" minlength="8" required>
 
         <button id=pageTwo>Next Page</button>
         `;
 
         let userInfo = mainDom.querySelector("input[name='userInfo']");
         let contact = mainDom.querySelector("input[name='contact']");
+        let userQuestionOne = mainDom.querySelector("input[name='userQuestionOne']");
+        let userQuestionTwo = mainDom.querySelector("input[name='userQuestionTwo']");
+        let userQuestionThree = mainDom.querySelector("input[name='userQuestionThree']");
+
 
         mainDom.querySelector("#pageTwo").addEventListener("click", e => {
         
-            if(userInfo.value != "" && contact.value != ""){
+            if(contact.value != ""){
             
-                let preference = {
+                let interests = {
+                     userQuestionOne: userQuestionOne.value,
+                     userQuestionTwo: userQuestionTwo.value,
+                     userQuestionThree: userQuestionThree.value,
                      userInfo: userInfo.value,
                      contact: contact.value
                     };
 
-                userData.interests.push(preference);
+                userData.interests.push(interests);
 
                 console.log(userData);
                 mainDom.innerHTML =``;
@@ -87,11 +112,14 @@ mainDom.querySelector("#pageOne").addEventListener("click", e => {
                     <option value="male"> Male </option>
                     <option value="None">Dont want to say</option>
                     </select>
-
-                    <lable for "ageOf"> What age: </lable>
-                    <input type="number" name="ageOf">    
-
-                    <button id="submitUser">Start dating!</button>           
+                    <div id="min-max" legendnum="2">
+                    <p> What age </p>
+                    <lable for "min_ageOf">Min age </lable>
+                    <input type="range" name="min_ageOf" step="1" min="18" max="99">
+                    <lable for "max_ageOf">Max age</lable>
+                    <input type="range" name="max_ageOf" step="1" min="18" max="99">    
+                    </div>
+                    <button type=submit id="submitUser">Start dating!</button>         
                     `;
 
                     let genderOf = mainDom.querySelector("select[name='genderOf']");
@@ -116,7 +144,7 @@ mainDom.querySelector("#pageOne").addEventListener("click", e => {
         } //else { 
     // Här måste det läggas till antingen en fetch så att man kan nå felmeddelandena (problemet är att userData är i fel scope)
     // Eller läggas till felkoder manuellt för de olika casen.
-    } //else addUser() kansk??
+   // } //else addUser() kansk??
 });
 
 async function addUser(userData){

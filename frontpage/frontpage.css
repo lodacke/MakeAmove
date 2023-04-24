@@ -1,0 +1,36 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    background-color: rgb(242, 240, 240);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+  }
+
+  .logo {
+    height: 15vh;
+    width: 22vh;
+    border-radius: 10vh;
+    background-color: white;
+  }
+
+  h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 7vh;
+    margin: 3vh;
+  }
+
+  button {
+    background-color: rgb(144, 144, 144);
+    color: white;
+    width: 90vw;
+    padding: 15px;
+    margin: 10px 2px;
+    border-radius: 15px;
+
+  }
+}

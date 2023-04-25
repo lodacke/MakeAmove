@@ -1,23 +1,36 @@
 "use strict";
 
-const bodyDom = document.querySelector("body");
-const headerDom = document.createElement("header");
-const frontMainDom = document.querySelector("main");
+function checkIfUserLoggedIn() {
+  if(window.localStorage.getItem("user")) {
+    renderDatingPage();
+  }
+  else {
+    renderFrontPage();
+  }
+}
 
-bodyDom.insertBefore(headerDom, frontMainDom);
+function renderFrontPage() {
+  let bodyDom = document.querySelector("body");
+  let headerDom = document.createElement("header");
+  let frontMainDom = document.querySelector("main");
 
-headerDom.innerHTML = `
-  <img class=logo src="image/logo.png" alt="appLogo">
-  <h1>Make A Move</h1>
-`;
+  bodyDom.insertBefore(headerDom, frontMainDom);
 
-frontMainDom.innerHTML = `
-  <button class="front-page-button login-button">Login</button>
-  <button class="front-page-button register-button">Register</button>
-`;
+  headerDom.innerHTML = `
+    <img class=logo src="image/logo.png" alt="appLogo">
+    <h1>Make A Move</h1>
+  `;
 
-const loginButton = document.querySelector(".login-button");
-loginButton.addEventListener("click", renderloginPage);
+  frontMainDom.innerHTML = `
+    <button class="front-page-button login-button">Login</button>
+    <button class="front-page-button register-button">Register</button>
+  `;
 
-const registerButton = document.querySelector(".register-button");
-registerButton.addEventListener("click", renderRegisterPage);
+  const loginButton = document.querySelector(".login-button");
+  loginButton.addEventListener("click", renderLoginPage);
+
+  const registerButton = document.querySelector(".register-button");
+  registerButton.addEventListener("click", renderRegisterPage);
+}
+
+checkIfUserLoggedIn();

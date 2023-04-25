@@ -2,16 +2,22 @@
 
 const bodyDom = document.querySelector("body");
 const headerDom = document.createElement("header");
-const mainDom = document.querySelector("main");
+const frontMainDom = document.querySelector("main");
 
-bodyDom.insertBefore(headerDom, mainDom);
+bodyDom.insertBefore(headerDom, frontMainDom);
 
 headerDom.innerHTML = `
   <img class=logo src="image/logo.png" alt="appLogo">
   <h1>Make A Move</h1>
 `;
 
-mainDom.innerHTML = `
-  <button>Sign In</button>
-  <button>Sign Up</button>
+frontMainDom.innerHTML = `
+  <button class="front-page-button login-button">Login</button>
+  <button class="front-page-button register-button">Register</button>
 `;
+
+const loginButton = document.querySelector(".login-button");
+loginButton.addEventListener("click", renderloginPage);
+
+const registerButton = document.querySelector(".register-button");
+registerButton.addEventListener("click", renderRegisterPage);

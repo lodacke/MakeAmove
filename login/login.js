@@ -18,4 +18,7 @@ function renderloginPage(event) {
       <button class="go-to-register">Register</button>
     </main>
   `;
+
+  const goToRegister = document.querySelector(".go-to-register");
+  goToRegister.addEventListener("click", renderRegisterPage);
 }

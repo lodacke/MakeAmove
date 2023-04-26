@@ -10,7 +10,7 @@ function allowCORS() {
     header("Access-Control-Allow-Origin: *");
   }
 }
-//test test
+
 function allowJSON() {
   if ($_SERVER["CONTENT_TYPE"] != "application/json") {
     abort(400, ["error" => "Invalid content type(only JSON is allowed)"]);

@@ -4,7 +4,7 @@ ini_set("display_errors", 1);
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     
-    $fileName = "users.json";
+    $fileName = "../users.json";
     $users = [];
 
     if(file_exists($fileName)){

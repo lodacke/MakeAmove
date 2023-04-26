@@ -7,7 +7,7 @@ allowCORS();
 allowMethod("POST");
 allowJSON();
 
-$filename = "../api/users.json";
+$filename = "../users.json";
 
 if (!file_exists($filename)) {
   $json = json_encode($users);

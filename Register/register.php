@@ -17,26 +17,30 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $jsonREQUEST = file_get_contents("php://input");
     $dataREQUEST = json_decode($jsonREQUEST, true);
 
-    $username = $dataREQUEST["username"];
+    $name = $dataREQUEST["name"];
+    $email = $dataREQUEST["email"];
     $password = $dataREQUEST["password"];
     $age = $dataREQUEST["age"];
     $gender = $dataREQUEST["gender"];
     //$image = $dataREQUEST["image"];  
+    $userQuestionOne = $dataREQUEST["interests"][0]["userQuestionOne"];
+    $userQuestionTwo = $dataREQUEST["interests"][0]["userQuestionTwo"];
+    $userQuestionThree = $dataREQUEST["interests"][0]["userQuestionThree"];
     $userInfo = $dataREQUEST["interests"][0]["userInfo"];
     $contact = $dataREQUEST["interests"][0]["contact"];
     $genderOf = $dataREQUEST["preference"][0]["genderOf"];   
     $ageOf = $dataREQUEST["preference"][0]["ageOf"];
                                  
 
-    for($i = 0; $i < count($users); $i++){
-       if($username == $users[$i]["username"]){        
+    /*for($i = 0; $i < count($users); $i++){
+       if($email == $users[$i]["email"]){        
         header("Content-type: application/json");
         http_response_code(409);
-        $message = "The username is already taken";
+        $message = "The email is already registered";
         echo (json_encode($message));
         exit();  
      }  
-   }  
+   }   */
 
    if($age < 18){
         header("Content-type: application/json");
@@ -46,15 +50,19 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         exit();
    }
 
-    if(!($username == "" && $password == "" && $gender == "none" && $userInfo == "" && $contact == "" && $age == null)){
+    if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $contact == "" && $age == null)){
         
         $newUser = [
-          "username" => $username,
+          "name" => $name,
+          "email" => $email,
           "password" => $password,
           "age" => $age,
           "gender" => $gender,
          // "image" => $image,
           "interests" => [
+            "userQuestionOne" => $userQuestionOne,
+            "userQuestionTwo" => $userQuestionTwo,
+            "userQuestionThree" => $userQuestionThree,
             "userInfo" => $userInfo,
             "contact" => $contact,
           ],

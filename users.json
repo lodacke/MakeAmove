@@ -1,0 +1,35 @@
+[
+    {
+        "name": "wertrewert",
+        "email": "email@sdf.com",
+        "password": "sdfsdfwertrew",
+        "age": "44",
+        "gender": "female",
+        "interests": {
+            "userInfo": "yes",
+            "contact": "12345678900987"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOf": "44"
+        }
+    },
+    {
+        "name": "wewewe",
+        "email": "eeemail@email.com",
+        "password": "sdfghjuytrer5t6y",
+        "age": "33",
+        "gender": "none",
+        "interests": {
+            "userQuestionOne": "yes",
+            "userQuestionTwo": "yes",
+            "userQuestionThree": "yes",
+            "userInfo": "yes",
+            "contact": "134567890"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOf": "44"
+        }
+    }
+]

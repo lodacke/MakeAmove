@@ -1,13 +1,13 @@
 <?php
 ini_set("display_errors", 1);
 
-require_once "helper.php";
+require_once "../helper.php";
 
 allowCORS();
 allowMethod("POST");
 allowJSON();
 
-$filename = "users.json";
+$filename = "../api/users.json";
 
 if (!file_exists($filename)) {
   $json = json_encode($users);

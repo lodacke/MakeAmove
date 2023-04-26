@@ -6,7 +6,7 @@ async function submitLogin(event) {
   let message = document.querySelector("main .message");
 
   try {
-    let response = await fetch("../api/login.php", {
+    let response = await fetch("login/login.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -16,7 +16,7 @@ async function submitLogin(event) {
     });
 
     let data = await response.json();
-
+    console.log(data)
     if (!response.ok) {
       message.innerHTML = `Oops! Something went wrong, we got this from the server <span>${data.message}</span>.`;
     } else {

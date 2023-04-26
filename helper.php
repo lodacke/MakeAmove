@@ -27,7 +27,7 @@ function abort($statusCode = 400, $message = []) {
   send($statusCode, $message);
 }
 
-function send($statusCode = 200, $data = []) {
+function send($statusCode = 200, $data) {
   header("Content-Type: application/json");
   http_response_code($statusCode);
   $json = json_encode($data);

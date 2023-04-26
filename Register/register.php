@@ -2,8 +2,43 @@
 
 ini_set("display_errors", 1);
 
+require_once("../helper.php");
+
 if($_SERVER["REQUEST_METHOD"] === "POST"){
-    
+
+    if(isset($_FILES["profilePicture"])) {
+      $file = $_FILES["profilePicture"];
+  
+      $fileName = $file["name"];
+      $fileTmpName = $file["tmp_name"];
+      $fileSize = $file["size"];
+      $fileError = $file["error"];
+      $fileType = $file["type"];
+        
+      $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION); 
+      $allowed = ["jpg", "jpeg"];  
+  
+      if(in_array($fileExtension, $allowed)) {
+          if($fileError == 0) {
+              $destination = "../uploads/".$fileName;
+              $source = $fileTmpName;
+              if(move_uploaded_file($source, $destination)) {
+                  $imageSource = ["source" => $destination];                  
+                  send(200, $imageSource);
+                  getNewUser($imageSource);
+              }
+          } else {
+              $error = ["error" => "Something went wrong when uploading image."];
+              send(405, $error);
+          }
+      } else {
+          $error = ["error" => "We only allow JPG and JPEG files."];
+          send(405, $error);
+      }
+    }
+ 
+  function getNewUser($imageSource) {
+
     $fileName = "../users.json";
     $users = [];
 
@@ -13,6 +48,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     } else { 
         file_put_contents($fileName, $users);
     }
+
+
 
     $jsonREQUEST = file_get_contents("php://input");
     $dataREQUEST = json_decode($jsonREQUEST, true);
@@ -58,7 +95,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
           "password" => $password,
           "age" => $age,
           "gender" => $gender,
-         // "image" => $image,
+          "image" => $imageSource,
           "interests" => [
             "userQuestionOne" => $userQuestionOne,
             "userQuestionTwo" => $userQuestionTwo,
@@ -89,14 +126,16 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             $message = "You need to fill in all the fields before you proceed";
             echo (json_encode($message));
             exit();  
-         }            
-    } else {
-        http_response_code(405);
-        $message = "Wrong HTTP-method";
-        echo (json_encode($message));
-        exit(); 
-        
-    }
+         }          
 
-
+  }
+    
+} else {
+  header("Content-type: application/json");
+  http_response_code(405);
+  $message = "Wrong HTTP-method";
+  echo (json_encode($message));
+  exit(); 
+}
+ 
 ?>

@@ -38,3 +38,18 @@ input[type="range"]{
 .notAnswered{
     border: 1px solid red;
 }
+
+#profilePicture {
+    display: flex;
+    flex-direction: column;
+}
+img {
+    border-radius: 54%;
+    border: 5px solid rgb(98, 168, 230);
+    overflow: hidden;
+    height: 250px;
+}
+#imageMessage {
+    text-align: center;
+    font-size: 20px;
+}

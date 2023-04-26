@@ -1,7 +1,5 @@
 "use strict"
 
-let request = "Register/register.php";
-
 function renderRegisterPage (){ 
 
     console.log("inne");
@@ -57,15 +55,53 @@ function renderRegisterPage (){
 
             function imagePage(userData){     //Lägga till Sofies form här
                 mainDom.innerHTML = `
-                <h1> Chose profile Photo</h1>
-                <lable for "image"> Profile photo: </lable>
-                <input type="file" name="image">
-                <button id="QuestionPage"> Next page </button>
+                <form id="upload" action="register.php" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="profilePicture">
+                    <button type="submit">Upload</button>
+                </form>
+                <div id="profilePicture">
+                    <div id="userImage"></div>
+                    <p id="imageMessage"></p>
+                </div>
+                <button id="QuestionPage">Next Page </button>
                 `;
 
+                const form = document.getElementById("upload");
+                const imageMessage = document.getElementById("imageMessage");
+                const userImage = document.getElementById("userImage");
+                
+                form.addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    userImage.innerHTML = "";
+                    const formData = new FormData(form);
+                    const request = new Request("Register/register.php", {
+                        method: "POST",
+                        body: formData,
+                    })
+                
+                    fetch(request)
+                        .then(response => response.json())
+                        .then(data => {
+                            //form.reset();
+                            if(data.error) {
+                                imageMessage.textContent = data.error;
+                            } else {
+                                imageMessage.textContent = "Success!";
+                
+                                const img = document.createElement("img");
+                                img.src = data.source;
+                                console.log(data.source);
+                                userImage.appendChild(img);
+
+                                userData.image = data.source;
+                            }
+                        });
+                    })
+                
+
                 mainDom.querySelector("#QuestionPage").addEventListener( "click", e => { 
-                    let imageDom = mainDom.querySelector("input[name='image']");
-                    userData.image = imageDom.value;
+                   // let imageDom = mainDom.querySelector("input[name='image']");
+                   // userData.image = imageDom.value;
 
                     console.log(userData.image);
                     QuestionPage(userData);
@@ -129,14 +165,7 @@ function renderRegisterPage (){
                                 <option value="Both">Both</option>
                                 </select>
                                 <p> What age </p>
-                                <div id="minMax">
-                                <div id=sliderValue> 
-                                 <h2 id="titleMin" class="sliderValueTitle">18</h2>
-                                 <h2 id="titleMax" class="sliderValueTitle">99</h2>
-                                 </div>
-                                <input type="range" name="min_ageOf" step="1" min="18" max="99">
-                                <input type="range" name="max_ageOf" step="1" min="18" max="99">    
-                                </div>
+                                <input name="ageOf">
                                 <button type=submit id="submitUser">Start dating!</button>         
                                 `;
 
@@ -179,7 +208,7 @@ function renderRegisterPage (){
 
 async function addUser(userData){
 
-    let requestPOST = await fetch( new Request(request, {
+    let requestPOST = await fetch( new Request("Register/register.php", {
     method: "POST",
     headers: {"Content-type":"application/json; charset=UTF-8"},
     body: JSON.stringify(userData)
@@ -205,3 +234,17 @@ function erroMessage(message){
     error_message.textContent = "You havent fild in all the required fields" + `${message}`;
     mainDom.append(error_message);
 };
+
+
+
+
+//TILL LO: 
+
+                               // <div id="minMax">
+                               // <div id=sliderValue> 
+                               //  <h2 id="titleMin" class="sliderValueTitle">18</h2>
+                               //  <h2 id="titleMax" class="sliderValueTitle">99</h2>
+                               //  </div>
+                               // <input type="range" name="min_ageOf" step="1" min="18" max="99">
+                               // <input type="range" name="max_ageOf" step="1" min="18" max="99">    
+                               // </div>

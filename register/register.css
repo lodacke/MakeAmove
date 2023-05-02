@@ -5,7 +5,7 @@ body{
 }
 
 header{
-    height: 20vh;
+    height: 30vh;
 }
 
 main{
@@ -15,7 +15,6 @@ main{
     justify-content: center;
 }
 
-
 button {
     width: 400px;
 }
@@ -23,45 +22,6 @@ button {
 input{
     width: 400px;
 }
-
-#minMax{
-    display: flex;
-    width: 400px;
-    height: 100px;
-    margin-top: 30px;
-    border: 1px solid black;
-    border-radius: 30px;
-    position: relative;
-}
-
-#tracker{
-    position: absolute;
-    top: 42px;
-    left: 30px;
-    height: 2px;
-    width: 300px;
-    background-color: gray;
-}
-
-
-input[type="range"]{
-    position: absolute;
-    top: 40px;
-    left: 30px; 
-    width: 300px;
-    height: 5px;
-    appearance: none;
-    background: none;
-}
-
-input[type="range"]::-moz-range-thumb{ /*moz funkar för firefox endast, måste kolla upp vad som behövs för att få det att funka på android/apple/andra webbläsare */
-    pointer-events: auto;   
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 50%;
-}
-
 
 .notAnswered{
     border: 1px solid red;

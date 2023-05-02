@@ -26,14 +26,6 @@ function renderRegisterPage (){
     <option value="neither">Neither</option>
     </select>
     <button id="pageOne">Next page</button>
-
-    <div id="minMax">
-        <h3 span class="rangeMinDom"> </h3>
-        <div id="tracker"></div>
-            <input type="range" class="rangeMin" name="min_ageOf" step="1" min="18" max="99">
-            <input type="range"class="rangeMax" name="max_ageOf" step="1" min="18" max="99"> 
-        <h3 span class="rangeMaxDom"> </h3>  
-    </div>
     `;
 
     let nameDom = mainDom.querySelector("input[name='name']");
@@ -273,15 +265,7 @@ function erroMessage(){
     })
 };
 
-function AgeRange (){
-    let minRange = document.querySelector(".rangeMin");
-    let maxRange = document.querySelector("rangeMax");
-    let minRangeDom = document.querySelector(".rangeMinDom");
-    let maxRangeDom = document.querySelector("rangeMaxDom");
 
-    minRangeDom.textContent = minRange;
-    maxRangeDom.textContent = maxRange;
-}
 
 
 

@@ -6,6 +6,8 @@ require_once("../helper.php");
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
 
+  $newUser = [];
+
     if(isset($_FILES["profilePicture"])) {
       $file = $_FILES["profilePicture"];
   
@@ -23,9 +25,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
               $destination = "../uploads/".$fileName;
               $source = $fileTmpName;
               if(move_uploaded_file($source, $destination)) {
-                  $imageSource = ["source" => $destination];                  
+                  $imageSource = ["image" => $destination];                  
                   send(200, $imageSource);
-                  getNewUser($imageSource);
+
+                  global $newUser;
+                  $newUser[] = $imageSource;
+
               }
           } else {
               $error = ["error" => "Something went wrong when uploading image."];
@@ -37,57 +42,50 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
       }
     }
  
-  function getNewUser($imageSource) {
 
-    $fileName = "../users.json";
-    $users = [];
-
-    if(file_exists($fileName)){
-        $JSONusers = file_get_contents($fileName);
-        $users = json_decode($JSONusers, true);   
-    } else { 
-        file_put_contents($fileName, $users);
-    }
-
-
-
-    $jsonREQUEST = file_get_contents("php://input");
-    $dataREQUEST = json_decode($jsonREQUEST, true);
-
-    $name = $dataREQUEST["name"];
-    $email = $dataREQUEST["email"];
-    $password = $dataREQUEST["password"];
-    $age = $dataREQUEST["age"];
-    $gender = $dataREQUEST["gender"];
-    //$image = $dataREQUEST["image"];  
-    $userQuestionOne = $dataREQUEST["interests"][0]["userQuestionOne"];
-    $userQuestionTwo = $dataREQUEST["interests"][0]["userQuestionTwo"];
-    $userQuestionThree = $dataREQUEST["interests"][0]["userQuestionThree"];
-    $userInfo = $dataREQUEST["interests"][0]["userInfo"];
-    $contact = $dataREQUEST["interests"][0]["contact"];
-    $genderOf = $dataREQUEST["preference"][0]["genderOf"];   
-    $ageOf = $dataREQUEST["preference"][0]["ageOf"];
-                                 
-
-    /*for($i = 0; $i < count($users); $i++){
-       if($email == $users[$i]["email"]){        
-        header("Content-type: application/json");
-        http_response_code(409);
-        $message = "The email is already registered";
-        echo (json_encode($message));
-        exit();  
-     }  
-   }   */
-
-   if($age < 18){
-        header("Content-type: application/json");
-        http_response_code(409);
-        $message = "You need to be over 18 to use this app";
-        echo (json_encode($message));
-        exit();
+   $fileName = "../users.json";
+   $users = [];
+   if(file_exists($fileName)){
+       $JSONusers = file_get_contents($fileName);
+       $users = json_decode($JSONusers, true);   
+   } else { 
+       file_put_contents($fileName, $users);
    }
+   $jsonREQUEST = file_get_contents("php://input");
+   $dataREQUEST = json_decode($jsonREQUEST, true);
+   $name = $dataREQUEST["name"];
+   $email = $dataREQUEST["email"];
+   $password = $dataREQUEST["password"];
+   $age = $dataREQUEST["age"];
+   $gender = $dataREQUEST["gender"];
+   //$image = $dataREQUEST["image"];  
+   $userQuestionOne = $dataREQUEST["interests"][0]["userQuestionOne"];
+   $userQuestionTwo = $dataREQUEST["interests"][0]["userQuestionTwo"];
+   $userQuestionThree = $dataREQUEST["interests"][0]["userQuestionThree"];
+   $userInfo = $dataREQUEST["interests"][0]["userInfo"];
+   $contact = $dataREQUEST["interests"][0]["contact"];
+   $genderOf = $dataREQUEST["preference"][0]["genderOf"];   
+   $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
+    $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
+                                
+   /*for($i = 0; $i < count($users); $i++){
+      if($email == $users[$i]["email"]){        
+       header("Content-type: application/json");
+       http_response_code(409);
+       $message = "The email is already registered";
+       echo (json_encode($message));
+       exit();  
+    }  
+  }   */
+  if($age < 18){
+       header("Content-type: application/json");
+       http_response_code(409);
+       $message = "You need to be over 18 to use this app";
+       echo (json_encode($message));
+       exit();
+  }
 
-    if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $contact == "" && $age == null)){
+  if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $contact == "" && $age == null)){
         
         $newUser = [
           "name" => $name,
@@ -95,7 +93,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
           "password" => $password,
           "age" => $age,
           "gender" => $gender,
-          "image" => $imageSource,
+          $imageSource,
           "interests" => [
             "userQuestionOne" => $userQuestionOne,
             "userQuestionTwo" => $userQuestionTwo,
@@ -105,7 +103,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
           ],
           "preference" => [
             "genderOf" => $genderOf,
-            "ageOf" => $ageOf,
+            "ageOfMax" => $ageOfMax,
+            "ageOfMin" => $ageOfMin,
           ],
           ];
           $users[] = $newUser;
@@ -128,7 +127,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             exit();  
          }          
 
-  }
+  
     
 } else {
   header("Content-type: application/json");

@@ -2,31 +2,38 @@
 
 function renderRegisterPage (){ 
 
-    console.log("inne");
     let mainDom = document.querySelector("main");
 
     mainDom.innerHTML = `
     <h1> Basic Info </h1>
-    <lable for "name"> Name: </lable>
-    <input type="username" name="name" minlength="2" required> 
+    <lable for "name"> First name: </lable>
+    <input type="username" name="name" class="required"> 
 
     <lable for "email"> Email-adress: </lable>
-    <input type="email" name="email" required> 
+    <input type="email" name="email" class="required"> 
 
     <lable for "password"> Password: </lable>
-    <input type="password" name="password" minlength="10" required> 
+    <input type="password" name="password" minlength="10" class="required"> 
 
     <lable for "age"> Age: </lable>
-    <input type="number" name="age" required>
+    <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
 
     <lable for "gender"> Gender: </lable>
-    <select name="gender"> 
+    <select name="gender" class="required"> 
     <option value="none">Choose an option </option>
-    <option value="female"> Girl </option>
+    <option value="female"> Girl </option>  
     <option value="male"> Boy </option>
     <option value="neither">Neither</option>
     </select>
     <button id="pageOne">Next page</button>
+
+    <div id="minMax">
+        <h3 span class="rangeMinDom"> </h3>
+        <div id="tracker"></div>
+            <input type="range" class="rangeMin" name="min_ageOf" step="1" min="18" max="99">
+            <input type="range"class="rangeMax" name="max_ageOf" step="1" min="18" max="99"> 
+        <h3 span class="rangeMaxDom"> </h3>  
+    </div>
     `;
 
     let nameDom = mainDom.querySelector("input[name='name']");
@@ -53,7 +60,7 @@ function renderRegisterPage (){
 
             imagePage(userData);
 
-            function imagePage(userData){     //Lägga till Sofies form här
+            function imagePage(userData){     
                 mainDom.innerHTML = `
                 <form id="upload" action="register.php" method="POST" enctype="multipart/form-data">
                     <input type="file" name="profilePicture">
@@ -89,11 +96,11 @@ function renderRegisterPage (){
                                 imageMessage.textContent = "Success!";
                 
                                 const img = document.createElement("img");
-                                img.src = data.source;
-                                console.log(data.source);
+                                img.src = data.image;
+                                console.log(data.image);
                                 userImage.appendChild(img);
 
-                                userData.image = data.source;
+                                userData.image = data.image;
                             }
                         });
                     })
@@ -125,7 +132,7 @@ function renderRegisterPage (){
                     <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile </p>
 
                     <lable for "contact">How do you want people to contact you?</lable> 
-                    <input name="contact" type="tel" placeholder="phonenumber" minlength="8" required>
+                    <input name="contact" type="tel" placeholder="phonenumber" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
 
                     <button id=pageTwo>Next Page</button>
                     `;
@@ -138,6 +145,7 @@ function renderRegisterPage (){
 
 
                     mainDom.querySelector("#pageTwo").addEventListener("click", e => {
+                        console.log(contact.value.length);
                     
                         if(contact.value != ""){
                         
@@ -158,30 +166,36 @@ function renderRegisterPage (){
                                 mainDom.innerHTML =`
                                 <h1> What are you looking for? </h1>
                                 <lable for "genderOf"> I'm intrested in: </lable>
-                                <select name="genderOf">
-                                <option value="none">Choose an option </option>
+                                <select name="genderOf" class="required">
+                                <option value="none"> Choose an option> </option>
                                 <option value="Girls"> Female </option>
                                 <option value="Boys"> Male </option>
                                 <option value="Both">Both</option>
                                 </select>
                                 <p> What age </p>
-                                <input name="ageOf">
+                                <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Min-age">
+                                <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Max-age">
+
                                 <button type=submit id="submitUser">Start dating!</button>         
                                 `;
 
                                 let genderOf = mainDom.querySelector("select[name='genderOf']");
-                                let ageOf = mainDom.querySelector("input[name='ageOf']");
+                                let ageOfMin = mainDom.querySelector("input[name='ageOfMin']");
+                                let ageOfMax = mainDom.querySelector("input[name='ageOfMax']");
 
                                 mainDom.querySelector("#submitUser").addEventListener("click", e => { 
-                                   if(genderOf.value != "none" && ageOf.value != null){
+                                   if(genderOf.value != "none" && ageOfMin.value != null && ageOfMax.value != null){
 
                                         let preference = {
                                             genderOf: genderOf.value,
-                                            ageOf: ageOf.value
+                                            ageOfMin: ageOfMin.value,
+                                            ageOfMax: ageOfMax.value
                                         };
                                         userData.preference.push(preference);
                                         addUser(userData);
                                         // Länk till funktion för att starta dejtandet()
+                                        } else {
+                                            erroMessage();
                                         }
                                     })
                                 }
@@ -192,12 +206,7 @@ function renderRegisterPage (){
                 }   
             })
         }
-} else {
-    let message = "";
-    switch ("") {
-        case nameDom: message = "You need till fill out you're name"
-    }
-    erroMessage(message)
+} else { erroMessage();
     }
 
 })
@@ -215,36 +224,50 @@ async function addUser(userData){
     }));  
 
     let JSONresponse = await requestPOST.json();
-
-    //let p_dom = document.createElement("p");
-    //document.querySelector("main").append(p_dom);
-//
-    //if(requestPOST.status === 200){
-    //    p_dom.textContent = ""; //Försök lägga p_dom i en egen funktion. 
-    //    p_dom.textContent = `${JSONresponse}`;
-//
-    //} else {
-    //    p_dom.textContent = `errorcode: ${requestPOST.statusText}, ${JSONresponse}`;     
-    //}
 }
 
-function erroMessage(message){ 
-    let error_message = document.createElement("p");
-    console.log(message);
-    error_message.textContent = "You havent fild in all the required fields" + `${message}`;
-    mainDom.append(error_message);
+function erroMessage(){ 
+
+    let RequiredInputs = document.querySelectorAll(".required");
+    RequiredInputs.forEach(required => { 
+        if (required.value == "" || required.value == "none"){
+            required.classList.add("notAnswered");
+
+         switch(required.attributes.name.value){
+            case "name": 
+                required.placeholder = "You need to write you're name.";
+                break;
+            case "email": 
+                required.placeholder ="This does not look like an emailadress?";
+                break;
+            case "password": 
+                required.placeholder = "The password needs to be atleast 8 characters.";
+                break;
+            case "age":
+                required.placeholder = "You need to be atleast 18 years old to use this app.";
+                break;
+            case "contact": 
+                required.placeholder = "This does not look like a phone number?";
+                break;
+            case "ageOf":
+                required.placeholder = "What age?";
+                break;
+            }
+    }  else {
+            required.classList.remove("notAnswered");
+        }   
+    })
 };
 
+function AgeRange (){
+    let minRange = document.querySelector(".rangeMin");
+    let maxRange = document.querySelector("rangeMax");
+    let minRangeDom = document.querySelector(".rangeMinDom");
+    let maxRangeDom = document.querySelector("rangeMaxDom");
+
+    minRangeDom.textContent = minRange;
+    maxRangeDom.textContent = maxRange;
+}
 
 
 
-//TILL LO: 
-
-                               // <div id="minMax">
-                               // <div id=sliderValue> 
-                               //  <h2 id="titleMin" class="sliderValueTitle">18</h2>
-                               //  <h2 id="titleMax" class="sliderValueTitle">99</h2>
-                               //  </div>
-                               // <input type="range" name="min_ageOf" step="1" min="18" max="99">
-                               // <input type="range" name="max_ageOf" step="1" min="18" max="99">    
-                               // </div>

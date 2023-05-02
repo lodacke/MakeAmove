@@ -230,6 +230,13 @@ async function addUser(userData){
     }));  
 
     let JSONresponse = await requestPOST.json();
+    console.log(JSONresponse);
+
+    let error_message = document.createElement("p");
+    let main = document.querySelector("main");
+    main.append(error_message);
+
+    error_message.textContent = JSONresponse;
 }
 
 function erroMessage(){ 

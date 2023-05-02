@@ -300,5 +300,27 @@
             "ageOfMax": "99",
             "ageOfMin": "24"
         }
+    },
+    {
+        "name": "er",
+        "email": "er",
+        "password": "er",
+        "age": "23",
+        "gender": "female",
+        "0": {
+            "source": "..\/uploads\/dog03.jpg"
+        },
+        "interests": {
+            "userQuestionOne": "",
+            "userQuestionTwo": "",
+            "userQuestionThree": "",
+            "userInfo": "",
+            "contact": "2323"
+        },
+        "preference": {
+            "genderOf": "Girls",
+            "ageOfMax": "66",
+            "ageOfMin": "23"
+        }
     }
 ]

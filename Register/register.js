@@ -155,7 +155,7 @@ function renderRegisterPage (){
 
 
                     mainDom.querySelector("#pageTwo").addEventListener("click", e => {
-                        console.log(contact.value.length); //Funkar för att mäta längden, ska användas i en kontroll senare för det är ett telefonnr/lösenord
+                        console.log(contact.value.length); //Funkar för att mäta längden, ska användas i en kontroll senare för det är ett telefonnr
                     
                         if(contact.value != ""){
                         

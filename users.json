@@ -257,5 +257,26 @@
             "genderOf": "Girls",
             "ageOf": "25"
         }
+    },
+    {
+        "name": "vyhvguk",
+        "email": "vuhgb",
+        "password": "hybgyu",
+        "age": "32",
+        "gender": "female",
+        "image": {
+            "source": "..\/uploads\/dog03.jpg"
+        },
+        "interests": {
+            "userQuestionOne": "yfvuyvuli",
+            "userQuestionTwo": "vyuiuuiy",
+            "userQuestionThree": "uvuiiu",
+            "userInfo": "uviulvui",
+            "contact": "3456789"
+        },
+        "preference": {
+            "genderOf": "Girls",
+            "ageOf": "42"
+        }
     }
 ]

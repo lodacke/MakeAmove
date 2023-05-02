@@ -7,6 +7,16 @@ require_once("../helper.php");
 if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     if(isset($_FILES["profilePicture"])) {
+      $imagesJSON = "imageSource.json";
+      $AllImages = [];
+
+      if(!file_exists($imagesJSON)) {
+          file_put_contents($imagesJSON, $AllImages);
+      } else {
+          $json = file_get_contents($imagesJSON);
+          $AllImages = json_decode($json, true);
+      }
+
       $file = $_FILES["profilePicture"];
   
       $fileName = $file["name"];
@@ -23,9 +33,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
               $destination = "../uploads/".$fileName;
               $source = $fileTmpName;
               if(move_uploaded_file($source, $destination)) {
-                  $imageSource = ["source" => $destination];                  
+                  $imageSource = ["source" => $destination];
+                  $AllImages[] = $imageSource;
+                  $json = json_encode($AllImages, JSON_PRETTY_PRINT);
+                  file_put_contents($imagesJSON, $json);                  
                   send(200, $imageSource);
-                  getNewUser($imageSource);
               }
           } else {
               $error = ["error" => "Something went wrong when uploading image."];
@@ -36,8 +48,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
           send(405, $error);
       }
     }
- 
-  function getNewUser($imageSource) {
 
     $fileName = "../users.json";
     $users = [];
@@ -49,8 +59,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         file_put_contents($fileName, $users);
     }
 
-
-
     $jsonREQUEST = file_get_contents("php://input");
     $dataREQUEST = json_decode($jsonREQUEST, true);
 
@@ -58,8 +66,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $email = $dataREQUEST["email"];
     $password = $dataREQUEST["password"];
     $age = $dataREQUEST["age"];
-    $gender = $dataREQUEST["gender"];
-    //$image = $dataREQUEST["image"];  
+    $gender = $dataREQUEST["gender"];  
     $userQuestionOne = $dataREQUEST["interests"][0]["userQuestionOne"];
     $userQuestionTwo = $dataREQUEST["interests"][0]["userQuestionTwo"];
     $userQuestionThree = $dataREQUEST["interests"][0]["userQuestionThree"];
@@ -68,8 +75,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $genderOf = $dataREQUEST["preference"][0]["genderOf"];   
     $ageOf = $dataREQUEST["preference"][0]["ageOf"];
                                  
-
-    /*for($i = 0; $i < count($users); $i++){
+    for($i = 0; $i < count($users); $i++){
        if($email == $users[$i]["email"]){        
         header("Content-type: application/json");
         http_response_code(409);
@@ -77,7 +83,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         echo (json_encode($message));
         exit();  
      }  
-   }   */
+   }   
 
    if($age < 18){
         header("Content-type: application/json");
@@ -88,7 +94,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
    }
 
     if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $contact == "" && $age == null)){
-        
+        $imagesJSON = "imageSource.json";
+        if(file_exists($imagesJSON)) {
+          $json = file_get_contents($imagesJSON);
+          $AllImages = json_decode($json, true);
+        }
+        $imageSource = end($AllImages);
+
         $newUser = [
           "name" => $name,
           "email" => $email,
@@ -119,7 +131,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
          echo (json_encode($message));
          exit();  
 
-
          } else {
             header("Content-type: application/json");
             http_response_code(401);
@@ -127,9 +138,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             echo (json_encode($message));
             exit();  
          }          
-
-  }
-    
 } else {
   header("Content-type: application/json");
   http_response_code(405);

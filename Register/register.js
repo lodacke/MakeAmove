@@ -71,6 +71,7 @@ function renderRegisterPage (){
                     <p id="imageMessage"></p>
                 </div>
                 <button id="QuestionPage">Next Page </button>
+                <button id="pageOneBack"> Previous page </button>
                 `;
 
                 const form = document.getElementById("upload");
@@ -104,6 +105,10 @@ function renderRegisterPage (){
                             }
                         });
                     })
+
+                mainDom.querySelector("#pageOneBack").addEventListener("click", e => {
+                renderRegisterPage(userData);
+                });
                 
 
                 mainDom.querySelector("#QuestionPage").addEventListener( "click", e => { 
@@ -135,6 +140,7 @@ function renderRegisterPage (){
                     <input name="contact" type="tel" placeholder="phonenumber" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
 
                     <button id=pageTwo>Next Page</button>
+                    <button id="pageTwoBack"> Previous page </button>
                     `;
 
                     let userInfo = mainDom.querySelector("input[name='userInfo']");
@@ -143,9 +149,13 @@ function renderRegisterPage (){
                     let userQuestionTwo = mainDom.querySelector("input[name='userQuestionTwo']");
                     let userQuestionThree = mainDom.querySelector("input[name='userQuestionThree']");
 
+                    mainDom.querySelector("#pageTwoBack").addEventListener("click", e => {
+                    imagePage(userData);
+                     });
+
 
                     mainDom.querySelector("#pageTwo").addEventListener("click", e => {
-                        console.log(contact.value.length);
+                        console.log(contact.value.length); //Funkar för att mäta längden, ska användas i en kontroll senare för det är ett telefonnr/lösenord
                     
                         if(contact.value != ""){
                         
@@ -159,7 +169,6 @@ function renderRegisterPage (){
 
                             userData.interests.push(interests);
 
-                            console.log(userData);
                             preferencePage(userData);
 
                             function preferencePage(userData){
@@ -167,7 +176,7 @@ function renderRegisterPage (){
                                 <h1> What are you looking for? </h1>
                                 <lable for "genderOf"> I'm intrested in: </lable>
                                 <select name="genderOf" class="required">
-                                <option value="none"> Choose an option> </option>
+                                <option value="none"> Choose an option </option>
                                 <option value="Girls"> Female </option>
                                 <option value="Boys"> Male </option>
                                 <option value="Both">Both</option>
@@ -176,12 +185,17 @@ function renderRegisterPage (){
                                 <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Min-age">
                                 <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Max-age">
 
-                                <button type=submit id="submitUser">Start dating!</button>         
+                                <button type=submit id="submitUser">Start dating!</button> 
+                                <button id="pageThreeBack"> Previous page </button>        
                                 `;
 
                                 let genderOf = mainDom.querySelector("select[name='genderOf']");
                                 let ageOfMin = mainDom.querySelector("input[name='ageOfMin']");
-                                let ageOfMax = mainDom.querySelector("input[name='ageOfMax']");
+                                let ageOfMax = mainDom.querySelector("input[name='ageOfMax']")
+
+                                mainDom.querySelector("#pageThreeBack").addEventListener("click", e => {
+                                    QuestionPage(userData);
+                                });
 
                                 mainDom.querySelector("#submitUser").addEventListener("click", e => { 
                                    if(genderOf.value != "none" && ageOfMin.value != null && ageOfMax.value != null){

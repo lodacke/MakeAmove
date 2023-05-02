@@ -75,7 +75,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $userInfo = $dataREQUEST["interests"][0]["userInfo"];
     $contact = $dataREQUEST["interests"][0]["contact"];
     $genderOf = $dataREQUEST["preference"][0]["genderOf"];   
-    $ageOf = $dataREQUEST["preference"][0]["ageOf"];
+    $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
+    $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
                                  
     for($i = 0; $i < count($users); $i++){
        if($email == $users[$i]["email"]){        

@@ -1,5 +1,7 @@
 "use strict";
 
+import { renderDatingPage } from "../date/date.js";
+
 async function submitLogin(event) {
   event.preventDefault();
 
@@ -59,3 +61,5 @@ function renderLoginPage() {
   let loginForm = loginMain.querySelector("form");
   loginForm.addEventListener("submit", submitLogin);
 }
+
+export { renderLoginPage };

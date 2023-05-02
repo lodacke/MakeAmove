@@ -1,5 +1,8 @@
 "use strict";
 
+import { renderDatingPage } from "../date/date.js";
+import { renderLoginPage } from "../login/login.js";
+
 function checkIfUserLoggedIn() {
   if(window.localStorage.getItem("user")) {
     renderDatingPage();

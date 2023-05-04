@@ -1,5 +1,7 @@
 "use strict";
 
+import { renderDatingPage } from "../date/date.js";
+
 async function submitLogin(event) {
   event.preventDefault();
 
@@ -30,7 +32,7 @@ async function submitLogin(event) {
   }
 }
 
-function renderLoginPage() {
+export function renderLoginPage() {
   let bodyDom = document.querySelector("body");
 
   bodyDom.innerHTML = `

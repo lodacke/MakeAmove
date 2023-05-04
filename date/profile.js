@@ -37,12 +37,32 @@ export function renderProfilePage(event) {
           ${renderCountryDropdownList()}
           <p class="title">More About Me</p>
           <div class="profile-button about-me-button">
-            <button>have children</button>
-            <button>smoke</button>
-            <button>drink</button>
-            <button>exercise</button>
-            <button>have religion</button>
+            <label class="button-about-me">
+              <input type="checkbox" name="button" value="children">
+              <span>have children</span>
+            </label>
+
+            <label class="button-about-me">
+              <input type="checkbox" name="button" value="smoke">
+              <span>smoke</span>
+            </label>
+
+            <label class="button-about-me">
+              <input type="checkbox" name="button" value="drink">
+              <span>drink</span>
+            </label>
+
+            <label class="button-about-me">
+              <input type="checkbox" name="button" value="exercise">
+              <span>exercise</span>
+            </label>
+
+            <label class="button-about-me">
+              <input type="checkbox" name="button" value="religion">
+              <span>have religion</span>
+            </label>
           </div>
+
           <p class="title">Profile Questions</p>
         </div>
 
@@ -51,12 +71,23 @@ export function renderProfilePage(event) {
           <p class="title looking-for">I am looking for...</p>
           <p class="title">Age</p>
           <input type="text" name="bio" value="${getUserData().preference.ageOf}">
+
           <p class="title">Gender</p>
-          <div class="profile-button gender-button">
-            <button>Girls</button>
-            <button>Boys</button>
-            <button>Other</button>
+          <div class="profile-button prefer-gender-button">
+            <label class="button-prefer-gender">
+              <input type="checkbox" name="button" value="girls">
+              <span>girls</span>
+            </label>
+            <label class="button-prefer-gender">
+              <input type="checkbox" name="button" value="boys">
+              <span>boys</span>
+            </label>
+            <label class="button-prefer-gender">
+              <input type="checkbox" name="button" value="other">
+              <span>other</span>
+            </label>
           </div>
+
           <div class="interest">
             <p class="title">Interest</p>
             <p class="five-options">list up to 5 options</p>

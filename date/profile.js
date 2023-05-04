@@ -21,11 +21,18 @@ export function renderProfilePage(event) {
           <p class="title">Age</p>
           <input type="text" name="bio" value="${getUserData().age}">
           <p class="title">Gender</p>
+
           <div class="profile-button gender-button">
-            <button>female</button>
-            <button>male</button>
-            <button>other</button>
+            <input type="radio" id="female" name="button-gender" checked>
+            <label for="female">female</label>
+
+            <input type="radio" id="male" name="button-gender">
+            <label for="male">male</label>
+
+            <input type="radio" id="other" name="button-gender">
+            <label for="other">other</label>
           </div>
+
           <p class="title">Location</p>
           ${renderCountryDropdownList()}
           <p class="title">More About Me</p>
@@ -65,4 +72,10 @@ export function renderProfilePage(event) {
     </form>
     ${stickyNav()}
   `;
+
+  const profileButtons = document.querySelectorAll(".gender-button label");
+  const genderOfUser = getUserData().gender;
+
+  document.getElementById(genderOfUser).checked = true;
+
 }

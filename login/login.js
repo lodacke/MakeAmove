@@ -62,4 +62,3 @@ export function renderLoginPage() {
   loginForm.addEventListener("submit", submitLogin);
 }
 
-export { renderLoginPage };

@@ -32,7 +32,7 @@ async function submitLogin(event) {
   }
 }
 
-function renderLoginPage() {
+export function renderLoginPage() {
   let bodyDom = document.querySelector("body");
 
   bodyDom.innerHTML = `

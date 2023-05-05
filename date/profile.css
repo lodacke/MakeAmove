@@ -1,0 +1,113 @@
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .profile-page-container {
+    height: 91vh;
+    overflow-y: auto;
+    padding: 5vw;
+    box-sizing: border-box;
+  }
+
+  .profile-top {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .user-picture {
+    height: 15vh;
+    width: 15vh;
+    border: 3px solid black;
+  }
+
+  .user-name {
+    padding-top: 1vh;
+  }
+
+  .profile-main {
+    /* overflow-y: auto; */
+    text-align: left;
+  }
+
+  .category {
+    background-color: gainsboro;
+    border: 4px dotted floralwhite;
+    border-radius: 21px;
+    padding: 0 10px;
+    margin: 2vh 0;
+  }
+
+  .title {
+    font-style: italic;
+  }
+
+  /* Gender buttons of user*/
+  .profile-button label {
+    display: inline-block;
+    padding: 10px;
+    margin: 3px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .info-button {
+    display: none;
+  }
+
+  .info-button + label {
+    display: inline-block;
+    width: auto;
+    height: 20px;
+    background-color: #eee;
+  }
+
+  .info-button:checked + label {
+    background-color: rgb(213, 80, 140);
+    color: #fff;
+  }
+
+  .looking-for,
+  .five-options,
+  .email {
+    font-family: monospace;
+  }
+
+  .email {
+    font-size: 2vh;
+  }
+
+  .profile-page-container input,
+  .form-select {
+    height: 2.5vh;
+    border: 2px solid darkgray;
+    width: 97%;
+  }
+
+  .form-select {
+    font-size: 2vh;
+    width: 99%;
+    height: 3.5vh;
+  }
+
+  .preference .interest {
+    display: flex;
+    align-items: center;
+  }
+
+  .preference .interest p:first-child {
+    padding-right: 3vw;
+  }
+
+  .password-sumbit {
+    display: flex;
+    gap: 3px;
+  }
+
+  .bottom-button {
+    border: 1px solid gray;
+    height: 3vh;
+    font-size: 2vh;
+  }
+
+}
+

@@ -23,9 +23,6 @@ input{
     width: 400px;
 }
 
-.notAnswered{
-    border: 1px solid red;
-}
 
 #profilePicture {
     display: flex;

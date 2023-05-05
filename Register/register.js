@@ -26,6 +26,7 @@ function renderRegisterPage (){
     <option value="neither">Neither</option>
     </select>
     <button id="pageOne">Next page</button>
+    <button id="startPage"> Start Page </button>
     `;
 
     let nameDom = mainDom.querySelector("input[name='name']");
@@ -33,6 +34,10 @@ function renderRegisterPage (){
     let ageDom = mainDom.querySelector("input[name='age']");
     let genderDom = mainDom.querySelector("select[name='gender']");
     let emailDom = mainDom.querySelector("input[name='email']");
+
+    mainDom.querySelector("#startPage").addEventListener("click", e => {
+        renderFrontPage();
+    })
 
 
     mainDom.querySelector("#pageOne").addEventListener("click", e => { 
@@ -104,8 +109,6 @@ function renderRegisterPage (){
                 
 
                 mainDom.querySelector("#QuestionPage").addEventListener( "click", e => { 
-                   // let imageDom = mainDom.querySelector("input[name='image']");
-                   // userData.image = imageDom.value;
 
                     console.log(userData.image);
                     QuestionPage(userData);

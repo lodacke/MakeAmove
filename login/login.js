@@ -26,6 +26,7 @@ async function submitLogin(event) {
       delete data.password;
 
       window.localStorage.setItem("user", JSON.stringify(data));
+      console.log(data);
       renderDatingPage();
     }
   } catch (err) {

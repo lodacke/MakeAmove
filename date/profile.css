@@ -36,11 +36,11 @@
     margin: 2vh 0;
   }
 
-  /* Gender buttons of user*/
-  .profile-button input[type="radio"] {
-    display: none;
+  .title {
+    font-style: italic;
   }
 
+  /* Gender buttons of user*/
   .profile-button label {
     display: inline-block;
     padding: 10px;
@@ -50,36 +50,34 @@
     cursor: pointer;
   }
 
-  .profile-button input[type="radio"]:checked+label {
+  .info-button {
+    display: none;
+  }
+
+  .info-button + label {
+    display: inline-block;
+    width: auto;
+    height: 20px;
+    background-color: #eee;
+  }
+
+  .info-button:checked + label {
     background-color: rgb(213, 80, 140);
     color: #fff;
   }
 
-  /* Buttons of More About Me */
-    .button-about-me input[type="checkbox"],
-    .button-prefer-gender input[type="checkbox"]{
-      display: none;
-    }
-
-    .button-about-me span,
-    .button-prefer-gender span {
-      display: inline-block;
-      width: auto;
-      height: 20px;
-      background-color: #eee;
-    }
-
-    .button-about-me input[type="checkbox"]:checked+span,
-    .button-prefer-gender input[type="checkbox"]:checked+span {
-      background-color: rgb(213, 80, 140);
-      color: #fff;
-    }
-
-  .looking-for, .five-options {
+  .looking-for,
+  .five-options,
+  .email {
     font-family: monospace;
   }
 
-  .profile-page-container input, .form-select {
+  .email {
+    font-size: 2vh;
+  }
+
+  .profile-page-container input,
+  .form-select {
     height: 2.5vh;
     border: 2px solid darkgray;
     width: 97%;
@@ -102,6 +100,7 @@
 
   .password-sumbit {
     display: flex;
+    gap: 3px;
   }
 
   .bottom-button {

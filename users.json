@@ -3,16 +3,23 @@
         "name": "wertrewert",
         "email": "email@sdf.com",
         "password": "sdfsdfwertrew",
-        "age": "44",
-        "gender": "female",
+        "age": "24",
+        "gender": "male",
         "interests": {
             "userInfo": "yes",
             "contact": "12345678900987"
         },
         "preference": {
-            "genderOf": "male",
-            "ageOf": "44"
-        }
+            "genderOf": "girls",
+            "ageOf": "30"
+        },
+        "bio": "hahahahha im not a weirdo",
+        "country": "AF",
+        "haveChildren": "yes",
+        "smoke": "no",
+        "drink": "yes",
+        "exercise": "yes",
+        "haveReligion": "yes"
     },
     {
         "name": "wewewe",
@@ -321,6 +328,28 @@
             "genderOf": "Girls",
             "ageOfMax": "66",
             "ageOfMin": "23"
+        }
+    },
+    {
+        "name": "wesrdtfghj\u00a7",
+        "email": "dfghj",
+        "password": "dfgchvj",
+        "age": "123",
+        "gender": "male",
+        "0": {
+            "source": "..\/uploads\/dog03.jpg"
+        },
+        "interests": {
+            "userQuestionOne": "",
+            "userQuestionTwo": "",
+            "userQuestionThree": "",
+            "userInfo": "",
+            "contact": "234567890"
+        },
+        "preference": {
+            "genderOf": "Boys",
+            "ageOfMax": "55",
+            "ageOfMin": "18"
         }
     }
 ]

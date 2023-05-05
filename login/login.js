@@ -20,7 +20,8 @@ async function submitLogin(event) {
     let data = await response.json();
     console.log(data)
     if (!response.ok) {
-      message.innerHTML = `Oops! Something went wrong, we got this from the server <span>${data.message}</span>.`;
+      message.innerHTML = `Oops! Something went wrong, it looks like <span>${data.message}</span>.`;
+      erroMessage();
     } else {
       delete data.password;
 
@@ -43,8 +44,8 @@ export function renderLoginPage() {
     <main>
       <h2>Login</h2>
       <form class="login-form" action="login.php" method="POST">
-        <input type="text" class="email" name="email" placeholder="Email">
-        <input type="password" class="password" name="password" placeholder="Password">
+        <input type="text" name="email" placeholder="Email" class="required">
+        <input type="password" name="password" placeholder="Password" class="required">
         <button class="login-button" type="submit">Login</button>
         <p class="message"></p>` +
         // TODO: <img class="loading" src="image/spinner.svg" alt="loading">

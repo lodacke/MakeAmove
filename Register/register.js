@@ -116,16 +116,136 @@ function renderRegisterPage (){
 
                 function QuestionPage(userData){
                     mainDom.innerHTML = `
-                    <h1> Tell people more about you </h1>
-                    <lable for "userQuestionOne"> Sweet or salty snacks</lable>
-                    <input name="userQuestionOne">
+                    <h1> interests </h1>
+                    <p> choose atleast 5 intrests </p>
 
-                    <lable for "userQuestionTwo"> Do you have siblings?:</lable>
-                    <input name="userQuestionTwo">
-
-                    <lable for "userQuestionThree"> How old were you when you lost you're first tooth:</lable>
-                    <input name="userQuestionThree">
-
+                      <div id="interestsList"> 
+                         <div>
+                            <input type="checkbox" name="traveling">
+                            <label for="traveling">Traveling</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="reading">
+                            <label for="reading">Reading</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="yoga">
+                            <label for="yoga">Yoga</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="movies">
+                            <label for="movies">Movies</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="astrology">
+                            <label for="astrology">Astrology</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="beer">
+                            <label for="beer">Beer</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="dancing">
+                            <label for="dancing">Dancing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="fishing">
+                            <label for="fishing">Fishing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="wine">
+                            <label for="wine">Wine</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="art">
+                            <label for="art">Art</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="standUpComedy">
+                            <label for="standUpComedy">Stand-up Comedy</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="running">
+                            <label for="running">Running</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="movieNights">
+                            <label for="movieNight">Movie Night</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="smoking">
+                            <label for="smoking">Smoking</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="snus">
+                            <label for="snus">Snus</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="poetry">
+                            <label for="poetry">Poetry</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="nightOut">
+                            <label for="nightOut">Night Out</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="fishing">
+                            <label for="fishing">Fishing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="sports">
+                            <label for="sport">Sport</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="singing">
+                            <label for="singing">Singing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="photographing">
+                            <label for="photographing">Photographing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="gaming">
+                            <label for="gaming">Gaming</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="hiking">
+                            <label for="hiking">Hiking</hiking>
+                        </div>
+                         <div>
+                            <input type="checkbox" name="playingAnInstrument">
+                            <label for="playingAnInstrument">Playing an Instrument</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="cooking">
+                            <label for="cooking">Cooking</label>
+                         </div>
+                        <div>
+                            <input type="checkbox" name="boardGames">
+                            <label for="boardGames">Board Games</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="gym">
+                            <label for="gym">Gym</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="sailing">
+                            <label for="sailinh">Sailing</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="fashion">
+                            <label for="fashion">Fashion</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="backpacking">
+                            <label for="backpacking">Backpacking</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="musicFestivals">
+                            <label for="musicFestivals">Music Festivals</label>
+                          </div>
+                    </div>
+                    
                     <lable for "userInfo"> Bio:</lable>
                     <textarea name="userInfo" rows="7" id="userInfo" placeholder="Add more info about yourself..."></textarea>
 
@@ -137,12 +257,11 @@ function renderRegisterPage (){
                     <button id=pageTwo>Next Page</button>
                     <button id="pageTwoBack"> Previous page </button>
                     `;
+                    
 
-                    let userInfo = mainDom.querySelector("input[name='userInfo']");
+                    let userInfo = mainDom.querySelector("textarea[name='userInfo']"); //
                     let contact = mainDom.querySelector("input[name='contact']");
-                    let userQuestionOne = mainDom.querySelector("input[name='userQuestionOne']");
-                    let userQuestionTwo = mainDom.querySelector("input[name='userQuestionTwo']");
-                    let userQuestionThree = mainDom.querySelector("input[name='userQuestionThree']");
+                    let interestsBoxes = document.querySelectorAll("input[type='checkbox']");
 
                     mainDom.querySelector("#pageTwoBack").addEventListener("click", e => {
                     imagePage(userData);
@@ -151,13 +270,26 @@ function renderRegisterPage (){
 
                     mainDom.querySelector("#pageTwo").addEventListener("click", e => {
                         console.log(contact.value.length); //Funkar för att mäta längden, ska användas i en kontroll senare för det är ett telefonnr
+
+                        let checkedIntrests = [];
+                        interestsBoxes.forEach(box => {
+                            console.log(box);
+                            if(box.checked){
+                                console.log(box);
+                                checkedIntrests.push(box.name);
+                            }
+                        });
+
+                        console.log(checkedIntrests);
                     
-                        if(contact.value != ""){
-                        
+                        if(contact.value != "" && !checkedIntrests.length < 5){
+                            
                             let interests = {
-                                 userQuestionOne: userQuestionOne.value,
-                                 userQuestionTwo: userQuestionTwo.value,
-                                 userQuestionThree: userQuestionThree.value,
+                                 interestsOne: checkedIntrests[0],
+                                 interestsTwo: checkedIntrests[1],
+                                 Three: checkedIntrests[2],
+                                 interestsFour: checkedIntrests[3],
+                                 interestsFive: checkedIntrests[4],
                                  userInfo: userInfo.value,
                                  contact: contact.value
                                 };

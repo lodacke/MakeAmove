@@ -21,8 +21,8 @@ function renderRegisterPage (){
     <lable for "gender"> Gender: </lable>
     <select name="gender" class="required"> 
     <option value="none">Choose an option </option>
-    <option value="female"> Girl </option>  
-    <option value="male"> Boy </option>
+    <option value="female"> Woman </option>  
+    <option value="male"> Man </option>
     <option value="neither">Neither</option>
     </select>
     <button id="pageOne">Next page</button>
@@ -123,8 +123,8 @@ function renderRegisterPage (){
                     <lable for "userQuestionThree"> How old were you when you lost you're first tooth:</lable>
                     <input name="userQuestionThree">
 
-                    <lable for "userInfo"> Anything else you'd like to add:</lable>
-                    <input name="userInfo">
+                    <lable for "userInfo"> Bio:</lable>
+                    <textarea name="userInfo" rows="7" id="userInfo" placeholder="Add more info about yourself..."></textarea>
 
                     <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile </p>
 

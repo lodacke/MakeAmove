@@ -300,5 +300,27 @@
             "ageOfMax": "55",
             "ageOfMin": "23"
         }
+    },
+    {
+        "name": "www",
+        "email": "www",
+        "password": "www",
+        "age": "23",
+        "gender": "male",
+        "0": {
+            "source": "..\/uploads\/dog03.jpg"
+        },
+        "interests": {
+            "userQuestionOne": "",
+            "userQuestionTwo": "",
+            "userQuestionThree": "",
+            "userInfo": "23",
+            "contact": "1234677"
+        },
+        "preference": {
+            "genderOf": "Both",
+            "ageOfMax": "33",
+            "ageOfMin": "22"
+        }
     }
 ]

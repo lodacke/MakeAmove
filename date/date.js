@@ -11,3 +11,5 @@ export function renderDatingPage() {
    document.querySelector(".profile").addEventListener("click", renderProfilePage);
 
 }
+
+

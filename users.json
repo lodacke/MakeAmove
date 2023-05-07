@@ -288,10 +288,10 @@
     },
     {
         "name": "a",
-        "email": "lo.dacke@mail.com",
+        "email": "w",
         "password": "23",
         "age": "23",
-        "gender": "female",
+        "gender": "male",
         "0": {
             "source": "..\/uploads\/dog03.jpg"
         },
@@ -303,17 +303,17 @@
             "contact": "23"
         },
         "preference": {
-            "genderOf": "Girls",
-            "ageOfMax": "99",
-            "ageOfMin": "24"
+            "genderOf": "Boys",
+            "ageOfMax": "55",
+            "ageOfMin": "23"
         }
     },
     {
-        "name": "er",
-        "email": "er",
-        "password": "er",
+        "name": "www",
+        "email": "www",
+        "password": "www",
         "age": "23",
-        "gender": "female",
+        "gender": "male",
         "0": {
             "source": "..\/uploads\/dog03.jpg"
         },
@@ -321,13 +321,13 @@
             "userQuestionOne": "",
             "userQuestionTwo": "",
             "userQuestionThree": "",
-            "userInfo": "",
-            "contact": "2323"
+            "userInfo": "23",
+            "contact": "1234677"
         },
         "preference": {
-            "genderOf": "Girls",
-            "ageOfMax": "66",
-            "ageOfMin": "23"
+            "genderOf": "Both",
+            "ageOfMax": "33",
+            "ageOfMin": "22"
         }
     },
     {

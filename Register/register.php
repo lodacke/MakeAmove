@@ -101,11 +101,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
    $email = $dataREQUEST["email"];
    $password = $dataREQUEST["password"];
    $age = $dataREQUEST["age"];
-   $gender = $dataREQUEST["gender"];
-   //$image = $dataREQUEST["image"];  
-   $userQuestionOne = $dataREQUEST["interests"][0]["userQuestionOne"];
-   $userQuestionTwo = $dataREQUEST["interests"][0]["userQuestionTwo"];
-   $userQuestionThree = $dataREQUEST["interests"][0]["userQuestionThree"];
+   $gender = $dataREQUEST["gender"]; 
+   $interestsOne= $dataREQUEST["interests"][0]["interestsOne"];
+   $interestsTwo = $dataREQUEST["interests"][0]["interestsTwo"];
+   $interestsThree = $dataREQUEST["interests"][0]["interestsThree"];
+   $interestsFour = $dataREQUEST["interests"][0]["interestsFour"];
+   $interestsFive = $dataREQUEST["interests"][0]["interestsFive"];
    $userInfo = $dataREQUEST["interests"][0]["userInfo"];
    $contact = $dataREQUEST["interests"][0]["contact"];
    $genderOf = $dataREQUEST["preference"][0]["genderOf"];   
@@ -145,9 +146,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
           "gender" => $gender,
           $imageSource,
           "interests" => [
-            "userQuestionOne" => $userQuestionOne,
-            "userQuestionTwo" => $userQuestionTwo,
-            "userQuestionThree" => $userQuestionThree,
+            "interestsOne" => $interestsOne,
+            "interestsTwo" => $interestsTwo,
+            "interestsThree" => $interestsThree,
+            "interestsFour" => $interestsFour,
+            "interestsFive" => $interestsFive,
             "userInfo" => $userInfo,
             "contact" => $contact,
           ],

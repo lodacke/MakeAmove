@@ -13,11 +13,11 @@ function renderFooter(previousFunction){
         <button id="nextPage"> Next Page </button>`;
 
         footerDom.querySelector("#previousPage").addEventListener("click", e => {
-            
-        })
+
+     })
 }
 
-function renderRegisterPage (){ 
+export function renderRegisterPage (){ 
 
     mainDom.innerHTML = `
     <h1> Basic Info </h1>
@@ -129,8 +129,7 @@ function QuestionPage(userData){
       "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night",
       "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing",
       "Photographing", "Gaming", "Hiking", "Playing an Instrument", "Cooking",
-      "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"
-    ];
+      "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"];
 
     mainDom.innerHTML = `
     <h1>Interests</h1>

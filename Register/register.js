@@ -21,19 +21,12 @@ function renderRegisterPage (){
     <lable for "gender"> Gender: </lable>
     <select name="gender" class="required"> 
     <option value="none">Choose an option </option>
-    <option value="female"> Girl </option>  
-    <option value="male"> Boy </option>
+    <option value="female"> Woman </option>  
+    <option value="male"> Man </option>
     <option value="neither">Neither</option>
     </select>
     <button id="pageOne">Next page</button>
-
-    <div id="minMax">
-        <h3 span class="rangeMinDom"> </h3>
-        <div id="tracker"></div>
-            <input type="range" class="rangeMin" name="min_ageOf" step="1" min="18" max="99">
-            <input type="range"class="rangeMax" name="max_ageOf" step="1" min="18" max="99"> 
-        <h3 span class="rangeMaxDom"> </h3>  
-    </div>
+    <button id="startPage"> Start Page </button>
     `;
 
     let nameDom = mainDom.querySelector("input[name='name']");
@@ -41,6 +34,10 @@ function renderRegisterPage (){
     let ageDom = mainDom.querySelector("input[name='age']");
     let genderDom = mainDom.querySelector("select[name='gender']");
     let emailDom = mainDom.querySelector("input[name='email']");
+
+    mainDom.querySelector("#startPage").addEventListener("click", e => {
+        renderFrontPage();
+    })
 
 
     mainDom.querySelector("#pageOne").addEventListener("click", e => { 
@@ -112,8 +109,6 @@ function renderRegisterPage (){
                 
 
                 mainDom.querySelector("#QuestionPage").addEventListener( "click", e => { 
-                   // let imageDom = mainDom.querySelector("input[name='image']");
-                   // userData.image = imageDom.value;
 
                     console.log(userData.image);
                     QuestionPage(userData);
@@ -121,18 +116,138 @@ function renderRegisterPage (){
 
                 function QuestionPage(userData){
                     mainDom.innerHTML = `
-                    <h1> Tell people more about you </h1>
-                    <lable for "userQuestionOne"> Sweet or salty snacks</lable>
-                    <input name="userQuestionOne">
+                    <h1> interests </h1>
+                    <p> choose atleast 5 intrests </p>
 
-                    <lable for "userQuestionTwo"> Do you have siblings?:</lable>
-                    <input name="userQuestionTwo">
-
-                    <lable for "userQuestionThree"> How old were you when you lost you're first tooth:</lable>
-                    <input name="userQuestionThree">
-
-                    <lable for "userInfo"> Anything else you'd like to add:</lable>
-                    <input name="userInfo">
+                      <div id="interestsList"> 
+                         <div>
+                            <input type="checkbox" name="traveling">
+                            <label for="traveling">Traveling</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="reading">
+                            <label for="reading">Reading</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="yoga">
+                            <label for="yoga">Yoga</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="movies">
+                            <label for="movies">Movies</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="astrology">
+                            <label for="astrology">Astrology</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="beer">
+                            <label for="beer">Beer</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="dancing">
+                            <label for="dancing">Dancing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="fishing">
+                            <label for="fishing">Fishing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="wine">
+                            <label for="wine">Wine</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="art">
+                            <label for="art">Art</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="standUpComedy">
+                            <label for="standUpComedy">Stand-up Comedy</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="running">
+                            <label for="running">Running</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="movieNights">
+                            <label for="movieNight">Movie Night</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="smoking">
+                            <label for="smoking">Smoking</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="snus">
+                            <label for="snus">Snus</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="poetry">
+                            <label for="poetry">Poetry</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="nightOut">
+                            <label for="nightOut">Night Out</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="fishing">
+                            <label for="fishing">Fishing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="sports">
+                            <label for="sport">Sport</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="singing">
+                            <label for="singing">Singing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="photographing">
+                            <label for="photographing">Photographing</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="gaming">
+                            <label for="gaming">Gaming</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="hiking">
+                            <label for="hiking">Hiking</hiking>
+                        </div>
+                         <div>
+                            <input type="checkbox" name="playingAnInstrument">
+                            <label for="playingAnInstrument">Playing an Instrument</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="cooking">
+                            <label for="cooking">Cooking</label>
+                         </div>
+                        <div>
+                            <input type="checkbox" name="boardGames">
+                            <label for="boardGames">Board Games</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="gym">
+                            <label for="gym">Gym</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="sailing">
+                            <label for="sailinh">Sailing</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="fashion">
+                            <label for="fashion">Fashion</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="backpacking">
+                            <label for="backpacking">Backpacking</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="musicFestivals">
+                            <label for="musicFestivals">Music Festivals</label>
+                          </div>
+                    </div>
+                    
+                    <lable for "userInfo"> Bio:</lable>
+                    <textarea name="userInfo" rows="7" id="userInfo" placeholder="Add more info about yourself..."></textarea>
 
                     <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile </p>
 
@@ -142,12 +257,11 @@ function renderRegisterPage (){
                     <button id=pageTwo>Next Page</button>
                     <button id="pageTwoBack"> Previous page </button>
                     `;
+                    
 
-                    let userInfo = mainDom.querySelector("input[name='userInfo']");
+                    let userInfo = mainDom.querySelector("textarea[name='userInfo']"); //
                     let contact = mainDom.querySelector("input[name='contact']");
-                    let userQuestionOne = mainDom.querySelector("input[name='userQuestionOne']");
-                    let userQuestionTwo = mainDom.querySelector("input[name='userQuestionTwo']");
-                    let userQuestionThree = mainDom.querySelector("input[name='userQuestionThree']");
+                    let interestsBoxes = document.querySelectorAll("input[type='checkbox']");
 
                     mainDom.querySelector("#pageTwoBack").addEventListener("click", e => {
                     imagePage(userData);
@@ -156,13 +270,26 @@ function renderRegisterPage (){
 
                     mainDom.querySelector("#pageTwo").addEventListener("click", e => {
                         console.log(contact.value.length); //Funkar för att mäta längden, ska användas i en kontroll senare för det är ett telefonnr
+
+                        let checkedIntrests = [];
+                        interestsBoxes.forEach(box => {
+                            console.log(box);
+                            if(box.checked){
+                                console.log(box);
+                                checkedIntrests.push(box.name);
+                            }
+                        });
+
+                        console.log(checkedIntrests);
                     
-                        if(contact.value != ""){
-                        
+                        if(contact.value != "" && !checkedIntrests.length < 5){
+                            
                             let interests = {
-                                 userQuestionOne: userQuestionOne.value,
-                                 userQuestionTwo: userQuestionTwo.value,
-                                 userQuestionThree: userQuestionThree.value,
+                                 interestsOne: checkedIntrests[0],
+                                 interestsTwo: checkedIntrests[1],
+                                 Three: checkedIntrests[2],
+                                 interestsFour: checkedIntrests[3],
+                                 interestsFive: checkedIntrests[4],
                                  userInfo: userInfo.value,
                                  contact: contact.value
                                 };
@@ -238,50 +365,16 @@ async function addUser(userData){
     }));  
 
     let JSONresponse = await requestPOST.json();
+    console.log(JSONresponse);
+
+    let error_message = document.createElement("p");
+    let main = document.querySelector("main");
+    main.append(error_message);
+
+    error_message.textContent = JSONresponse;
 }
 
-function erroMessage(){ 
 
-    let RequiredInputs = document.querySelectorAll(".required");
-    RequiredInputs.forEach(required => { 
-        if (required.value == "" || required.value == "none"){
-            required.classList.add("notAnswered");
-
-         switch(required.attributes.name.value){
-            case "name": 
-                required.placeholder = "You need to write you're name.";
-                break;
-            case "email": 
-                required.placeholder ="This does not look like an emailadress?";
-                break;
-            case "password": 
-                required.placeholder = "The password needs to be atleast 8 characters.";
-                break;
-            case "age":
-                required.placeholder = "You need to be atleast 18 years old to use this app.";
-                break;
-            case "contact": 
-                required.placeholder = "This does not look like a phone number?";
-                break;
-            case "ageOf":
-                required.placeholder = "What age?";
-                break;
-            }
-    }  else {
-            required.classList.remove("notAnswered");
-        }   
-    })
-};
-
-function AgeRange (){
-    let minRange = document.querySelector(".rangeMin");
-    let maxRange = document.querySelector("rangeMax");
-    let minRangeDom = document.querySelector(".rangeMinDom");
-    let maxRangeDom = document.querySelector("rangeMaxDom");
-
-    minRangeDom.textContent = minRange;
-    maxRangeDom.textContent = maxRange;
-}
 
 
 

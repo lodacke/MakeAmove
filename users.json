@@ -3,16 +3,23 @@
         "name": "wertrewert",
         "email": "email@sdf.com",
         "password": "sdfsdfwertrew",
-        "age": "44",
-        "gender": "female",
+        "age": "24",
+        "gender": "male",
         "interests": {
             "userInfo": "yes",
             "contact": "12345678900987"
         },
         "preference": {
-            "genderOf": "male",
-            "ageOf": "44"
-        }
+            "genderOf": "girls",
+            "ageOf": "30"
+        },
+        "bio": "hahahahha im not a weirdo",
+        "country": "AF",
+        "haveChildren": "yes",
+        "smoke": "no",
+        "drink": "yes",
+        "exercise": "yes",
+        "haveReligion": "yes"
     },
     {
         "name": "wewewe",
@@ -301,25 +308,47 @@
         }
     },
     {
-        "name": "ygyub",
-        "email": "uibgi",
-        "password": "buybiu",
+        "name": "www",
+        "email": "www",
+        "password": "www",
         "age": "23",
-        "gender": "female",
+        "gender": "male",
         "0": {
-            "source": "..\/uploads\/dog04.jpg"
+            "source": "..\/uploads\/dog03.jpg"
         },
         "interests": {
-            "userQuestionOne": "gvuyou",
-            "userQuestionTwo": "yvbuv",
-            "userQuestionThree": "yubui",
-            "userInfo": "bub",
-            "contact": "12345678"
+            "userQuestionOne": "",
+            "userQuestionTwo": "",
+            "userQuestionThree": "",
+            "userInfo": "23",
+            "contact": "1234677"
         },
         "preference": {
-            "genderOf": "Girls",
-            "ageOfMax": "20",
-            "ageOfMin": "19"
+            "genderOf": "Both",
+            "ageOfMax": "33",
+            "ageOfMin": "22"
+        }
+    },
+    {
+        "name": "wesrdtfghj\u00a7",
+        "email": "dfghj",
+        "password": "dfgchvj",
+        "age": "123",
+        "gender": "male",
+        "0": {
+            "source": "..\/uploads\/dog03.jpg"
+        },
+        "interests": {
+            "userQuestionOne": "",
+            "userQuestionTwo": "",
+            "userQuestionThree": "",
+            "userInfo": "",
+            "contact": "234567890"
+        },
+        "preference": {
+            "genderOf": "Boys",
+            "ageOfMax": "55",
+            "ageOfMin": "18"
         }
     }
 ]

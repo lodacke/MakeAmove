@@ -1,14 +1,15 @@
 @media (min-width: 320px) and (max-width: 480px) {
-  body {
+  /* body {
     position: relative;
-  }
+  } */
 
   .sticky-nav {
     height: 9vh;
     width: 100%;
     background-color: gray;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
+    position: fixed;
   }
 
   .sticky-nav ul {

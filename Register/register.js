@@ -94,11 +94,8 @@ function renderRegisterPage (){
                                 imageMessage.textContent = "Success!";
                 
                                 const img = document.createElement("img");
-                                img.src = data.image;
-                                console.log(data.image);
+                                img.src = data.source;
                                 userImage.appendChild(img);
-
-                                userData.image = data.image;
                             }
                         });
                     })
@@ -110,7 +107,6 @@ function renderRegisterPage (){
 
                 mainDom.querySelector("#QuestionPage").addEventListener( "click", e => { 
 
-                    console.log(userData.image);
                     QuestionPage(userData);
 
 

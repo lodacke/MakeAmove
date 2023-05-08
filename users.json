@@ -350,5 +350,29 @@
             "ageOfMax": "55",
             "ageOfMin": "18"
         }
+    },
+    {
+        "name": "huoihoi",
+        "email": "ihoihno\u00e4",
+        "password": "ihnoihno\u00e4",
+        "age": "24",
+        "gender": "female",
+        "0": {
+            "source": "..\/uploads\/dog06.jpg"
+        },
+        "interests": {
+            "interestsOne": "traveling",
+            "interestsTwo": "beer",
+            "interestsThree": null,
+            "interestsFour": "art",
+            "interestsFive": "standUpComedy",
+            "userInfo": "jag \u00e4lskar sommar",
+            "contact": "2345678"
+        },
+        "preference": {
+            "genderOf": "Girls",
+            "ageOfMax": "25",
+            "ageOfMin": "20"
+        }
     }
 ]

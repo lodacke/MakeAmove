@@ -18,15 +18,11 @@ async function submitLogin(event) {
     });
 
     let data = await response.json();
-    console.log(data)
     if (!response.ok) {
       message.innerHTML = `Oops! Something went wrong, it looks like <span>${data.message}</span>.`;
       erroMessage();
     } else {
-      delete data.password;
-
       window.localStorage.setItem("user", JSON.stringify(data));
-      console.log(data);
       renderDatingPage();
     }
   } catch (err) {

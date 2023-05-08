@@ -43,6 +43,7 @@ if(
       $user["email"] === $email &&
       $user["password"] === $password
     ) {
+      unset($user["password"]);
       $userIsFound = true;
       $userToSend = $user;
       break;

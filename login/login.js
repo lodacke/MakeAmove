@@ -1,6 +1,7 @@
 "use strict";
 
 import { renderDatingPage } from "../date/date.js";
+import { renderRegisterPage } from "../Register/register.js";
 
 async function submitLogin(event) {
   event.preventDefault();

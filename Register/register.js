@@ -4,7 +4,7 @@ import { errorMessage } from "../helper.js";
 
 
  let mainDom = document.querySelector("main");
- 
+
 function renderFooter(previousFunction){
     let footerDom = document.querySelector("footer");
 
@@ -17,26 +17,26 @@ function renderFooter(previousFunction){
      })
 }
 
-export function renderRegisterPage (){ 
+export function renderRegisterPage (){
 
     mainDom.innerHTML = `
     <h1> Basic Info </h1>
     <label for "name"> First name: </label>
-    <input type="username" name="name" class="required"> 
+    <input type="username" name="name" class="required">
 
     <label for "email"> Email-adress: </label>
-    <input type="email" name="email" class="required"> 
+    <input type="email" name="email" class="required">
 
     <label for "password"> Password: </label>
-    <input type="password" name="password" minlength="10" class="required"> 
+    <input type="password" name="password" minlength="10" class="required">
 
     <label for "age"> Age: </label>
     <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
 
     <label for "gender"> Gender: </label>
-    <select name="gender" class="required"> 
+    <select name="gender" class="required">
         <option value="none">Choose an option </option>
-        <option value="female"> Woman </option>  
+        <option value="female"> Woman </option>
         <option value="male"> Man </option>
         <option value="neither">Neither</option>
     </select>
@@ -50,11 +50,11 @@ export function renderRegisterPage (){
     let emailDom = mainDom.querySelector("input[name='email']");
 
 
-    mainDom.querySelector("#nextPage").addEventListener("click", e => { 
+    mainDom.querySelector("#nextPage").addEventListener("click", e => {
 
         if(nameDom.value != "" && emailDom.value != "" && passwordDom.value != "" && ageDom.value != null && genderDom.value != "none"){
 
-            let userData = { 
+            let userData = {
                 image: {},
                 name: nameDom.value,
                 email: emailDom.value,
@@ -67,13 +67,13 @@ export function renderRegisterPage (){
 
         imagePage(userData);
 
-        } else {            
+        } else {
         } errorMessage();
-    }) 
+    })
 }
 
 
-function imagePage(userData){     
+function imagePage(userData){
     mainDom.innerHTML = `
     <form id="upload" action="register.php" method="POST" enctype="multipart/form-data">
         <input type="file" name="profilePicture">
@@ -97,9 +97,9 @@ function imagePage(userData){
         const request = new Request("Register/register.php", {
             method: "POST",
             body: formData,
+        });
 
-
-    fetch(request)
+        fetch(request)
         .then(response => response.json())
         .then(data => {
             //form.reset();
@@ -110,20 +110,19 @@ function imagePage(userData){
                 const img = document.createElement("img");
                 img.src = data.source;
                 userImage.appendChild(img);
-                }
-            }) 
-        }) 
+            }
+        })
     });
 
     mainDom.querySelector("#nextPage").addEventListener( "click", e => {
 
         QuestionPage(userData);
 
-        });
-    };
+    });
+}
 
 function QuestionPage(userData){
-                    
+
     const interests = [
       "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing",
       "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night",
@@ -139,11 +138,11 @@ function QuestionPage(userData){
     <label for "userInfo"> Bio:</label>
     <textarea name="userInfo" rows="7" id="userInfo" placeholder="Add more info about yourself..."></textarea>
     <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile </p>
-    <label for "contact">How do you want people to contact you?</label> 
+    <label for "contact">How do you want people to contact you?</label>
     <input name="contact" type="tel" placeholder="phonenumber" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required>
      <div>${renderFooter()} </div>
     `;
-    
+
     const interestsList = document.getElementById("interestsList");
 
     interests.forEach(interest => {
@@ -158,12 +157,12 @@ function QuestionPage(userData){
       div.appendChild(label);
       interestsList.appendChild(div);
     });
-    
+
     let userInfo = mainDom.querySelector("textarea[name='userInfo']");
     let contact = mainDom.querySelector("input[name='contact']");
 
     let interestsBoxes = document.querySelectorAll("input[type='checkbox']");
-     
+
     mainDom.querySelector("#nextPage").addEventListener("click", e => {
         console.log(contact.value.length); //Funkar för att mäta längden, ska användas i en kontroll senare för det är ett telefo
         let checkedIntrests = [];
@@ -175,9 +174,9 @@ function QuestionPage(userData){
             }
         })
 
-    
+
         if(contact.value != "" && !checkedIntrests.length < 5){
-            
+
             let interests = {
                  interestsOne: checkedIntrests[0],
                  interestsTwo: checkedIntrests[1],
@@ -187,7 +186,7 @@ function QuestionPage(userData){
                  userInfo: userInfo.value,
                  contact: contact.value
             }
-            
+
             userData.interests.push(interests);
 
             preferencePage(userData);
@@ -211,15 +210,15 @@ function preferencePage(userData){
     <p> What age </p>
     <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Min-age">
     <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Max-age">
-    <button type=submit id="submitUser">Start dating!</button> 
-    <button id="pageThreeBack"> Previous page </button> 
-     <div>${renderFooter()} </div>`;  
-      
+    <button type=submit id="submitUser">Start dating!</button>
+    <button id="pageThreeBack"> Previous page </button>
+     <div>${renderFooter()} </div>`;
+
     let genderOf = mainDom.querySelector("select[name='genderOf']");
     let ageOfMin = mainDom.querySelector("input[name='ageOfMin']");
     let ageOfMax = mainDom.querySelector("input[name='ageOfMax']");
 
-    mainDom.querySelector("#nextPage").addEventListener("click", e => { 
+    mainDom.querySelector("#nextPage").addEventListener("click", e => {
 
        if(genderOf.value != "none" && ageOfMin.value != null && ageOfMax.value != null){
             let preference = {
@@ -237,7 +236,7 @@ function preferencePage(userData){
     })
 };
 
-   
+
 
 async function addUser(userData){
 
@@ -245,7 +244,7 @@ async function addUser(userData){
     method: "POST",
     headers: {"Content-type":"application/json; charset=UTF-8"},
     body: JSON.stringify(userData)
-    }));  
+    }));
 
     let JSONresponse = await requestPOST.json();
     console.log(JSONresponse);

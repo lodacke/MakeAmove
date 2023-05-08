@@ -2,6 +2,7 @@
 
 import { renderDatingPage } from "../date/date.js";
 import { renderLoginPage } from "../login/login.js";
+import { renderRegisterPage } from "../Register/register.js";
 
 function checkIfUserLoggedIn() {
   if(window.localStorage.getItem("user")) {

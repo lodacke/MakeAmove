@@ -278,5 +278,48 @@
             "genderOf": "Girls",
             "ageOf": "42"
         }
+    },
+    {
+        "name": "jwneifjd",
+        "email": "wejnilecd",
+        "password": "dhsbdjawed",
+        "age": "23",
+        "gender": "female",
+        "image": {
+            "source": "..\/uploads\/dog07.jpg"
+        },
+        "interests": {
+            "userQuestionOne": "iwuhednil",
+            "userQuestionTwo": "wehudbj",
+            "userQuestionThree": "WQIUHD",
+            "userInfo": "uygwbed",
+            "contact": "2345678"
+        },
+        "preference": {
+            "genderOf": "Girls",
+            "ageOf": "24"
+        }
+    },
+    {
+        "name": "ygyub",
+        "email": "uibgi",
+        "password": "buybiu",
+        "age": "23",
+        "gender": "female",
+        "0": {
+            "source": "..\/uploads\/dog04.jpg"
+        },
+        "interests": {
+            "userQuestionOne": "gvuyou",
+            "userQuestionTwo": "yvbuv",
+            "userQuestionThree": "yubui",
+            "userInfo": "bub",
+            "contact": "12345678"
+        },
+        "preference": {
+            "genderOf": "Girls",
+            "ageOfMax": "20",
+            "ageOfMin": "19"
+        }
     }
 ]

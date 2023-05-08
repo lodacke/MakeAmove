@@ -59,44 +59,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $users = json_decode($JSONusers, true);   
     } else { 
         file_put_contents($fileName, $users);
-    }
+    }                         
 
-    $jsonREQUEST = file_get_contents("php://input");
-    $dataREQUEST = json_decode($jsonREQUEST, true);
-
-    $name = $dataREQUEST["name"];
-    $email = $dataREQUEST["email"];
-    $password = $dataREQUEST["password"];
-    $age = $dataREQUEST["age"];
-    $gender = $dataREQUEST["gender"];  
-    $userQuestionOne = $dataREQUEST["interests"][0]["userQuestionOne"];
-    $userQuestionTwo = $dataREQUEST["interests"][0]["userQuestionTwo"];
-    $userQuestionThree = $dataREQUEST["interests"][0]["userQuestionThree"];
-    $userInfo = $dataREQUEST["interests"][0]["userInfo"];
-    $contact = $dataREQUEST["interests"][0]["contact"];
-    $genderOf = $dataREQUEST["preference"][0]["genderOf"];   
-    $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
-    $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
-                                 
-    for($i = 0; $i < count($users); $i++){
-       if($email == $users[$i]["email"]){        
-        header("Content-type: application/json");
-        http_response_code(409);
-        $message = "The email is already registered";
-        echo (json_encode($message));
-        exit();  
-     }  
-   }   
-
-   if($age < 18){
-        header("Content-type: application/json");
-        http_response_code(409);
-        $message = "You need to be over 18 to use this app";
-        echo (json_encode($message));
-        exit();
-   }
    $jsonREQUEST = file_get_contents("php://input");
    $dataREQUEST = json_decode($jsonREQUEST, true);
+
    $name = $dataREQUEST["name"];
    $email = $dataREQUEST["email"];
    $password = $dataREQUEST["password"];
@@ -113,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
    $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
     $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
                                 
-   /*for($i = 0; $i < count($users); $i++){
+   for($i = 0; $i < count($users); $i++){
       if($email == $users[$i]["email"]){        
        header("Content-type: application/json");
        http_response_code(409);
@@ -121,7 +88,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
        echo (json_encode($message));
        exit();  
     }  
-  }   */
+  }   
   if($age < 18){
        header("Content-type: application/json");
        http_response_code(409);

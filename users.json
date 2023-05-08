@@ -3,23 +3,16 @@
         "name": "wertrewert",
         "email": "email@sdf.com",
         "password": "sdfsdfwertrew",
-        "age": "24",
-        "gender": "male",
+        "age": "44",
+        "gender": "female",
         "interests": {
             "userInfo": "yes",
             "contact": "12345678900987"
         },
         "preference": {
-            "genderOf": "girls",
-            "ageOf": "30"
-        },
-        "bio": "hahahahha im not a weirdo",
-        "country": "AF",
-        "haveChildren": "yes",
-        "smoke": "no",
-        "drink": "yes",
-        "exercise": "yes",
-        "haveReligion": "yes"
+            "genderOf": "male",
+            "ageOf": "44"
+        }
     },
     {
         "name": "wewewe",
@@ -287,24 +280,25 @@
         }
     },
     {
-        "name": "jwneifjd",
-        "email": "wejnilecd",
-        "password": "dhsbdjawed",
+        "name": "a",
+        "email": "w",
+        "password": "23",
         "age": "23",
-        "gender": "female",
-        "image": {
-            "source": "..\/uploads\/dog07.jpg"
+        "gender": "male",
+        "0": {
+            "source": "..\/uploads\/dog03.jpg"
         },
         "interests": {
-            "userQuestionOne": "iwuhednil",
-            "userQuestionTwo": "wehudbj",
-            "userQuestionThree": "WQIUHD",
-            "userInfo": "uygwbed",
-            "contact": "2345678"
+            "userQuestionOne": "",
+            "userQuestionTwo": "",
+            "userQuestionThree": "",
+            "userInfo": "",
+            "contact": "23"
         },
         "preference": {
-            "genderOf": "Girls",
-            "ageOf": "24"
+            "genderOf": "Boys",
+            "ageOfMax": "55",
+            "ageOfMin": "23"
         }
     },
     {
@@ -312,7 +306,7 @@
         "email": "www",
         "password": "www",
         "age": "23",
-        "gender": "male",
+        "gender": "male",   
         "0": {
             "source": "..\/uploads\/dog03.jpg"
         },
@@ -327,52 +321,6 @@
             "genderOf": "Both",
             "ageOfMax": "33",
             "ageOfMin": "22"
-        }
-    },
-    {
-        "name": "wesrdtfghj\u00a7",
-        "email": "dfghj",
-        "password": "dfgchvj",
-        "age": "123",
-        "gender": "male",
-        "0": {
-            "source": "..\/uploads\/dog03.jpg"
-        },
-        "interests": {
-            "userQuestionOne": "",
-            "userQuestionTwo": "",
-            "userQuestionThree": "",
-            "userInfo": "",
-            "contact": "234567890"
-        },
-        "preference": {
-            "genderOf": "Boys",
-            "ageOfMax": "55",
-            "ageOfMin": "18"
-        }
-    },
-    {
-        "name": "huoihoi",
-        "email": "ihoihno\u00e4",
-        "password": "ihnoihno\u00e4",
-        "age": "24",
-        "gender": "female",
-        "0": {
-            "source": "..\/uploads\/dog06.jpg"
-        },
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "beer",
-            "interestsThree": null,
-            "interestsFour": "art",
-            "interestsFive": "standUpComedy",
-            "userInfo": "jag \u00e4lskar sommar",
-            "contact": "2345678"
-        },
-        "preference": {
-            "genderOf": "Girls",
-            "ageOfMax": "25",
-            "ageOfMin": "20"
         }
     }
 ]

@@ -18,9 +18,9 @@ export function renderCountryDropdownList() {
       ${options}
     </select>
   `;
-}
+} 
 
-function erroMessage(){
+export function errorMessage(){
 
     let RequiredInputs = document.querySelectorAll(".required");
     RequiredInputs.forEach(required => {

@@ -1,6 +1,8 @@
 import { stickyNav } from "../stickyNav/stickyNav.js";
 import { getUserData, renderCountryDropdownList } from "../helper.js";
 
+const genders = ["girls", "boys", "both"];
+
 export function renderProfilePage(event) {
   const userData = getUserData();
 
@@ -15,107 +17,75 @@ export function renderProfilePage(event) {
       </div>
 
       <div class="profile-main">
-        <div class="category basic-info">
-          <h3>Basic Info</h3>
-          <p class="title">Bio</p>
+        <div class="category about-me">
+          <h3>About me</h3>
+
+          <div class="title">Bio</div>
           <input type="text" name="bio" value="${userData.bio}">
-          <p class="title">Age</p>
-          <input type="text" name="age" value="${userData.age}">
-          <p class="title">Gender</p>
 
-          <div class="profile-button gender-button">
-            <input type="radio" value="female" id="female" name="gender" class="info-button">
-            <label for="female">female</label>
-
-            <input type="radio" value="male" id="male" name="gender" class="info-button">
-            <label for="male">male</label>
-
-            <input type="radio" value="other" id="other" name="gender" class="info-button">
-            <label for="other">other</label>
+          <div class="interest">
+            <div class="title">Interest</div>
+            <div class="five-options">list up to 5 options</div>
           </div>
 
-          <p class="title">Location</p>
+          <div class="title">Location</div>
           ${renderCountryDropdownList()}
-          <p class="title">Email</p>
-          <p class="email">${userData.email}</p>
-          <p class="title">More About Me</p>
-          <div class="profile-button about-me-button">
-            <input type="checkbox" name="haveChildren" value="yes" id="children" class="info-button">
-            <label for="children">
-              have children
-            </label>
 
-            <input type="checkbox" name="smoke" value="yes" id="smoke" class="info-button">
-            <label for="smoke">
-              smoke
-            </label>
-
-            <input type="checkbox" name="drink" value="yes" id="drink" class="info-button">
-            <label for="drink">
-              drink
-            </label>
-
-            <input type="checkbox" name="exercise" value="yes" id="exercise" class="info-button">
-            <label for="exercise">
-              exercise
-            </label>
-
-            <input type="checkbox" name="haveReligion" value="yes" id="religion" class="info-button">
-            <label for="religion">
-              have religion
-            </label>
+          <div class="age">
+            <div class="title">Age</div>
+            <input type="text" name="age" value="${userData.age}">
           </div>
 
-          <p class="title">Profile Questions</p>
         </div>
 
         <div class="category preference">
           <h3>Preference</h3>
-          <p class="looking-for">I am looking for...</p>
-          <p class="title">Age</p>
-          <input type="text" name="ageOf" value="${userData.preference.ageOf}">
 
-          <p class="title">Gender</p>
-          <div class="profile-button prefer-gender-button">
-            <input type="checkbox" name="genderOf" value="girls" id="girls" class="info-button">
-            <label for="girls">
-              girls
-            </label>
-
-            <input type="checkbox" name="genderOf" value="boys" id="boys" class="info-button">
-            <label for="boys">
-              boys
-            </label>
-
-            <input type="checkbox" name="genderOf" value="neither" id="neither" class="info-button">
-            <label for="neither">
-              neither
-            </label>
+          <div class="prefer-age">
+            <div class="title">Age</div>
+            <input type="text" name="ageOf" value="${userData.preference.ageOfMin}">
+            <input type="text" name="ageOf" value="${userData.preference.ageOfMax}">
           </div>
 
           <div class="interest">
-            <p class="title">Interest</p>
-            <p class="five-options">list up to 5 options</p>
+            <div class="title">Interest</div>
+            <div class="five-options">list up to 5 options</div>
           </div>
+
+          <div class="title">I am looking for</div>
+
+          ${createPreferGenderButton(genders)}
+
+
         </div>
+
+        <div class="category user-setting">
+          <h3>User Setting</h3>
+          <div id="email">
+            <div class="title">Email:</div>
+            <div class="emailaddress">${userData.email}</div>
+          </div>
+
+          <div class="user-setting-button">
+            <button class="change-password">Change password</button>
+            <button class="delete-password">Delete account</button>
+          </div>
+
+        </div>
+
       </div>
 
       <div class="password-sumbit">
-        <button class="bottom-button change-password">Change password</button>
-        <button class="bottom-button save" type="submit">save</button>
+        <button class="save-button" type="submit">save</button>
       </div>
 
     </form>
     ${stickyNav()}
   `;
 
-  // Check the user's gender button
-  const genderOfUser = userData.gender;
-  document.getElementById(genderOfUser).checked = true;
-
   // Save the form
   const form = document.querySelector('.profile-page-container');
-  const submitButton = form.querySelector('.save');
+  const submitButton = form.querySelector('.save-button');
   submitButton.addEventListener('click', submitForm);
 
   function submitForm(event) {
@@ -150,4 +120,24 @@ export function renderProfilePage(event) {
     });
   }
 
+  const changePasswordButton = document.querySelector(".change-password");
+  changePasswordButton.addEventListener("click", renderChangePasswordBox)
+}
+
+function createPreferGenderButton(genders) {
+  let html = '<div class="profile-button prefer-gender-button">';
+
+  for (let gender of genders) {
+    html += `
+        <input type="checkbox" name="genderOf" value="${gender}" id="${gender}" class="info-button">
+      `;
+    html += `
+        <label for="${gender}">
+          ${gender}
+        </label>
+      `;
+  }
+
+  html += '</div>';
+  return html;
 }

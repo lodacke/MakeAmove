@@ -74,27 +74,19 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
    $interestsThree = $dataREQUEST["interests"][0]["interestsThree"];
    $interestsFour = $dataREQUEST["interests"][0]["interestsFour"];
    $interestsFive = $dataREQUEST["interests"][0]["interestsFive"];
-   $userInfo = $dataREQUEST["interests"][0]["userInfo"];
+   $bio = $dataREQUEST["interests"][0]["bio"];
    $contact = $dataREQUEST["interests"][0]["contact"];
    $genderOf = $dataREQUEST["preference"][0]["genderOf"];   
    $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
     $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
                                 
    for($i = 0; $i < count($users); $i++){
-      if($email == $users[$i]["email"]){        
-       header("Content-type: application/json");
-       http_response_code(409);
-       $message = "The email is already registered";
-       echo (json_encode($message));
-       exit();  
-    }  
-  }   
+      if($email == $users[$i]["email"]){    
+        send(409, [$data = "The email is already registered"]); 
+      }  
+    }   
   if($age < 18){
-       header("Content-type: application/json");
-       http_response_code(409);
-       $message = "You need to be over 18 to use this app";
-       echo (json_encode($message));
-       exit();
+    send(409, [$data = "You need to be over 18 to use this app"]);
   }
 
     if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $contact == "" && $age == null)){
@@ -118,7 +110,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             "interestsThree" => $interestsThree,
             "interestsFour" => $interestsFour,
             "interestsFive" => $interestsFive,
-            "userInfo" => $userInfo,
+            "bio" => $bio,
             "contact" => $contact,
           ],
           "preference" => [
@@ -132,25 +124,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $data = json_encode($users, JSON_PRETTY_PRINT);
         file_put_contents($fileName, $data);
                   
-         header("Content-type: application/json");
-         http_response_code(200);
-         $message = "A new user have been added!";
-         echo (json_encode($message));
-         exit();  
+         send(200, [$data = "A new user have been added!"]);
 
          } else {
-            header("Content-type: application/json");
-            http_response_code(401);
-            $message = "You need to fill in all the fields before you proceed";
-            echo (json_encode($message));
-            exit();  
+          send(401, [$data = "You need to fill in all the fields before you proceed."]);
          }          
 } else {
-  header("Content-type: application/json");
-  http_response_code(405);
-  $message = "Wrong HTTP-method";
-  echo (json_encode($message));
-  exit(); 
+  allowJSON();
 }
  
 ?>

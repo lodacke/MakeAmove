@@ -83,45 +83,14 @@ export function renderProfilePage(event) {
     ${stickyNav()}
   `;
 
-  // Save the form
-  const form = document.querySelector('.profile-page-container');
-  const submitButton = form.querySelector('.save-profile-button');
-  submitButton.addEventListener('click', submitForm);
-
-  function submitForm(event) {
-    event.preventDefault();
-
-    const formData = new FormData(form);
-
-    // formData.append("name", getUserData().name);
-    formData.append("email", getUserData().email);
-
-    for(const pair of formData.entries()) {
-      console.log(pair[0] + ': ' + pair[1]);
-    }
-
-    fetch("date/profile.php", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => {
-      console.log("response", response);
-
-      // if (!response.ok) {
-      //   console.log("Failed to update user data");
-      // }
-      return response.json();
-    })
-    .then(data => {
-      localStorage.setItem("user", JSON.stringify(data));
-    })
-    .catch(error => {
-      console.error(error);
-    });
-  }
-
+  // Change password
   const changePasswordButton = document.querySelector(".change-password");
-  changePasswordButton.addEventListener("click", renderChangePasswordBox)
+  changePasswordButton.addEventListener("click", renderChangePasswordBox);
+
+  // Save the form
+  const form = bodyDom.querySelector('.profile-page-container');
+  const submitButton = form.querySelector('.save-profile-button');
+  submitButton.addEventListener('click', () => submitForm(form));
 }
 
 function renderChangePasswordBox(event) {
@@ -175,7 +144,6 @@ function renderChangePasswordBox(event) {
 
   const allShowPasswordIcons = overlayContent.querySelectorAll("#show-password");
   const whiteCross = overlayContent.querySelector(".white-cross");
-  console.log(whiteCross);
 
   allShowPasswordIcons.forEach(icon => {
     icon.addEventListener("click", () => showPassword(icon));
@@ -215,4 +183,37 @@ function createPreferGenderButton(genders) {
 
   html += '</div>';
   return html;
+}
+
+
+function submitForm(form) {
+  event.preventDefault();
+  const formData = new FormData(form);
+  console.log(formData);
+
+  // formData.append("name", getUserData().name);
+  formData.append("email", getUserData().email);
+
+  for (const pair of formData.entries()) {
+    // console.log(pair[0] + ': ' + pair[1]);
+  }
+
+  fetch("date/profile.php", {
+    method: "POST",
+    body: formData
+  })
+    .then(response => {
+      console.log("response", response);
+
+      // if (!response.ok) {
+      //   console.log("Failed to update user data");
+      // }
+      return response.json();
+    })
+    .then(data => {
+      localStorage.setItem("user", JSON.stringify(data));
+    })
+    .catch(error => {
+      console.error(error);
+    });
 }

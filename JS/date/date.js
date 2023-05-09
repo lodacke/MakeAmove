@@ -1,5 +1,5 @@
-import { stickyNav } from "../stickyNav/stickyNav.js";
-import { renderProfilePage } from "../date/profile.js";
+import { stickyNav } from "./stickyNav.js";
+import { renderProfilePage } from "./profile.js";
 
 export function renderDatingPage() {
   let bodyDom = document.querySelector("body");

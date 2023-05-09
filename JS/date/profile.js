@@ -1,4 +1,4 @@
-import { stickyNav } from "../stickyNav/stickyNav.js";
+import { stickyNav } from "./stickyNav.js";
 import { getUserData, renderCountryDropdownList } from "../helper.js";
 
 export function renderProfilePage(event) {

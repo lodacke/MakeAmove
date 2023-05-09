@@ -51,7 +51,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
       }
     }
 
-    $fileName = "../users.json";
+    $fileName = "/PHP/DB/users.json";
     $users = [];
 
     if(file_exists($fileName)){

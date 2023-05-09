@@ -1,4 +1,4 @@
-import { errorMessage } from "../helper.js";
+import { errorMessage } from "./helper.js";
 
 "use strict"
 
@@ -197,7 +197,7 @@ function QuestionPage(userData){
         console.log(checkedIntrests);
         console.log(contact.value.length); //Funkar för att mäta längden, ska användas i en kontroll senare för det är ett telefo
 
-        if(contact.value != "" && count != 5){
+        if(contact.value != "" && count === 5){
 
             let interests = {
                  interestsOne: checkedIntrests[0],
@@ -261,7 +261,7 @@ function preferencePage(userData){
 
 async function addUser(userData){
 
-    let requestPOST = await fetch( new Request("Register/register.php", {
+    let requestPOST = await fetch( new Request("PHP/register/register.php", {
     method: "POST",
     headers: {"Content-type":"application/json; charset=UTF-8"},
     body: JSON.stringify(userData)

@@ -1,6 +1,6 @@
 "use strict";
 
-import { countries } from "./countries.js";
+import { countries } from "./date/countries.js";
 
 export function getUserData() {
   const userData = localStorage.getItem("user");

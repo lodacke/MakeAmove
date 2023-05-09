@@ -306,7 +306,7 @@
         "email": "www",
         "password": "www",
         "age": "23",
-        "gender": "male",   
+        "gender": null,
         "0": {
             "source": "..\/uploads\/dog03.jpg"
         },
@@ -318,9 +318,17 @@
             "contact": "1234677"
         },
         "preference": {
-            "genderOf": "Both",
+            "genderOf": null,
             "ageOfMax": "33",
-            "ageOfMin": "22"
-        }
+            "ageOfMin": "22",
+            "ageOf": "33"
+        },
+        "bio": "undefined",
+        "country": "select country",
+        "haveChildren": "no",
+        "smoke": "no",
+        "drink": "no",
+        "exercise": "no",
+        "haveReligion": "no"
     }
 ]

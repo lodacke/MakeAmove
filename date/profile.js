@@ -75,8 +75,8 @@ export function renderProfilePage(event) {
 
       </div>
 
-      <div class="password-sumbit">
-        <button class="save-button" type="submit">save</button>
+      <div class="profile-sumbit">
+        <button class="save-profile-button" type="submit">save</button>
       </div>
 
     </form>
@@ -85,7 +85,7 @@ export function renderProfilePage(event) {
 
   // Save the form
   const form = document.querySelector('.profile-page-container');
-  const submitButton = form.querySelector('.save-button');
+  const submitButton = form.querySelector('.save-profile-button');
   submitButton.addEventListener('click', submitForm);
 
   function submitForm(event) {
@@ -122,6 +122,71 @@ export function renderProfilePage(event) {
 
   const changePasswordButton = document.querySelector(".change-password");
   changePasswordButton.addEventListener("click", renderChangePasswordBox)
+}
+
+function renderChangePasswordBox(event) {
+  event.preventDefault();
+
+  let overlay = document.createElement("div");
+  let overlayContent = document.createElement("div");
+  let overlayBackground = document.createElement("div");
+  let profileMain = document.querySelector(".profile-main");
+  let profileContainer = document.querySelector(".profile-page-container");
+  profileContainer.appendChild(overlay);
+  overlay.classList.add("overlay");
+  profileMain.classList.add("makeContentLighter");
+
+  overlay.appendChild(overlayBackground);
+  overlayBackground.appendChild(overlayContent);
+
+  overlayContent.classList.add("overlay-content");
+
+  overlayContent.innerHTML = `
+    <img class="white-cross" src="image/white-cross.svg" alt="white-cross">
+
+    <div class="password-row">
+      <div>Old password:</div>
+      <div class="password-field">
+        <input type="password" class="password-input" autocomplete="off">
+        <img src="image/eye.png" alt="show-password" id="show-password">
+      </div>
+    </div>
+
+    <div class="password-row">
+      <div>New password:</div>
+      <div class="password-field">
+        <input type="password" class="password-input" autocomplete="off">
+        <img src="image/eye.png" alt="show-password" id="show-password">
+      </div>
+    </div>
+
+    <div class="password-row">
+      <div>Repeat new password:</div>
+      <div class="password-field">
+        <input type="password" class="password-input" autocomplete="off">
+        <img src="image/eye.png" alt="show-password" id="show-password">
+      </div>
+    </div>
+
+    <button class="save-password">Save</button>
+  `;
+
+  overlayBackground.classList.add("overlay-background");
+
+  const allShowPasswordIcons = overlayContent.querySelectorAll("#show-password");
+
+  allShowPasswordIcons.forEach(icon => {
+    icon.addEventListener("click", () => showPassword(icon));
+  });
+}
+
+function showPassword(checkbox) {
+  let passwordOutlook = checkbox.parentNode.querySelector(".password-input");
+  if (passwordOutlook.type === "password") {
+    passwordOutlook.type = "text";
+  } else {
+    passwordOutlook.type = "password";
+  }
 }
 
 function createPreferGenderButton(genders) {

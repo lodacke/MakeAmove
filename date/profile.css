@@ -1,4 +1,7 @@
 @media (min-width: 320px) and (max-width: 480px) {
+  body {
+    position: relative;
+  }
 
   .profile-page-container {
     height: 91vh;
@@ -113,12 +116,12 @@
     padding-right: 3vw;
   }
 
-  .password-sumbit {
+  .profile-sumbit {
     display: flex;
     gap: 3px;
   }
 
-  .save-button {
+  .save-profile-button {
     border: 1px solid gray;
     border-radius: 5px;
     height: 4vh;
@@ -146,6 +149,78 @@
     height: 4vh;
   }
 
+  /* Change password */
+  .makeContentLighter {
+    opacity: 0.2;
+  }
 
+  .overlay {
+    position: absolute;
+  }
+
+  .overlay-background {
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 13px;
+    height: 86vh;
+    width: 88vw;
+    border-radius: 32px;
+    position: relative;
+  }
+
+  .overlay-content {
+    background-color: rgb(213, 80, 140);
+    color: white;
+    height: 50%;
+    width: 77%;
+    position: absolute;
+    top: 140px;
+    left: 5%;
+    border-radius: 14px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vw;
+    gap: 1vh;
+  }
+
+  .white-cross {
+    position: absolute;
+    width: 1.5vh;
+    height: 2vh;
+    top: 2vh;
+    right: 5vw;
+    border: transparent;
+    border-radius: 1px;
+  }
+
+  .password-field {
+    display: flex;
+    position: relative;
+    padding-top: 1vh;
+  }
+
+  .password-input {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  #show-password {
+    height: 3vh;
+    width: 3vh;
+    position: absolute;
+    right: 2vw;
+    border: transparent;
+  }
+
+  .save-password {
+    position: absolute;
+    right: 6vw;
+    bottom: 8vh;
+    width: 29vw;
+    height: 3.5vh;
+    font-weight: bold;
+    border: transparent;
+    border-radius: 8px;
+}
 }
 

@@ -174,10 +174,20 @@ function renderChangePasswordBox(event) {
   overlayBackground.classList.add("overlay-background");
 
   const allShowPasswordIcons = overlayContent.querySelectorAll("#show-password");
+  const whiteCross = overlayContent.querySelector(".white-cross");
+  console.log(whiteCross);
 
   allShowPasswordIcons.forEach(icon => {
     icon.addEventListener("click", () => showPassword(icon));
   });
+  whiteCross.addEventListener("click", closeChangePasswordBox);
+}
+
+function closeChangePasswordBox() {
+  const overlay = document.querySelector(".overlay");
+  const profileMain = document.querySelector(".profile-main");
+  overlay.remove();
+  profileMain.classList.remove("makeContentLighter");
 }
 
 function showPassword(checkbox) {

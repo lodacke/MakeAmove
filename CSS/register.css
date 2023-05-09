@@ -38,19 +38,28 @@ img {
     font-size: 20px;
 }
 
+#bio{
+    width: 380px;
+}
+
 #interestsList{
-    gap: 10px;
-    width: 300px;
+    height: 200px;
+    overflow: scroll;
+    width: 380px;
     display: grid;
-    grid-template-columns: repeat(4, 60px);
+    grid-template-columns: repeat(4, 40px);
+    gap: 10px;
+    box-sizing: content-box;
+    border: 1px solid gray;
+    border-radius: 20px;
+
 }
 
-input[type="checkbox"]{
-    width: 100%;
-
-}
-
-input[type="checkbox"] + label{
+#interestsList > input[type="checkbox"] + label{
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+       vertical-align: middle;
     display: inline-block;
     width: auto;
     text-align: center;
@@ -58,5 +67,10 @@ input[type="checkbox"] + label{
     gap: 10px;
     height: 20px;
     background-color: #eee;
-    
+
+}
+
+#pageNavigation{
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,6 +1,6 @@
 "use strict";
 
-import { stickyNav } from "../stickyNav/stickyNav.js";
+import { stickyNav } from "./stickyNav.js";
 import { getUserData, renderCountryDropdownList } from "../helper.js";
 
 const genders = ["girls", "boys", "both"];

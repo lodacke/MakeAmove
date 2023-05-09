@@ -1,6 +1,6 @@
 "use strict";
 
-import { countries } from "./countries.js";
+import { countries } from "./date/countries.js";
 
 export function getUserData() {
   const userData = localStorage.getItem("user");
@@ -43,9 +43,11 @@ export function errorMessage(){
             case "contact":
                 required.placeholder = "This does not look like a phone number?";
                 break;
-            case "ageOf":
-                required.placeholder = "What age?";
+            case "ageOfMax":
+                required.placeholder = "Here you add the max age.";
                 break;
+            case "ageOfMin":
+                required.placeholder = "Here you add the min age."
             }
     }  else {
             required.classList.remove("notAnswered");

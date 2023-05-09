@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Lo",
+        "email": "lo.dacke@anemail.com",
+        "password": "4WdVWz4jD8ByrYu",
+        "age": "43",
+        "gender": "female",
+        "0": {
+            "source": "..\/uploads\/dog06.jpg"
+        },
+        "interests": {
+            "interestsOne": "beer",
+            "interestsTwo": "poetry",
+            "interestsThree": "nightout",
+            "interestsFour": "hiking",
+            "interestsFive": "cooking",
+            "userInfo": "",
+            "contact": "076044"
+        },
+        "preference": {
+            "genderOf": "Both",
+            "ageOfMax": "31",
+            "ageOfMin": "22"
+        }
+    },
+    {
+        "name": "Rosa",
+        "email": "Rosa@gmail.com",
+        "password": "rosaa",
+        "age": "29",
+        "gender": "female",
+        "0": {
+            "source": "..\/uploads\/dog06.jpg"
+        },
+        "interests": {
+            "interestsOne": "movienight",
+            "interestsTwo": "nightout",
+            "interestsThree": "singing",
+            "interestsFour": "playinginstruments",
+            "interestsFive": "boardgames",
+            "bio": "",
+            "contact": "0760555"
+        },
+        "preference": {
+            "genderOf": "Boys",
+            "ageOfMax": "33",
+            "ageOfMin": "24"
+        }
+    },
+    {
+        "name": "e",
+        "email": "e",
+        "password": "4WdVWz4jD8ByrYu",
+        "age": "32",
+        "gender": "male",
+        "0": {
+            "source": "..\/uploads\/dog06.jpg"
+        },
+        "interests": {
+            "interestsOne": "stand-upcomedy",
+            "interestsTwo": "poetry",
+            "interestsThree": "photographing",
+            "interestsFour": "hiking",
+            "interestsFive": "boardgames",
+            "bio": "",
+            "contact": "072325778"
+        },
+        "preference": {
+            "genderOf": "Girls",
+            "ageOfMax": "28",
+            "ageOfMin": "21"
+        }
+    },
+    {
+        "name": "Elin",
+        "email": "elin.and@gmail.com",
+        "password": "Password1",
+        "age": "19",
+        "gender": "male",
+        "0": {
+            "source": "..\/uploads\/dog06.jpg"
+        },
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "dancing",
+            "interestsThree": "fishing",
+            "interestsFour": "fishing",
+            "interestsFive": "cooking",
+            "bio": "",
+            "contact": "073216789"
+        },
+        "preference": {
+            "genderOf": "Girls",
+            "ageOfMax": "25",
+            "ageOfMin": "19"
+        }
+    },
+    {
+        "name": "a",
+        "email": "a",
+        "password": "4WdVWz4jD8ByrYu",
+        "age": "34",
+        "gender": "male",
+        "0": {
+            "source": "..\/uploads\/dog06.jpg"
+        },
+        "interests": {
+            "interestsOne": "beer",
+            "interestsTwo": "dancing",
+            "interestsThree": "reading",
+            "interestsFour": "traveling",
+            "interestsFive": "yoga",
+            "bio": "",
+            "contact": "1234567890"
+        },
+        "preference": {
+            "genderOf": "Girls",
+            "ageOfMax": "33",
+            "ageOfMin": "23"
+        }
+    }
+]

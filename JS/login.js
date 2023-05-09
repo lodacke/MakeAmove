@@ -1,7 +1,7 @@
 "use strict";
 
-import { renderDatingPage } from "../date/date.js";
-import { renderRegisterPage } from "../Register/register.js";
+import { renderDatingPage } from "./date/date.js";
+import { renderRegisterPage } from "./register.js";
 
 async function submitLogin(event) {
   event.preventDefault();
@@ -9,7 +9,7 @@ async function submitLogin(event) {
   let message = document.querySelector("main .message");
 
   try {
-    let response = await fetch("login/login.php", {
+    let response = await fetch("./PHP/login.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -36,12 +36,12 @@ export function renderLoginPage() {
 
   bodyDom.innerHTML = `
     <header>
-      <img class="logo" src="image/logo.png" alt="appLogo">
+      <img class="logo" src="PHP/DB/image/logo.png" alt="appLogo">
       <h1>Make A Move</h1>
     </header>
     <main>
       <h2>Login</h2>
-      <form class="login-form" action="login.php" method="POST">
+      <form class="login-form" action="PHP/login.php" method="POST">
         <input type="text" name="email" placeholder="Email" class="required">
         <input type="password" name="password" placeholder="Password" class="required">
         <button class="login-button" type="submit">Login</button>

@@ -1,3 +1,5 @@
+"use strict";
+
 import { stickyNav } from "../stickyNav/stickyNav.js";
 import { getUserData, renderCountryDropdownList } from "../helper.js";
 
@@ -43,8 +45,6 @@ export function renderProfilePage(event) {
 
           <div class="prefer-age">
             <div class="title">Age</div>
-            <input type="text" name="ageOf" value="${userData.preference.ageOfMin}">
-            <input type="text" name="ageOf" value="${userData.preference.ageOfMax}">
           </div>
 
           <div class="interest">
@@ -90,71 +90,113 @@ export function renderProfilePage(event) {
   // Save the form
   const form = bodyDom.querySelector('.profile-page-container');
   const submitButton = form.querySelector('.save-profile-button');
-  submitButton.addEventListener('click', () => submitForm(form));
+  submitButton.addEventListener('click', () => saveProfile(form));
 }
 
 function renderChangePasswordBox(event) {
   event.preventDefault();
 
-  let overlay = document.createElement("div");
-  let overlayContent = document.createElement("div");
-  let overlayBackground = document.createElement("div");
+  let popup = document.createElement("div");
+  let popupContent = document.createElement("form");
+  let popupBackground = document.createElement("div");
   let profileMain = document.querySelector(".profile-main");
-  let profileContainer = document.querySelector(".profile-page-container");
-  profileContainer.appendChild(overlay);
-  overlay.classList.add("overlay");
+  let bodyDom = document.querySelector("body");
+  bodyDom.appendChild(popup);
+  popup.classList.add("popup");
   profileMain.classList.add("makeContentLighter");
 
-  overlay.appendChild(overlayBackground);
-  overlayBackground.appendChild(overlayContent);
+  popup.appendChild(popupBackground);
+  popupBackground.appendChild(popupContent);
 
-  overlayContent.classList.add("overlay-content");
+  popupContent.classList.add("popup-content");
 
-  overlayContent.innerHTML = `
+  popupContent.innerHTML = `
     <img class="white-cross" src="image/white-cross.svg" alt="white-cross">
 
     <div class="password-row">
-      <div>Old password:</div>
+      <label>Old password:</label>
       <div class="password-field">
-        <input type="password" class="password-input" autocomplete="off">
+        <input type="password" class="password-input" name="passwordOld" autocomplete="off">
         <img src="image/eye.png" alt="show-password" id="show-password">
       </div>
     </div>
 
     <div class="password-row">
-      <div>New password:</div>
+      <label>New password:</label>
       <div class="password-field">
-        <input type="password" class="password-input" autocomplete="off">
+        <input type="password" class="password-input" name="passwordNew" autocomplete="off">
         <img src="image/eye.png" alt="show-password" id="show-password">
       </div>
     </div>
 
     <div class="password-row">
-      <div>Repeat new password:</div>
+      <label>Repeat new password:</label>
       <div class="password-field">
-        <input type="password" class="password-input" autocomplete="off">
+        <input type="password" class="password-input" name="passwordRepeat" autocomplete="off">
         <img src="image/eye.png" alt="show-password" id="show-password">
       </div>
     </div>
 
+    <p class="password-message"></p>
     <button class="save-password">Save</button>
+
   `;
 
-  overlayBackground.classList.add("overlay-background");
+  popupBackground.classList.add("popup-background");
 
-  const allShowPasswordIcons = overlayContent.querySelectorAll("#show-password");
-  const whiteCross = overlayContent.querySelector(".white-cross");
+  const allShowPasswordIcons = popupContent.querySelectorAll("#show-password");
+  const whiteCross = popupContent.querySelector(".white-cross");
 
   allShowPasswordIcons.forEach(icon => {
     icon.addEventListener("click", () => showPassword(icon));
   });
   whiteCross.addEventListener("click", closeChangePasswordBox);
+  popupContent.addEventListener("submit", saveNewPassword);
+}
+
+async function saveNewPassword(event) {
+  event.preventDefault();
+
+  let message = document.querySelector(".password-message");
+  console.log(getUserData().email);
+
+  try {
+    let response = await fetch("date/changePassword.php", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: getUserData().email,
+        passwordOld: this.elements.passwordOld.value,
+        passwordNew: this.elements.passwordNew.value,
+        passwordRepeat: this.elements.passwordRepeat.value,
+      }),
+    });
+    console.log(response);
+
+    let data = await response.json();
+
+    console.log(data.password);
+
+    if (!response.ok) {
+      message.innerHTML = `<span>${data.message}</span>.`;
+      // erroMessage();
+    } else {
+      // window.localStorage.setItem("user", JSON.stringify(data.password));
+
+      const userData = JSON.parse(localStorage.getItem("user"));
+      userData.password = data.password;
+      localStorage.setItem("user", JSON.stringify(userData));
+    }
+  } catch (err) {
+    message.textContent = `Error: ${err.message}`;
+  }
+
 }
 
 function closeChangePasswordBox() {
-  const overlay = document.querySelector(".overlay");
+  const popup = document.querySelector(".popup");
   const profileMain = document.querySelector(".profile-main");
-  overlay.remove();
+  popup.remove();
   profileMain.classList.remove("makeContentLighter");
 }
 
@@ -185,8 +227,7 @@ function createPreferGenderButton(genders) {
   return html;
 }
 
-
-function submitForm(form) {
+function saveProfile(form) {
   event.preventDefault();
   const formData = new FormData(form);
   console.log(formData);

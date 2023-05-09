@@ -154,20 +154,21 @@
     opacity: 0.2;
   }
 
-  .overlay {
+  .popup {
     position: absolute;
   }
 
-  .overlay-background {
+  .popup-background {
     background-color: rgba(0, 0, 0, 0.4);
-    top: 13px;
-    height: 85vh;
+    top: 3vh;
+    left: 6vw;
+    height: 86vh;
     width: 88vw;
     border-radius: 32px;
     position: relative;
   }
 
-  .overlay-content {
+  .popup-content {
     background-color: rgb(213, 80, 140);
     color: white;
     height: 50%;
@@ -194,6 +195,11 @@
     border-radius: 1px;
   }
 
+  .password-row {
+    text-align: left;
+    font-size: 2.5vh;
+  }
+
   .password-field {
     display: flex;
     position: relative;
@@ -201,26 +207,30 @@
   }
 
   .password-input {
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    height: 3vh;
+    border-radius: 5px;
+    border: 1px solid white;
   }
 
   #show-password {
     height: 3vh;
     width: 3vh;
     position: absolute;
+    top: 11px;
     right: 2vw;
     border: transparent;
   }
 
   .save-password {
     position: absolute;
-    right: 6vw;
-    bottom: 8vh;
+    right: 5vw;
+    bottom: 6vh;
     width: 29vw;
     height: 3.5vh;
     font-weight: bold;
     border: transparent;
     border-radius: 8px;
+    font-size: 2vh;
 }
 }
 

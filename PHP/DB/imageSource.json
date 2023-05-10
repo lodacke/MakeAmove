@@ -73,5 +73,11 @@
     },
     {
         "source": "..\/uploads\/dog06.jpg"
+    },
+    {
+        "source": "..\/DB\/uploads\/dog07.jpg"
+    },
+    {
+        "source": "PHP\/DB\/uploads\/dog05.jpg"
     }
 ]

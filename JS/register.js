@@ -93,7 +93,7 @@ function imagePage(userData){
         event.preventDefault();
         userImage.innerHTML = "";
         const formData = new FormData(form);
-        const request = new Request("Register/register.php", {
+        const request = new Request("PHP/register/register.php", {
             method: "POST",
             body: formData,
         });

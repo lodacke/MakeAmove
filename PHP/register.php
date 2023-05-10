@@ -52,7 +52,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
       }
     }
 
-    $fileName = "../DB/users.json";
+    $fileName = "DB/users.json";
     $users = [];
 
     if(file_exists($fileName)){
@@ -91,7 +91,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
   }
 
     if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $contact == "" && $age == null)){
-        $imagesJSON = "imageSource.json";
+        $imagesJSON = "DB/imageSource.json";
         if(file_exists($imagesJSON)) {
           $json = file_get_contents($imagesJSON);
           $AllImages = json_decode($json, true);

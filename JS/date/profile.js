@@ -3,10 +3,11 @@
 import { stickyNav } from "./stickyNav.js";
 import { getUserData, renderCountryDropdownList } from "../helper.js";
 
-const genders = ["girls", "boys", "both"];
+const genders = ["Girls", "Boys", "Both"];
 
 export function renderProfilePage(event) {
   const userData = getUserData();
+  const preferredGender = userData.preference.genderOf;
 
   let bodyDom = document.querySelector("body");
   // event.preventDefault();
@@ -56,7 +57,6 @@ export function renderProfilePage(event) {
 
           ${createPreferGenderButton(genders)}
 
-
         </div>
 
         <div class="category user-setting">
@@ -82,6 +82,8 @@ export function renderProfilePage(event) {
     </form>
     ${stickyNav()}
   `;
+
+  colorThePreferredGender(preferredGender);
 
   // Change password
   const changePasswordButton = document.querySelector(".change-password");
@@ -212,7 +214,7 @@ function createPreferGenderButton(genders) {
         <input type="checkbox" name="genderOf" value="${gender}" id="${gender}" class="info-button">
       `;
     html += `
-        <label for="${gender}">
+        <label class="${gender}" for="${gender}">
           ${gender}
         </label>
       `;
@@ -221,6 +223,16 @@ function createPreferGenderButton(genders) {
   html += '</div>';
   return html;
 }
+
+function colorThePreferredGender(preferredGender) {
+  genders.forEach(function (gender) {
+    if (gender === preferredGender) {
+      const preferredGenderButton = document.querySelector(`#${gender}`);
+      preferredGenderButton.checked = true;
+    }
+  });
+}
+
 
 function saveProfile(form) {
   event.preventDefault();

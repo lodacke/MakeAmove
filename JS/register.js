@@ -263,7 +263,7 @@ function preferencePage(userData){
 
 async function addUser(userData){
 
-    let requestPOST = await fetch( new Request("PHP/register/register.php", {
+    let requestPOST = await fetch( new Request("PHP/register.php", {
     method: "POST",
     headers: {"Content-type":"application/json; charset=UTF-8"},
     body: JSON.stringify(userData)

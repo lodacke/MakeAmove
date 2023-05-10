@@ -14,7 +14,7 @@ export function renderProfilePage(event) {
     <form class="profile-page-container">
 
       <div class="profile-top">
-        <img class="user-picture" src="image/profile.png" alt="user-picture">
+        <img class="user-picture" src="../PHP/DB/image/profile.png" alt="user-picture">
         <h2 class="user-name">[${userData.name}]</h2>
       </div>
 
@@ -111,13 +111,13 @@ function renderChangePasswordBox(event) {
   popupContent.classList.add("popup-content");
 
   popupContent.innerHTML = `
-    <img class="white-cross" src="image/white-cross.svg" alt="white-cross">
+    <img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross">
 
     <div class="password-row">
       <label>Old password:</label>
       <div class="password-field">
         <input type="password" class="password-input" name="passwordOld" autocomplete="off">
-        <img src="image/eye.png" alt="show-password" id="show-password">
+        <img src="../PHP/DB/image/eye.png" alt="show-password" id="show-password">
       </div>
     </div>
 
@@ -125,7 +125,7 @@ function renderChangePasswordBox(event) {
       <label>New password:</label>
       <div class="password-field">
         <input type="password" class="password-input" name="passwordNew" autocomplete="off">
-        <img src="image/eye.png" alt="show-password" id="show-password">
+        <img src="../PHP/DB/image/eye.png" alt="show-password" id="show-password">
       </div>
     </div>
 
@@ -133,7 +133,7 @@ function renderChangePasswordBox(event) {
       <label>Repeat new password:</label>
       <div class="password-field">
         <input type="password" class="password-input" name="passwordRepeat" autocomplete="off">
-        <img src="image/eye.png" alt="show-password" id="show-password">
+        <img src="../PHP/DB/image/eye.png" alt="show-password" id="show-password">
       </div>
     </div>
 
@@ -161,7 +161,7 @@ async function saveNewPassword(event) {
   console.log(getUserData().email);
 
   try {
-    let response = await fetch("date/changePassword.php", {
+    let response = await fetch("../PHP/date/changePassword.php", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

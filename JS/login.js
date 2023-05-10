@@ -9,7 +9,7 @@ async function submitLogin(event) {
   let message = document.querySelector("main .message");
 
   try {
-    let response = await fetch("./PHP/login.php", {
+    let response = await fetch("../PHP/login.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

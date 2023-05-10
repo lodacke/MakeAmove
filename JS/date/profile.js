@@ -130,7 +130,7 @@ function renderChangePasswordBox(event) {
     </div>
 
     <div class="password-row">
-      <label>Repeat new password:</label>
+      <label>Repeated new password:</label>
       <div class="password-field">
         <input type="password" class="password-input" name="passwordRepeat" autocomplete="off">
         <img src="../PHP/DB/image/eye.png" alt="show-password" id="show-password">
@@ -158,7 +158,6 @@ async function saveNewPassword(event) {
   event.preventDefault();
 
   let message = document.querySelector(".password-message");
-  console.log(getUserData().email);
 
   try {
     let response = await fetch("../PHP/date/changePassword.php", {
@@ -171,21 +170,17 @@ async function saveNewPassword(event) {
         passwordRepeat: this.elements.passwordRepeat.value,
       }),
     });
-    console.log(response);
 
     let data = await response.json();
 
-    console.log(data.password);
-
     if (!response.ok) {
-      message.innerHTML = `<span>${data.message}</span>.`;
-      // erroMessage();
+      message.innerHTML = `<span>${data.message}</span>`;
     } else {
-      // window.localStorage.setItem("user", JSON.stringify(data.password));
+      message.innerHTML = `<span>Password has been changed successfully! ≧◡≦</span>`;
 
-      const userData = JSON.parse(localStorage.getItem("user"));
-      userData.password = data.password;
-      localStorage.setItem("user", JSON.stringify(userData));
+      // const userData = JSON.parse(localStorage.getItem("user"));
+      // userData.password = data.password;
+      // localStorage.setItem("user", JSON.stringify(userData));
     }
   } catch (err) {
     message.textContent = `Error: ${err.message}`;

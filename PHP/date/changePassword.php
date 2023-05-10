@@ -7,14 +7,14 @@ allowCORS();
 allowMethod("PATCH");
 allowJSON();
 
-$filename = "../users.json";
+$filename = "../DB/users.json";
 
-if (!file_exists($filename)) {
-  $json = json_encode($users);
-  file_put_contents($filename, $json);
-} else {
+if (file_exists($filename)) {
   $json = file_get_contents($filename);
   $users = json_decode($json, true);
+} else {
+  $error = ["message" => "Something goes wrong..."];
+  abort(400, $error);
 }
 
 $requestJSON = file_get_contents("php://input");
@@ -33,7 +33,7 @@ if(
     $requestData["passwordRepeat"] === ""
   )
 ) {
-  $error = ["message" => "Password inputs can not be empty"];
+  $error = ["message" => "Password inputs can not be empty!"];
   abort(400, $error);
 } else {
   $email = $requestData["email"];
@@ -50,26 +50,27 @@ if(
 
     if ($user["email"] === $email) {
       if ($user["password"] !== $oldPassword) {
-        $error = ["message" => "Wrong old password"];
+        $error = ["message" => "Wrong old password! >_<"];
         abort(400, $error);
       } else if ($newPassword !== $passwordRepeat) {
-        $error = ["message" => "New password and repeat new password do not match"];
+        $error = ["message" => "New password and repeated new password do not match! (☉̃o☉)"];
         abort(400, $error);
       } else {
         $user["password"] = $newPassword;
 
         $userIsFound = true;
         $userToSend = $user;
+
         break;
       }
     }
   }
 
   if ($userIsFound) {
-    $users[$index] = $user;
+    $users[$index] = $userToSend;
 
-    $jsonData = json_encode($user, JSON_PRETTY_PRINT);
-    file_put_contents("../users.json", $jsonData);
+    $jsonData = json_encode($users, JSON_PRETTY_PRINT);
+    file_put_contents("../DB/users.json", $jsonData);
 
     send(200, $userToSend);
   }

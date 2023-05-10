@@ -18,7 +18,7 @@
             "contact": "076044"
         },
         "preference": {
-            "genderOf": "Both",
+            "genderOf": "both",
             "ageOfMax": "31",
             "ageOfMin": "22"
         }
@@ -42,13 +42,13 @@
             "contact": "0760555"
         },
         "preference": {
-            "genderOf": "Boys",
-            "ageOfMax": "33",
+            "genderOf": "male",
+            "ageOfMax": "38",
             "ageOfMin": "24"
         }
     },
     {
-        "name": "e",
+        "name": "Emil",
         "email": "e",
         "password": "4WdVWz4jD8ByrYu",
         "age": "32",
@@ -66,9 +66,9 @@
             "contact": "072325778"
         },
         "preference": {
-            "genderOf": "Girls",
-            "ageOfMax": "28",
-            "ageOfMin": "21"
+            "genderOf": "female",
+            "ageOfMax": "99",
+            "ageOfMin": "18"
         }
     },
     {
@@ -90,7 +90,7 @@
             "contact": "073216789"
         },
         "preference": {
-            "genderOf": "Girls",
+            "genderOf": "male",
             "ageOfMax": "25",
             "ageOfMin": "19"
         }
@@ -114,7 +114,7 @@
             "contact": "1234567890"
         },
         "preference": {
-            "genderOf": "Girls",
+            "genderOf": "man",
             "ageOfMax": "33",
             "ageOfMin": "23"
         }
@@ -138,7 +138,7 @@
             "contact": "234567"
         },
         "preference": {
-            "genderOf": "Girls",
+            "genderOf": "female",
             "ageOfMax": "25",
             "ageOfMin": "23"
         }

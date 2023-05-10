@@ -58,14 +58,18 @@
   } */
 
   /* About me */
-  .age {
+  .age, .age-min, .age-max {
     display: flex;
     align-items: center;
   }
 
-  .age input {
-    width: 10%;
+  .age input, .preferred-age input{
+    width: 8%;
     margin-left: 1vw;
+  }
+
+  .preferred-age {
+    display: flex;
   }
 
   /* Gender buttons of user*/

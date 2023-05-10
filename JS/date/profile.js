@@ -44,8 +44,16 @@ export function renderProfilePage(event) {
         <div class="category preference">
           <h3>Preference</h3>
 
-          <div class="prefer-age">
-            <div class="title">Age</div>
+          <div class="preferred-age">
+            <div class="age-min">
+              <div class="title">Minimum age</div>
+              <input type="text" name="age" value="${userData.preference.ageOfMin}">
+            </div>
+            <div class="age-max">
+              <div class="title">Maximum age</div>
+              <input type="text" name="age" value="${userData.preference.ageOfMax}">
+            </div>
+
           </div>
 
           <div class="interest">

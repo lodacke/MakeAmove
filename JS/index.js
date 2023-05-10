@@ -21,7 +21,7 @@ function renderFrontPage() {
   bodyDom.insertBefore(headerDom, frontMainDom);
 
   headerDom.innerHTML = `
-    <img class=logo src="image/logo.png" alt="appLogo">
+    <img class=logo src="/PHP/DB/image/logo.png" alt="appLogo">
     <h1>Make A Move</h1>
   `;
 

@@ -36,7 +36,7 @@ export function renderLoginPage() {
 
   bodyDom.innerHTML = `
     <header>
-      <img class="logo" src="PHP/DB/image/logo.png" alt="appLogo">
+      <img class="logo" src="/PHP/DB/image/logo.png" alt="appLogo">
       <h1>Make A Move</h1>
     </header>
     <main>

@@ -24,7 +24,7 @@ export function errorMessage(){
 
     let RequiredInputs = document.querySelectorAll(".required");
     RequiredInputs.forEach(required => {
-        if (required.value == "" || required.value == "none"){
+        if (required.value == "" || required.value == "none" || required.checked === false){
             required.classList.add("notAnswered");
 
          switch(required.attributes.name.value){

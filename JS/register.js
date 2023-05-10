@@ -130,11 +130,12 @@ function QuestionPage(userData){
     <div id="interestsList" class="required">
     </div>
 
-    <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile </p>
-
-    <label for "contact">How do you want people to contact you?</label>
+    <p>How do you want people to contact you?</p>
 
     <input name="contact" type="tel" placeholder="phonenumber" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+
+    <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile </p>
+
      ${renderPageNavigation()} 
      `;
 
@@ -148,9 +149,10 @@ function QuestionPage(userData){
     const interestsList = document.getElementById("interestsList");
 
     interests.forEach(interest => {
-      const div = document.createElement("div"); //maybe add mainDom here instead
+      const div = document.createElement("div"); 
       const input = document.createElement("input");
       input.type = "checkbox";
+      input.classList.add("required");
       input.name = interest.toLowerCase().replace(" ", "");
       const label = document.createElement("label");
       label.htmlFor = input.name;

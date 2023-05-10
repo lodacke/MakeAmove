@@ -1,7 +1,7 @@
 <?php
 ini_set("display_errors", 1);
 
-require_once "../helper.php";
+require_once "../PHP/helper.php";
 
 allowCORS();
 allowMethod("POST");

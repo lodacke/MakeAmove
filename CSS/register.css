@@ -5,22 +5,29 @@ body{
 }
 
 header{
-    height: 30vh;
+    height: 20vh;
 }
 
 main{
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+#pageNavigation{
+    margin: 10px;
+     display: flex;
+    justify-content: space-around;
+}
+
 button {
-    width: 400px;
+    width: 380px;
 }
 
 input{
-    width: 400px;
+    width: 380px;
 }
 
 #profilePicture {
@@ -42,35 +49,38 @@ img {
     width: 380px;
 }
 
-#interestsList{
-    height: 200px;
-    overflow: scroll;
-    width: 380px;
-    display: grid;
-    grid-template-columns: repeat(4, 40px);
-    gap: 10px;
-    box-sizing: content-box;
-    border: 1px solid gray;
-    border-radius: 20px;
+#interestsList {
+  height: 150px;
+  width: 380px;
+  box-sizing: content-box;
+  border: 1px solid gray;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+   overflow: scroll;
+}
+
+#interestsList > div {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
 
 }
 
-#interestsList > input[type="checkbox"] + label{
-    width: auto;
-    display: inline-block;
-    vertical-align: middle;
-       vertical-align: middle;
-    display: inline-block;
-    width: auto;
-    text-align: center;
-    padding:10px;
-    gap: 10px;
-    height: 20px;
-    background-color: #eee;
-
+#interestsList input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
 }
 
-#pageNavigation{
-    display: flex;
-    justify-content: space-between;
+
+#interestsList label {
+  font-size: 16px;
+  max-width: 100%;
 }
+
+

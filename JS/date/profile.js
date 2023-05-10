@@ -4,6 +4,12 @@ import { stickyNav } from "./stickyNav.js";
 import { getUserData, renderCountryDropdownList } from "../helper.js";
 
 const genders = ["Girls", "Boys", "Both"];
+const interests = [
+  "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing",
+  "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night",
+  "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing",
+  "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking",
+  "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"];
 
 export function renderProfilePage(event) {
   const userData = getUserData();
@@ -27,8 +33,11 @@ export function renderProfilePage(event) {
           <textarea class="bio" name="bio" >${userData.bio}</textarea>
 
           <div class="interest">
-            <div class="title">Interest</div>
-            <div class="five-options">list up to 5 options</div>
+            <div class="interest-title-limit">
+              <div class="title">Interest</div>
+              <div class="five-options">list up to 5 options</div>
+            </div>
+            <div class="interest-list-my required"></div>
           </div>
 
           <div class="title">Location</div>
@@ -57,8 +66,11 @@ export function renderProfilePage(event) {
           </div>
 
           <div class="interest">
-            <div class="title">Interest</div>
-            <div class="five-options">list up to 5 options</div>
+            <div class="interest-title-limit">
+              <div class="title">Interest</div>
+              <div class="five-options">list up to 5 options</div>
+            </div>
+            <div class="interest-list-prefer required"></div>
           </div>
 
           <div class="title">I am looking for</div>
@@ -92,6 +104,7 @@ export function renderProfilePage(event) {
   `;
 
   colorThePreferredGender(preferredGender);
+  renderInterestOptions();
 
   // Change password
   const changePasswordButton = document.querySelector(".change-password");
@@ -101,6 +114,36 @@ export function renderProfilePage(event) {
   const form = bodyDom.querySelector('.profile-page-container');
   const submitButton = form.querySelector('.save-profile-button');
   submitButton.addEventListener('click', () => saveProfile(form));
+}
+
+function renderInterestOptions() {
+  const interestListMy = document.querySelector(".interest-list-my");
+  const interestListPrefer = document.querySelector(".interest-list-prefer");
+
+  interests.forEach(interest => {
+    const div = document.createElement("div");
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.classList.add("required");
+    const label = document.createElement("label");
+    label.htmlFor = input.name;
+    label.textContent = interest;
+    div.append(input);
+    div.append(label);
+
+    const divDuplicate = div.cloneNode(true);
+
+    div
+    .querySelector('input')
+    .name = 'my-' + interest.toLowerCase().replace(" ", "");
+
+    divDuplicate
+    .querySelector('input')
+    .name = 'prefer-' + interest.toLowerCase().replace(" ", "");
+
+    interestListMy.append(div);
+    interestListPrefer.append(divDuplicate);
+  });
 }
 
 function renderChangePasswordBox(event) {

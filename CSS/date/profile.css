@@ -113,10 +113,32 @@
     height: 3.5vh;
   }
 
+  /* Interest */
   .interest {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .interest-title-limit {
     display: flex;
     align-items: center;
     gap: 2vw;
+    margin-bottom: 1vh;
+  }
+
+  .interest-list-my,
+  .interest-list-prefer {
+    height: 150px;
+    width: 380px;
+    box-sizing: content-box;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    overflow: scroll;
   }
 
   .profile-sumbit {
@@ -234,6 +256,6 @@
     border: transparent;
     border-radius: 8px;
     font-size: 2vh;
-}
+  }
 }
 

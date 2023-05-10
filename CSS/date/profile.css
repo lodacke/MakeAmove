@@ -14,12 +14,13 @@
   }
 
   .profile-page-container input,
-  .form-select {
+  .bio {
     height: 2.5vh;
     border: 2px solid darkgray;
     width: 97%;
   }
 
+  /* Profile top */
   .profile-top {
     display: flex;
     align-items: center;
@@ -36,6 +37,7 @@
     padding-top: 1vh;
   }
 
+  /* Profile main */
   .profile-main {
     /* overflow-y: auto; */
     text-align: left;
@@ -48,14 +50,10 @@
     padding: 0 10px;
     margin: 2vh 0;
     gap: 1vh;
-        display: flex;
-          flex-direction: column;
-          padding-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3vh;
   }
-
-  /* .title {
-    margin-bottom: 1vh;
-  } */
 
   /* About me */
   .age, .age-min, .age-max {
@@ -72,6 +70,9 @@
     display: flex;
   }
 
+  .bio {
+    height: 5vh;
+  }
   /* Gender buttons of user*/
   .profile-button label {
     display: inline-block;

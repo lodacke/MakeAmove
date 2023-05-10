@@ -24,7 +24,7 @@ export function renderProfilePage(event) {
           <h3>About me</h3>
 
           <div class="title">Bio</div>
-          <input type="text" name="bio" value="${userData.bio}">
+          <textarea class="bio" name="bio" >${userData.bio}</textarea>
 
           <div class="interest">
             <div class="title">Interest</div>

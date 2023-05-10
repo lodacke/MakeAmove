@@ -142,5 +142,221 @@
             "ageOfMax": "25",
             "ageOfMin": "23"
         }
+    },
+    {
+        "name": "Anna",
+        "email": "anna@gmail.com",
+        "password": "anna123",
+        "age": "23",
+        "gender": "female",
+        "0": {
+            "source": "PHP\/DB\/uploads\/dog03.jpg"
+        },
+        "interests": {
+            "interestsOne": "traveling",
+            "interestsTwo": "astrology",
+            "interestsThree": "wine",
+            "interestsFour": "beer",
+            "interestsFive": "reading",
+            "bio": "\u00e4lskar hundar",
+            "contact": "123456789"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "30",
+            "ageOfMin": "20"
+        }
+    },
+    {
+        "name": "Johan",
+        "email": "johan@gmail.com",
+        "password": "johan123",
+        "age": "25",
+        "gender": "male",
+        "0": {
+            "source": "PHP\/DB\/uploads\/dog02.jpg"
+        },
+        "interests": {
+            "interestsOne": "traveling",
+            "interestsTwo": "stand-upcomedy",
+            "interestsThree": "dancing",
+            "interestsFour": "fishing",
+            "interestsFive": "movies",
+            "bio": "",
+            "contact": "123456789"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "35",
+            "ageOfMin": "24"
+        }
+    },
+    {
+        "name": "Sam",
+        "email": "sam@gmail.com",
+        "password": "sam123",
+        "age": "30",
+        "gender": "male",
+        "0": {
+            "source": "PHP\/DB\/uploads\/dog06.jpg"
+        },
+        "interests": {
+            "interestsOne": "nightout",
+            "interestsTwo": "poetry",
+            "interestsThree": "singing",
+            "interestsFour": "snus",
+            "interestsFive": "sport",
+            "bio": "S\u00f6ker mamman till mina barn",
+            "contact": "23456789"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "35",
+            "ageOfMin": "20"
+        }
+    },
+    {
+        "name": "Sandra",
+        "email": "sandra@gmail.com",
+        "password": "sandra123",
+        "age": "28",
+        "gender": "female",
+        "0": {
+            "source": "PHP\/DB\/uploads\/dog07.jpg"
+        },
+        "interests": {
+            "interestsOne": "singing",
+            "interestsTwo": "fishing",
+            "interestsThree": "nightout",
+            "interestsFour": "poetry",
+            "interestsFive": "sport",
+            "bio": "\u00c4lskar Malm\u00f6",
+            "contact": "12345678"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "40",
+            "ageOfMin": "25"
+        }
+    },
+    {
+        "name": "Hanna",
+        "email": "hanna@gmail.com",
+        "password": "hanna123",
+        "age": "32",
+        "gender": "female",
+        "0": {
+            "source": "PHP\/DB\/uploads\/dog04.jpg"
+        },
+        "interests": {
+            "interestsOne": "beer",
+            "interestsTwo": "dancing",
+            "interestsThree": "movies",
+            "interestsFour": "yoga",
+            "interestsFive": "reading",
+            "bio": "Ta en \u00f6l?",
+            "contact": "12345678"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "40",
+            "ageOfMin": "23"
+        }
+    },
+    {
+        "name": "Tomas",
+        "email": "tomas@gmail.com",
+        "password": "tomas123",
+        "age": "26",
+        "gender": "male",
+        "0": {
+            "source": "PHP\/DB\/uploads\/dog06.jpg"
+        },
+        "interests": {
+            "interestsOne": "poetry",
+            "interestsTwo": "nightout",
+            "interestsThree": "fishing",
+            "interestsFour": "singing",
+            "interestsFive": "sport",
+            "bio": "tjena!",
+            "contact": "23456789"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "40",
+            "ageOfMin": "20"
+        }
+    },
+    {
+        "name": "klara",
+        "email": "klara@gmail.com",
+        "password": "klara123",
+        "age": "29",
+        "gender": "female",
+        "0": {
+            "source": "PHP\/DB\/uploads\/dog05.jpg"
+        },
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "dancing",
+            "interestsThree": "wine",
+            "interestsFour": "art",
+            "interestsFive": "stand-upcomedy",
+            "bio": "Vin dejt?",
+            "contact": "3456789"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "40",
+            "ageOfMin": "25"
+        }
+    },
+    {
+        "name": "Linus",
+        "email": "linus@gmail.com",
+        "password": "linus123",
+        "age": "27",
+        "gender": "male",
+        "0": {
+            "source": "PHP\/DB\/uploads\/dog04.jpg"
+        },
+        "interests": {
+            "interestsOne": "traveling",
+            "interestsTwo": "beer",
+            "interestsThree": "dancing",
+            "interestsFour": "nightout",
+            "interestsFive": "poetry",
+            "bio": "linus123 p\u00e5 instagram",
+            "contact": "3456789"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "40",
+            "ageOfMin": "20"
+        }
+    },
+    {
+        "name": "Lina",
+        "email": "lina@gmail.com",
+        "password": "lina123",
+        "age": "32",
+        "gender": "female",
+        "0": {
+            "source": "PHP\/DB\/uploads\/dog05.jpg"
+        },
+        "interests": {
+            "interestsOne": "art",
+            "interestsTwo": "stand-upcomedy",
+            "interestsThree": "movienight",
+            "interestsFour": "running",
+            "interestsFive": "wine",
+            "bio": "Ta en promenad i skogen?",
+            "contact": "23456789"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "40",
+            "ageOfMin": "30"
+        }
     }
 ]

@@ -118,5 +118,29 @@
             "ageOfMax": "33",
             "ageOfMin": "23"
         }
+    },
+    {
+        "name": "niuniu",
+        "email": "unujniun",
+        "password": "unbuib",
+        "age": "34",
+        "gender": "female",
+        "0": {
+            "source": "PHP\/DB\/uploads\/dog07.jpg"
+        },
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "beer",
+            "interestsThree": "art",
+            "interestsFour": "astrology",
+            "interestsFive": "wine",
+            "bio": "",
+            "contact": "234567"
+        },
+        "preference": {
+            "genderOf": "Girls",
+            "ageOfMax": "25",
+            "ageOfMin": "23"
+        }
     }
 ]

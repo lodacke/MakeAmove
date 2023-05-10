@@ -1,10 +1,11 @@
 "use strict";
 
-import { renderDatingPage } from "./date/date.js";
+import { renderDatingPage } from "./date/explore.js";
 import { renderRegisterPage } from "./register.js";
 
 async function submitLogin(event) {
   event.preventDefault();
+  renderDatingPage();
 
   let message = document.querySelector("main .message");
 

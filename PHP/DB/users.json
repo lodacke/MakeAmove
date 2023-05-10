@@ -142,5 +142,29 @@
             "ageOfMax": "25",
             "ageOfMin": "23"
         }
+    },
+    {
+        "name": "b",
+        "email": "email@fgh",
+        "password": "4WdVWz4jD8ByrYu",
+        "age": "23",
+        "gender": "male",
+        "0": {
+            "source": "PHP\/DB\/uploads\/dog07.jpg"
+        },
+        "interests": {
+            "interestsOne": "traveling",
+            "interestsTwo": "astrology",
+            "interestsThree": "wine",
+            "interestsFour": "art",
+            "interestsFive": "beer",
+            "bio": "",
+            "contact": "23"
+        },
+        "preference": {
+            "genderOf": "Both",
+            "ageOfMax": "33",
+            "ageOfMin": "23"
+        }
     }
 ]

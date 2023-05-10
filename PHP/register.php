@@ -2,14 +2,14 @@
 
 ini_set("display_errors", 1);
 
-require_once("../helper.php");
+require_once("helper.php");
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
 
   $newUser = [];
 
     if(isset($_FILES["profilePicture"])) {
-      $imagesJSON = "imageSource.json";
+      $imagesJSON = "DB/imageSource.json";
       $AllImages = [];
 
       if(!file_exists($imagesJSON)) {
@@ -32,9 +32,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
   
       if(in_array($fileExtension, $allowed)) {
           if($fileError == 0) {
-              $destination = "../uploads/".$fileName;
+              $destination = "DB/uploads/".$fileName;
               $source = $fileTmpName;
               if(move_uploaded_file($source, $destination)) {
+                  $destination = "PHP/DB/uploads/".$fileName;
                   $imageSource = ["source" => $destination];
                   $AllImages[] = $imageSource;
                   $json = json_encode($AllImages, JSON_PRETTY_PRINT);

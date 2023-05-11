@@ -89,7 +89,7 @@ export function renderProfilePage(event) {
 
           <div class="user-setting-button">
             <button class="change-password">Change password</button>
-            <button class="delete-password">Delete account</button>
+            <button class="delete-account">Delete account</button>
           </div>
 
         </div>
@@ -112,6 +112,10 @@ export function renderProfilePage(event) {
   // Change password
   const changePasswordButton = document.querySelector(".change-password");
   changePasswordButton.addEventListener("click", renderChangePasswordBox);
+
+  // Delete account
+  const deleteAccountButton = document.querySelector(".delete-account");
+  deleteAccountButton.addEventListener("click", renderConfirmDeleteAccountBox);
 
   // Save the form
   const form = bodyDom.querySelector('.profile-page-container');
@@ -216,19 +220,9 @@ function limitInterestBoxOptions(boxes) {
 function renderChangePasswordBox(event) {
   event.preventDefault();
 
-  let popup = document.createElement("div");
-  let popupContent = document.createElement("form");
-  let popupBackground = document.createElement("div");
-  let profileMain = document.querySelector(".profile-main");
-  let bodyDom = document.querySelector("body");
-  bodyDom.appendChild(popup);
-  popup.classList.add("popup");
-  profileMain.classList.add("makeContentLighter");
+  renderPopUpBox();
 
-  popup.appendChild(popupBackground);
-  popupBackground.appendChild(popupContent);
-
-  popupContent.classList.add("popup-content");
+  const popupContent = document.querySelector(".popup-content");
 
   popupContent.innerHTML = `
     <img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross">
@@ -261,8 +255,6 @@ function renderChangePasswordBox(event) {
     <button class="save-password">Save</button>
 
   `;
-
-  popupBackground.classList.add("popup-background");
 
   const allShowPasswordIcons = popupContent.querySelectorAll("#show-password");
   const whiteCross = popupContent.querySelector(".white-cross");
@@ -322,6 +314,30 @@ function showPassword(checkbox) {
   } else {
     passwordOutlook.type = "password";
   }
+}
+
+function renderPopUpBox() {
+  let popup = document.createElement("div");
+  let popupContent = document.createElement("form");
+  let popupBackground = document.createElement("div");
+  let profileMain = document.querySelector(".profile-main");
+  let bodyDom = document.querySelector("body");
+  bodyDom.appendChild(popup);
+  popup.classList.add("popup");
+  profileMain.classList.add("makeContentLighter");
+  popup.appendChild(popupBackground);
+  popupBackground.appendChild(popupContent);
+  popupContent.classList.add("popup-content");
+  popupBackground.classList.add("popup-background");
+}
+
+function renderConfirmDeleteAccountBox(event) {
+  event.preventDefault();
+
+  renderPopUpBox();
+
+
+
 }
 
 function createPreferGenderButton(genders) {

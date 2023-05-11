@@ -14,6 +14,7 @@ const interests = [
 export function renderProfilePage(event) {
   const userData = getUserData();
   const preferredGender = userData.preference.genderOf;
+  const myChosenInterestAtRegister = userData.interests;
 
   let bodyDom = document.querySelector("body");
   // event.preventDefault();
@@ -106,6 +107,7 @@ export function renderProfilePage(event) {
 
   colorThePreferredGender(preferredGender);
   renderInterestBoxes();
+  checkMyChosenInterestAtRegister(myChosenInterestAtRegister);
 
   // Change password
   const changePasswordButton = document.querySelector(".change-password");
@@ -120,6 +122,23 @@ export function renderProfilePage(event) {
   //   event.preventDefault();
   //   saveProfile(event, form);
   // });
+}
+
+function checkMyChosenInterestAtRegister(myChosenInterestAtRegister) {
+  const interestsArray = Object.values(myChosenInterestAtRegister);
+  interestsArray.splice(-2);
+
+  const myInterestLabels = document.querySelectorAll(".my-interest");
+
+  myInterestLabels.forEach(function (label) {
+    const myInterestValues = label.textContent.trim();
+    const interestsWithLowercaseNoSpace = myInterestValues.toLowerCase().replace(/\s/g, '');
+
+    if (interestsArray.includes(interestsWithLowercaseNoSpace)) {
+      const checkbox = label.previousElementSibling;
+      checkbox.checked = true;
+    }
+  });
 }
 
 function renderInterestBoxes() {
@@ -143,13 +162,17 @@ function renderInterestBoxes() {
     .querySelector('input')
     .name = 'my-' + interest.toLowerCase().replace(" ", "");
 
+    div.querySelector('label').classList.add("my-interest");
+
     divDuplicate
     .querySelector('input')
     .name = 'prefer-' + interest.toLowerCase().replace(" ", "");
 
     interestListMy.append(div);
     interestListPrefer.append(divDuplicate);
+
   });
+
 
   // Limit 5 options for each interest list
   let myInterestBoxes = document.querySelectorAll(".interest-list-my input[type='checkbox']");

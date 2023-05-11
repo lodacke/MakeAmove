@@ -143,7 +143,12 @@
 
   .profile-sumbit {
     display: flex;
+    flex-direction: column;
     gap: 3px;
+  }
+
+  .profile-message {
+    margin: 0 0 1vh 0;
   }
 
   .save-profile-button {

@@ -96,6 +96,7 @@ export function renderProfilePage(event) {
       </div>
 
       <div class="profile-sumbit">
+        <p class="profile-message"></p>
         <button class="save-profile-button" type="submit">save</button>
       </div>
 
@@ -113,7 +114,12 @@ export function renderProfilePage(event) {
   // Save the form
   const form = bodyDom.querySelector('.profile-page-container');
   const submitButton = form.querySelector('.save-profile-button');
-  submitButton.addEventListener('click', () => saveProfile(form));
+  submitButton.addEventListener("click", () => saveProfile(form));
+
+  // submitButton.addEventListener("submit", (event) => {
+  //   event.preventDefault();
+  //   saveProfile(event, form);
+  // });
 }
 
 function renderInterestOptions() {
@@ -284,35 +290,46 @@ function colorThePreferredGender(preferredGender) {
   });
 }
 
-
-function saveProfile(form) {
+async function saveProfile(form) {
   event.preventDefault();
+  let message = document.querySelector(".profile-message");
   const formData = new FormData(form);
   console.log(formData);
 
-  // formData.append("name", getUserData().name);
   formData.append("email", getUserData().email);
 
-  for (const pair of formData.entries()) {
-    // console.log(pair[0] + ': ' + pair[1]);
+  // for (const pair of formData.entries()) {
+  //   // console.log(pair[0] + ': ' + pair[1]);
+  // }
+
+  try {
+    let response = await fetch("../PHP/date/profile.php", {
+      method: "PATCH",
+      body: formData
+    });
+    console.log(response);
+
+    let result = await response.json();
+    console.log(result);
+
+  } catch (err) {
+    message.textContent = `Error: ${err.message}`;
   }
 
-  fetch("date/profile.php", {
-    method: "POST",
-    body: formData
-  })
-    .then(response => {
-      console.log("response", response);
+  // let result = await response.json();
+  // console.log(result);
+    // .then(response => {
+    //   console.log("response", response);
 
-      // if (!response.ok) {
-      //   console.log("Failed to update user data");
-      // }
-      return response.json();
-    })
-    .then(data => {
-      localStorage.setItem("user", JSON.stringify(data));
-    })
-    .catch(error => {
-      console.error(error);
-    });
+    //   if (!response.ok) {
+    //     console.log("Failed to update user data");
+    //   }
+    //   return response.json();
+    // })
+    // .then(data => {
+    //   localStorage.setItem("user", JSON.stringify(data));
+    // })
+    // .catch(error => {
+    //   console.error(error);
+    // });
 }

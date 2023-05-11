@@ -105,7 +105,7 @@ export function renderProfilePage(event) {
   `;
 
   colorThePreferredGender(preferredGender);
-  renderInterestOptions();
+  renderInterestBoxes();
 
   // Change password
   const changePasswordButton = document.querySelector(".change-password");
@@ -122,7 +122,7 @@ export function renderProfilePage(event) {
   // });
 }
 
-function renderInterestOptions() {
+function renderInterestBoxes() {
   const interestListMy = document.querySelector(".interest-list-my");
   const interestListPrefer = document.querySelector(".interest-list-prefer");
 
@@ -150,6 +150,44 @@ function renderInterestOptions() {
     interestListMy.append(div);
     interestListPrefer.append(divDuplicate);
   });
+
+  // Limit 5 options for each interest list
+  let myInterestBoxes = document.querySelectorAll(".interest-list-my input[type='checkbox']");
+  let myPreferredBoxes = document.querySelectorAll(".interest-list-prefer input[type='checkbox']");
+
+  limitInterestBoxOptions(myInterestBoxes);
+  limitInterestBoxOptions(myPreferredBoxes);
+}
+
+function limitInterestBoxOptions(boxes) {
+  let count = 0;
+  let checkedInterests = [];
+
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener("change", e => {
+      if (boxes[i].checked === true) {
+        count++;
+        checkedInterests.push(boxes[i].name);
+        console.log(checkedInterests);
+      } else {
+        count--;
+        let index = checkedInterests.indexOf(boxes[i].name);
+        checkedInterests.splice(index, 1);
+        console.log(checkedInterests);
+      }
+      if (count === 5) {
+        boxes.forEach(box => {
+          if (!box.checked) {
+            box.disabled = true;
+          }
+        })
+      } else {
+        boxes.forEach(box => {
+          box.disabled = false;
+        })
+      }
+    })
+  }
 }
 
 function renderChangePasswordBox(event) {

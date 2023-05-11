@@ -262,7 +262,7 @@ function renderChangePasswordBox(event) {
   allShowPasswordIcons.forEach(icon => {
     icon.addEventListener("click", () => showPassword(icon));
   });
-  whiteCross.addEventListener("click", closeChangePasswordBox);
+  whiteCross.addEventListener("click", closePopUpdBox);
   popupContent.addEventListener("submit", saveNewPassword);
 }
 
@@ -300,7 +300,7 @@ async function saveNewPassword(event) {
 
 }
 
-function closeChangePasswordBox() {
+function closePopUpdBox() {
   const popup = document.querySelector(".popup");
   const profileMain = document.querySelector(".profile-main");
   popup.remove();
@@ -336,7 +336,23 @@ function renderConfirmDeleteAccountBox(event) {
 
   renderPopUpBox();
 
+  const popupContent = document.querySelector(".popup-content");
 
+  popupContent.innerHTML = `
+    <img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross">
+    <p class="confirm-question">Are you sure that you want to delete your account?</p>
+    <button class="confirm-delete-yes">Yes</button>
+    <button class="confirm-delete-no">No</button>
+  `;
+
+  const whiteCross = popupContent.querySelector(".white-cross");
+  const confirmDeleteNo = popupContent.querySelector(".confirm-delete-no");
+  const confirmDeleteYes = popupContent.querySelector(".confirm-delete-yes");
+  whiteCross.addEventListener("click", closePopUpdBox);
+  confirmDeleteYes.addEventListener("click", deteleUserAccount);
+}
+
+function deteleUserAccount() {
 
 }
 

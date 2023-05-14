@@ -177,7 +177,6 @@ function renderInterestBoxes() {
 
   });
 
-
   // Limit 5 options for each interest list
   let myInterestBoxes = document.querySelectorAll(".interest-list-my input[type='checkbox']");
   let myPreferredBoxes = document.querySelectorAll(".interest-list-prefer input[type='checkbox']");
@@ -262,7 +261,7 @@ function renderChangePasswordBox(event) {
   allShowPasswordIcons.forEach(icon => {
     icon.addEventListener("click", () => showPassword(icon));
   });
-  whiteCross.addEventListener("click", closePopUpdBox);
+  whiteCross.addEventListener("click", closePopUpBox);
   popupContent.addEventListener("submit", saveNewPassword);
 }
 
@@ -297,10 +296,9 @@ async function saveNewPassword(event) {
   } catch (err) {
     message.textContent = `Error: ${err.message}`;
   }
-
 }
 
-function closePopUpdBox() {
+function closePopUpBox() {
   const popup = document.querySelector(".popup");
   const profileMain = document.querySelector(".profile-main");
   popup.remove();
@@ -340,20 +338,47 @@ function renderConfirmDeleteAccountBox(event) {
 
   popupContent.innerHTML = `
     <img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross">
-    <p class="confirm-question">Are you sure that you want to delete your account?</p>
-    <button class="confirm-delete-yes">Yes</button>
-    <button class="confirm-delete-no">No</button>
+    <div class="delete-content">
+      <p class="confirm-question">Are you sure that you want to delete your account?</p>
+      <button class="confirm-delete-yes">Yes</button>
+      <button class="confirm-delete-no">No</button>
+    </div>
   `;
 
   const whiteCross = popupContent.querySelector(".white-cross");
   const confirmDeleteNo = popupContent.querySelector(".confirm-delete-no");
-  const confirmDeleteYes = popupContent.querySelector(".confirm-delete-yes");
-  whiteCross.addEventListener("click", closePopUpdBox);
-  confirmDeleteYes.addEventListener("click", deteleUserAccount);
+  whiteCross.addEventListener("click", closePopUpBox);
+  confirmDeleteNo.addEventListener("click", closePopUpBox);
+  popupContent.addEventListener("submit", deleteUserAccount);
+
 }
 
-function deteleUserAccount() {
+async function deleteUserAccount(event) {
+  event.preventDefault();
 
+  let message = document.querySelector(".delete-content");
+
+  try {
+    const response = await fetch("../PHP/date/deleteAccount.php", {
+      method: "DELETE",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: getUserData().email,
+      }),
+    });
+
+    let data = await response.json();
+
+    if (!response.ok) {
+      message.textContent = data.message;
+    } else {
+      message.textContent = "Your account is successfully deleted!";
+    }
+  } catch (err) {
+    message.textContent = `Error: ${err.message}`;
+  }
 }
 
 function createPreferGenderButton(genders) {

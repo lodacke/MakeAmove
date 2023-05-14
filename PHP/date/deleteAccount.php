@@ -26,7 +26,6 @@ if (!isset($requestData["email"])) {
 }
 
 $email = $requestData["email"];
-file_put_contents("dump.txt", json_encode($email));
 
 foreach ($users as $index => $user) {
   if ($user["email"] == $email) {

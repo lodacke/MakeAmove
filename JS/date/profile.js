@@ -5,24 +5,25 @@ import { getUserData, renderCityDropdownList } from "../helper.js";
 
 const genders = ["Girls", "Boys", "Both"];
 const interests = [
-  "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing",
-  "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night",
-  "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing",
-  "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking",
-  "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"];
+  "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing", "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night", "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing", "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking", "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"];
 
-export function renderProfilePage(event) {
-  const userData = getUserData();
-  const preferredGender = userData.preference.genderOf;
-  const myChosenInterestAtRegister = userData.interests;
+export async function renderProfilePage() {
+  let response = await fetch(`../PHP/date/getProfile.php?email=${getUserData().email}`);
+
+  const userData = await response.json();
+
+  if (!response.ok) {
+    // TODO: Show to user: "Network response was not ok"
+    return;
+  }
 
   let bodyDom = document.querySelector("body");
-  // event.preventDefault();
+
   bodyDom.innerHTML = `
     <form class="profile-page-container">
 
       <div class="profile-top">
-        <img class="user-picture" src="../PHP/DB/image/profile.png" alt="user-picture">
+        <img class="user-picture" src="${userData["0"].source}" alt="user-picture">
         <h2 class="user-name">[${userData.name}]</h2>
       </div>
 
@@ -96,8 +97,8 @@ export function renderProfilePage(event) {
     ${stickyNav()}
   `;
 
-  colorThePreferredGender(preferredGender);
-  renderInterestBoxes(myChosenInterestAtRegister);
+  colorThePreferredGender(userData.preference.genderOf);
+  renderInterestBoxes(userData.interests);
 
   // Change password
   const changePasswordButton = document.querySelector(".change-password");
@@ -148,10 +149,10 @@ function renderInterestBox(interest) {
   div.append(label);
 
   div
-    .querySelector('input')
-    .name = 'my-' + interest.toLowerCase().replace(" ", "");
+    .querySelector("input")
+    .name = "my-" + interest.toLowerCase().replace(" ", "");
 
-  div.querySelector('label').classList.add("my-interest");
+  div.querySelector("label").classList.add("my-interest");
 
   interestListMy.append(div);
 }
@@ -267,13 +268,9 @@ async function saveNewPassword(event) {
     let data = await response.json();
 
     if (!response.ok) {
-      message.innerHTML = `<span>${data.message}</span>`;
+      message.textContent = data.message;
     } else {
-      message.innerHTML = `<span>Password has been changed successfully! ≧◡≦</span>`;
-
-      // const userData = JSON.parse(localStorage.getItem("user"));
-      // userData.password = data.password;
-      // localStorage.setItem("user", JSON.stringify(userData));
+      message.textContent = "Password has been changed successfully! ≧◡≦";
     }
   } catch (err) {
     message.textContent = `Error: ${err.message}`;

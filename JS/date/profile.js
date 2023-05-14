@@ -135,28 +135,29 @@ function checkMyChosenInterestAtRegister(myChosenInterestAtRegister) {
   });
 }
 
-function renderInterestBoxes(myChosenInterestAtRegister) {
+function renderInterestBox(interest) {
   const interestListMy = document.querySelector(".interest-list-my");
+  const div = document.createElement("div");
+  const input = document.createElement("input");
+  input.type = "checkbox";
+  input.classList.add("required");
+  const label = document.createElement("label");
+  label.htmlFor = input.name;
+  label.textContent = interest;
+  div.append(input);
+  div.append(label);
 
-  interests.forEach(interest => {
-    const div = document.createElement("div");
-    const input = document.createElement("input");
-    input.type = "checkbox";
-    input.classList.add("required");
-    const label = document.createElement("label");
-    label.htmlFor = input.name;
-    label.textContent = interest;
-    div.append(input);
-    div.append(label);
-
-    div
+  div
     .querySelector('input')
     .name = 'my-' + interest.toLowerCase().replace(" ", "");
 
-    div.querySelector('label').classList.add("my-interest");
+  div.querySelector('label').classList.add("my-interest");
 
-    interestListMy.append(div);
-  });
+  interestListMy.append(div);
+}
+
+function renderInterestBoxes(myChosenInterestAtRegister) {
+  interests.forEach(interest => renderInterestBox(interest));
 
   checkMyChosenInterestAtRegister(myChosenInterestAtRegister);
 

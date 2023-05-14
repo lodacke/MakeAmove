@@ -97,8 +97,7 @@ export function renderProfilePage(event) {
   `;
 
   colorThePreferredGender(preferredGender);
-  renderInterestBoxes();
-  checkMyChosenInterestAtRegister(myChosenInterestAtRegister);
+  renderInterestBoxes(myChosenInterestAtRegister);
 
   // Change password
   const changePasswordButton = document.querySelector(".change-password");
@@ -136,7 +135,7 @@ function checkMyChosenInterestAtRegister(myChosenInterestAtRegister) {
   });
 }
 
-function renderInterestBoxes() {
+function renderInterestBoxes(myChosenInterestAtRegister) {
   const interestListMy = document.querySelector(".interest-list-my");
 
   interests.forEach(interest => {
@@ -157,42 +156,43 @@ function renderInterestBoxes() {
     div.querySelector('label').classList.add("my-interest");
 
     interestListMy.append(div);
-
   });
 
-  // Limit 5 options for the interest list
-  let myInterestBoxes = document.querySelectorAll(".interest-list-my input[type='checkbox']");
+  checkMyChosenInterestAtRegister(myChosenInterestAtRegister);
 
-  limitInterestBoxOptions(myInterestBoxes);
-}
-
-function limitInterestBoxOptions(boxes) {
-  let count = 0;
+  let boxes = document.querySelectorAll(".interest-list-my input[type='checkbox']");
   let checkedInterests = [];
+
+  disableInterestBoxes();
 
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener("change", e => {
       if (boxes[i].checked === true) {
-        count++;
         checkedInterests.push(boxes[i].name);
-        console.log(checkedInterests);
       } else {
-        count--;
         let index = checkedInterests.indexOf(boxes[i].name);
         checkedInterests.splice(index, 1);
-        console.log(checkedInterests);
       }
-      if (count === 5) {
-        boxes.forEach(box => {
-          if (!box.checked) {
-            box.disabled = true;
-          }
-        })
-      } else {
-        boxes.forEach(box => {
-          box.disabled = false;
-        })
+
+      disableInterestBoxes();
+    })
+  }
+}
+
+function disableInterestBoxes() {
+  let checkedBoxes = document.querySelectorAll(".interest-list-my input[type='checkbox']:checked");
+  let boxes = document.querySelectorAll(".interest-list-my input[type='checkbox']");
+  let count = checkedBoxes.length;
+
+  if (count === 5) {
+    boxes.forEach(box => {
+      if (!box.checked) {
+        box.disabled = true;
       }
+    })
+  } else {
+    boxes.forEach(box => {
+      box.disabled = false;
     })
   }
 }

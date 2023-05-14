@@ -1,7 +1,7 @@
 "use strict";
 
 import { stickyNav } from "./stickyNav.js";
-import { getUserData, renderCountryDropdownList } from "../helper.js";
+import { getUserData, renderCityDropdownList } from "../helper.js";
 
 const genders = ["Girls", "Boys", "Both"];
 const interests = [
@@ -42,7 +42,7 @@ export function renderProfilePage(event) {
           </div>
 
           <div class="title">Location</div>
-          ${renderCountryDropdownList()}
+          ${renderCityDropdownList()}
 
           <div class="age">
             <div class="title">Age</div>

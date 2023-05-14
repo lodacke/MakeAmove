@@ -27,7 +27,7 @@ if(isset($_PATCH["email"])) {
       $user["bio"] = $_PATCH["bio"];
       $user["age"] = $_PATCH["age"];
       $user["gender"] = $_PATCH["gender"];
-      $user["country"] = $_PATCH["country"];
+      $user["city"] = $_PATCH["city"];
       $user["haveChildren"] = isset($_PATCH["haveChildren"]) ? $_PATCH["haveChildren"] : "no";
       $user["smoke"] = isset($_PATCH["smoke"]) ? $_PATCH["smoke"] : "no";
       $user["drink"] = isset($_PATCH["drink"]) ? $_PATCH["drink"] : "no";

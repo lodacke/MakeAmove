@@ -63,15 +63,6 @@ export function renderProfilePage(event) {
               <div class="title">Maximum age</div>
               <input type="text" name="age" value="${userData.preference.ageOfMax}">
             </div>
-
-          </div>
-
-          <div class="interest">
-            <div class="interest-title-limit">
-              <div class="title">Interest</div>
-              <div class="five-options">list up to 5 options</div>
-            </div>
-            <div class="interest-list-prefer required"></div>
           </div>
 
           <div class="title">I am looking for</div>
@@ -147,7 +138,6 @@ function checkMyChosenInterestAtRegister(myChosenInterestAtRegister) {
 
 function renderInterestBoxes() {
   const interestListMy = document.querySelector(".interest-list-my");
-  const interestListPrefer = document.querySelector(".interest-list-prefer");
 
   interests.forEach(interest => {
     const div = document.createElement("div");
@@ -160,29 +150,20 @@ function renderInterestBoxes() {
     div.append(input);
     div.append(label);
 
-    const divDuplicate = div.cloneNode(true);
-
     div
     .querySelector('input')
     .name = 'my-' + interest.toLowerCase().replace(" ", "");
 
     div.querySelector('label').classList.add("my-interest");
 
-    divDuplicate
-    .querySelector('input')
-    .name = 'prefer-' + interest.toLowerCase().replace(" ", "");
-
     interestListMy.append(div);
-    interestListPrefer.append(divDuplicate);
 
   });
 
-  // Limit 5 options for each interest list
+  // Limit 5 options for the interest list
   let myInterestBoxes = document.querySelectorAll(".interest-list-my input[type='checkbox']");
-  let myPreferredBoxes = document.querySelectorAll(".interest-list-prefer input[type='checkbox']");
 
   limitInterestBoxOptions(myInterestBoxes);
-  limitInterestBoxOptions(myPreferredBoxes);
 }
 
 function limitInterestBoxOptions(boxes) {

@@ -32,7 +32,7 @@ export async function renderProfilePage() {
           <h3>About me</h3>
 
           <div class="title">Bio</div>
-          <textarea class="bio" name="bio" >${userData.bio}</textarea>
+          <textarea class="bio" name="bio" placeholder="Write something about yourself">${userData.bio || ""}</textarea>
 
           <div class="interest">
             <div class="interest-title-limit">

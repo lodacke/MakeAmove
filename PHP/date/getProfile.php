@@ -5,7 +5,6 @@ require_once "../helper.php";
 
 allowCORS();
 allowMethod("GET");
-// allowJSON();
 
 $filename = "../DB/users.json";
 $email = $_GET["email"];

@@ -134,23 +134,24 @@ function checkMyChosenInterestAtRegister(myChosenInterestAtRegister) {
 
 function renderInterestBox(interest) {
   const interestListMy = document.querySelector(".interest-list-my");
-  const div = document.createElement("div");
+  const anInterest = document.createElement("div");
   const input = document.createElement("input");
   input.type = "checkbox";
-  input.classList.add("required");
+  input.setAttribute('id', 'interestCheckbox');
   const label = document.createElement("label");
   label.htmlFor = input.name;
   label.textContent = interest;
-  div.append(input);
-  div.append(label);
+  label.setAttribute('for', 'myCheckbox');
+  anInterest.append(input);
+  anInterest.append(label);
 
-  div
+  anInterest
     .querySelector("input")
     .name = "my-" + interest.toLowerCase().replace(" ", "");
+  anInterest.classList.add("an-interest");
+  anInterest.querySelector("label").classList.add("my-interest");
 
-  div.querySelector("label").classList.add("my-interest");
-
-  interestListMy.append(div);
+  interestListMy.append(anInterest);
 }
 
 function renderInterestBoxes(myChosenInterestAtRegister) {

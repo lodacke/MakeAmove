@@ -15,7 +15,7 @@
 
   .profile-page-container input,
   .bio {
-    height: 2.5vh;
+    height: 2vh;
     border: 2px solid darkgray;
     width: 97%;
   }
@@ -92,7 +92,6 @@
   .info-button + label {
     display: inline-block;
     width: auto;
-    height: 20px;
     background-color: #eee;
   }
 
@@ -126,8 +125,7 @@
     margin-bottom: 1vh;
   }
 
-  .interest-list-my,
-  .interest-list-prefer {
+  .interest-list-my {
     height: 150px;
     width: 380px;
     box-sizing: content-box;
@@ -139,6 +137,33 @@
     align-items: center;
     padding: 5px;
     overflow: scroll;
+    gap: 5px;
+  }
+
+  .an-interest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Checkbox */
+  /* input[type="checkbox"] {
+    display: none;
+  } */
+
+  label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #e0e0e0;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  input[type="checkbox"]:checked+label {
+    background-color: rgb(213, 80, 140);
+    color: #fff;
   }
 
   .profile-sumbit {

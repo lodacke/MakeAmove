@@ -120,10 +120,10 @@
         }
     },
     {
-        "name": "niuniu",
-        "email": "unujniun",
-        "password": "unbuib",
-        "age": "34",
+        "name": "Jenny",
+        "email": "jenny@email.com",
+        "password": "jen",
+        "age": "20",
         "gender": "female",
         "0": {
             "source": "PHP\/DB\/uploads\/dog07.jpg"
@@ -134,13 +134,14 @@
             "interestsThree": "art",
             "interestsFour": "astrology",
             "interestsFive": "wine",
-            "bio": "",
+            "bio": "Hi there!",
             "contact": "234567"
         },
         "preference": {
-            "genderOf": "Girls",
-            "ageOfMax": "25",
-            "ageOfMin": "23"
-        }
+            "genderOf": "Boys",
+            "ageOfMax": "28",
+            "ageOfMin": "20"
+        },
+        "city": "Malm\u00f6"
     }
 ]

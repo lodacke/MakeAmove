@@ -12,6 +12,8 @@ export async function renderProfilePage() {
 
   const userData = await response.json();
 
+  console.log("userData", userData);
+
   if (!response.ok) {
     // TODO: Show to user: "Network response was not ok"
     return;
@@ -32,7 +34,7 @@ export async function renderProfilePage() {
           <h3>About me</h3>
 
           <div class="title">Bio</div>
-          <textarea class="bio" name="bio" placeholder="Write something about yourself">${userData.bio || ""}</textarea>
+          <textarea class="bio" name="bio" placeholder="Write something about yourself">${userData.interests.bio || ""}</textarea>
 
           <div class="interest">
             <div class="interest-title-limit">
@@ -43,11 +45,11 @@ export async function renderProfilePage() {
           </div>
 
           <div class="title">Location</div>
-          ${renderCityDropdownList()}
+          ${renderCityDropdownList(userData)}
 
           <div class="age">
             <div class="title">Age</div>
-            <input type="text" name="age" value="${userData.age}">
+            <input type="text" name="age-my" value="${userData.age}">
           </div>
 
         </div>
@@ -58,11 +60,11 @@ export async function renderProfilePage() {
           <div class="preferred-age">
             <div class="age-min">
               <div class="title">Minimum age</div>
-              <input type="text" name="age" value="${userData.preference.ageOfMin}">
+              <input type="text" name="age-min" value="${userData.preference.ageOfMin}">
             </div>
             <div class="age-max">
               <div class="title">Maximum age</div>
-              <input type="text" name="age" value="${userData.preference.ageOfMax}">
+              <input type="text" name="age-max" value="${userData.preference.ageOfMax}">
             </div>
           </div>
 
@@ -110,13 +112,7 @@ export async function renderProfilePage() {
 
   // Save the form
   const form = bodyDom.querySelector('.profile-page-container');
-  const submitButton = form.querySelector('.save-profile-button');
-  submitButton.addEventListener("click", () => saveProfile(form));
-
-  // submitButton.addEventListener("submit", (event) => {
-  //   event.preventDefault();
-  //   saveProfile(event, form);
-  // });
+  form.addEventListener("submit", saveProfile);
 }
 
 function checkMyChosenInterestAtRegister(myChosenInterestAtRegister) {
@@ -387,46 +383,39 @@ function colorThePreferredGender(preferredGender) {
   });
 }
 
-async function saveProfile(form) {
+async function saveProfile(event) {
   event.preventDefault();
+
   let message = document.querySelector(".profile-message");
-  const formData = new FormData(form);
-  console.log(formData);
+  const formData = new FormData(event.target);
 
   formData.append("email", getUserData().email);
 
-  // for (const pair of formData.entries()) {
-  //   // console.log(pair[0] + ': ' + pair[1]);
-  // }
+  for (const pair of formData.entries()) {
+    console.log(pair[0] + ': ' + pair[1]);
+  }
+
+  console.log('testing', JSON.stringify(formData));
 
   try {
-    let response = await fetch("../PHP/date/profile.php", {
+    let response = await fetch("../PHP/date/updateProfile.php", {
       method: "PATCH",
-      body: formData
+      // body: formData,
+      // body: JSON.stringify(formData),
+      body: JSON.stringify(Object.fromEntries(formData.entries())),
+      // body: JSON.stringify({
+      //   email: getUserData().email,
+      // }),
+      // body: "{email:\"hello\",name:\"Grace\"}",
+      headers: {
+        "Content-Type": "application/json"
+      }
     });
     console.log(response);
 
-    let result = await response.json();
-    console.log(result);
-
+    // let newProfileInfo = await response.json();
+    // document.querySelector(".bio").value = newProfileInfo.interests.bio;
   } catch (err) {
     message.textContent = `Error: ${err.message}`;
   }
-
-  // let result = await response.json();
-  // console.log(result);
-    // .then(response => {
-    //   console.log("response", response);
-
-    //   if (!response.ok) {
-    //     console.log("Failed to update user data");
-    //   }
-    //   return response.json();
-    // })
-    // .then(data => {
-    //   localStorage.setItem("user", JSON.stringify(data));
-    // })
-    // .catch(error => {
-    //   console.error(error);
-    // });
 }

@@ -391,30 +391,21 @@ async function saveProfile(event) {
 
   formData.append("email", getUserData().email);
 
-  for (const pair of formData.entries()) {
-    console.log(pair[0] + ': ' + pair[1]);
-  }
-
-  console.log('testing', JSON.stringify(formData));
-
   try {
     let response = await fetch("../PHP/date/updateProfile.php", {
       method: "PATCH",
-      // body: formData,
-      // body: JSON.stringify(formData),
       body: JSON.stringify(Object.fromEntries(formData.entries())),
-      // body: JSON.stringify({
-      //   email: getUserData().email,
-      // }),
-      // body: "{email:\"hello\",name:\"Grace\"}",
       headers: {
         "Content-Type": "application/json"
       }
     });
-    console.log(response);
 
-    // let newProfileInfo = await response.json();
-    // document.querySelector(".bio").value = newProfileInfo.interests.bio;
+    message.textContent = "The profile is updated successfully! ٩( ̆◡ ̆)۶";
+
+    setTimeout(() => {
+      message.textContent = "";
+    }, 1500);
+
   } catch (err) {
     message.textContent = `Error: ${err.message}`;
   }

@@ -120,6 +120,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             "ageOfMax" => $ageOfMax,
             "ageOfMin" => $ageOfMin,
           ],
+          "matches" => [
+            "yes" => [],
+            "no" => [],
+          ], 
           ];
           $users[] = $newUser;
 

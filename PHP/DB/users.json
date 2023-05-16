@@ -34,14 +34,15 @@
             "interestsThree": "singing",
             "interestsFour": "playinginstruments",
             "interestsFive": "boardgames",
-            "bio": "",
+            "bio": "here is a bio ",
             "contact": "0760555"
         },
         "preference": {
             "genderOf": "male",
             "ageOfMax": "38",
             "ageOfMin": "24"
-        }
+        },
+        "city": "select city"
     },
     {
         "name": "Emil",

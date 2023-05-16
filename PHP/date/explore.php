@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
      $sortedUsers = [];
 
     forEach($users as $user){
-        if($user["email"] ===  $_GET["email"]){
+        if($user["email"] === $_GET["email"]){
         $preferenceGender = $user["preference"]["genderOf"];
         $preferenceAgeMax = $user["preference"]["ageOfMax"];
         $preferenceAgeMin = $user["preference"]["ageOfMin"];
@@ -22,7 +22,6 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
         break;
         }
     }
-
 
     forEach($users as $user){
     if($user["email"] != $_GET["email"]){

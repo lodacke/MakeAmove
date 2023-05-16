@@ -10,20 +10,11 @@ export async function renderDatingPage() {
   let userGender = getUserData().gender;
   let userEmail = getUserData().email;
 
-  let requestPOST = await fetch( new Request("PHP/date/explore.php", {
-    method: "POST",
-    headers: {"Content-type":"application/json; charset=UTF-8"},
-    body: JSON.stringify( {
-      preference: userPreference, 
-      age: userAge,
-      gender: userGender,
-      email: userEmail,
-      })
-    }));
+  let request = await fetch(`/PHP/date/explore.php?email=${getUserData().email}`);
   
-    let user = await requestPOST.json();
+    let userDATA = await request.json();
 
-    console.log(user);
+    console.log(userDATA);
 
 
   let navDom = document.querySelector("#pageNavigation");
@@ -34,14 +25,14 @@ export async function renderDatingPage() {
   let mainDom = document.querySelector("main");
 
   mainDom.innerHTML = `
-    <h2>${user.name}</h2>
-    <img src="${user.source}"></img>
+    <h2>${userDATA.name}</h2>
+    <img src="${userDATA.source}"></img>
     <h3> bio: </h3>
-    <p id="bio"> ${user.interests.bio} </p>
+    <p id="bio"> ${userDATA.interests.bio} </p>
     <div id="interestsBox"></div>
     <button id="logout">Loutout</button>`;
 
-    let interests = [user.interests.interestsOne, user.interests.interestsTwo, user.interests.interestsThree, user.interests.interestsFour, user.interests.interestsFive];
+    let interests = [userDATA.interests.interestsOne, userDATA.interests.interestsTwo, userDATA.interests.interestsThree, userDATA.interests.interestsFour, userDATA.interests.interestsFive];
     let interestsBox = document.getElementById("interestsBox");
 
     interests.forEach(intrest => {

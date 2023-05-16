@@ -6,28 +6,27 @@ require_once("../helper.php");
 
 $filename = "../DB/users.json";
 
-if($_SERVER["REQUEST_METHOD"] === "POST"){
+if($_SERVER["REQUEST_METHOD"] === "GET"){
     $json = file_get_contents($filename);
     $users = json_decode($json, true);
-
-    $requestInput = file_get_contents("php://input");
-    $requestDATA = json_decode($requestInput, true);
-
-    $userEmail = $requestDATA["email"];
-    $preferenceGender = $requestDATA["preference"]["genderOf"];
-    $preferenceAgeMax = $requestDATA["preference"]["ageOfMax"];
-    $preferenceAgeMin = $requestDATA["preference"]["ageOfMin"];
-    $gender = $requestDATA["gender"];
-    $age = $requestDATA["age"];
-
-    $sortedUsers = [];
+     $sortedUsers = [];
 
     forEach($users as $user){
-        var_dump("inne");
-    if($user["email"] != $userEmail){
-         if($user["age"] >= $preferenceAgeMin && $user["age"] <= $preferenceAgeMax && $user["gender"] === $preferenceGender){
-            if($user["preference"]["ageOfMin"] <= $age && $user["preference"]["ageOfMax"] >= $age && $user["gender"] === $gender){
+        if($user["email"] ===  $_GET["email"]){
+        $preferenceGender = $user["preference"]["genderOf"];
+        $preferenceAgeMax = $user["preference"]["ageOfMax"];
+        $preferenceAgeMin = $user["preference"]["ageOfMin"];
+        $gender = $user["gender"];
+        $age = $user["age"];
+        break;
+        }
+    }
 
+
+    forEach($users as $user){
+    if($user["email"] != $_GET["email"]){
+         if($user["age"] >= $preferenceAgeMin && $user["age"] <= $preferenceAgeMax && $user["gender"] === $preferenceGender){
+            if($user["preference"]["ageOfMin"] <= $age && $user["preference"]["ageOfMax"] >= $age && $user["preference"]["genderOf"] === $gender){
             unset($user["interests"]["contact"]);
             unset($user["password"]);
             unset($user["preference"]);
@@ -35,11 +34,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 }       
             }
         }
+    };
+
     $randIndex = array_rand($sortedUsers, 1);
     $randUser = $sortedUsers[$randIndex];
 
     send(200, $randUser);
-    };
 
    
     

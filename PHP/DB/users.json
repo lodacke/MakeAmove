@@ -112,8 +112,8 @@
     {
         "name": "Jenny",
         "email": "jenny@email.com",
-        "password": "jen",
-        "age": "20",
+        "password": "jenny",
+        "age": "22",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog07.jpg",
         "interests": {
@@ -126,10 +126,11 @@
             "contact": "234567"
         },
         "preference": {
-            "genderOf": "female",
-            "ageOfMax": "25",
-            "ageOfMin": "23"
-        }
+            "genderOf": "Boys",
+            "ageOfMax": "30",
+            "ageOfMin": "20"
+        },
+        "city": "Abborrberget"
     },
     {
         "name": "Anna",
@@ -146,7 +147,7 @@
             "interestsThree": "wine",
             "interestsFour": "beer",
             "interestsFive": "reading",
-            "bio": "Älskar hundar",
+            "bio": "\u00c4lskar hundar",
             "contact": "123456789"
         },
         "preference": {
@@ -170,7 +171,7 @@
             "interestsThree": "dancing",
             "interestsFour": "fishing",
             "interestsFive": "movies",
-            "bio": "Älskar att vara ute i naturen",
+            "bio": "\u00c4lskar att vara ute i naturen",
             "contact": "123456789"
         },
         "preference": {
@@ -242,7 +243,7 @@
             "interestsThree": "movies",
             "interestsFour": "yoga",
             "interestsFive": "reading",
-            "bio": "Ta en ö?",
+            "bio": "Ta en \u00f6?",
             "contact": "12345678"
         },
         "preference": {

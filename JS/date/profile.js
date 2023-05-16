@@ -3,6 +3,8 @@
 import { stickyNav } from "./stickyNav.js";
 import { getUserData, renderCityDropdownList } from "../helper.js";
 import { renderFrontPage } from "../index.js";
+import { renderDatingPage } from "./explore.js";
+import { renderMatchesPage } from "./matches.js";
 
 const genders = ["Girls", "Boys", "Both"];
 const interests = [
@@ -24,7 +26,7 @@ export async function renderProfilePage() {
     <form class="profile-page-container">
 
       <div class="profile-top">
-        <img class="user-picture" src="${userData["0"].source}" alt="user-picture">
+        <img class="user-picture" src="${userData.imageSource}" alt="user-picture">
         <h2 class="user-name">[${userData.name}]</h2>
       </div>
 
@@ -33,7 +35,6 @@ export async function renderProfilePage() {
           <h3>About me</h3>
 
           <div class="title">Bio</div>
-          <input type="text" name="bio" value="${userData.interests.bio}">
           <textarea class="bio" name="bio" placeholder="Write something about yourself">${userData.interests.bio || ""}</textarea>
 
           <div class="interest">
@@ -103,6 +104,13 @@ export async function renderProfilePage() {
     ${stickyNav()}
   `;
 
+  colorThePreferredGender(userData.preference.genderOf);
+  renderInterestBoxes(userData.interests);
+
+  // Logout
+  const logoutButton = document.querySelector(".logout-button");
+  logoutButton.addEventListener("click", logoutFromAccount);
+
   // Change password
   const changePasswordButton = document.querySelector(".change-password");
   changePasswordButton.addEventListener("click", renderChangePasswordBox);
@@ -114,6 +122,9 @@ export async function renderProfilePage() {
   // Save the form
   const form = bodyDom.querySelector('.profile-page-container');
   form.addEventListener("submit", saveProfile);
+
+  document.querySelector(".explore").addEventListener("click", renderDatingPage);
+  document.querySelector(".match").addEventListener("click", renderMatchesPage);
 }
 
 function logoutFromAccount() {

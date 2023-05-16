@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 ini_set("display_errors", 1);
 
@@ -9,6 +9,7 @@ $filename = "../DB/users.json";
 if($_SERVER["REQUEST_METHOD"] === "GET"){
     $json = file_get_contents($filename);
     $users = json_decode($json, true);
+
      $sortedUsers = [];
 
     forEach($users as $user){
@@ -30,8 +31,8 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
             unset($user["interests"]["contact"]);
             unset($user["password"]);
             unset($user["preference"]);
-            $sortedUsers[] = $user;   
-                }       
+            $sortedUsers[] = $user;
+                }
             }
         }
     };
@@ -41,14 +42,14 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
 
     send(200, $randUser);
 
-   
-    
+
+
 // Need to find a solution for how we will add "both" values in if
 
 // skapa json-fil för matchningar, bestående av email & ja/nej, en stor json fil för alla som sedan matchas ihop users.json för att visa matchningar.)
 
 //    function sortUsers($users, $userEmail, $preferenceAgeMin, $preferenceAgeMax){
-//        
+//
 //        $sortedUsers = [];
 //        forEach($users as $user){
 //            if($user["email"] != $userEmail && $user["age"] >= $preferenceAgeMin && $user["age"] <= $preferenceAgeMax){
@@ -66,9 +67,9 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
 //        foreach($sortedUsers as $user){
 //            if($preferenceGender === "both"){
 //               sortByPreference($sortedUsers);
-//        } else if($user["gender"] === $preferenceGender) { 
+//        } else if($user["gender"] === $preferenceGender) {
 //             $sortedByGenderUsers[] = $user;
-//                sortByPreference($sortedByGenderUsers);   
+//                sortByPreference($sortedByGenderUsers);
 //            }
 //        }
 //    }
@@ -82,7 +83,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
 //            }
 //        }
 //    }
-//    
+//
 //    function  sortByPreferanceGender($sortedByPereferance){
 //        $finalSorting = [];
 //        forEach($sortedByPereferance as $user){
@@ -108,4 +109,4 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
 
      }
 
-?> 
+?>

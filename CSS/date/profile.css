@@ -56,12 +56,15 @@
   }
 
   /* About me */
-  .age, .age-min, .age-max {
+  .age,
+  .age-min,
+  .age-max {
     display: flex;
     align-items: center;
   }
 
-  .age input, .preferred-age input{
+  .age input,
+  .preferred-age input {
     width: 8%;
     margin-left: 1vw;
   }
@@ -89,13 +92,13 @@
     display: none;
   }
 
-  .info-button + label {
+  .info-button+label {
     display: inline-block;
     width: auto;
     background-color: #eee;
   }
 
-  .info-button:checked + label {
+  .info-button:checked+label {
     background-color: rgb(213, 80, 140);
     color: #fff;
   }
@@ -217,7 +220,8 @@
     gap: 2%;
   }
 
-  .change-password, .delete-account {
+  .change-password,
+  .delete-account {
     width: 48%;
     height: 4vh;
   }
@@ -316,4 +320,3 @@
     left: 5vw;
   }
 }
-

@@ -1,24 +1,24 @@
 "use strict";
 
-import { countries } from "./date/countries.js";
+import { cities } from "./date/cities.js";
 
 export function getUserData() {
   const userData = localStorage.getItem("user");
   return JSON.parse(userData);
 }
 
-export function renderCountryDropdownList() {
-  const options = countries.map(country => `
-    <option value="${country.value}">${country.name}</option>
+export function renderCityDropdownList(userData) {
+  const options = cities.map(city => `
+    <option value="${city}">${city}</option>
   `).join('');
 
   return `
-    <select class="form-select" id="country" name="country">
-      <option>select country</option>
+    <select class="form-select" id="city" name="city">
+      <option>${userData.city || "select city"}</option>
       ${options}
     </select>
   `;
-} 
+}
 
 export function errorMessage(){
 

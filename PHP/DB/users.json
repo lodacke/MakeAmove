@@ -24,7 +24,7 @@
     {
         "name": "Rosa",
         "email": "Rosa@gmail.com",
-        "password": "rosaa",
+        "password": "rosa",
         "age": "29",
         "gender": "female",
         "imageSource": "..\/uploads\/dog06.jpg",
@@ -110,10 +110,10 @@
         }
     },
     {
-        "name": "niuniu",
-        "email": "unujniun",
-        "password": "unbuib",
-        "age": "34",
+        "name": "Jenny",
+        "email": "jenny@email.com",
+        "password": "jen",
+        "age": "20",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog07.jpg",
         "interests": {
@@ -122,7 +122,7 @@
             "interestsThree": "art",
             "interestsFour": "astrology",
             "interestsFive": "wine",
-            "bio": "",
+            "bio": "Hi there!",
             "contact": "234567"
         },
         "preference": {
@@ -174,5 +174,10 @@
             "ageOfMax": "26",
             "ageOfMin": "24"
         }
+            "genderOf": "Boys",
+            "ageOfMax": "28",
+            "ageOfMin": "20"
+        },
+        "city": "Malm\u00f6"
     }
 ]

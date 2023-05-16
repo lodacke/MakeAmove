@@ -4,16 +4,67 @@ body{
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-header{
-    height: 20vh;
+#registerPageHeader {
+    height: 17vh;
+    margin-top: 1.5vh;
 }
 
-main{
+#registerPageHeader .logo {
+    height: 17vh;
+}
+
+#registerPageHeader h1 {
+    display: none;
+}
+
+#registerPageMain {
     height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-top: 7vh;
+}
+
+.inputbox {
+    position: relative;
+    margin-top: 20px;
+}
+
+.inputbox input {
+    width: 80vw;
+    padding: 15px;
+    border-radius: 13px;
+    border: 1px solid #a2a2a2;
+    background-color: #ffffffa1;
+    outline: none;
+}
+
+.inputbox label {
+    position: absolute;
+    left: 0;
+    font-size: 15px;
+    color: #686868;
+    padding: 15px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputbox input:valid ~ label, 
+.inputbox input:focus ~ label {
+    color: #2078b7;
+    transform: translateX(10px) translateY(-12px);
+    font-size: 10px;
+    padding: 0 10px;
+}
+
+.ageAndGender {
+    width: 80vw;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 13px;
+    border: 1px solid #a2a2a2;
+    background-color: #ffffffa1;
+    height: 15vh;
 }
 
 #pageNavigation{
@@ -26,20 +77,30 @@ button {
     width: 380px;
 }
 
+#notAnswered {
+    border: 1px solid red;
+}
+/*
 input{
-    width: 380px;
+    width: 80vw;
+    height: 5vh;
+    border-radius: 13px;
+    border: 1px solid #a2a2a2;
+    background-color: #ffffffa1;
 }
 
+label {
+    margin-top: 2vh;
+    font-size: 15px;
+}
+*/
 #profilePicture {
     display: flex;
     flex-direction: column;
 }
-img {
-    border-radius: 54%;
-    border: 5px solid rgb(98, 168, 230);
-    overflow: hidden;
-    height: 250px;
-}
+
+
+
 #imageMessage {
     text-align: center;
     font-size: 20px;

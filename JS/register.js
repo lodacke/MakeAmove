@@ -2,45 +2,59 @@ import { errorMessage } from "./helper.js";
 
 "use strict"
 
- let mainDom = document.querySelector("main");
 
-function renderPageNavigation(previousFunction){
-    let pageNavDom = document.getElementById("pageNavigation");
 
-    pageNavDom.innerHTML = `
-        <button id="previousPage"> Previous Page </button>
-        <button id="nextPage"> Next Page </button>`;
-
-        pageNavDom.querySelector("#previousPage").addEventListener("click", e => {
-
-     })
-}
+let mainDom = document.querySelector("main");
 
 export function renderRegisterPage (){
 
+    document.getElementById("startPageHeader").id = "registerPageHeader";
+    document.getElementById("startPageMain").id = "registerPageMain";
+
     mainDom.innerHTML = `
     <h1> Basic Info </h1>
-    <label for "name"> First name: </label>
-    <input type="username" name="name" class="required">
 
-    <label for "email"> Email-adress: </label>
-    <input type="email" name="email" class="required">
+    <div class="inputbox">
+        <input type="username" name="name" class="required" required="required">
+        <label for "name"> First name </label>
+    </div>
 
-    <label for "password"> Password: </label>
-    <input type="password" name="password" minlength="10" class="required">
+    <div class="inputbox">
+        <input type="email" name="email" class="required" required="required">
+        <label for "email"> Email-adress </label>
+    </div>
 
-    <label for "age"> Age: </label>
-    <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+    <div class="inputbox">
+        <input type="password" name="password" minlength="10" class="required" required="required">
+        <label for "password"> Password </label>
+    </div>
 
-    <label for "gender"> Gender: </label>
-    <select name="gender" class="required">
-        <option value="none">Choose an option </option>
-        <option value="female"> Woman </option>
-        <option value="male"> Man </option>
-        <option value="neither">Neither</option>
-    </select>
-    ${renderPageNavigation()}
+    <div class="ageAndGender">
+        <label for "age"> Age: <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required"> </label>
+        <label for "gender"> Gender: </label>
+        <select name="gender" class="required">
+            <option value="none">Choose an option </option>
+            <option value="female"> Woman </option>
+            <option value="male"> Man </option>
+            <option value="neither">Neither</option>
+        </select>
+    </div>
+
+ 
     `;
+    renderPageNavigation();
+
+    function renderPageNavigation(previousFunction){
+        let pageNavDom = document.getElementById("pageNavigation");
+    
+        pageNavDom.innerHTML = `
+            <button id="previousPage"> Previous Page </button>
+            <button id="nextPage"> Next Page </button>`;
+    
+            pageNavDom.querySelector("#previousPage").addEventListener("click", e => {
+    
+         })
+    }
 
     let nameDom = mainDom.querySelector("input[name='name']");
     let passwordDom = mainDom.querySelector("input[name='password']");

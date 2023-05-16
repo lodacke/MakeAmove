@@ -14,3 +14,12 @@
     margin: 4px;
     padding: 4px;
 }
+
+#MatchButtons{
+    display: flex;
+    justify-content: space-between;
+}
+
+#MatchButtons > button{
+    width: 40px;
+}

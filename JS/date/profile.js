@@ -24,7 +24,7 @@ export async function renderProfilePage() {
     <form class="profile-page-container">
 
       <div class="profile-top">
-        <img class="user-picture" src="${userData["0"].source}" alt="user-picture">
+        <img class="user-picture" src="${userData.source}" alt="user-picture">
         <h2 class="user-name">[${userData.name}]</h2>
       </div>
 

@@ -34,14 +34,15 @@
             "interestsThree": "singing",
             "interestsFour": "playinginstruments",
             "interestsFive": "boardgames",
-            "bio": "",
+            "bio": "here is a bio ",
             "contact": "0760555"
         },
         "preference": {
             "genderOf": "male",
             "ageOfMax": "38",
             "ageOfMin": "24"
-        }
+        },
+        "city": "select city"
     },
     {
         "name": "Emil",
@@ -146,7 +147,7 @@
             "interestsThree": "wine",
             "interestsFour": "beer",
             "interestsFive": "reading",
-            "bio": "Älskar hundar",
+            "bio": "\u00c4lskar hundar",
             "contact": "123456789"
         },
         "preference": {
@@ -170,7 +171,7 @@
             "interestsThree": "dancing",
             "interestsFour": "fishing",
             "interestsFive": "movies",
-            "bio": "Älskar att vara ute i naturen",
+            "bio": "\u00c4lskar att vara ute i naturen",
             "contact": "123456789"
         },
         "preference": {
@@ -242,7 +243,7 @@
             "interestsThree": "movies",
             "interestsFour": "yoga",
             "interestsFive": "reading",
-            "bio": "Ta en ö?",
+            "bio": "Ta en \u00f6?",
             "contact": "12345678"
         },
         "preference": {

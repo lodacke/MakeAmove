@@ -33,6 +33,7 @@ export async function renderProfilePage() {
           <h3>About me</h3>
 
           <div class="title">Bio</div>
+          <input type="text" name="bio" value="${userData.interests.bio}">
           <textarea class="bio" name="bio" placeholder="Write something about yourself">${userData.interests.bio || ""}</textarea>
 
           <div class="interest">
@@ -101,13 +102,6 @@ export async function renderProfilePage() {
     </form>
     ${stickyNav()}
   `;
-
-  colorThePreferredGender(userData.preference.genderOf);
-  renderInterestBoxes(userData.interests);
-
-  // Logout
-  const logoutButton = document.querySelector(".logout-button");
-  logoutButton.addEventListener("click", logoutFromAccount);
 
   // Change password
   const changePasswordButton = document.querySelector(".change-password");

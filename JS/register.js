@@ -37,7 +37,7 @@ export function renderRegisterPage (){
         <option value="none">Choose an option </option>
         <option value="female"> Woman </option>
         <option value="male"> Man </option>
-        <option value="neither">Neither</option>
+        <option value="both">Neither</option>
     </select>
     ${renderPageNavigation()}
     `;
@@ -227,9 +227,9 @@ function preferencePage(userData){
     <lable for "genderOf"> I'm intrested in: </lable>
     <select name="genderOf" class="required">
     <option value="none"> Choose an option </option>
-    <option value="Girls"> Female </option>
-    <option value="Boys"> Male </option>
-    <option value="Both">Both</option>
+    <option value="female"> Female </option>
+    <option value="male"> Male </option>
+    <option value="both">Both</option>
     </select>
     <p> What age </p>
     <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Min-age">

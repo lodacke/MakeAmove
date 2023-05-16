@@ -1,0 +1,16 @@
+#bio{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#interestsBox{
+    display: flex;
+}
+
+#interestsBox > div {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 4px;
+    padding: 4px;
+}

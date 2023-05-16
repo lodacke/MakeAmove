@@ -193,6 +193,24 @@
     margin-left: 2vw;
   }
 
+  .user-setting-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logout-button {
+    width: 21vw;
+    height: 4vh;
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 1vw;
+  }
+
   .user-setting-button {
     margin: 2vh 0;
     display: flex;

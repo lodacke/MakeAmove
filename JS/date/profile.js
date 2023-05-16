@@ -2,6 +2,7 @@
 
 import { stickyNav } from "./stickyNav.js";
 import { getUserData, renderCityDropdownList } from "../helper.js";
+import { renderFrontPage } from "../index.js";
 
 const genders = ["Girls", "Boys", "Both"];
 const interests = [
@@ -11,8 +12,6 @@ export async function renderProfilePage() {
   let response = await fetch(`../PHP/date/getProfile.php?email=${getUserData().email}`);
 
   const userData = await response.json();
-
-  console.log("userData", userData);
 
   if (!response.ok) {
     // TODO: Show to user: "Network response was not ok"
@@ -75,7 +74,11 @@ export async function renderProfilePage() {
         </div>
 
         <div class="category user-setting">
-          <h3>User Setting</h3>
+          <div class="user-setting-top">
+            <h3>User Setting</h3>
+            <button class="logout-button">Logout</button>
+          </div>
+
           <div id="email">
             <div class="title">Email:</div>
             <div class="emailaddress">${userData.email}</div>
@@ -102,6 +105,10 @@ export async function renderProfilePage() {
   colorThePreferredGender(userData.preference.genderOf);
   renderInterestBoxes(userData.interests);
 
+  // Logout
+  const logoutButton = document.querySelector(".logout-button");
+  logoutButton.addEventListener("click", logoutFromAccount);
+
   // Change password
   const changePasswordButton = document.querySelector(".change-password");
   changePasswordButton.addEventListener("click", renderChangePasswordBox);
@@ -113,6 +120,15 @@ export async function renderProfilePage() {
   // Save the form
   const form = bodyDom.querySelector('.profile-page-container');
   form.addEventListener("submit", saveProfile);
+}
+
+function logoutFromAccount() {
+  window.localStorage.removeItem("user");
+  document.querySelector("body").innerHTML = "";
+  const bodyDom = document.querySelector("body");
+  const mainDom = document.createElement("main");
+  bodyDom.appendChild(mainDom);
+  renderFrontPage();
 }
 
 function checkMyChosenInterestAtRegister(myChosenInterestAtRegister) {

@@ -1,6 +1,7 @@
 import { stickyNav } from "./stickyNav.js";
 import { renderProfilePage } from "./profile.js";
 import { getUserData } from "../helper.js";
+import { renderFrontPage } from "../index.js";
 
 export async function renderDatingPage() {
 
@@ -19,24 +20,47 @@ export async function renderDatingPage() {
       email: userEmail,
       })
     }));
-
-    let response = await requestPOST.json();
-
-    console.log(response);
-
-
-
   
+    let user = await requestPOST.json();
 
-  let bodyDom = document.querySelector("body");
-  bodyDom.innerHTML = `
-    ${stickyNav()}
+    console.log(user);
 
-    <h2 class="dateTitle">Explore</h2>
+
+  let navDom = document.querySelector("#pageNavigation");
+  navDom.innerHTML = `
+   ${stickyNav()}
   `;
 
+  let mainDom = document.querySelector("main");
+
+  mainDom.innerHTML = `
+    <h2>${user.name}</h2>
+    <img src="${user.source}"></img>
+    <h3> bio: </h3>
+    <p id="bio"> ${user.interests.bio} </p>
+    <div id="interestsBox"></div>
+    <button id="logout">Loutout</button>`;
+
+    let interests = [user.interests.interestsOne, user.interests.interestsTwo, user.interests.interestsThree, user.interests.interestsFour, user.interests.interestsFive];
+    let interestsBox = document.getElementById("interestsBox");
+
+    interests.forEach(intrest => {
+      const div = document.createElement("div"); 
+      div.textContent = intrest;
+      interestsBox.append(div);
+
+    });
+
    document.querySelector(".profile").addEventListener("click", renderProfilePage);
+   document.querySelector(".match").addEventListener("click", renderProfilePage);
+   document.querySelector("#logout").addEventListener("click", onclickLogout)
 
 }
 
+
+    function onclickLogout() {
+
+            window.localStorage.clear();
+            renderFrontPage()
+        }
 

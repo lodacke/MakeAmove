@@ -23,7 +23,7 @@ export function renderProfilePage(event) {
           <h3>About me</h3>
 
           <div class="title">Bio</div>
-          <input type="text" name="bio" value="${userData.bio}">
+          <input type="text" name="bio" value="${userData.interests.bio}">
 
           <div class="interest">
             <div class="title">Interest</div>
@@ -82,6 +82,10 @@ export function renderProfilePage(event) {
     </form>
     ${stickyNav()}
   `;
+
+  document.querySelector(".explore").addEventListener("click", renderDatingPage()); //These two doesnt work
+  document.querySelector(".match").addEventListener("click", renderMatchesPage());
+
 
   // Change password
   const changePasswordButton = document.querySelector(".change-password");

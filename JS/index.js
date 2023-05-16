@@ -13,7 +13,7 @@ function checkIfUserLoggedIn() {
   }
 }
 
-function renderFrontPage() {
+export function renderFrontPage() {
   let bodyDom = document.querySelector("body");
   let headerDom = document.createElement("header");
   let frontMainDom = document.querySelector("main");

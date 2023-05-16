@@ -96,7 +96,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
           $json = file_get_contents($imagesJSON);
           $AllImages = json_decode($json, true);
         }
-        $imageSource = end($AllImages);
+        $image = end($AllImages);
+        $imageSource = $image["source"];
 
         $newUser = [
           "name" => $name,
@@ -104,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
           "password" => $password,
           "age" => $age,
           "gender" => $gender,
-          $imageSource,
+          "imageSource" => $imageSource,
           "interests" => [
             "interestsOne" => $interestsOne,
             "interestsTwo" => $interestsTwo,

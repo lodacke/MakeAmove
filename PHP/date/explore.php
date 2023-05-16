@@ -32,8 +32,6 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
             $user["preference"]["ageOfMax"] >= $age &&
             $user["preference"]["genderOf"] === $gender
         ) {
-            file_put_contents("dump.txt", "Seems like we found a user after all, woo!");
-
             unset($user["interests"]["contact"]);
             unset($user["password"]);
             unset($user["preference"]);
@@ -41,9 +39,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
         }
     }
 
-    // file_put_contents("dump.txt", $sortedUsers);
-
-    if(isset($sortedUsers)) {
+    if(count($sortedUsers) > 0) {
         $randIndex = array_rand($sortedUsers, 1);
         $randUser = $sortedUsers[$randIndex];
 
@@ -51,8 +47,6 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
     } else {
         abort(400, "Not found");
     }
-
-
 
 
 // Need to find a solution for how we will add "both" values in if

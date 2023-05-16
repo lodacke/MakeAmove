@@ -114,7 +114,7 @@
         "name": "Jenny",
         "email": "jenny@email.com",
         "password": "jenny",
-        "age": "22",
+        "age": "20",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog06.jpg",
         "interests": {
@@ -131,7 +131,7 @@
             "ageOfMax": "30",
             "ageOfMin": "20"
         },
-        "city": "Abborrberget"
+        "city": "Malm\u00f6"
     },
     {
         "name": "Anna",

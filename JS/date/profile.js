@@ -6,7 +6,7 @@ import { renderFrontPage } from "../index.js";
 import { renderDatingPage } from "./explore.js";
 import { renderMatchesPage } from "./matches.js";
 
-const genders = ["Girls", "Boys", "Both"];
+const genders = ["female", "male", "both"];
 const interests = [
   "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing", "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night", "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing", "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking", "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"];
 

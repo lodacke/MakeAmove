@@ -5,10 +5,6 @@ import { renderFrontPage } from "../index.js";
 import { renderMatchesPage } from "./matches.js";
 
 export async function renderDatingPage() {
-  let bodyDom = document.querySelector("body");
-  console.log("explore");
-  bodyDom.innerHTML = `
-    ${stickyNav()}
 
   let request = await fetch(`/PHP/date/explore.php?email=${getUserData().email}`);
   

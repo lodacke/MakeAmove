@@ -32,6 +32,9 @@ export function renderRegisterPage (){
     <label for "age"> Age: </label>
     <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
 
+    <div class="title">Location</div>
+          ${renderCityDropdownList()}
+
     <label for "gender"> Gender: </label>
     <select name="gender" class="required">
         <option value="none">Choose an option </option>

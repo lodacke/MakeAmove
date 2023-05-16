@@ -5,7 +5,7 @@
         "password": "4WdVWz4jD8ByrYu",
         "age": "43",
         "gender": "female",
-        "imageSource": "..\/uploads\/dog06.jpg",
+        "imageSource": "..\/uploads\/dog01.jpg",
         "interests": {
             "interestsOne": "beer",
             "interestsTwo": "poetry",
@@ -27,7 +27,7 @@
         "password": "rosa",
         "age": "29",
         "gender": "female",
-        "imageSource": "..\/uploads\/dog06.jpg",
+        "imageSource": "..\/uploads\/dog02.jpg",
         "interests": {
             "interestsOne": "movienight",
             "interestsTwo": "nightout",
@@ -50,7 +50,7 @@
         "password": "4WdVWz4jD8ByrYu",
         "age": "32",
         "gender": "male",
-        "imageSource": "..\/uploads\/dog06.jpg",
+        "imageSource": "..\/uploads\/dog03.jpg",
         "interests": {
             "interestsOne": "stand-upcomedy",
             "interestsTwo": "poetry",
@@ -72,7 +72,7 @@
         "password": "Password1",
         "age": "19",
         "gender": "male",
-        "imageSource": "..\/uploads\/dog06.jpg",
+        "imageSource": "..\/uploads\/dog04.jpg",
         "interests": {
             "interestsOne": "reading",
             "interestsTwo": "dancing",
@@ -94,7 +94,7 @@
         "password": "4WdVWz4jD8ByrYu",
         "age": "34",
         "gender": "male",
-        "imageSource": "..\/uploads\/dog06.jpg",
+        "imageSource": "..\/uploads\/dog05.jpg",
         "interests": {
             "interestsOne": "beer",
             "interestsTwo": "dancing",
@@ -116,7 +116,7 @@
         "password": "jenny",
         "age": "22",
         "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog07.jpg",
+        "imageSource": "PHP\/DB\/uploads\/dog06.jpg",
         "interests": {
             "interestsOne": "reading",
             "interestsTwo": "beer",
@@ -127,7 +127,7 @@
             "contact": "234567"
         },
         "preference": {
-            "genderOf": "Boys",
+            "genderOf": "male",
             "ageOfMax": "30",
             "ageOfMin": "20"
         },
@@ -139,9 +139,7 @@
         "password": "anna123",
         "age": "23",
         "gender": "female",
-        "0": {
-            "source": "PHP\/DB\/uploads\/dog03.jpg"
-        },
+        "imageSource": "..\/uploads\/dog07.jpg",
         "interests": {
             "interestsOne": "traveling",
             "interestsTwo": "astrology",
@@ -163,9 +161,7 @@
         "password": "johan123",
         "age": "25",
         "gender": "male",
-        "0": {
-            "source": "PHP\/DB\/uploads\/dog02.jpg"
-        },
+        "imageSource": "..\/uploads\/dog01.jpg",
         "interests": {
             "interestsOne": "traveling",
             "interestsTwo": "stand-upcomedy",
@@ -187,9 +183,7 @@
         "password": "sam123",
         "age": "30",
         "gender": "male",
-        "0": {
-            "source": "PHP\/DB\/uploads\/dog06.jpg"
-        },
+        "imageSource": "..\/uploads\/dog03.jpg",
         "interests": {
             "interestsOne": "nightout",
             "interestsTwo": "poetry",
@@ -211,9 +205,7 @@
         "password": "sandra123",
         "age": "28",
         "gender": "female",
-        "0": {
-            "source": "PHP\/DB\/uploads\/dog07.jpg"
-        },
+        "imageSource": "..\/uploads\/dog03.jpg",
         "interests": {
             "interestsOne": "singing",
             "interestsTwo": "fishing",
@@ -235,9 +227,7 @@
         "password": "hanna123",
         "age": "32",
         "gender": "female",
-        "0": {
-            "source": "PHP\/DB\/uploads\/dog04.jpg"
-        },
+        "imageSource": "..\/uploads\/dog04.jpg",
         "interests": {
             "interestsOne": "beer",
             "interestsTwo": "dancing",
@@ -259,9 +249,7 @@
         "password": "tomas123",
         "age": "26",
         "gender": "male",
-        "0": {
-            "source": "PHP\/DB\/uploads\/dog06.jpg"
-        },
+        "imageSource": "..\/uploads\/dog05.jpg",
         "interests": {
             "interestsOne": "poetry",
             "interestsTwo": "nightout",
@@ -283,9 +271,7 @@
         "password": "klara123",
         "age": "29",
         "gender": "female",
-        "0": {
-            "source": "PHP\/DB\/uploads\/dog05.jpg"
-        },
+        "imageSource": "..\/uploads\/dog06.jpg",
         "interests": {
             "interestsOne": "reading",
             "interestsTwo": "dancing",
@@ -307,9 +293,7 @@
         "password": "linus123",
         "age": "27",
         "gender": "male",
-        "0": {
-            "source": "PHP\/DB\/uploads\/dog04.jpg"
-        },
+        "imageSource": "..\/uploads\/dog07.jpg",
         "interests": {
             "interestsOne": "traveling",
             "interestsTwo": "beer",
@@ -331,9 +315,7 @@
         "password": "lina123",
         "age": "32",
         "gender": "female",
-        "0": {
-            "source": "PHP\/DB\/uploads\/dog05.jpg"
-        },
+        "imageSource": "..\/uploads\/dog01.jpg",
         "interests": {
             "interestsOne": "art",
             "interestsTwo": "stand-upcomedy",
@@ -348,5 +330,74 @@
             "ageOfMax": "40",
             "ageOfMin": "30"
         }
+    },
+    {
+        "name": "Simon",
+        "email": "simon@email.com",
+        "password": "simon",
+        "age": "22",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog02.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "beer",
+            "interestsThree": "art",
+            "interestsFour": "astrology",
+            "interestsFive": "wine",
+            "bio": "Hi there!",
+            "contact": "234567"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "30",
+            "ageOfMin": "20"
+        },
+        "city": "Abborrberget"
+    },
+    {
+        "name": "Fred",
+        "email": "fred@email.com",
+        "password": "fred",
+        "age": "27",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog03.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "beer",
+            "interestsThree": "art",
+            "interestsFour": "astrology",
+            "interestsFive": "wine",
+            "bio": "Hi there!",
+            "contact": "234567"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "30",
+            "ageOfMin": "20"
+        },
+        "city": "Lund"
+    },
+    {
+        "name": "Tony",
+        "email": "tony@email.com",
+        "password": "tony",
+        "age": "20",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog04.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "beer",
+            "interestsThree": "art",
+            "interestsFour": "astrology",
+            "interestsFive": "wine",
+            "bio": "Hi there!",
+            "contact": "234567"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "30",
+            "ageOfMin": "20"
+        },
+        "city": "Stockholm"
     }
 ]

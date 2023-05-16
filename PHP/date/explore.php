@@ -9,37 +9,49 @@ $filename = "../DB/users.json";
 if($_SERVER["REQUEST_METHOD"] === "GET"){
     $json = file_get_contents($filename);
     $users = json_decode($json, true);
-
-     $sortedUsers = [];
+    $sortedUsers = [];
 
     forEach($users as $user){
         if($user["email"] === $_GET["email"]){
-        $preferenceGender = $user["preference"]["genderOf"];
-        $preferenceAgeMax = $user["preference"]["ageOfMax"];
-        $preferenceAgeMin = $user["preference"]["ageOfMin"];
-        $gender = $user["gender"];
-        $age = $user["age"];
-        break;
+            $preferenceGender = $user["preference"]["genderOf"];
+            $preferenceAgeMax = $user["preference"]["ageOfMax"];
+            $preferenceAgeMin = $user["preference"]["ageOfMin"];
+            $gender = $user["gender"];
+            $age = $user["age"];
+            break;
         }
     }
 
     forEach($users as $user){
-    if($user["email"] != $_GET["email"]){
-         if($user["age"] >= $preferenceAgeMin && $user["age"] <= $preferenceAgeMax && $user["gender"] === $preferenceGender){
-            if($user["preference"]["ageOfMin"] <= $age && $user["preference"]["ageOfMax"] >= $age && $user["preference"]["genderOf"] === $gender){
+        if(
+            $user["email"] != $_GET["email"] &&
+            $user["age"] >= $preferenceAgeMin &&
+            $user["age"] <= $preferenceAgeMax &&
+            $user["gender"] === $preferenceGender &&
+            $user["preference"]["ageOfMin"] <= $age &&
+            $user["preference"]["ageOfMax"] >= $age &&
+            $user["preference"]["genderOf"] === $gender
+        ) {
+            file_put_contents("dump.txt", "Seems like we found a user after all, woo!");
+
             unset($user["interests"]["contact"]);
             unset($user["password"]);
             unset($user["preference"]);
             $sortedUsers[] = $user;
-                }
-            }
         }
-    };
+    }
 
-    $randIndex = array_rand($sortedUsers, 1);
-    $randUser = $sortedUsers[$randIndex];
+    // file_put_contents("dump.txt", $sortedUsers);
 
-    send(200, $randUser);
+    if(isset($sortedUsers)) {
+        $randIndex = array_rand($sortedUsers, 1);
+        $randUser = $sortedUsers[$randIndex];
+
+        send(200, $randUser);
+    } else {
+        abort(400, "Not found");
+    }
+
 
 
 
@@ -106,6 +118,5 @@ if($_SERVER["REQUEST_METHOD"] === "GET"){
 //        }
 //
 
-     }
-
+    }
 ?>

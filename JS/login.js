@@ -5,7 +5,7 @@ import { renderRegisterPage } from "./register.js";
 
 async function submitLogin(event) {
   event.preventDefault();
-  renderDatingPage();
+  // renderDatingPage();
 
   let message = document.querySelector("main .message");
 
@@ -22,7 +22,7 @@ async function submitLogin(event) {
     let data = await response.json();
     if (!response.ok) {
       message.innerHTML = `Oops! Something went wrong, it looks like <span>${data.message}</span>.`;
-      erroMessage();
+      // errorMessage();
     } else {
       window.localStorage.setItem("user", JSON.stringify(data));
       renderDatingPage();

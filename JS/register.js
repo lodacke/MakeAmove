@@ -30,19 +30,22 @@ export function renderRegisterPage (){
     </div>
 
     <div class="ageAndGender">
-        <label for "age"> Age: <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required"> </label>
-        <label for "gender"> Gender: </label>
-        <select name="gender" class="required">
-            <option value="none">Choose an option </option>
-            <option value="female"> Woman </option>
-            <option value="male"> Man </option>
-            <option value="neither">Neither</option>
-        </select>
+        <label for "age"> Age: <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required" required="required"> </label>
+        <label for "gender"> Gender: 
+            <select name="gender" class="required">
+                <option value="none">Choose an option </option>
+                <option value="female"> Woman </option>
+                <option value="male"> Man </option>
+                <option value="neither">Neither</option>
+            </select>
+        </label>
+        
     </div>
 
+    ${renderPageNavigation()};
  
     `;
-    renderPageNavigation();
+   
 
     function renderPageNavigation(previousFunction){
         let pageNavDom = document.getElementById("pageNavigation");

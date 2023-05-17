@@ -43,11 +43,10 @@ export function renderRegisterPage (){
 
     <div class="ageAndGender">
         <select name="city" class="required">
-    <option value="none" > Choose a city </option>
-    ${renderCityDropdownListReg()}
-    </select>
-
-    <label for "age"> Age: <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required" required="required"> </label>
+            <option value="none" > Choose a city </option>
+            ${renderCityDropdownListReg()}
+        </select>
+        <label for "age"> Age: <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required"> </label>
         <label for "gender"> Gender: 
             <select name="gender" class="required">
                 <option value="none">Choose an option </option>
@@ -56,7 +55,6 @@ export function renderRegisterPage (){
                 <option value="both">Neither</option>
             </select>
         </label>
-        
     </div>
 
     ${renderPageNavigation()};
@@ -112,6 +110,7 @@ export function renderRegisterPage (){
 
 function imagePage(userData){
     mainDom.innerHTML = `
+    <h1> Upload a profile picture! </h1>
     <form id="upload" action="register.php" method="POST" enctype="multipart/form-data">
         <input type="file" name="profilePicture">
         <button type="submit">Upload</button>

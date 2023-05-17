@@ -84,6 +84,12 @@ body{
     width: 12vw;
 }
 
+.ageAndGender > select {
+    width: 26vw;
+    display: flex;
+    align-self: center;
+}
+
 .ageAndGender label {
     display: flex;
     flex-direction: column;

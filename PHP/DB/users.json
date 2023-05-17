@@ -399,5 +399,63 @@
             "ageOfMin": "20"
         },
         "city": "Stockholm"
+    },
+    {
+        "name": "wewewewew",
+        "email": "ww",
+        "password": "32",
+        "age": "32",
+        "city": "Malm\u00f6n",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "traveling",
+            "interestsTwo": "movies",
+            "interestsThree": "astrology",
+            "interestsFour": "reading",
+            "interestsFive": "yoga",
+            "general": {
+                "bio": "",
+                "contact": "1234567"
+            }
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "23",
+            "ageOfMin": "22"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "name": "a",
+        "email": "33",
+        "password": "rosaa44",
+        "age": "34",
+        "city": "Mad\u00e4ngsholm",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "stand-upcomedy",
+            "interestsTwo": "movienight",
+            "interestsThree": "running",
+            "interestsFour": "art",
+            "interestsFive": "dancing"
+        },
+        "general": {
+            "bio": "asdfgh\u00f6\u00e4\u00f6\u00e4\u00f6 \u00f6\u00e4\u00f6\u00e4 sdfdfg\u00f6\u00e4",
+            "contact": "123456789"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "37",
+            "ageOfMin": "34"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
     }
 ]

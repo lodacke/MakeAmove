@@ -69,28 +69,29 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
    $email = $dataREQUEST["email"];
    $password = $dataREQUEST["password"];
    $age = $dataREQUEST["age"];
+   $city = $dataREQUEST["city"];
    $gender = $dataREQUEST["gender"]; 
    $interestsOne= $dataREQUEST["interests"][0]["interestsOne"];
    $interestsTwo = $dataREQUEST["interests"][0]["interestsTwo"];
    $interestsThree = $dataREQUEST["interests"][0]["interestsThree"];
    $interestsFour = $dataREQUEST["interests"][0]["interestsFour"];
    $interestsFive = $dataREQUEST["interests"][0]["interestsFive"];
-   $bio = $dataREQUEST["interests"][0]["bio"];
-   $contact = $dataREQUEST["interests"][0]["contact"];
+   $bio = $dataREQUEST["general"][0]["bio"];
+   $contact = $dataREQUEST["general"][0]["contact"];
    $genderOf = $dataREQUEST["preference"][0]["genderOf"];   
    $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
     $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
                                 
-   for($i = 0; $i < count($users); $i++){
-      if($email == $users[$i]["email"]){    
-        send(409, [$data = "The email is already registered"]); 
-      }  
-    }   
+  // for($i = 0; $i < count($users); $i++){
+  //    if($email == $users[$i]["email"]){    
+  //      send(409, [$data = "The email is already registered"]); 
+  //    }  
+  //  }   
   if($age < 18){
     send(409, [$data = "You need to be over 18 to use this app"]);
   }
 
-    if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $contact == "" && $age == null)){
+    if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $contact == "" && $age == null && $city == null)){
         $imagesJSON = "DB/imageSource.json";
         if(file_exists($imagesJSON)) {
           $json = file_get_contents($imagesJSON);
@@ -104,6 +105,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
           "email" => $email,
           "password" => $password,
           "age" => $age,
+          "city" => $city,
           "gender" => $gender,
           "imageSource" => $imageSource,
           "interests" => [
@@ -112,6 +114,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             "interestsThree" => $interestsThree,
             "interestsFour" => $interestsFour,
             "interestsFive" => $interestsFive,
+          ],
+          "general" => [
             "bio" => $bio,
             "contact" => $contact,
           ],

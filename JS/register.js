@@ -1,11 +1,13 @@
 import { errorMessage } from "./helper.js";
+import { renderCityDropdownListReg } from "./helper.js";
 
 "use strict"
 
  let mainDom = document.querySelector("main");
 
 function renderPageNavigation(previousFunction){
-    let pageNavDom = document.getElementById("pageNavigation");
+    let pageNavDom = document.querySelector("#pageNavigation");
+    console.log(pageNavDom);
 
     pageNavDom.innerHTML = `
         <button id="previousPage"> Previous Page </button>
@@ -32,8 +34,10 @@ export function renderRegisterPage (){
     <label for "age"> Age: </label>
     <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
 
-    <div class="title">Location</div>
-          ${renderCityDropdownList()}
+    <select name="city" class="required">
+    <option value="none" > Choose a city </option>
+    ${renderCityDropdownListReg()}
+    </select>
 
     <label for "gender"> Gender: </label>
     <select name="gender" class="required">
@@ -50,11 +54,12 @@ export function renderRegisterPage (){
     let ageDom = mainDom.querySelector("input[name='age']");
     let genderDom = mainDom.querySelector("select[name='gender']");
     let emailDom = mainDom.querySelector("input[name='email']");
+    let cityDom = mainDom.querySelector("select[name='city']");
 
 
     document.getElementById("nextPage").addEventListener("click", e => {
 
-        if(nameDom.value != "" && emailDom.value != "" && passwordDom.value != "" && ageDom.value != null && genderDom.value != "none"){
+        if(nameDom.value != "" && emailDom.value != "" && passwordDom.value != "" && ageDom.value != null && genderDom.value != "none" && cityDom.value != "none"){
 
             let userData = {
                 image: {},
@@ -62,9 +67,12 @@ export function renderRegisterPage (){
                 email: emailDom.value,
                 password: passwordDom.value,
                 age: ageDom.value,
+                city: cityDom.value,
                 gender: genderDom.value,
                 interests: [],
+                general: [],
                 preference: [],
+
             };
 
         imagePage(userData);
@@ -128,7 +136,7 @@ function QuestionPage(userData){
     mainDom.innerHTML = `
     <h1>Interests</h1>
     <label for "bio"> Bio:</label>
-    <textarea name="bio" rows="7" id="bio" placeholder="Add more info about yourself..."></textarea>
+    <textarea accept-charset="UTF-8" name="bio" rows="7" id="bio" placeholder="Add more info about yourself..."></textarea>
     <p>Choose 5 interests</p>
     <div id="interestsList" class="required">
     </div>
@@ -210,13 +218,18 @@ function QuestionPage(userData){
                  interestsThree: checkedIntrests[2],
                  interestsFour: checkedIntrests[3],
                  interestsFive: checkedIntrests[4],
-                 bio: bio.value,
-                 contact: contact.value
+            }
+            let general = {
+                bio: bio.value,
+                contact: contact.value
             }
 
             userData.interests.push(interests);
+            userData.general.push(general);
 
             preferencePage(userData);
+
+            console.log(userData);
 
         } else {
              errorMessage();

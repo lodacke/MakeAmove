@@ -7,6 +7,14 @@ export function getUserData() {
   return JSON.parse(userData);
 }
 
+export function renderCityDropdownListReg(){
+  const options = cities.map(city => `
+    <option value="${city}">${city}</option>
+  `).join('');
+  return options;
+
+}
+
 export function renderCityDropdownList(userData) {
   const options = cities.map(city => `
     <option value="${city}">${city}</option>

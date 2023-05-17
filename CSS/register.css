@@ -4,42 +4,131 @@ body{
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-header{
-    height: 20vh;
+#registerPageHeader {
+    height: 17vh;
+    margin-top: 1.5vh;
 }
 
-main{
+#registerPageHeader .logo {
+    height: 17vh;
+}
+
+#registerPageHeader h1 {
+    display: none;
+}
+
+#registerPageMain {
     height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-top: 7vh;
 }
 
-#pageNavigation{
-    margin: 10px;
-     display: flex;
+.inputbox {
+    position: relative;
+    margin-top: 20px;
+}
+
+.inputbox input {
+    width: 80vw;
+    padding: 15px;
+    border-radius: 13px;
+    border: 1px solid #a2a2a2;
+    background-color: #ffffffa1;
+    outline: none;
+}
+
+.inputbox label {
+    position: absolute;
+    left: 0;
+    font-size: 15px;
+    color: #686868;
+    padding: 15px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputbox input:valid ~ label, 
+.inputbox input:focus ~ label {
+    transform: translateX(10px) translateY(-12px);
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.inputbox input:valid, 
+.inputbox input:focus {
+    border: 3px solid #469dff;
+}
+
+.ageAndGender {
+    color: #686868;
+    width: 80vw;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 13px;
+    border: 1px solid #a2a2a2;
+    background-color: #ffffffa1;
+    height: 8vh;
+    display: flex;
     justify-content: space-around;
 }
 
-button {
-    width: 380px;
+.ageAndGender input, 
+.ageAndGender select {
+    border: 1px solid #a2a2a2;
+    border-radius: 5px;
 }
 
+.ageAndGender input:first-child {
+    width: 12vw;
+}
+
+.ageAndGender label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#pageNavigation {
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    height: 6vh;
+    gap: 1vw;
+}
+
+#pageNavigation button {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #6c6c6c;
+    color: #5d626a;
+}
+
+#notAnswered {
+    border: 1px solid red;
+}
+/*
 input{
-    width: 380px;
+    width: 80vw;
+    height: 5vh;
+    border-radius: 13px;
+    border: 1px solid #a2a2a2;
+    background-color: #ffffffa1;
 }
 
+label {
+    margin-top: 2vh;
+    font-size: 15px;
+}
+*/
 #profilePicture {
     display: flex;
     flex-direction: column;
 }
-img {
-    border-radius: 54%;
-    border: 5px solid rgb(98, 168, 230);
-    overflow: hidden;
-    height: 250px;
-}
+
+
+
 #imageMessage {
     text-align: center;
     font-size: 20px;

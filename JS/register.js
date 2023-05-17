@@ -20,34 +20,61 @@ function renderPageNavigation(previousFunction){
 
 export function renderRegisterPage (){
 
+    document.getElementById("startPageHeader").id = "registerPageHeader";
+    document.getElementById("startPageMain").id = "registerPageMain";
+
     mainDom.innerHTML = `
     <h1> Basic Info </h1>
-    <label for "name"> First name: </label>
-    <input type="username" name="name" class="required">
 
-    <label for "email"> Email-adress: </label>
-    <input type="email" name="email" class="required">
+    <div class="inputbox">
+        <input type="username" name="name" class="required" required="required">
+        <label for "name"> First name </label>
+    </div>
 
-    <label for "password"> Password: </label>
-    <input type="password" name="password" minlength="10" class="required">
+    <div class="inputbox">
+        <input type="email" name="email" class="required" required="required">
+        <label for "email"> Email-adress </label>
+    </div>
 
-    <label for "age"> Age: </label>
-    <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+    <div class="inputbox">
+        <input type="password" name="password" minlength="10" class="required" required="required">
+        <label for "password"> Password </label>
+    </div>
 
-    <select name="city" class="required">
+    <div class="ageAndGender">
+        <select name="city" class="required">
     <option value="none" > Choose a city </option>
     ${renderCityDropdownListReg()}
     </select>
 
-    <label for "gender"> Gender: </label>
-    <select name="gender" class="required">
-        <option value="none">Choose an option </option>
-        <option value="female"> Woman </option>
-        <option value="male"> Man </option>
-        <option value="both">Neither</option>
-    </select>
-    ${renderPageNavigation()}
+    <label for "age"> Age: <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required" required="required"> </label>
+        <label for "gender"> Gender: 
+            <select name="gender" class="required">
+                <option value="none">Choose an option </option>
+                <option value="female"> Woman </option>
+                <option value="male"> Man </option>
+                <option value="both">Neither</option>
+            </select>
+        </label>
+        
+    </div>
+
+    ${renderPageNavigation()};
+ 
     `;
+
+
+    function renderPageNavigation(previousFunction){
+        let pageNavDom = document.getElementById("pageNavigation");
+    
+        pageNavDom.innerHTML = `
+            <button id="previousPage"> Previous Page </button>
+            <button id="nextPage"> Next Page </button>`;
+    
+            pageNavDom.querySelector("#previousPage").addEventListener("click", e => {
+    
+         })
+    }
 
     let nameDom = mainDom.querySelector("input[name='name']");
     let passwordDom = mainDom.querySelector("input[name='password']");

@@ -15,11 +15,58 @@
     padding: 4px;
 }
 
-#MatchButtons{
+#potentialMatch {
+    position: relative;
+}
+
+#potentialMatchPic {
+    border-radius: 2px;
+    border: 2px solid white;
+    height: 56vh;
+}
+
+#potentialMatchInfo {
+    font-weight: bold;
+    display: flex;
+    height: 4vh;
+    width: 100%;
+    position: absolute;
+    bottom: 7vh;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#potentialMatchInfo button {
+    width: 20vw;
+}
+
+#matchButtons{
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-#MatchButtons > button{
-    width: 40px;
+#matchButtons button{
+    width: 10vw;
+}
+
+#match, #noMatch {
+align-items: center;
+    background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    height: 54px;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    text-transform: uppercase;
+
 }

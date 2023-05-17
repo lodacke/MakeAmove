@@ -1,4 +1,5 @@
 import { errorMessage } from "./helper.js";
+import { renderDatingPage } from "./date/explore.js";
 import { renderCityDropdownListReg } from "./helper.js";
 
 "use strict"
@@ -6,17 +7,15 @@ import { renderCityDropdownListReg } from "./helper.js";
  let mainDom = document.querySelector("main");
 
 function renderPageNavigation(previousFunction){
-    let pageNavDom = document.querySelector("#pageNavigation");
-    console.log(pageNavDom);
+    let pageNavDom = document.getElementById("pageNavigation");
 
     pageNavDom.innerHTML = `
         <button id="previousPage"> Previous Page </button>
         <button id="nextPage"> Next Page </button>`;
 
         pageNavDom.querySelector("#previousPage").addEventListener("click", e => {
-
-     })
-}
+        })
+   }
 
 export function renderRegisterPage (){
 
@@ -63,19 +62,6 @@ export function renderRegisterPage (){
  
     `;
 
-
-    function renderPageNavigation(previousFunction){
-        let pageNavDom = document.getElementById("pageNavigation");
-    
-        pageNavDom.innerHTML = `
-            <button id="previousPage"> Previous Page </button>
-            <button id="nextPage"> Next Page </button>`;
-    
-            pageNavDom.querySelector("#previousPage").addEventListener("click", e => {
-    
-         })
-    }
-
     let nameDom = mainDom.querySelector("input[name='name']");
     let passwordDom = mainDom.querySelector("input[name='password']");
     let ageDom = mainDom.querySelector("input[name='age']");
@@ -84,7 +70,7 @@ export function renderRegisterPage (){
     let cityDom = mainDom.querySelector("select[name='city']");
 
 
-    document.getElementById("nextPage").addEventListener("click", e => {
+    document.querySelector("#nextPage").addEventListener("click", e => {
 
         if(nameDom.value != "" && emailDom.value != "" && passwordDom.value != "" && ageDom.value != null && genderDom.value != "none" && cityDom.value != "none"){
 
@@ -163,7 +149,7 @@ function QuestionPage(userData){
     mainDom.innerHTML = `
     <h1>Interests</h1>
     <label for "bio"> Bio:</label>
-    <textarea accept-charset="UTF-8" name="bio" rows="7" id="bio" placeholder="Add more info about yourself..."></textarea>
+    <textarea name="bio" rows="7" id="bio" placeholder="Add more info about yourself..."></textarea>
     <p>Choose 5 interests</p>
     <div id="interestsList" class="required">
     </div>
@@ -295,7 +281,7 @@ function preferencePage(userData){
 
         userData.preference.push(preference);
         addUser(userData);
-        // Länk till funktion för att starta dejtandet()
+        renderDatingPage();
             } else {
              errorMessage();
         }
@@ -318,9 +304,24 @@ async function addUser(userData){
     mainDom.append(error_message);
 
     error_message.textContent = JSONresponse;
+
 }
 
 
-
+// ---FUNKTION DÄR NAV SKAPAS ISTÄLLET FÖR ATT ANVÄNDA DEN I HTML, PROBLEM MED ATT KALLA PÅ DEN IGEN I ANDRA FUNKTIONER.
+//function renderPageNavigation(previousFunction){
+//    let pageNavDom = document.createElement("div");
+//    pageNavDom.setAttribute("id", "pageNavigation");
+//    mainDom.append(pageNavDom);
+//    console.log(pageNavDom);
+//
+//    pageNavDom.innerHTML = `
+//        <button id="previousPage"> Previous Page </button>
+//        <button id="nextPage"> Next Page </button>`;
+//
+//        pageNavDom.querySelector("#previousPage").addEventListener("click", e => {
+//
+//     })
+//}
 
 

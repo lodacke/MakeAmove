@@ -81,6 +81,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
    $genderOf = $dataREQUEST["preference"][0]["genderOf"];   
    $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
     $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
+
+    
                                 
   // for($i = 0; $i < count($users); $i++){
   //    if($email == $users[$i]["email"]){    

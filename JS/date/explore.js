@@ -15,32 +15,38 @@ export async function renderDatingPage() {
   let mainDom = document.createElement("main");
   bodyDom.appendChild(mainDom);
 
-  // mainDom.innerHTML = `
-  //   <div id="potentialMatch">
-  //     <img id="potentialMatchPic" src="${userDATA.imageSource}"></img>
-  //     <div id="potentialMatchInfo">
-  //       <div>${userDATA.name}</div>
-  //       <button>Info</button>
-  //       <div>${userDATA.age}</div>
-  //     </div>
-  //   </div>
-  //   <div id="matchButtons">
-  //     <button id="match">Yes</button>
-  //     <button id="noMatch">No</button>
-  //   </div>
+    document.querySelector(".profile").addEventListener("click", renderProfilePage);
+    document.querySelector(".match").addEventListener("click", renderMatchesPage
+    
+    );
+   mainDom.innerHTML = `
+     <div id="potentialMatch">
+       <img id="potentialMatchPic" src="${userDATA.imageSource}"></img>  
+       <div id="potentialMatchInfo">
+         <div>${userDATA.name}</div>
+         <button>Info</button>
+         <div>${userDATA.age}</div>
+       </div>
+       <p> ${userDATA.general.bio}</p>
+       <div id="interestsBox"></div>
+     </div>
+     <div id="matchButtons">
+       <button id="match">Yes</button>
+       <button id="noMatch">No</button>
+     </div>
 
-  // `;
-  mainDom.innerHTML = `
-    <h2>${userDATA.name}</h2>
-    <img src="${userDATA.imageSource}"></img>
-    <h3> bio: </h3>
-    <div id="matchButtons">
-      <button id="match"> Yes! </button>
-      <button id="noMatch"> No </button>
-    </div>
-    <p id="bio"> ${userDATA.interests.bio} </p>
-    <div id="interestsBox"></div>
-    `;
+   `;
+  //mainDom.innerHTML = `
+  //  <h2>${userDATA.name}</h2>
+  //  <img id="testImage"src="${userDATA.imageSource}"></img>
+  //  <h3> bio: </h3>
+  //  <div id="matchButtons">
+  //    <button id="match"> Yes! </button>
+  //    <button id="noMatch"> No </button>
+  //  </div>
+  //  
+  //  <div id="interestsBox"></div>
+  //  `;
 
     let interests =
       [userDATA.interests.interestsOne,
@@ -92,47 +98,12 @@ export async function renderDatingPage() {
   document.querySelector(".match").addEventListener("click", renderMatchesPage);
 }
 
-// export async function renderDatingPage() {
-//   let userPreference = getUserData().preference;
-//   let userAge = getUserData().age;
-//   let userGender = getUserData().gender;
-//   let userEmail = getUserData().email;
 
-//   let request = await fetch(`/PHP/date/explore.php?email=${getUserData().email}`);
-
-//     let userDATA = await request.json();
-
-//     console.log(userDATA);
-
-
+ //----- HÄR FINNS FÖRSÖKET TILL NAV-DOM FUNKTIONEN --------
 //   let navDom = document.querySelector("#pageNavigation");
 //   navDom.innerHTML = `
 //    ${stickyNav()}
 //   `;
-
-//   let mainDom = document.querySelector("main");
-
-//   mainDom.innerHTML = `
-//     <h2>${userDATA.name}</h2>
-//     <img src="${userDATA.source}"></img>
-//     <h3> bio: </h3>
-//     <p id="bio"> ${userDATA.interests.bio} </p>
-//     <div id="interestsBox"></div>
-//     <button id="logout">Loutout</button>`;
-
-//     let interests = [userDATA.interests.interestsOne, userDATA.interests.interestsTwo, userDATA.interests.interestsThree, userDATA.interests.interestsFour, userDATA.interests.interestsFive];
-//     let interestsBox = document.getElementById("interestsBox");
-
-//     interests.forEach(intrest => {
-//       const div = document.createElement("div");
-//       div.textContent = intrest;
-//       interestsBox.append(div);
-
-//     });
-
-//    document.querySelector(".profile").addEventListener("click", renderProfilePage);
-//    document.querySelector(".match").addEventListener("click", renderProfilePage);
-//    document.querySelector("#logout").addEventListener("click", onclickLogout)
 
 // }
 

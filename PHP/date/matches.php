@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     var_dump($dataREQUEST);
 
     $loggedInUser = $dataREQUEST["loggedInUser"];
-    $foundUser = $dataREQUEST["MatchedUser"];
+    $foundUser = $dataREQUEST["matchedUser"];
 
 
 

@@ -20,20 +20,22 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
 
 
-    forEach($users as $user){
+    forEach($users as &$user){
         if($loggedInUser === $user["email"]){
-            $user["matches"]["yes"] = $foundUser;
-        }
+           $user["matches"]["yes"][] = ($foundUser);
+            break;
+        } 
     }
  
-    forEach($users as $user){
-        if($user["email"] === $foundUser){
-            if(in_array($loggedInUser, $user["matches"]["yes"])){
-                 $userContact = $user["interests"]["contact"];
-                 send(200, [$userContact]);
-            }     
-        }
-    }
+   // forEach($users as $user){                   <-- När denna inte är utmarkerad så läggs inte värden till. Kanske att den ska läggas i en funktion som anropas i forloopen åvanför.
+   //     if($user["email"] === $foundUser){
+   //         if(in_array($loggedInUser, $user["matches"]["yes"])){
+   //              $userContact = $user["general"]["contact"];
+   //              send(200, [$userContact]);
+   //              break;
+   //         }     
+   //     }
+   // }
    
     $data = json_encode($users, JSON_PRETTY_PRINT);
     file_put_contents($fileName, $data);

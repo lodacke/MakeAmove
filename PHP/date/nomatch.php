@@ -16,17 +16,17 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     $loggedInUser = $dataREQUEST["loggedInUser"];
     $foundUser = $dataREQUEST["matchedUser"];
-
-    var_dump($loggedInUser);
     
-    forEach($users as $user){
+    forEach($users as &$user){
         if($loggedInUser === $user["email"]){
-            $user["matches"]["no"] = $foundUser;
+            $user["matches"]["no"][] = ($foundUser);
+        break;
         }
     }
-   
     $data = json_encode($users, JSON_PRETTY_PRINT);
     file_put_contents($fileName, $data);
+
+  
 }
 
 ?> 

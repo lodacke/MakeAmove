@@ -15,32 +15,32 @@ export async function renderDatingPage() {
   let mainDom = document.createElement("main");
   bodyDom.appendChild(mainDom);
 
-  mainDom.innerHTML = `
-    <div id="potentialMatch">
-      <img id="potentialMatchPic" src="${userDATA.imageSource}"></img>
-      <div id="potentialMatchInfo">
-        <div>${userDATA.name}</div>
-        <button>Info</button>
-        <div>${userDATA.age}</div>
-      </div>
-    </div>
-    <div id="matchButtons">
-      <button id="match">Yes</button>
-      <button id="noMatch">No</button>
-    </div>
-
-  `;
   // mainDom.innerHTML = `
-  //   <h2>${userDATA.name}</h2>
-  //   <img src="${userDATA.imageSource}"></img>
-  //   <h3> bio: </h3>
-  //   <div id="matchButtons">
-  //     <button id="match"> Yes! </button>
-  //     <button id="noMatch"> No </button>
+  //   <div id="potentialMatch">
+  //     <img id="potentialMatchPic" src="${userDATA.imageSource}"></img>
+  //     <div id="potentialMatchInfo">
+  //       <div>${userDATA.name}</div>
+  //       <button>Info</button>
+  //       <div>${userDATA.age}</div>
+  //     </div>
   //   </div>
-  //   <p id="bio"> ${userDATA.interests.bio} </p>
-  //   <div id="interestsBox"></div>
-  //   `;
+  //   <div id="matchButtons">
+  //     <button id="match">Yes</button>
+  //     <button id="noMatch">No</button>
+  //   </div>
+
+  // `;
+  mainDom.innerHTML = `
+    <h2>${userDATA.name}</h2>
+    <img src="${userDATA.imageSource}"></img>
+    <h3> bio: </h3>
+    <div id="matchButtons">
+      <button id="match"> Yes! </button>
+      <button id="noMatch"> No </button>
+    </div>
+    <p id="bio"> ${userDATA.interests.bio} </p>
+    <div id="interestsBox"></div>
+    `;
 
     let interests =
       [userDATA.interests.interestsOne,

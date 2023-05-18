@@ -10,23 +10,25 @@ export async function renderDatingPage() {
 
   // console.log(userDATA);
   let bodyDom = document.querySelector("body");
-  bodyDom.innerHTML = stickyNav();
+  // bodyDom.innerHTML = stickyNav();
 
-  let mainDom = document.createElement("main");
-  bodyDom.appendChild(mainDom);
+  let headerDom = document.querySelector("header");
+  headerDom.innerHTML =
+    `<img class="explore-logo" src="../PHP/DB/image/logo.png" alt="logo">
+  `;
+  let mainDom = document.querySelector("main");
+  mainDom.setAttribute("id", "explore-main")
 
-    document.querySelector(".profile").addEventListener("click", renderProfilePage);
-    document.querySelector(".match").addEventListener("click", renderMatchesPage
-    
-    );
-   mainDom.innerHTML = `
+  mainDom.innerHTML = `
      <div id="potentialMatch">
-       <img id="potentialMatchPic" src="${userDATA.imageSource}"></img>  
-       <div id="potentialMatchInfo">
-         <div>${userDATA.name}</div>
-         <button>Info</button>
-         <div>${userDATA.age}</div>
-       </div>
+      <div id="potentialMatchPicIndo">
+        <img id="potentialMatchPic" src="${userDATA.imageSource}"></img>
+        <div id="potentialMatchInfo">
+          <div>${userDATA.name}</div>
+          <button>Info</button>
+          <div>${userDATA.age}</div>
+        </div>
+      </div>
        <p> ${userDATA.general.bio}</p>
        <div id="interestsBox"></div>
      </div>
@@ -34,38 +36,33 @@ export async function renderDatingPage() {
        <button id="match">Yes</button>
        <button id="noMatch">No</button>
      </div>
-
    `;
-  //mainDom.innerHTML = `
-  //  <h2>${userDATA.name}</h2>
-  //  <img id="testImage"src="${userDATA.imageSource}"></img>
-  //  <h3> bio: </h3>
-  //  <div id="matchButtons">
-  //    <button id="match"> Yes! </button>
-  //    <button id="noMatch"> No </button>
-  //  </div>
-  //  
-  //  <div id="interestsBox"></div>
-  //  `;
 
-    let interests =
-      [userDATA.interests.interestsOne,
-      userDATA.interests.interestsTwo,
-      userDATA.interests.interestsThree,
-      userDATA.interests.interestsFour,
-      userDATA.interests.interestsFive
-    ];
+  let navBar = document.querySelector("#pageNavigation");
+  console.log(navBar);
+  navBar.innerHTML = stickyNav();
 
-    let interestsBox = document.getElementById("interestsBox");
+  document.querySelector(".profile").addEventListener("click", renderProfilePage);
+  document.querySelector(".match").addEventListener("click", renderMatchesPage);
 
-    interests.forEach(intrest => {
-      const div = document.createElement("div");
-      div.textContent = intrest;
-      interestsBox.append(div);
-    });
+  // let interests =
+  //   [userDATA.interests.interestsOne,
+  //   userDATA.interests.interestsTwo,
+  //   userDATA.interests.interestsThree,
+  //   userDATA.interests.interestsFour,
+  //   userDATA.interests.interestsFive
+  // ];
 
-    mainDom.querySelector("#match").addEventListener("click", matches);
-    mainDom.querySelector("#noMatch").addEventListener("click", noMatch);
+  // let interestsBox = document.getElementById("interestsBox");
+
+  // interests.forEach(intrest => {
+  //   const div = document.createElement("div");
+  //   div.textContent = intrest;
+  //   interestsBox.append(div);
+  // });
+
+  mainDom.querySelector("#match").addEventListener("click", matches);
+  mainDom.querySelector("#noMatch").addEventListener("click", noMatch);
 
   let match = {
     "loggedInUser": getUserData().email,
@@ -91,7 +88,7 @@ export async function renderDatingPage() {
       body: JSON.stringify(match),
     }));
 
-    
+
 
     renderDatingPage();
   }

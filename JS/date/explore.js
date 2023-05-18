@@ -39,7 +39,6 @@ export async function renderDatingPage() {
    `;
 
   let navBar = document.querySelector("#pageNavigation");
-  console.log(navBar);
   navBar.innerHTML = stickyNav();
 
   document.querySelector(".profile").addEventListener("click", renderProfilePage);

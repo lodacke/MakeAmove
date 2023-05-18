@@ -5,11 +5,11 @@ import { renderProfilePage } from "./profile.js";
 import { renderDatingPage } from "./explore.js";
 
 export function renderMatchesPage(){
-  let bodyDom = document.querySelector("body");
+  let mainDom = document.querySelector("main");
+  mainDom.innerHTML = ``;
+  let navBar = document.querySelector("#pageNavigation");
 
-  bodyDom.innerHTML = `
-    ${stickyNav()}
-  `;
+  navBar.innerHTML = stickyNav();
 
   document.querySelector(".explore").addEventListener("click", renderDatingPage);
   document.querySelector(".profile").addEventListener("click", renderProfilePage);

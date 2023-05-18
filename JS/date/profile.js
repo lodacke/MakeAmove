@@ -154,7 +154,7 @@ function renderInterestBox(interest) {
   const anInterest = document.createElement("div");
   const input = document.createElement("input");
   input.type = "checkbox";
-  input.setAttribute("id", "interest-checkbox");
+  input.classList.add("interest-checkbox");
   const label = document.createElement("label");
   label.htmlFor = input.name;
   label.textContent = interest;

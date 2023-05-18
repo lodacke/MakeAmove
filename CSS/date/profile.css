@@ -155,7 +155,7 @@
     display: none;
   } */
 
-  label {
+  .my-interest {
     display: inline-block;
     padding: 8px 16px;
     background-color: #e0e0e0;
@@ -238,9 +238,9 @@
 
   .popup-background {
     background-color: rgba(0, 0, 0, 0.4);
-    top: 3vh;
+    top: 14vh;
     left: 6vw;
-    height: 86vh;
+    height: 72vh;
     width: 88vw;
     border-radius: 32px;
     position: relative;
@@ -273,6 +273,7 @@
   }
 
   .password-row {
+    padding: 2px;
     text-align: left;
     font-size: 2.5vh;
   }
@@ -285,6 +286,7 @@
 
   .password-input {
     height: 3vh;
+    width: 100%;
     border-radius: 5px;
     border: 1px solid white;
   }
@@ -303,7 +305,7 @@
   .confirm-delete-no {
     position: absolute;
     right: 5vw;
-    bottom: 6vh;
+    bottom: 5vh;
     width: 29vw;
     height: 3.5vh;
     font-weight: bold;

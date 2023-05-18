@@ -34,24 +34,25 @@ async function submitLogin(event) {
 
 export function renderLoginPage() {
   let bodyDom = document.querySelector("body");
+  let headerDom = document.querySelector("header");
+  let mainDom = document.querySelector("main");
 
-  bodyDom.innerHTML = `
-    <header>
-      <img class="logo" src="/PHP/DB/image/logo.png" alt="appLogo">
-      <h1>Make A Move</h1>
-    </header>
-    <main>
-      <h2>Login</h2>
-      <form class="login-form" action="PHP/login.php" method="POST">
-        <input type="text" name="email" placeholder="Email" class="required">
-        <input type="password" name="password" placeholder="Password" class="required">
-        <button class="login-button" type="submit">Login</button>
-        <p class="message"></p>` +
-        // TODO: <img class="loading" src="image/spinner.svg" alt="loading">
+  headerDom.innerHTML = `
+    <img class="logo" src="/PHP/DB/image/logo.png" alt="appLogo">
+    <h1>Make A Move</h1>
+  `;
+
+  mainDom.innerHTML = `
+    <h2>Login</h2>
+    <form class="login-form" action="PHP/login.php" method="POST">
+      <input type="text" name="email" placeholder="Email" class="required">
+      <input type="password" name="password" placeholder="Password" class="required">
+      <button class="login-button" type="submit">Login</button>
+      <p class="message"></p>` +
+      // TODO: <img class="loading" src="image/spinner.svg" alt="loading">
     `</form>
       <p class="login-kind-words">You're not alone! Many like-minded people are looking for their love from Make A Move. Let us help you! 🫰🏼</p>
       <button class="go-to-register">Register</button>
-    </main>
   `;
 
   const goToRegister = document.querySelector(".go-to-register");

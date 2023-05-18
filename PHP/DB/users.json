@@ -216,30 +216,41 @@
     {
         "name": "Emil",
         "email": "emil@gmail.com",
-        "password": "emil",
-        "age": "30",
+        "password": "e",
+        "age": "20",
         "city": "Stoby",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": {
-            "interestsOne": "sport",
-            "interestsTwo": "gaming",
-            "interestsThree": "nightout",
+            "interestsOne": "traveling",
+            "interestsTwo": "yoga",
+            "interestsThree": "art",
             "interestsFour": "photographing",
-            "interestsFive": "gym"
+            "interestsFive": "movienight"
         },
         "general": {
-            "bio": "",
+            "bio": "hi there",
             "contact": "078943742"
         },
         "preference": {
             "genderOf": "female",
-            "ageOfMax": "35",
-            "ageOfMin": "20"
+            "ageOfMax": "28",
+            "ageOfMin": "18"
         },
         "matches": {
-            "yes": [],
-            "no": []
+            "yes": [
+                "Rosa@gmail.com",
+                "amiiina@hotmail.com",
+                "vickan@hotmail.com",
+                "vickan@hotmail.com",
+                "jobbmail@jobb.com"
+            ],
+            "no": [
+                "Rosa@gmail.com",
+                "amiiina@hotmail.com",
+                "vickan@hotmail.com",
+                "jobbmail@jobb.com"
+            ]
         }
     },
     {

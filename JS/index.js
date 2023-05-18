@@ -14,14 +14,11 @@ function checkIfUserLoggedIn() {
 }
 
 export function renderFrontPage() {
-  let bodyDom = document.querySelector("body");
   let headerDom = document.querySelector("header");
-  console.log(headerDom);
   headerDom.setAttribute("id", "startPageHeader");
+
   let frontMainDom = document.querySelector("main");
   frontMainDom.setAttribute("id", "startPageMain");
-
-  //bodyDom.insertBefore(headerDom, frontMainDom);
 
   headerDom.innerHTML = `
     <img class=logo src="/PHP/DB/image/logo.png" alt="appLogo">

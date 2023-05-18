@@ -6,14 +6,11 @@
   }
 
   #startPageHeader {
-    margin-top: 15vh;
     height: 25vh;
   }
 
   #startPageHeader .logo {
     height: 22vh;
-
-    
   }
 
   #startPageHeader h1 {

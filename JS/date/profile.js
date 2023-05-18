@@ -20,9 +20,9 @@ export async function renderProfilePage() {
     return;
   }
 
-  let bodyDom = document.querySelector("body");
+  let mainDom = document.querySelector("main");
 
-  bodyDom.innerHTML = `
+  mainDom.innerHTML = `
     <form class="profile-page-container">
 
       <div class="profile-top">
@@ -101,7 +101,6 @@ export async function renderProfilePage() {
       </div>
 
     </form>
-    ${stickyNav()}
   `;
 
   colorThePreferredGender(userData.preference.genderOf);
@@ -120,7 +119,7 @@ export async function renderProfilePage() {
   deleteAccountButton.addEventListener("click", renderConfirmDeleteAccountBox);
 
   // Save the form
-  const form = bodyDom.querySelector('.profile-page-container');
+  const form = mainDom.querySelector('.profile-page-container');
   form.addEventListener("submit", saveProfile);
 
   document.querySelector(".explore").addEventListener("click", renderDatingPage);
@@ -129,8 +128,9 @@ export async function renderProfilePage() {
 
 function logoutFromAccount() {
   window.localStorage.removeItem("user");
-  document.querySelector("body").innerHTML = "";
   renderFrontPage();
+  let navBar = document.querySelector(".sticky-nav");
+  navBar.classList.add("hide");
 }
 
 function checkMyChosenInterestAtRegister(myChosenInterestAtRegister) {

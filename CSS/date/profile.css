@@ -320,4 +320,8 @@
   .confirm-delete-yes {
     left: 5vw;
   }
+
+  .hide {
+    display: none;
+  }
 }

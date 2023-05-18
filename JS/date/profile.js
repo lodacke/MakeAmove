@@ -35,7 +35,7 @@ export async function renderProfilePage() {
           <h3>About me</h3>
 
           <div class="title">Bio</div>
-          <textarea class="bio" name="bio" placeholder="Write something about yourself">${userData.interests.bio || ""}</textarea>
+          <textarea class="bio" name="bio" placeholder="Write something about yourself">${userData.general.bio || ""}</textarea>
 
           <div class="interest">
             <div class="interest-title-limit">
@@ -130,15 +130,11 @@ export async function renderProfilePage() {
 function logoutFromAccount() {
   window.localStorage.removeItem("user");
   document.querySelector("body").innerHTML = "";
-  const bodyDom = document.querySelector("body");
-  const mainDom = document.createElement("main");
-  bodyDom.appendChild(mainDom);
   renderFrontPage();
 }
 
 function checkMyChosenInterestAtRegister(myChosenInterestAtRegister) {
   const interestsArray = Object.values(myChosenInterestAtRegister);
-  interestsArray.splice(-2);
 
   const myInterestLabels = document.querySelectorAll(".my-interest");
 
@@ -158,11 +154,11 @@ function renderInterestBox(interest) {
   const anInterest = document.createElement("div");
   const input = document.createElement("input");
   input.type = "checkbox";
-  input.setAttribute('id', 'interestCheckbox');
+  input.setAttribute("id", "interest-checkbox");
   const label = document.createElement("label");
   label.htmlFor = input.name;
   label.textContent = interest;
-  label.setAttribute('for', 'myCheckbox');
+  label.setAttribute("for", "myCheckbox");
   anInterest.append(input);
   anInterest.append(label);
 

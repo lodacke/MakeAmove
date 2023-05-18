@@ -28,9 +28,10 @@
   }
 
   .user-picture {
-    height: 15vh;
-    width: 15vh;
+    height: 18vh;
+    width: 18vh;
     border: 3px solid black;
+    border-radius: 50%;
   }
 
   .user-name {

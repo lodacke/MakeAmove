@@ -16,6 +16,10 @@
     text-align: left;
   }
 
+  .logo {
+    height: 22vh;
+  }
+
   .login-form input {
     margin: 2vw;
     margin-left: 0;

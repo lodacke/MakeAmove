@@ -10,7 +10,6 @@ export async function renderDatingPage() {
 
   // console.log(userDATA);
   let bodyDom = document.querySelector("body");
-  // bodyDom.innerHTML = stickyNav();
 
   let headerDom = document.querySelector("header");
   headerDom.innerHTML =
@@ -38,7 +37,8 @@ export async function renderDatingPage() {
      </div>
    `;
 
-  let navBar = document.querySelector("#pageNavigation");
+  let navBar = document.querySelector(".sticky-nav");
+  navBar.classList.remove("hide");
   navBar.innerHTML = stickyNav();
 
   document.querySelector(".profile").addEventListener("click", renderProfilePage);

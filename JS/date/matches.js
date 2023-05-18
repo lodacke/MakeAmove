@@ -7,7 +7,7 @@ import { renderDatingPage } from "./explore.js";
 export function renderMatchesPage(){
   let mainDom = document.querySelector("main");
   mainDom.innerHTML = ``;
-  let navBar = document.querySelector("#pageNavigation");
+  let navBar = document.querySelector(".sticky-nav");
 
   navBar.innerHTML = stickyNav();
 

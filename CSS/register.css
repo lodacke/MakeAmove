@@ -90,7 +90,7 @@ body{
     gap: 5px;
 }
 
-#pageNavigation {
+  .sticky-nav {
     margin: 10px;
     display: flex;
     justify-content: space-around;

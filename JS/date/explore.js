@@ -7,10 +7,11 @@ import { renderFrontPage } from "../index.js";
 export async function renderDatingPage() {
   let mainDom = document.querySelector("main");
   mainDom.innerHTML = ``;
+  mainDom.setAttribute("id", "exploreMain");
 
   let request = await fetch(`/PHP/date/explore.php?id=${getUserData().id}`);
   let userDATA = await request.json();
-  
+
   renderCurrentDate();
 
   function renderCurrentDate (){
@@ -44,14 +45,16 @@ export async function renderDatingPage() {
       mainDom.innerHTML = `
       <div id="potentialMatch">
         <img id="potentialMatchPic" src="${userDATA.imageSource}"></img>  
+        </div>
         <div id="potentialMatchInfo">
           <div>${userDATA.name}</div>
           <div>${userDATA.age} </div>
         </div>
-         <div id="matchButtons">
+        <div id="matchButtons">
         <button id="match">Yes</button>
         <button id="noMatch">No</button>
       </div>
+
     `;
 
   // let interestsBox = document.getElementById("interestsBox");

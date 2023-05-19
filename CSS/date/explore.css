@@ -5,7 +5,11 @@
 
 }
 
-#explore-main {
+#exploreMain{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
 
@@ -41,7 +45,7 @@
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
     margin: 4px;
-    padding: 4px;
+    padding: 7px;
 }
 
 #potentialMatch {
@@ -61,22 +65,18 @@
 #potentialMatchInfo {
     font-weight: bold;
     display: flex;
-    height: 4vh;
-    width: 100%;
+    height: 7vh;
+    width: 92vw;
     position: absolute;
-    bottom: 7vh;
+    bottom: 14vh;
     background-color: rgba(255, 255, 255, 0.5);
     justify-content: space-around;
     align-items: center;
 }
 
-#potentialMatchInfo button {
-    width: 20vw;
-}
-
 #matchButtons{
     position: absolute;
-    width: 100%;
+    width: 94%;
     display: flex;
     justify-content: space-between;
     bottom: 30vh;

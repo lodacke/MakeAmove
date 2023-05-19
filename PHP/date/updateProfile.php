@@ -32,7 +32,7 @@ if(isset($requestData["email"])) {
       $user["city"] = isset($requestData["city"]) ? $requestData["city"] : $user["city"];
       $user["age"] = isset($requestData["age-my"]) ? $requestData["age-my"] : $user["age"];
 
-      $user["interests"]["bio"] = isset($requestData["bio"]) ? $requestData["bio"] : $user["interests"]["bio"];
+      $user["general"]["bio"] = isset($requestData["bio"]) ? $requestData["bio"] : $user["general"]["bio"];
       $user["interests"]["interestsOne"] = isset($requestData["interestsOne"]) ? $requestData["interestsOne"] : $user["interests"]["interestsOne"];
       $user["interests"]["interestsTwo"] = isset($requestData["interestsTwo"]) ? $requestData["interestsTwo"] : $user["interests"]["interestsTwo"];
       $user["interests"]["interestsThree"] = isset($requestData["interestsThree"]) ? $requestData["interestsThree"] : $user["interests"]["interestsThree"];

@@ -2,6 +2,22 @@
     display: flex;
     justify-content: space-between;
     margin: 5px;
+
+}
+
+#explore-main {
+    position: relative;
+}
+
+.explore-logo {
+    width: 10vh;
+    margin: 3vh 0 2vh;
+}
+
+#bio{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 #exploreLogo{
@@ -29,7 +45,11 @@
 }
 
 #potentialMatch {
-    position: relative;
+    /* position: relative; */
+}
+
+#potentialMatchPicIndo {
+
 }
 
 #potentialMatchPic {
@@ -59,6 +79,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    bottom: 30vh;
 }
 
 #matchButtons button{

@@ -41,8 +41,16 @@ export async function renderDatingPage() {
       </div>
     `;
 
-    mainDom.querySelector("#match").addEventListener("click", matches);
-    mainDom.querySelector("#noMatch").addEventListener("click", noMatch);
+  // let interestsBox = document.getElementById("interestsBox");
+
+  // interests.forEach(intrest => {
+  //   const div = document.createElement("div");
+  //   div.textContent = intrest;
+  //   interestsBox.append(div);
+  // });
+
+  mainDom.querySelector("#match").addEventListener("click", matches);
+  mainDom.querySelector("#noMatch").addEventListener("click", noMatch);
 
     mainDom.querySelector("#potentialMatchPic").addEventListener("click", showUser);
 

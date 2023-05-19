@@ -12,6 +12,7 @@ export async function renderDatingPage() {
   let bodyDom = document.querySelector("body");
 
   let headerDom = document.querySelector("header");
+  headerDom.removeAttribute("id");
   headerDom.classList.add("header-logo");
   headerDom.innerHTML =
     `<img class="explore-logo" src="../PHP/DB/image/logo.png" alt="logo">

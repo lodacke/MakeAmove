@@ -1,16 +1,29 @@
-#bio{
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding: 20px;
+#exploreHeader{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
 }
 
-#interestsBox{
+#exploreLogo{
+    height: 6vh;
+    width: 14vw;
+}
+
+#exploreBio{
+    border-radius: 5px;
+    padding: 10px;
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.6);
+    ;
+}
+
+#exploreInterestsBox{
     display: flex;
 }
 
-#interestsBox > div {
-    border: 1px solid gray;
-    border-radius: 10px;
+#exploreInterestsBox > div {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
     margin: 4px;
     padding: 4px;
 }
@@ -32,7 +45,7 @@
     width: 100%;
     position: absolute;
     bottom: 7vh;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
     justify-content: space-around;
     align-items: center;
 }
@@ -68,5 +81,26 @@ align-items: center;
     padding-right: 20px;
     padding-top: 3px;
     text-transform: uppercase;
+
+}
+
+#noPotentialMatch{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#exploreProfile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#exploreProfileImage{
+    border-radius: 2px;
+    border: 2px solid white;
+    height: 35vh;
 
 }

@@ -4,96 +4,120 @@ import { getUserData } from "../helper.js";
 import { renderMatchesPage } from "./matches.js";
 
 export async function renderDatingPage() {
-  let request = await fetch(`/PHP/date/explore.php?email=${getUserData().email}`);
 
+  let request = await fetch(`/PHP/date/explore.php?id=${getUserData().id}`);
   let userDATA = await request.json();
+  renderCurrentDate();
 
-  // console.log(userDATA);
-  let bodyDom = document.querySelector("body");
-  bodyDom.innerHTML = stickyNav();
+  function renderCurrentDate (){
 
-  let mainDom = document.createElement("main");
-  bodyDom.appendChild(mainDom);
+   // let navDom = document.querySelector("#pageNavigation");
+   let navDom = document.createElement("div");
+   document.querySelector("body").append(navDom);
+    navDom.innerHTML = stickyNav();
 
+    let headerDOM = document.querySelector("header");
+    headerDOM.innerHTML = `
+    <div id="exploreHeader"> 
+      <img id="exploreLogo" src="/PHP/DB/image/logo.png" alt="appLogo">
+    </div>`;
+  
+    let mainDom = document.querySelector("main");
+  
     document.querySelector(".profile").addEventListener("click", renderProfilePage);
-    document.querySelector(".match").addEventListener("click", renderMatchesPage
-    
-    );
-   mainDom.innerHTML = `
-     <div id="potentialMatch">
-       <img id="potentialMatchPic" src="${userDATA.imageSource}"></img>  
-       <div id="potentialMatchInfo">
-         <div>${userDATA.name}</div>
-         <button>Info</button>
-         <div>${userDATA.age}</div>
-       </div>
-       <p> ${userDATA.general.bio}</p>
-       <div id="interestsBox"></div>
-     </div>
-     <div id="matchButtons">
-       <button id="match">Yes</button>
-       <button id="noMatch">No</button>
-     </div>
+    document.querySelector(".match").addEventListener("click", renderMatchesPage);
 
-   `;
-  //mainDom.innerHTML = `
-  //  <h2>${userDATA.name}</h2>
-  //  <img id="testImage"src="${userDATA.imageSource}"></img>
-  //  <h3> bio: </h3>
-  //  <div id="matchButtons">
-  //    <button id="match"> Yes! </button>
-  //    <button id="noMatch"> No </button>
-  //  </div>
-  //  
-  //  <div id="interestsBox"></div>
-  //  `;
-
-    let interests =
-      [userDATA.interests.interestsOne,
-      userDATA.interests.interestsTwo,
-      userDATA.interests.interestsThree,
-      userDATA.interests.interestsFour,
-      userDATA.interests.interestsFive
-    ];
-
-    let interestsBox = document.getElementById("interestsBox");
-
-    interests.forEach(intrest => {
-      const div = document.createElement("div");
-      div.textContent = intrest;
-      interestsBox.append(div);
-    });
+    if(request.status == 200){
+      mainDom.innerHTML = `
+      <div id="potentialMatch">
+        <img id="potentialMatchPic" src="${userDATA.imageSource}"></img>  
+        <div id="potentialMatchInfo">
+          <div>${userDATA.name}</div>
+          <div>${userDATA.age} </div>
+        </div>
+         <div id="matchButtons">
+        <button id="match">Yes</button>
+        <button id="noMatch">No</button>
+      </div>
+    `;
 
     mainDom.querySelector("#match").addEventListener("click", matches);
     mainDom.querySelector("#noMatch").addEventListener("click", noMatch);
 
-  let match = {
-    "loggedInUser": getUserData().email,
-    "matchedUser": userDATA.email,
-  };
+    mainDom.querySelector("#potentialMatchPic").addEventListener("click", showUser);
 
-  async function matches(){
-    let requestPOST = await fetch( new Request("/PHP/date/matches.php", {
-      method: "POST",
-      headers: {"Content-type":"application/json; charset=UTF-8"},
-      body: JSON.stringify(match),
+    let match = {
+      "loggedInUser": getUserData().id,
+      "matchedUser": userDATA.id,
+    };
+
+    async function matches(){
+      let requestPOST = await fetch( new Request("/PHP/date/matches.php", {
+        method: "POST",
+        headers: {"Content-type":"application/json; charset=UTF-8"},
+        body: JSON.stringify(match),
       }));
 
-    let response = await requestPOST.json();
+      let response = await requestPOST.json();
 
-    renderDatingPage();
-  }
+      if(response != "no match"){
+        alert(`its a match! ${response}`);
+        };
 
-  async function noMatch(){
-    let requestPOST = await fetch( new Request("/PHP/date/nomatch.php", {
-      method: "POST",
-      headers: {"Content-type":"application/json; charset=UTF-8"},
-      body: JSON.stringify(match),
-    }));
+      renderDatingPage();
+    } 
 
-    
+    async function noMatch(){
+      let requestPOST = await fetch( new Request("/PHP/date/nomatch.php", {
+        method: "POST",
+        headers: {"Content-type":"application/json; charset=UTF-8"},
+        body: JSON.stringify(match),
+      })); 
 
-    renderDatingPage();
+      renderDatingPage();
+    }
+
+    function showUser(){
+
+      mainDom.innerHTML = `
+      <div id="exploreProfile"> 
+        <h3> ${userDATA.name}, ${userDATA.age} y/o</h3> 
+        <img id="exploreProfileImage" src="${userDATA.imageSource}"></img> 
+        <h3> bio: </h3>
+        <div id="exploreBio">
+          ${userDATA.general.bio}
+        </div>
+       <div id="exploreInterestsBox"></div>
+      </div>`;
+
+      let interests =
+        [userDATA.interests.interestsOne,
+        userDATA.interests.interestsTwo,
+        userDATA.interests.interestsThree,
+        userDATA.interests.interestsFour,
+        userDATA.interests.interestsFive
+       ];
+
+      let interestsBox = mainDom.querySelector("#exploreInterestsBox");
+
+      interests.forEach(intrest => {
+        const div = document.createElement("div");
+        div.textContent = intrest;
+        interestsBox.append(div);
+      });
+
+      mainDom.querySelector("#exploreProfileImage").addEventListener("click", e => {
+        renderCurrentDate();
+      });
+
+    }
+  } else { 
+    mainDom.innerHTML = `
+    <div id="noPotentialMatch">
+      <p> No potential matches are found right now :(</p>
+    </div>
+    `
+    } 
   }
 
   document.querySelector(".profile").addEventListener("click", renderProfilePage);
@@ -101,13 +125,6 @@ export async function renderDatingPage() {
 }
 
 
- //----- HÄR FINNS FÖRSÖKET TILL NAV-DOM FUNKTIONEN --------
-//   let navDom = document.querySelector("#pageNavigation");
-//   navDom.innerHTML = `
-//    ${stickyNav()}
-//   `;
-
-// }
 
 
 

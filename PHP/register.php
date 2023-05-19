@@ -102,7 +102,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $image = end($AllImages);
         $imageSource = $image["source"];
 
+
         $newUser = [
+          "id" => uniqid(),
           "name" => $name,
           "email" => $email,
           "password" => $password,

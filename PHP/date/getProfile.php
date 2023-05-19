@@ -7,16 +7,16 @@ allowCORS();
 allowMethod("GET");
 
 $filename = "../DB/users.json";
-$email = $_GET["email"];
+$id = $_GET["id"];
 
 if (file_exists($filename)) {
   $json = file_get_contents($filename);
   $users = json_decode($json, true);
 }
 
-if (isset($email)) {
+if (isset($id)) {
   foreach($users as $user) {
-    if ($user["email"] === $email) {
+    if ($user["id"] === $id) {
       send(200, $user);
     }
   }

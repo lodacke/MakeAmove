@@ -13,30 +13,38 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $jsonREQUEST = file_get_contents("php://input");
     $dataREQUEST = json_decode($jsonREQUEST, true);
 
-    var_dump($dataREQUEST);
+    $foundUserMatch = null;
 
     $loggedInUser = $dataREQUEST["loggedInUser"];
     $foundUser = $dataREQUEST["matchedUser"];
 
-
-
     forEach($users as &$user){
-        if($loggedInUser === $user["email"]){
+        if($loggedInUser === $user["id"]){
            $user["matches"]["yes"][] = ($foundUser);
             break;
         } 
     }
+    $data = json_encode($users, JSON_PRETTY_PRINT);
+    file_put_contents($fileName, $data);
+    
+    foreach ($users as &$user) {
+        if ($foundUser === $user["id"]) {
+            if (in_array($loggedInUser, $user["matches"]["yes"])) {
+                $foundUserMatch = $user;
+                break;
+            } else {
+                send(200, "no match");
+            }
+        }
+    }
+
+    if ($foundUserMatch) {
+        $userContact = $foundUserMatch["general"]["contact"];
+        send(200, $userContact);
+    } else {
+        send(404, ["user not found"]);
+    }
  
-   // forEach($users as $user){                   <-- När denna inte är utmarkerad så läggs inte värden till. Kanske att den ska läggas i en funktion som anropas i forloopen åvanför.
-   //     if($user["email"] === $foundUser){
-   //         if(in_array($loggedInUser, $user["matches"]["yes"])){
-   //              $userContact = $user["general"]["contact"];
-   //              send(200, [$userContact]);
-   //              break;
-   //         }     
-   //     }
-   // }
-   
     $data = json_encode($users, JSON_PRETTY_PRINT);
     file_put_contents($fileName, $data);
 }

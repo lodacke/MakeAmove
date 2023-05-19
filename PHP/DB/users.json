@@ -1,26 +1,315 @@
 [
     {
-        "name": "Lo",
-        "email": "lo.mail@mgmgm.com",
-        "password": "hejhej",
-        "age": "33",
-        "city": "Mala",
-        "gender": "male",
+        "id": "64660bd13d77b",
+        "name": "Anna",
+        "email": "anna@mail.com",
+        "password": "anna",
+        "age": "21",
+        "city": "Lund",
+        "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": {
-            "interestsOne": "movies",
-            "interestsTwo": "traveling",
-            "interestsThree": "reading",
-            "interestsFour": "astrology",
-            "interestsFive": "fishing"
+            "interestsOne": "reading",
+            "interestsTwo": "astrology",
+            "interestsThree": "fishing",
+            "interestsFour": "beer",
+            "interestsFive": "yoga"
         },
         "general": {
-            "bio": "Hej h\u00e4r st\u00e5r det lite om mig",
-            "contact": "2345676666"
+            "bio": "",
+            "contact": "0764537832"
         },
         "preference": {
             "genderOf": "male",
-            "ageOfMax": "33",
+            "ageOfMax": "29",
+            "ageOfMin": "18"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "64660d07a43ac",
+        "name": "Sara",
+        "email": "sara@mail.com",
+        "password": "sara",
+        "age": "21",
+        "city": "Malm\u00f6",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "traveling",
+            "interestsTwo": "movies",
+            "interestsThree": "fishing",
+            "interestsFour": "wine",
+            "interestsFive": "art"
+        },
+        "general": {
+            "bio": "Hejhej!",
+            "contact": "0760373456"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "30",
+            "ageOfMin": "18"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "64660d2f4834a",
+        "name": "Rosa",
+        "email": "Rosa@gmail.com",
+        "password": "rosa",
+        "age": "24",
+        "city": "Link\u00f6ping",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "stand-upcomedy",
+            "interestsThree": "art",
+            "interestsFour": "smoking",
+            "interestsFive": "running"
+        },
+        "general": {
+            "bio": "",
+            "contact": "076033456"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "30",
+            "ageOfMin": "20"
+        },
+        "matches": {
+            "yes": [
+                "64660e2656c5d",
+                "64660f47636ce"
+            ],
+            "no": [
+                "64660d6fe59eb",
+                "64660ddeac576",
+                "64660d9225322",
+                "64660ecc168b7",
+                "64660ddeac576",
+                "64660ecc168b7",
+                "64660ddeac576",
+                "64660f6cd01de",
+                "64660ddeac576",
+                "64660f6cd01de"
+            ]
+        }
+    },
+    {
+        "id": "64660d6fe59eb",
+        "name": "Emil",
+        "email": "Emil@gmail.com",
+        "password": "Emil",
+        "age": "27",
+        "city": "G\u00f6teborg",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "beer",
+            "interestsTwo": "wine",
+            "interestsThree": "fishing",
+            "interestsFour": "sport",
+            "interestsFive": "snus"
+        },
+        "general": {
+            "bio": "Looking for wifey",
+            "contact": "0768889431"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "29",
+            "ageOfMin": "18"
+        },
+        "matches": {
+            "yes": [
+                "64660d2f4834a"
+            ],
+            "no": []
+        }
+    },
+    {
+        "id": "64660d9225322",
+        "name": "Benjamin",
+        "email": "benjamin@gmail.com",
+        "password": "rosaa",
+        "age": "22",
+        "city": "Lund",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "photographing",
+            "interestsThree": "hiking",
+            "interestsFour": "gaming",
+            "interestsFive": "playinginstruments"
+        },
+        "general": {
+            "bio": "",
+            "contact": "0768889431"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "28",
+            "ageOfMin": "18"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "64660db9d6489",
+        "name": "Sofie",
+        "email": "sofie@gmail.com",
+        "password": "sofie",
+        "age": "22",
+        "city": "G\u00e4vle",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "astrology",
+            "interestsTwo": "traveling",
+            "interestsThree": "reading",
+            "interestsFour": "wine",
+            "interestsFive": "movienight"
+        },
+        "general": {
+            "bio": "",
+            "contact": "0768889431"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "32",
+            "ageOfMin": "20"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "64660ddeac576",
+        "name": "Kalle",
+        "email": "kalle@gmail.com",
+        "password": "kalle",
+        "age": "27",
+        "city": "\u00d6rebro",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "snus",
+            "interestsTwo": "photographing",
+            "interestsThree": "singing",
+            "interestsFour": "nightout",
+            "interestsFive": "running"
+        },
+        "general": {
+            "bio": "Family-oriented and dedicated to building meaningful connections. Enjoying quality time with loved ones and creating lasting memories. Seeking a partner who prioritizes relationships and cherishes the bonds we create.",
+            "contact": "0768889431"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "34",
+            "ageOfMin": "20"
+        },
+        "matches": {
+            "yes": [
+                "64660d2f4834a"
+            ],
+            "no": []
+        }
+    },
+    {
+        "id": "64660e0328c77",
+        "name": "Sandra",
+        "email": "sandra@gmail.com",
+        "password": "sandra",
+        "age": "19",
+        "city": "Stockholm",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "beer",
+            "interestsTwo": "wine",
+            "interestsThree": "fishing",
+            "interestsFour": "sport",
+            "interestsFive": "poetry"
+        },
+        "general": {
+            "bio": "Free spirit with a love for mindfulness and self-growth. Practicing yoga and meditation to find inner balance. Hoping to connect with someone who values personal development and living in the present moment.",
+            "contact": "0768889431"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "27",
+            "ageOfMin": "18"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "64660e2656c5d",
+        "name": "Erik",
+        "email": "erik@gmail.com",
+        "password": "erik",
+        "age": "25",
+        "city": "Lule\u00e5",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "astrology",
+            "interestsTwo": "traveling",
+            "interestsThree": "wine",
+            "interestsFour": "stand-upcomedy",
+            "interestsFive": "movienight"
+        },
+        "general": {
+            "bio": "Tech enthusiast and problem solver. Fascinated by the latest gadgets and always up for a coding challenge. Searching for a partner who shares my passion for technology and innovation.",
+            "contact": "0768889431"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "30",
+            "ageOfMin": "20"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "64660e5833550",
+        "name": "Louise",
+        "email": "louise@gmail.com",
+        "password": "louise",
+        "age": "23",
+        "city": "Ume\u00e5",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "photographing",
+            "interestsTwo": "singing",
+            "interestsThree": "nightout",
+            "interestsFour": "backpacking",
+            "interestsFive": "musicfestivals"
+        },
+        "general": {
+            "bio": "Animal lover and advocate for their well-being. Volunteering at animal shelters and always surrounded by furry friends. Seeking someone who values compassion and shares a love for animals.",
+            "contact": "0768889431"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "31",
             "ageOfMin": "23"
         },
         "matches": {
@@ -29,28 +318,29 @@
         }
     },
     {
-        "name": "Sara",
-        "email": "sara@hotmail.com",
-        "password": "h\u00f6\u00f6",
-        "age": "23",
-        "city": "Dala - Floda",
-        "gender": "female",
+        "id": "64660ea70f618",
+        "name": "Marcus",
+        "email": "marcus@gmail.com",
+        "password": "marcus",
+        "age": "21",
+        "city": "Sundsvall",
+        "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "movies",
-            "interestsThree": "dancing",
-            "interestsFour": "astrology",
-            "interestsFive": "reading"
+            "interestsOne": "astrology",
+            "interestsTwo": "wine",
+            "interestsThree": "movienight",
+            "interestsFour": "art",
+            "interestsFive": "fishing"
         },
         "general": {
-            "bio": "Tr\u00f6tt p\u00e5 att dejta.",
-            "contact": "123456789"
+            "bio": "Entrepreneur with a drive to make a difference. Building my own business and working towards my dreams. Hoping to find a supportive and ambitious partner who can join me on this journey",
+            "contact": "0768889431"
         },
         "preference": {
-            "genderOf": "male",
-            "ageOfMax": "18",
-            "ageOfMin": "28"
+            "genderOf": "female",
+            "ageOfMax": "28",
+            "ageOfMin": "18"
         },
         "matches": {
             "yes": [],
@@ -58,97 +348,89 @@
         }
     },
     {
-        "name": "Dina",
-        "email": "\u00e4",
-        "password": "\u00e4\u00e4\u00e4\u00e4",
-        "age": "23",
-        "city": "Agunnaryd",
+        "id": "64660ecc168b7",
+        "name": "Henrik",
+        "email": "henrik@gmail.com",
+        "password": "henrik",
+        "age": "28",
+        "city": "Uppsala",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "snus",
+            "interestsTwo": "poetry",
+            "interestsThree": "movienight",
+            "interestsFour": "running",
+            "interestsFive": "nightout"
+        },
+        "general": {
+            "bio": "Foodie at heart. I love exploring different cuisines and trying out new recipes. Looking for a partner who shares my love for good food and culinary adventures.",
+            "contact": "0768889431"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "34",
+            "ageOfMin": "23"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "64660ef3195d9",
+        "name": "Camilla",
+        "email": "camilla@gmail.com",
+        "password": "camilla",
+        "age": "25",
+        "city": "Stockholm",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": {
             "interestsOne": "reading",
             "interestsTwo": "astrology",
-            "interestsThree": "fishing",
-            "interestsFour": "movies",
-            "interestsFive": "dancing"
+            "interestsThree": "hiking",
+            "interestsFour": "photographing",
+            "interestsFive": "sport"
         },
         "general": {
-            "bio": "h\u00e4r \u00e4\u00e4",
-            "contact": "12345"
+            "bio": "Adventure seeker, passionate about exploring new places and trying new experiences. Looking for a partner who shares my love for travel and can add excitement to life's journey.",
+            "contact": "0768889431"
         },
         "preference": {
             "genderOf": "male",
-            "ageOfMax": "26",
-            "ageOfMin": "21"
+            "ageOfMax": "35",
+            "ageOfMin": "25"
         },
         "matches": {
-            "yes": [],
+            "yes": ["64663f0f47181"],
             "no": []
         }
     },
     {
-        "name": "Rosa",
-        "email": "Rosa@gmail.com",
-        "password": "rosaa",
-        "age": "26",
-        "city": "Malmk\u00f6ping",
-        "gender": "female",
+        "id": "64660f22587e5",
+        "name": "Liam",
+        "email": "liam@gmail.com",
+        "password": "liam",
+        "age": "29",
+        "city": "Kalmar",
+        "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": {
-            "interestsOne": "singing",
-            "interestsTwo": "photographing",
-            "interestsThree": "hiking",
+            "interestsOne": "astrology",
+            "interestsTwo": "reading",
+            "interestsThree": "traveling",
             "interestsFour": "running",
             "interestsFive": "movienight"
         },
         "general": {
-            "bio": "Looking for love!",
-            "contact": "076033456"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "50",
-            "ageOfMin": "18"
-        },
-        "matches": {
-            "yes": [
-                "emiiiiil@hotmail.com",
-                "benji@hotmail.com",
-                "emil@gmail.com"
-            ],
-            "no": [
-                "emil@gmail.com",
-                "benji@hotmail.com",
-                "benji@hotmail.com",
-                "viktor.jb@gmm.com",
-                "carl@carlan.com",
-                "benji@hotmail.com"
-            ]
-        }
-    },
-    {
-        "name": "Emil",
-        "email": "emiiiiil@hotmail.com",
-        "password": "emillars",
-        "age": "29",
-        "city": "Skara",
-        "gender": "male",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "movies",
-            "interestsTwo": "astrology",
-            "interestsThree": "reading",
-            "interestsFour": "backpacking",
-            "interestsFive": "sailing"
-        },
-        "general": {
-            "bio": "Looking for a wifey",
+            "bio": "Creative soul with a passion for art and music. Whether it's painting, playing an instrument, or attending live performances, I find inspiration in all forms of artistic expression. Seeking someone who appreciates the beauty in life.",
             "contact": "0768889431"
         },
         "preference": {
             "genderOf": "female",
             "ageOfMax": "35",
-            "ageOfMin": "20"
+            "ageOfMin": "25"
         },
         "matches": {
             "yes": [],
@@ -156,26 +438,57 @@
         }
     },
     {
+        "id": "64660f47636ce",
         "name": "Stefan",
-        "email": "jobbmail@jobb.com",
-        "password": "mittl\u00f6senord",
-        "age": "22",
-        "city": "Grimsl\u00f6v",
-        "gender": "female",
+        "email": "stefan@gmail.com",
+        "password": "stefan",
+        "age": "26",
+        "city": "Uppsala",
+        "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": {
-            "interestsOne": "snus",
-            "interestsTwo": "fishing",
-            "interestsThree": "gaming",
-            "interestsFour": "gym",
-            "interestsFive": "musicfestivals"
+            "interestsOne": "reading",
+            "interestsTwo": "traveling",
+            "interestsThree": "movies",
+            "interestsFour": "astrology",
+            "interestsFive": "beer"
         },
         "general": {
-            "bio": "Hejhej!",
-            "contact": "0712556368"
+            "bio": "Fitness enthusiast and nature lover. I spend my free time hiking, running, and staying active. Searching for a partner who values a healthy lifestyle and enjoys outdoor adventures.",
+            "contact": "0768889431"
         },
         "preference": {
-            "genderOf": "male",
+            "genderOf": "female",
+            "ageOfMax": "32",
+            "ageOfMin": "18"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "64660f6cd01de",
+        "name": "Viktor",
+        "email": "viktor.jb@gmail.com",
+        "password": "jb",
+        "age": "27",
+        "city": "Uppsala",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "beer",
+            "interestsThree": "wine",
+            "interestsFour": "stand-upcomedy",
+            "interestsFive": "movienight"
+        },
+        "general": {
+            "bio": "Bookworm and coffee enthusiast. I enjoy long conversations and deep connections. Seeking someone with a curious mind and a love for intellectual discussions.",
+            "contact": "0768889431"
+        },
+        "preference": {
+            "genderOf": "female",
             "ageOfMax": "29",
             "ageOfMin": "18"
         },
@@ -185,504 +498,37 @@
         }
     },
     {
-        "name": "Lina",
-        "email": "lina.svensson@hotmail.com",
-        "password": "lina55",
-        "age": "31",
-        "city": "Fagerfj\u00e4ll",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "wine",
-            "interestsThree": "smoking",
-            "interestsFour": "nightout",
-            "interestsFive": "cooking"
-        },
-        "general": {
-            "bio": "Vart \u00e4r du???",
-            "contact": "0782147542"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "38",
-            "ageOfMin": "18"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "name": "Emil",
-        "email": "emil@gmail.com",
-        "password": "emil",
-        "age": "30",
-        "city": "Stoby",
+        "id": "64663f0f47181",
+        "name": "anders",
+        "email": "anders@gmail.com",
+        "password": "anders",
+        "age": "34",
+        "city": "Trelleborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": {
-            "interestsOne": "sport",
-            "interestsTwo": "gaming",
-            "interestsThree": "nightout",
-            "interestsFour": "photographing",
+            "interestsOne": "running",
+            "interestsTwo": "art",
+            "interestsThree": "fishing",
+            "interestsFour": "stand-upcomedy",
             "interestsFive": "gym"
         },
         "general": {
             "bio": "",
-            "contact": "078943742"
+            "contact": "0764567822"
         },
         "preference": {
             "genderOf": "female",
-            "ageOfMax": "35",
-            "ageOfMin": "20"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "name": "Elin",
-        "email": "elin@hotmail.com",
-        "password": "eliiin",
-        "age": "22",
-        "city": "Granby",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "movies",
-            "interestsTwo": "dancing",
-            "interestsThree": "wine",
-            "interestsFour": "snus",
-            "interestsFive": "boardgames"
-        },
-        "general": {
-            "bio": "Hejheeeej",
-            "contact": "075548834"
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "30",
-            "ageOfMin": "18"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "name": "Viktor",
-        "email": "viktor.jb@gmm.com",
-        "password": "jb",
-        "age": "27",
-        "city": "Hudiksvall",
-        "gender": "male",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "sport",
-            "interestsThree": "musicfestivals",
-            "interestsFour": "gaming",
-            "interestsFive": "hiking"
-        },
-        "general": {
-            "bio": "",
-            "contact": "0725568211"
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "35",
-            "ageOfMin": "20"
-        },
-        "matches": {
-            "yes": [
-                "Rosa@gmail.com"
-            ],
-            "no": []
-        }
-    },
-    {
-        "name": "Amina",
-        "email": "amiiina@hotmail.com",
-        "password": "l\u00f6senordl\u00f6sen",
-        "age": "25",
-        "city": "Fagerfj\u00e4ll",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "yoga",
-            "interestsThree": "wine",
-            "interestsFour": "art",
-            "interestsFive": "poetry"
-        },
-        "general": {
-            "bio": "V\u00e4lkommen till min profil :)",
-            "contact": "072498921"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "31",
-            "ageOfMin": "19"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "name": "Carl",
-        "email": "carl@carlan.com",
-        "password": "calle",
-        "age": "29",
-        "city": "Staffanstorp",
-        "gender": "male",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "fishing",
-            "interestsThree": "running",
-            "interestsFour": "fishing",
-            "interestsFive": "sport"
-        },
-        "general": {
-            "bio": "",
-            "contact": "0764545295"
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "33",
-            "ageOfMin": "22"
-        },
-        "matches": {
-            "yes": [
-                "Rosa@gmail.com"
-            ],
-            "no": []
-        }
-    },
-    {
-        "name": "Marie-Louise",
-        "email": "ML@gmail.com",
-        "password": "ml",
-        "age": "24",
-        "city": "Perstorp",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "nightout",
-            "interestsTwo": "art",
-            "interestsThree": "wine",
-            "interestsFour": "movies",
-            "interestsFive": "reading"
-        },
-        "general": {
-            "bio": "",
-            "contact": "0722492311"
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "32",
-            "ageOfMin": "22"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "name": "Benjamin",
-        "email": "benji@hotmail.com",
-        "password": "Benji",
-        "age": "19",
-        "city": "Alby",
-        "gender": "male",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "beer",
-            "interestsTwo": "traveling",
-            "interestsThree": "snus",
-            "interestsFour": "smoking",
-            "interestsFive": "nightout"
-        },
-        "general": {
-            "bio": "",
-            "contact": "0653286999"
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "35",
+            "ageOfMax": "26",
             "ageOfMin": "18"
         },
         "matches": {
             "yes": [
-                "Rosa@gmail.com"
+                "64660ef3195d9" 
             ],
-            "no": []
-        }
-    },
-    {
-        "name": "Pernilla",
-        "email": "per@mail.com",
-        "password": "mypassword",
-        "age": "35",
-        "city": "Dals L\u00e5nged",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "wine",
-            "interestsThree": "sport",
-            "interestsFour": "poetry",
-            "interestsFive": "fishing"
-        },
-        "general": {
-            "bio": "",
-            "contact": "07164495321"
-        },
-        "preference": {
-            "genderOf": "both",
-            "ageOfMax": "40",
-            "ageOfMin": "20"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "name": "Armin",
-        "email": "mini@hotmail.com",
-        "password": "password",
-        "age": "25",
-        "city": "Kungs\u00f6r",
-        "gender": "male",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "movies",
-            "interestsTwo": "traveling",
-            "interestsThree": "dancing",
-            "interestsFour": "stand-upcomedy",
-            "interestsFive": "backpacking"
-        },
-        "general": {
-            "bio": "Adventure seeker and movie enthusiast",
-            "contact": "076547421"
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "32",
-            "ageOfMin": "18"
-        },
-        "matches": {
-            "yes": [
-                "Rosa@gmail.com"
-            ],
-            "no": []
-        }
-    },
-    {
-        "name": "Ria",
-        "email": "myemail@email.com",
-        "password": "riaria",
-        "age": "18",
-        "city": "Lunne",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "singing",
-            "interestsTwo": "nightout",
-            "interestsThree": "art",
-            "interestsFour": "stand-upcomedy",
-            "interestsFive": "fishing"
-        },
-        "general": {
-            "bio": "Ria!",
-            "contact": "075237668"
-        },
-        "preference": {
-            "genderOf": "both",
-            "ageOfMax": "29",
-            "ageOfMin": "18"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "name": "William",
-        "email": "wille@gmail.com",
-        "password": "password",
-        "age": "23",
-        "city": "Flurkmark",
-        "gender": "male",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "nightout",
-            "interestsTwo": "photographing",
-            "interestsThree": "singing",
-            "interestsFour": "hiking",
-            "interestsFive": "cooking"
-        },
-        "general": {
-            "bio": "Matcha med mig!",
-            "contact": "078323317"
-        },
-        "preference": {
-            "genderOf": "both",
-            "ageOfMax": "28",
-            "ageOfMin": "19"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "name": "Victoria",
-        "email": "vickan@hotmail.com",
-        "password": "hejhej",
-        "age": "22",
-        "city": "Alster",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "beer",
-            "interestsThree": "wine",
-            "interestsFour": "smoking",
-            "interestsFive": "snus"
-        },
-        "general": {
-            "bio": "Det e ba jag",
-            "contact": "074326657"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "30",
-            "ageOfMin": "20"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "name": "Victoria",
-        "email": "vickan@hotmail.com",
-        "password": "hejhej",
-        "age": "22",
-        "city": "Alster",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "beer",
-            "interestsThree": "wine",
-            "interestsFour": "smoking",
-            "interestsFive": "snus"
-        },
-        "general": {
-            "bio": "Det e ba jag",
-            "contact": "074326657"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "30",
-            "ageOfMin": "20"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "name": "Rosa",
-        "email": "Rosa@gmail.com",
-        "password": "rosaa",
-        "age": "26",
-        "city": "Malmk\u00f6ping",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "singing",
-            "interestsTwo": "photographing",
-            "interestsThree": "hiking",
-            "interestsFour": "running",
-            "interestsFive": "movienight"
-        },
-        "general": {
-            "bio": "Looking for love!",
-            "contact": "076033456"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "50",
-            "ageOfMin": "18"
-        },
-        "matches": {
-            "yes": "emil@gmail.com",
-            "no": "Arrayviktor.jb@gmm.com"
-        }
-    },
-    {
-        "name": "Rosa",
-        "email": "Rosa@gmail.com",
-        "password": "rosaa",
-        "age": "26",
-        "city": "Malmk\u00f6ping",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "singing",
-            "interestsTwo": "photographing",
-            "interestsThree": "hiking",
-            "interestsFour": "running",
-            "interestsFive": "movienight"
-        },
-        "general": {
-            "bio": "Looking for love!",
-            "contact": "076033456"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "50",
-            "ageOfMin": "18"
-        },
-        "matches": {
-            "yes": "emil@gmail.com",
-            "no": "benji@hotmail.com"
-        }
-    },
-    {
-        "name": "Rosa",
-        "email": "Rosa@gmail.com",
-        "password": "rosaa",
-        "age": "26",
-        "city": "Malmk\u00f6ping",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "singing",
-            "interestsTwo": "photographing",
-            "interestsThree": "hiking",
-            "interestsFour": "running",
-            "interestsFive": "movienight"
-        },
-        "general": {
-            "bio": "Looking for love!",
-            "contact": "076033456"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "50",
-            "ageOfMin": "18"
-        },
-        "matches": {
-            "yes": "emil@gmail.com",
-            "no": "benji@hotmail.com"
+            "no": [
+
+            ]
         }
     }
 ]

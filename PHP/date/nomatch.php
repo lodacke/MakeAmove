@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $foundUser = $dataREQUEST["matchedUser"];
     
     forEach($users as &$user){
-        if($loggedInUser === $user["email"]){
+        if($loggedInUser === $user["id"]){
             $user["matches"]["no"][] = ($foundUser);
         break;
         }

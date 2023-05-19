@@ -242,7 +242,6 @@ function QuestionPage(userData){
 
             preferencePage(userData);
 
-            console.log(userData);
 
         } else {
              errorMessage();
@@ -281,7 +280,6 @@ function preferencePage(userData){
 
         userData.preference.push(preference);
         addUser(userData);
-        renderDatingPage();
             } else {
              errorMessage();
         }
@@ -300,10 +298,20 @@ async function addUser(userData){
 
     let JSONresponse = await requestPOST.json();
 
-    let error_message = document.createElement("p");
-    mainDom.append(error_message);
+    if(requestPOST.ok){
+        window.localStorage.setItem("user", JSON.stringify(JSONresponse));
+        console.log("inne");
+        renderDatingPage();
+    } else {
+        let error_message = document.createElement("p");
+        mainDom.append(error_message);
 
-    error_message.textContent = JSONresponse;
+        error_message.textContent = JSONresponse;
+    }
+
+
+   
+    
 
 }
 

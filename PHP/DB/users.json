@@ -86,20 +86,15 @@
         },
         "matches": {
             "yes": [
-                "64660e2656c5d",
-                "64660f47636ce"
+                "64660d9225322"
             ],
             "no": [
-                "64660d6fe59eb",
-                "64660ddeac576",
-                "64660d9225322",
-                "64660ecc168b7",
-                "64660ddeac576",
-                "64660ecc168b7",
-                "64660ddeac576",
-                "64660f6cd01de",
-                "64660ddeac576",
-                "64660f6cd01de"
+                "64660e2656c5d",
+                "64660e2656c5d",
+                "64660f47636ce",
+                "64660f47636ce",
+                "64660f47636ce",
+                "64660e2656c5d"
             ]
         }
     },
@@ -403,7 +398,9 @@
             "ageOfMin": "25"
         },
         "matches": {
-            "yes": ["64663f0f47181"],
+            "yes": [
+                "64663f0f47181"
+            ],
             "no": []
         }
     },
@@ -524,10 +521,280 @@
         },
         "matches": {
             "yes": [
-                "64660ef3195d9" 
+                "64660ef3195d9"
             ],
+            "no": []
+        }
+    },
+    {
+        "id": "646748b1103a6",
+        "name": "lisa",
+        "email": "lisa@gmail.com",
+        "password": "lisa",
+        "age": "23",
+        "city": "Sk\u00f6vde",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "dancing",
+            "interestsTwo": "fishing",
+            "interestsThree": "astrology",
+            "interestsFour": "musicfestivals",
+            "interestsFive": "gym"
+        },
+        "general": {
+            "bio": "",
+            "contact": "07421798411"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "28",
+            "ageOfMin": "21"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "6467499703dbd",
+        "name": "Amina",
+        "email": "amina@gmail.com",
+        "password": "amina",
+        "age": "27",
+        "city": "Falun",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "astrology",
+            "interestsTwo": "wine",
+            "interestsThree": "movienight",
+            "interestsFour": "art",
+            "interestsFive": "dancing"
+        },
+        "general": {
+            "bio": "",
+            "contact": "0783543742"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "28",
+            "ageOfMin": "18"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "646761f6c97eb",
+        "name": "a",
+        "email": "a",
+        "password": "a",
+        "age": "23",
+        "city": "Ume\u00e5",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "astrology",
+            "interestsThree": "beer",
+            "interestsFour": "yoga",
+            "interestsFive": "wine"
+        },
+        "general": {
+            "bio": "",
+            "contact": "212"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "34",
+            "ageOfMin": "12"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "6467629716a2a",
+        "name": "a",
+        "email": "a",
+        "password": "rosaa",
+        "age": "23",
+        "city": "Malm\u00f6",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "astrology",
+            "interestsThree": "wine",
+            "interestsFour": "fishing",
+            "interestsFive": "movies"
+        },
+        "general": {
+            "bio": "",
+            "contact": "23"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "26",
+            "ageOfMin": "21"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "6467638ae6997",
+        "name": "a",
+        "email": "a",
+        "password": "a",
+        "age": "23",
+        "city": "G\u00f6teborg",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "fishing",
+            "interestsTwo": "astrology",
+            "interestsThree": "reading",
+            "interestsFour": "beer",
+            "interestsFive": "yoga"
+        },
+        "general": {
+            "bio": "",
+            "contact": "23"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "27",
+            "ageOfMin": "23"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "6467641273861",
+        "name": "a",
+        "email": "a",
+        "password": "a",
+        "age": "23",
+        "city": "G\u00f6teborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "traveling",
+            "interestsTwo": "movies",
+            "interestsThree": "dancing",
+            "interestsFour": "fishing",
+            "interestsFive": "astrology"
+        },
+        "general": {
+            "bio": "",
+            "contact": "23"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "24",
+            "ageOfMin": "23"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "6467650373fa6",
+        "name": "a",
+        "email": "a",
+        "password": "a",
+        "age": "21",
+        "city": "G\u00e4vle",
+        "gender": "both",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "astrology",
+            "interestsThree": "fishing",
+            "interestsFour": "beer",
+            "interestsFive": "yoga"
+        },
+        "general": {
+            "bio": "",
+            "contact": "23"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "28",
+            "ageOfMin": "21"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "646766e59757b",
+        "name": "a",
+        "email": "a",
+        "password": "a",
+        "age": "21",
+        "city": "G\u00f6teborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "astrology",
+            "interestsThree": "beer",
+            "interestsFour": "wine",
+            "interestsFive": "yoga"
+        },
+        "general": {
+            "bio": "",
+            "contact": "21"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "25",
+            "ageOfMin": "21"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "646767909949f",
+        "name": "a",
+        "email": "a",
+        "password": "a",
+        "age": "21",
+        "city": "G\u00f6teborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "astrology",
+            "interestsTwo": "fishing",
+            "interestsThree": "reading",
+            "interestsFour": "yoga",
+            "interestsFive": "beer"
+        },
+        "general": {
+            "bio": "",
+            "contact": "23"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "29",
+            "ageOfMin": "21"
+        },
+        "matches": {
+            "yes": [],
             "no": [
-
+                "64660d9225322"
             ]
         }
     }

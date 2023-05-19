@@ -2,27 +2,40 @@ import { stickyNav } from "./stickyNav.js";
 import { renderProfilePage } from "./profile.js";
 import { getUserData } from "../helper.js";
 import { renderMatchesPage } from "./matches.js";
+import { renderFrontPage } from "../index.js";
 
 export async function renderDatingPage() {
+  let mainDom = document.querySelector("main");
+  mainDom.innerHTML = ``;
 
   let request = await fetch(`/PHP/date/explore.php?id=${getUserData().id}`);
   let userDATA = await request.json();
+  
   renderCurrentDate();
 
   function renderCurrentDate (){
 
-   // let navDom = document.querySelector("#pageNavigation");
-   let navDom = document.createElement("div");
-   document.querySelector("body").append(navDom);
+    let navDom = document.querySelector("#pageNavigation");
     navDom.innerHTML = stickyNav();
 
     let headerDOM = document.querySelector("header");
     headerDOM.innerHTML = `
     <div id="exploreHeader"> 
       <img id="exploreLogo" src="/PHP/DB/image/logo.png" alt="appLogo">
+      <button class="logout"> Logout </button>
     </div>`;
+
+    let logout = document.querySelector(".logout")
+    logout.addEventListener("click", logoutFromAccount);
   
-    let mainDom = document.querySelector("main");
+    function logoutFromAccount() {
+  window.localStorage.removeItem("user");
+  renderFrontPage();
+
+  let navBar = document.querySelector(".sticky-nav");
+  navBar.classList.add("hide");
+}
+    
   
     document.querySelector(".profile").addEventListener("click", renderProfilePage);
     document.querySelector(".match").addEventListener("click", renderMatchesPage);

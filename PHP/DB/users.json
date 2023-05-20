@@ -7,13 +7,13 @@
         "city": "Mala",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "movies",
-            "interestsTwo": "traveling",
-            "interestsThree": "reading",
-            "interestsFour": "astrology",
-            "interestsFive": "fishing"
-        },
+        "interests": [
+            "movies",
+            "traveling",
+            "reading",
+            "astrology",
+            "fishing"
+        ],
         "general": {
             "bio": "Hej h\u00e4r st\u00e5r det lite om mig",
             "contact": "2345676666"
@@ -36,13 +36,13 @@
         "city": "Dala - Floda",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "movies",
-            "interestsThree": "dancing",
-            "interestsFour": "astrology",
-            "interestsFive": "reading"
-        },
+        "interests": [
+            "traveling",
+            "movies",
+            "dancing",
+            "astrology",
+            "reading"
+        ],
         "general": {
             "bio": "Tr\u00f6tt p\u00e5 att dejta.",
             "contact": "123456789"
@@ -65,13 +65,13 @@
         "city": "Agunnaryd",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "astrology",
-            "interestsThree": "fishing",
-            "interestsFour": "movies",
-            "interestsFive": "dancing"
-        },
+        "interests": [
+            "reading",
+            "astrology",
+            "fishing",
+            "movies",
+            "dancing"
+        ],
         "general": {
             "bio": "h\u00e4r \u00e4\u00e4",
             "contact": "12345"
@@ -94,13 +94,13 @@
         "city": "Malmk\u00f6ping",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "singing",
-            "interestsTwo": "photographing",
-            "interestsThree": "hiking",
-            "interestsFour": "running",
-            "interestsFive": "movienight"
-        },
+        "interests": [
+            "singing",
+            "photographing",
+            "hiking",
+            "running",
+            "movienight"
+        ],
         "general": {
             "bio": "Looking for love!",
             "contact": "076033456"
@@ -134,13 +134,13 @@
         "city": "Skara",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "movies",
-            "interestsTwo": "astrology",
-            "interestsThree": "reading",
-            "interestsFour": "backpacking",
-            "interestsFive": "sailing"
-        },
+        "interests": [
+            "movies",
+            "astrology",
+            "reading",
+            "backpacking",
+            "sailing"
+        ],
         "general": {
             "bio": "Looking for a wifey",
             "contact": "0768889431"
@@ -163,13 +163,13 @@
         "city": "Grimsl\u00f6v",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "snus",
-            "interestsTwo": "fishing",
-            "interestsThree": "gaming",
-            "interestsFour": "gym",
-            "interestsFive": "musicfestivals"
-        },
+        "interests": [
+            "snus",
+            "fishing",
+            "gaming",
+            "gym",
+            "musicfestivals"
+        ],
         "general": {
             "bio": "Hejhej!",
             "contact": "0712556368"
@@ -192,13 +192,13 @@
         "city": "Fagerfj\u00e4ll",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "wine",
-            "interestsThree": "smoking",
-            "interestsFour": "nightout",
-            "interestsFive": "cooking"
-        },
+        "interests": [
+            "traveling",
+            "wine",
+            "smoking",
+            "nightout",
+            "cooking"
+        ],
         "general": {
             "bio": "Vart \u00e4r du???",
             "contact": "0782147542"
@@ -221,13 +221,13 @@
         "city": "Stoby",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "yoga",
-            "interestsThree": "art",
-            "interestsFour": "photographing",
-            "interestsFive": "movienight"
-        },
+        "interests": [
+            "traveling",
+            "yoga",
+            "art",
+            "photographing",
+            "movienight"
+        ],
         "general": {
             "bio": "hi there",
             "contact": "078943742"
@@ -261,13 +261,13 @@
         "city": "Granby",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "movies",
-            "interestsTwo": "dancing",
-            "interestsThree": "wine",
-            "interestsFour": "snus",
-            "interestsFive": "boardgames"
-        },
+        "interests": [
+            "movies",
+            "dancing",
+            "wine",
+            "snus",
+            "boardgames"
+        ],
         "general": {
             "bio": "Hejheeeej",
             "contact": "075548834"
@@ -290,13 +290,13 @@
         "city": "Hudiksvall",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "sport",
-            "interestsThree": "musicfestivals",
-            "interestsFour": "gaming",
-            "interestsFive": "hiking"
-        },
+        "interests": [
+            "traveling",
+            "sport",
+            "musicfestivals",
+            "gaming",
+            "hiking"
+        ],
         "general": {
             "bio": "",
             "contact": "0725568211"
@@ -321,13 +321,13 @@
         "city": "Fagerfj\u00e4ll",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "yoga",
-            "interestsThree": "wine",
-            "interestsFour": "art",
-            "interestsFive": "poetry"
-        },
+        "interests": [
+            "astrology",
+            "yoga",
+            "wine",
+            "art",
+            "poetry"
+        ],
         "general": {
             "bio": "V\u00e4lkommen till min profil :)",
             "contact": "072498921"
@@ -350,13 +350,13 @@
         "city": "Staffanstorp",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "fishing",
-            "interestsThree": "running",
-            "interestsFour": "fishing",
-            "interestsFive": "sport"
-        },
+        "interests": [
+            "astrology",
+            "fishing",
+            "running",
+            "fishing",
+            "sport"
+        ],
         "general": {
             "bio": "",
             "contact": "0764545295"
@@ -381,13 +381,13 @@
         "city": "Perstorp",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "nightout",
-            "interestsTwo": "art",
-            "interestsThree": "wine",
-            "interestsFour": "movies",
-            "interestsFive": "reading"
-        },
+        "interests": [
+            "nightout",
+            "art",
+            "wine",
+            "movies",
+            "reading"
+        ],
         "general": {
             "bio": "",
             "contact": "0722492311"
@@ -410,13 +410,13 @@
         "city": "Alby",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "beer",
-            "interestsTwo": "traveling",
-            "interestsThree": "snus",
-            "interestsFour": "smoking",
-            "interestsFive": "nightout"
-        },
+        "interests": [
+            "beer",
+            "traveling",
+            "snus",
+            "smoking",
+            "nightout"
+        ],
         "general": {
             "bio": "",
             "contact": "0653286999"
@@ -441,13 +441,13 @@
         "city": "Dals L\u00e5nged",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "wine",
-            "interestsThree": "sport",
-            "interestsFour": "poetry",
-            "interestsFive": "fishing"
-        },
+        "interests": [
+            "astrology",
+            "wine",
+            "sport",
+            "poetry",
+            "fishing"
+        ],
         "general": {
             "bio": "",
             "contact": "07164495321"
@@ -470,13 +470,13 @@
         "city": "Kungs\u00f6r",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "movies",
-            "interestsTwo": "traveling",
-            "interestsThree": "dancing",
-            "interestsFour": "stand-upcomedy",
-            "interestsFive": "backpacking"
-        },
+        "interests": [
+            "movies",
+            "traveling",
+            "dancing",
+            "stand-upcomedy",
+            "backpacking"
+        ],
         "general": {
             "bio": "Adventure seeker and movie enthusiast",
             "contact": "076547421"
@@ -501,13 +501,13 @@
         "city": "Lunne",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "singing",
-            "interestsTwo": "nightout",
-            "interestsThree": "art",
-            "interestsFour": "stand-upcomedy",
-            "interestsFive": "fishing"
-        },
+        "interests": [
+            "singing",
+            "nightout",
+            "art",
+            "stand-upcomedy",
+            "fishing"
+        ],
         "general": {
             "bio": "Ria!",
             "contact": "075237668"
@@ -530,13 +530,13 @@
         "city": "Flurkmark",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "nightout",
-            "interestsTwo": "photographing",
-            "interestsThree": "singing",
-            "interestsFour": "hiking",
-            "interestsFive": "cooking"
-        },
+        "interests": [
+            "nightout",
+            "photographing",
+            "singing",
+            "hiking",
+            "cooking"
+        ],
         "general": {
             "bio": "Matcha med mig!",
             "contact": "078323317"
@@ -559,13 +559,13 @@
         "city": "Alster",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "beer",
-            "interestsThree": "wine",
-            "interestsFour": "smoking",
-            "interestsFive": "snus"
-        },
+        "interests": [
+            "traveling",
+            "beer",
+            "wine",
+            "smoking",
+            "snus"
+        ],
         "general": {
             "bio": "Det e ba jag",
             "contact": "074326657"
@@ -588,13 +588,13 @@
         "city": "Alster",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "beer",
-            "interestsThree": "wine",
-            "interestsFour": "smoking",
-            "interestsFive": "snus"
-        },
+        "interests": [
+            "traveling",
+            "beer",
+            "wine",
+            "smoking",
+            "snus"
+        ],
         "general": {
             "bio": "Det e ba jag",
             "contact": "074326657"
@@ -617,13 +617,13 @@
         "city": "Malmk\u00f6ping",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "singing",
-            "interestsTwo": "photographing",
-            "interestsThree": "hiking",
-            "interestsFour": "running",
-            "interestsFive": "movienight"
-        },
+        "interests": [
+            "singing",
+            "photographing",
+            "hiking",
+            "running",
+            "movienight"
+        ],
         "general": {
             "bio": "Looking for love!",
             "contact": "076033456"
@@ -646,13 +646,13 @@
         "city": "Malmk\u00f6ping",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "singing",
-            "interestsTwo": "photographing",
-            "interestsThree": "hiking",
-            "interestsFour": "running",
-            "interestsFive": "movienight"
-        },
+        "interests": [
+            "singing",
+            "photographing",
+            "hiking",
+            "running",
+            "movienight"
+        ],
         "general": {
             "bio": "Looking for love!",
             "contact": "076033456"
@@ -675,13 +675,13 @@
         "city": "Malmk\u00f6ping",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "singing",
-            "interestsTwo": "photographing",
-            "interestsThree": "hiking",
-            "interestsFour": "running",
-            "interestsFive": "movienight"
-        },
+        "interests": [
+            "singing",
+            "photographing",
+            "hiking",
+            "running",
+            "movienight"
+        ],
         "general": {
             "bio": "Looking for love!",
             "contact": "076033456"

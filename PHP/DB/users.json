@@ -457,5 +457,34 @@
             "yes": [],
             "no": []
         }
+    },
+    {
+        "name": "bibuibiu",
+        "email": "annauibui@gmail.com",
+        "password": "anna123biu",
+        "age": "34",
+        "city": "Alvhem",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog04.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "astrology",
+            "interestsThree": "movies",
+            "interestsFour": "traveling",
+            "interestsFive": "wine"
+        },
+        "general": {
+            "bio": "hej!!",
+            "contact": "345678"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "56",
+            "ageOfMin": "23"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
     }
 ]

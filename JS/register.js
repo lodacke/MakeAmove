@@ -37,15 +37,17 @@ export function renderRegisterPage (){
     </div>
 
     <div class="inputbox">
-        <input type="password" name="password" minlength="10" class="required" required="required">
+        <input type="password" name="password" class="required" required="required">
         <label for "password"> Password </label>
     </div>
 
     <div class="ageAndGender">
-        <select name="city" class="required">
-            <option value="none" > Choose a city </option>
-            ${renderCityDropdownListReg()}
-        </select>
+        <label for "city"> City: 
+            <select name="city" class="required">
+                <option value="none" > Choose a city </option>
+                ${renderCityDropdownListReg()}
+            </select>
+        </label>
         <label for "age"> Age: <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required"> </label>
         <label for "gender"> Gender: 
             <select name="gender" class="required">
@@ -61,7 +63,6 @@ export function renderRegisterPage (){
  
     `;
 
-
     function renderPageNavigation(previousFunction){
         let pageNavDom = document.getElementById("pageNavigation");
     
@@ -73,7 +74,7 @@ export function renderRegisterPage (){
     
          })
     }
-
+    
     let nameDom = mainDom.querySelector("input[name='name']");
     let passwordDom = mainDom.querySelector("input[name='password']");
     let ageDom = mainDom.querySelector("input[name='age']");
@@ -142,7 +143,7 @@ function imagePage(userData){
             if(data.error) {
                 imageMessage.textContent = data.error;
             } else {
-                imageMessage.textContent = "Success!";
+                imageMessage.textContent = "Good choice!";
                 const img = document.createElement("img");
                 img.src = data.source;
                 userImage.appendChild(img);
@@ -162,7 +163,7 @@ function QuestionPage(userData){
     mainDom.innerHTML = `
     <h1>Interests</h1>
     <label for "bio"> Bio:</label>
-    <textarea accept-charset="UTF-8" name="bio" rows="7" id="bio" placeholder="Add more info about yourself..."></textarea>
+    <textarea accept-charset="UTF-8" name="bio" rows="7" id="registerBio" placeholder="Add more info about yourself..."></textarea>
     <p>Choose 5 interests</p>
     <div id="interestsList" class="required">
     </div>
@@ -266,16 +267,20 @@ function QuestionPage(userData){
 function preferencePage(userData){
     mainDom.innerHTML =`
     <h1> What are you looking for? </h1>
-    <lable for "genderOf"> I'm intrested in: </lable>
-    <select name="genderOf" class="required">
-    <option value="none"> Choose an option </option>
-    <option value="female"> Female </option>
-    <option value="male"> Male </option>
-    <option value="both">Both</option>
-    </select>
-    <p> What age </p>
-    <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Min-age">
-    <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Max-age">
+    <div id="lookingFor">
+        <lable for "genderOf"> I'm intrested in: </lable>
+        <select name="genderOf" class="required">
+            <option value="none"> Choose an option </option>
+            <option value="female"> Female </option>
+            <option value="male"> Male </option>
+            <option value="both">Both</option>
+        </select>
+        <p> What age do you prefer? </p>
+        <div class="preferredAge">
+            <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Min-age">
+            <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Max-age">
+        </div>    
+    </div>
      <div>${renderPageNavigation()} </div>`;
 
     let genderOf = mainDom.querySelector("select[name='genderOf']");

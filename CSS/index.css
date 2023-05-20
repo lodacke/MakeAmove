@@ -2,7 +2,7 @@
   body {
     background: linear-gradient(180deg, rgba(233,233,233,1) 5%, rgba(0,149,255,1) 100%);
     text-align: center;
-    height: 100vh;
+    height: 100%;
   }
 
   #startPageHeader {

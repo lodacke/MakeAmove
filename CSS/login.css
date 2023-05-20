@@ -2,13 +2,14 @@
   * {
     font-family: Helvetica;
   }
-
+/*
   body {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    margin: 0 6vw;
+    /*margin: 0 6vw;*/
   }
+
 
   h2 {
     font-size: 4.2vh;

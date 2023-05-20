@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 ini_set("display_errors", 1);
 
@@ -20,16 +20,16 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
       }
 
       $file = $_FILES["profilePicture"];
-  
+
       $fileName = $file["name"];
       $fileTmpName = $file["tmp_name"];
       $fileSize = $file["size"];
       $fileError = $file["error"];
       $fileType = $file["type"];
-        
-      $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION); 
-      $allowed = ["jpg", "jpeg"];  
-  
+
+      $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
+      $allowed = ["jpg", "jpeg"];
+
       if(in_array($fileExtension, $allowed)) {
           if($fileError == 0) {
               $destination = "DB/uploads/".$fileName;
@@ -39,7 +39,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                   $imageSource = ["source" => $destination];
                   $AllImages[] = $imageSource;
                   $json = json_encode($AllImages, JSON_PRETTY_PRINT);
-                  file_put_contents($imagesJSON, $json);                  
+                  file_put_contents($imagesJSON, $json);
                   send(200, $imageSource);
               }
           } else {
@@ -57,10 +57,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     if(file_exists($fileName)){
         $JSONusers = file_get_contents($fileName);
-        $users = json_decode($JSONusers, true);   
-    } else { 
+        $users = json_decode($JSONusers, true);
+    } else {
         file_put_contents($fileName, $users);
-    }                         
+    }
 
    $jsonREQUEST = file_get_contents("php://input");
    $dataREQUEST = json_decode($jsonREQUEST, true);
@@ -70,25 +70,20 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
    $password = $dataREQUEST["password"];
    $age = $dataREQUEST["age"];
    $city = $dataREQUEST["city"];
-   $gender = $dataREQUEST["gender"]; 
-   $interestsOne= $dataREQUEST["interests"][0]["interestsOne"];
-   $interestsTwo = $dataREQUEST["interests"][0]["interestsTwo"];
-   $interestsThree = $dataREQUEST["interests"][0]["interestsThree"];
-   $interestsFour = $dataREQUEST["interests"][0]["interestsFour"];
-   $interestsFive = $dataREQUEST["interests"][0]["interestsFive"];
+   $gender = $dataREQUEST["gender"];
+   $interests = array_values($dataREQUEST["interests"][0]);
    $bio = $dataREQUEST["general"][0]["bio"];
    $contact = $dataREQUEST["general"][0]["contact"];
-   $genderOf = $dataREQUEST["preference"][0]["genderOf"];   
+   $genderOf = $dataREQUEST["preference"][0]["genderOf"];
    $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
-    $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
+   $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
 
-    
-                                
   // for($i = 0; $i < count($users); $i++){
-  //    if($email == $users[$i]["email"]){    
-  //      send(409, [$data = "The email is already registered"]); 
-  //    }  
-  //  }   
+  //    if($email == $users[$i]["email"]){
+  //      send(409, [$data = "The email is already registered"]);
+  //    }
+  //  }
+
   if($age < 18){
     send(409, [$data = "You need to be over 18 to use this app"]);
   }
@@ -110,13 +105,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
           "city" => $city,
           "gender" => $gender,
           "imageSource" => $imageSource,
-          "interests" => [
-            "interestsOne" => $interestsOne,
-            "interestsTwo" => $interestsTwo,
-            "interestsThree" => $interestsThree,
-            "interestsFour" => $interestsFour,
-            "interestsFive" => $interestsFive,
-          ],
+          "interests" => $interests,
           "general" => [
             "bio" => $bio,
             "contact" => $contact,
@@ -129,20 +118,20 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
           "matches" => [
             "yes" => [],
             "no" => [],
-          ], 
+          ],
           ];
           $users[] = $newUser;
 
         $data = json_encode($users, JSON_PRETTY_PRINT);
         file_put_contents($fileName, $data);
-                  
+
          send(200, [$data = "A new user have been added!"]);
 
          } else {
           send(401, [$data = "You need to fill in all the fields before you proceed."]);
-         }          
+         }
 } else {
   allowJSON();
 }
- 
+
 ?>

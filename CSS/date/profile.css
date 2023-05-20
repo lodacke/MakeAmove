@@ -80,7 +80,12 @@
   }
 
   /* Gender buttons of user*/
-  .profile-button label {
+  .profile-button .a-gender {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .a-gender label {
     display: inline-block;
     padding: 10px;
     margin: 3px;
@@ -89,17 +94,17 @@
     cursor: pointer;
   }
 
-  .info-button {
+  .a-gender .info-button {
     display: none;
   }
 
-  .info-button+label {
+  .a-gender .info-button+label {
     display: inline-block;
     width: auto;
     background-color: #eee;
   }
 
-  .info-button:checked+label {
+  .a-gender .info-button:checked+label {
     background-color: rgb(213, 80, 140);
     color: #fff;
   }
@@ -150,11 +155,6 @@
     align-items: center;
   }
 
-  /* Checkbox */
-  /* input[type="checkbox"] {
-    display: none;
-  } */
-
   .my-interest {
     display: inline-block;
     padding: 8px 16px;
@@ -195,6 +195,10 @@
   .emailaddress {
     font-size: 2vh;
     margin-left: 2vw;
+  }
+
+  .gender-buttons {
+    display: flex;
   }
 
   .user-setting-top {

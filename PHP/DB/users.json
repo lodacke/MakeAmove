@@ -695,5 +695,63 @@
             "yes": "emil@gmail.com",
             "no": "benji@hotmail.com"
         }
+    },
+    {
+        "name": "yvonne",
+        "email": "yvonne@gmail.com",
+        "password": "y",
+        "age": "20",
+        "city": "Malm\u00f6",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": [
+            "traveling",
+            "movies",
+            "art",
+            "gaming",
+            "boardgames"
+        ],
+        "general": {
+            "bio": "I am Yvonne! I love animals :)",
+            "contact": "123456789"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "30",
+            "ageOfMin": "20"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "name": "carol",
+        "email": "carol@gmail.com",
+        "password": "carol",
+        "age": "50",
+        "city": "Uppsala",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": [
+            "art",
+            "fashion",
+            "cooking",
+            "gym",
+            "musicfestivals"
+        ],
+        "general": {
+            "bio": "Animals lover!",
+            "contact": "34567890"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "60",
+            "ageOfMin": "40"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
     }
 ]

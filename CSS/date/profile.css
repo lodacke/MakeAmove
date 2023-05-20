@@ -242,7 +242,7 @@
 
   .popup-background {
     background-color: rgba(0, 0, 0, 0.4);
-    top: 14vh;
+    top: 22vh;
     left: 6vw;
     height: 72vh;
     width: 88vw;
@@ -253,11 +253,11 @@
   .popup-content {
     background-color: rgb(213, 80, 140);
     color: white;
-    height: 50%;
+    height: 62%;
     width: 77%;
     position: absolute;
-    top: 140px;
-    left: 5%;
+    top: 98px;
+    left: 6%;
     border-radius: 14px;
     display: flex;
     flex-direction: column;

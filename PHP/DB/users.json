@@ -13,7 +13,6 @@
             "yoga",
             "astrology",
             "beer",
-            "fishing",
             "fishing"
         ],
         "general": {
@@ -43,13 +42,13 @@
         "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "movies",
-            "interestsThree": "fishing",
-            "interestsFour": "wine",
-            "interestsFive": "art"
-        },
+        "interests": [
+            "traveling",
+            "movies",
+            "fishing",
+            "wine",
+            "art"
+        ],
         "general": {
             "bio": "Hejhej!",
             "contact": "0760373456"
@@ -73,13 +72,13 @@
         "city": "Link\u00f6ping",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "stand-upcomedy",
-            "interestsThree": "art",
-            "interestsFour": "smoking",
-            "interestsFive": "running"
-        },
+        "interests": [
+            "reading",
+            "stand-upcomedy",
+            "art",
+            "smoking",
+            "running"
+        ],
         "general": {
             "bio": "",
             "contact": "076033456"
@@ -112,13 +111,13 @@
         "city": "G\u00f6teborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "beer",
-            "interestsTwo": "wine",
-            "interestsThree": "fishing",
-            "interestsFour": "sport",
-            "interestsFive": "snus"
-        },
+        "interests": [
+            "beer",
+            "wine",
+            "fishing",
+            "sport",
+            "snus"
+        ],
         "general": {
             "bio": "Looking for wifey",
             "contact": "0768889431"
@@ -144,13 +143,13 @@
         "city": "Lund",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "photographing",
-            "interestsThree": "hiking",
-            "interestsFour": "gaming",
-            "interestsFive": "playinginstruments"
-        },
+        "interests": [
+            "reading",
+            "photographing",
+            "hiking",
+            "gaming",
+            "playinginstruments"
+        ],
         "general": {
             "bio": "",
             "contact": "0768889431"
@@ -174,13 +173,13 @@
         "city": "G\u00e4vle",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "traveling",
-            "interestsThree": "reading",
-            "interestsFour": "wine",
-            "interestsFive": "movienight"
-        },
+        "interests": [
+            "astrology",
+            "traveling",
+            "reading",
+            "wine",
+            "movienight"
+        ],
         "general": {
             "bio": "",
             "contact": "0768889431"
@@ -204,13 +203,13 @@
         "city": "\u00d6rebro",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "snus",
-            "interestsTwo": "photographing",
-            "interestsThree": "singing",
-            "interestsFour": "nightout",
-            "interestsFive": "running"
-        },
+        "interests": [
+            "snus",
+            "photographing",
+            "singing",
+            "nightout",
+            "running"
+        ],
         "general": {
             "bio": "Family-oriented and dedicated to building meaningful connections. Enjoying quality time with loved ones and creating lasting memories. Seeking a partner who prioritizes relationships and cherishes the bonds we create.",
             "contact": "0768889431"
@@ -236,13 +235,13 @@
         "city": "Stockholm",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "beer",
-            "interestsTwo": "wine",
-            "interestsThree": "fishing",
-            "interestsFour": "sport",
-            "interestsFive": "poetry"
-        },
+        "interests": [
+            "beer",
+            "wine",
+            "fishing",
+            "sport",
+            "poetry"
+        ],
         "general": {
             "bio": "Free spirit with a love for mindfulness and self-growth. Practicing yoga and meditation to find inner balance. Hoping to connect with someone who values personal development and living in the present moment.",
             "contact": "0768889431"
@@ -266,13 +265,13 @@
         "city": "Lule\u00e5",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "traveling",
-            "interestsThree": "wine",
-            "interestsFour": "stand-upcomedy",
-            "interestsFive": "movienight"
-        },
+        "interests": [
+            "astrology",
+            "traveling",
+            "wine",
+            "stand-upcomedy",
+            "movienight"
+        ],
         "general": {
             "bio": "Tech enthusiast and problem solver. Fascinated by the latest gadgets and always up for a coding challenge. Searching for a partner who shares my passion for technology and innovation.",
             "contact": "0768889431"
@@ -296,13 +295,13 @@
         "city": "Ume\u00e5",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "photographing",
-            "interestsTwo": "singing",
-            "interestsThree": "nightout",
-            "interestsFour": "backpacking",
-            "interestsFive": "musicfestivals"
-        },
+        "interests": [
+            "photographing",
+            "singing",
+            "nightout",
+            "backpacking",
+            "musicfestivals"
+        ],
         "general": {
             "bio": "Animal lover and advocate for their well-being. Volunteering at animal shelters and always surrounded by furry friends. Seeking someone who values compassion and shares a love for animals.",
             "contact": "0768889431"
@@ -326,13 +325,13 @@
         "city": "Sundsvall",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "wine",
-            "interestsThree": "movienight",
-            "interestsFour": "art",
-            "interestsFive": "fishing"
-        },
+        "interests": [
+            "astrology",
+            "wine",
+            "movienight",
+            "art",
+            "fishing"
+        ],
         "general": {
             "bio": "Entrepreneur with a drive to make a difference. Building my own business and working towards my dreams. Hoping to find a supportive and ambitious partner who can join me on this journey",
             "contact": "0768889431"
@@ -356,13 +355,13 @@
         "city": "Uppsala",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "snus",
-            "interestsTwo": "poetry",
-            "interestsThree": "movienight",
-            "interestsFour": "running",
-            "interestsFive": "nightout"
-        },
+        "interests": [
+            "snus",
+            "poetry",
+            "movienight",
+            "running",
+            "nightout"
+        ],
         "general": {
             "bio": "Foodie at heart. I love exploring different cuisines and trying out new recipes. Looking for a partner who shares my love for good food and culinary adventures.",
             "contact": "0768889431"
@@ -386,13 +385,13 @@
         "city": "Stockholm",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "astrology",
-            "interestsThree": "hiking",
-            "interestsFour": "photographing",
-            "interestsFive": "sport"
-        },
+        "interests": [
+            "reading",
+            "astrology",
+            "hiking",
+            "photographing",
+            "sport"
+        ],
         "general": {
             "bio": "Adventure seeker, passionate about exploring new places and trying new experiences. Looking for a partner who shares my love for travel and can add excitement to life's journey.",
             "contact": "0768889431"
@@ -418,13 +417,13 @@
         "city": "Kalmar",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "reading",
-            "interestsThree": "traveling",
-            "interestsFour": "running",
-            "interestsFive": "movienight"
-        },
+        "interests": [
+            "astrology",
+            "reading",
+            "traveling",
+            "running",
+            "movienight"
+        ],
         "general": {
             "bio": "Creative soul with a passion for art and music. Whether it's painting, playing an instrument, or attending live performances, I find inspiration in all forms of artistic expression. Seeking someone who appreciates the beauty in life.",
             "contact": "0768889431"
@@ -448,13 +447,13 @@
         "city": "Uppsala",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "traveling",
-            "interestsThree": "movies",
-            "interestsFour": "astrology",
-            "interestsFive": "beer"
-        },
+        "interests": [
+            "reading",
+            "traveling",
+            "movies",
+            "astrology",
+            "beer"
+        ],
         "general": {
             "bio": "Fitness enthusiast and nature lover. I spend my free time hiking, running, and staying active. Searching for a partner who values a healthy lifestyle and enjoys outdoor adventures.",
             "contact": "0768889431"
@@ -478,13 +477,13 @@
         "city": "Uppsala",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "beer",
-            "interestsThree": "wine",
-            "interestsFour": "stand-upcomedy",
-            "interestsFive": "movienight"
-        },
+        "interests": [
+            "reading",
+            "beer",
+            "wine",
+            "stand-upcomedy",
+            "movienight"
+        ],
         "general": {
             "bio": "Bookworm and coffee enthusiast. I enjoy long conversations and deep connections. Seeking someone with a curious mind and a love for intellectual discussions.",
             "contact": "0768889431"
@@ -508,13 +507,13 @@
         "city": "Trelleborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "running",
-            "interestsTwo": "art",
-            "interestsThree": "fishing",
-            "interestsFour": "stand-upcomedy",
-            "interestsFive": "gym"
-        },
+        "interests": [
+            "running",
+            "art",
+            "fishing",
+            "stand-upcomedy",
+            "gym"
+        ],
         "general": {
             "bio": "",
             "contact": "0764567822"
@@ -540,13 +539,13 @@
         "city": "Sk\u00f6vde",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "dancing",
-            "interestsTwo": "fishing",
-            "interestsThree": "astrology",
-            "interestsFour": "musicfestivals",
-            "interestsFive": "gym"
-        },
+        "interests": [
+            "dancing",
+            "fishing",
+            "astrology",
+            "musicfestivals",
+            "gym"
+        ],
         "general": {
             "bio": "",
             "contact": "07421798411"
@@ -570,13 +569,13 @@
         "city": "Falun",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "wine",
-            "interestsThree": "movienight",
-            "interestsFour": "art",
-            "interestsFive": "dancing"
-        },
+        "interests": [
+            "astrology",
+            "wine",
+            "movienight",
+            "art",
+            "dancing"
+        ],
         "general": {
             "bio": "",
             "contact": "0783543742"
@@ -600,13 +599,13 @@
         "city": "Ume\u00e5",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "astrology",
-            "interestsThree": "beer",
-            "interestsFour": "yoga",
-            "interestsFive": "wine"
-        },
+        "interests": [
+            "reading",
+            "astrology",
+            "beer",
+            "yoga",
+            "wine"
+        ],
         "general": {
             "bio": "",
             "contact": "212"
@@ -630,13 +629,13 @@
         "city": "Malm\u00f6",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "astrology",
-            "interestsThree": "wine",
-            "interestsFour": "fishing",
-            "interestsFive": "movies"
-        },
+        "interests": [
+            "reading",
+            "astrology",
+            "wine",
+            "fishing",
+            "movies"
+        ],
         "general": {
             "bio": "",
             "contact": "23"
@@ -660,13 +659,13 @@
         "city": "G\u00f6teborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "fishing",
-            "interestsTwo": "astrology",
-            "interestsThree": "reading",
-            "interestsFour": "beer",
-            "interestsFive": "yoga"
-        },
+        "interests": [
+            "fishing",
+            "astrology",
+            "reading",
+            "beer",
+            "yoga"
+        ],
         "general": {
             "bio": "",
             "contact": "23"
@@ -690,13 +689,13 @@
         "city": "G\u00f6teborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "traveling",
-            "interestsTwo": "movies",
-            "interestsThree": "dancing",
-            "interestsFour": "fishing",
-            "interestsFive": "astrology"
-        },
+        "interests": [
+            "traveling",
+            "movies",
+            "dancing",
+            "fishing",
+            "astrology"
+        ],
         "general": {
             "bio": "",
             "contact": "23"
@@ -720,13 +719,13 @@
         "city": "G\u00e4vle",
         "gender": "both",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "astrology",
-            "interestsThree": "fishing",
-            "interestsFour": "beer",
-            "interestsFive": "yoga"
-        },
+        "interests": [
+            "reading",
+            "astrology",
+            "fishing",
+            "beer",
+            "yoga"
+        ],
         "general": {
             "bio": "",
             "contact": "23"
@@ -750,13 +749,13 @@
         "city": "G\u00f6teborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "astrology",
-            "interestsThree": "beer",
-            "interestsFour": "wine",
-            "interestsFive": "yoga"
-        },
+        "interests": [
+            "reading",
+            "astrology",
+            "beer",
+            "wine",
+            "yoga"
+        ],
         "general": {
             "bio": "",
             "contact": "21"
@@ -780,13 +779,13 @@
         "city": "G\u00f6teborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "astrology",
-            "interestsTwo": "fishing",
-            "interestsThree": "reading",
-            "interestsFour": "yoga",
-            "interestsFive": "beer"
-        },
+        "interests": [
+            "astrology",
+            "fishing",
+            "reading",
+            "yoga",
+            "beer"
+        ],
         "general": {
             "bio": "",
             "contact": "23"
@@ -812,13 +811,13 @@
         "city": "Sundsvall",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "astrology",
-            "interestsThree": "fishing",
-            "interestsFour": "beer",
-            "interestsFive": "yoga"
-        },
+        "interests": [
+            "reading",
+            "astrology",
+            "fishing",
+            "beer",
+            "yoga"
+        ],
         "general": {
             "bio": "",
             "contact": "23"
@@ -842,13 +841,13 @@
         "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "astrology",
-            "interestsThree": "fishing",
-            "interestsFour": "wine",
-            "interestsFive": "beer"
-        },
+        "interests": [
+            "reading",
+            "astrology",
+            "fishing",
+            "wine",
+            "beer"
+        ],
         "general": {
             "bio": "",
             "contact": "23"
@@ -872,13 +871,13 @@
         "city": "G\u00f6teborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
-        "interests": {
-            "interestsOne": null,
-            "interestsTwo": null,
-            "interestsThree": null,
-            "interestsFour": null,
-            "interestsFive": null
-        },
+        "interests": [
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
         "general": {
             "bio": "2345",
             "contact": "234534567"
@@ -902,13 +901,13 @@
         "city": "Stockholm",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "beer",
-            "interestsThree": "art",
-            "interestsFour": "stand-upcomedy",
-            "interestsFive": "dancing"
-        },
+        "interests": [
+            "reading",
+            "beer",
+            "art",
+            "stand-upcomedy",
+            "dancing"
+        ],
         "general": {
             "bio": "wtgskrngjs",
             "contact": "456789234"

@@ -28,9 +28,9 @@
   }
 
   .user-picture {
+    object-fit: cover;
     height: 18vh;
     width: 18vh;
-    border: 3px solid black;
     border-radius: 50%;
   }
 
@@ -45,8 +45,8 @@
   }
 
   .category {
-    background-color: gainsboro;
-    border: 4px dotted floralwhite;
+    background-color: #fffbff;
+    border: 4px dotted darksalmon;
     border-radius: 21px;
     padding: 0 10px;
     margin: 2vh 0;

@@ -1,6 +1,7 @@
 @media (min-width: 320px) and (max-width: 480px) {
   body {
-    background: linear-gradient(180deg, rgba(233,233,233,1) 5%, rgba(0,149,255,1) 100%);
+    /* background: linear-gradient(180deg, rgba(233,233,233,1) 5%, rgba(0,149,255,1) 100%); */
+    background-image: radial-gradient(311px at 8.6% 27.9%, rgba(62, 147, 252, 0.57) 12.9%, rgba(239, 183, 192, 0.44) 91.2%);
     text-align: center;
     height: 100vh;
   }

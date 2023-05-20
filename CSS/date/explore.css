@@ -1,5 +1,5 @@
 #explore-main {
-    margin-top: 4vh;
+    margin-top: 3vh;
     position: relative;
 }
 
@@ -22,19 +22,23 @@
 
 #potentialMatchInfo {
     font-weight: bold;
+    font-size: 20px;
     display: flex;
     height: 7vh;
-    width: 100%;
+    width: 72%;
+    left: 8vh;
+    bottom: 1px;
     position: absolute;
-    bottom: 14vh;
+    bottom: 3vh;
     background-color: rgba(255, 255, 255, 0.8);
     justify-content: space-around;
     align-items: center;
+    border-radius: 56px;
 }
 
 #matchButtons{
     position: absolute;
-    top: 43%;
+    top: 40%;
     left: 12px;
     width: 95%;
     display: flex;
@@ -49,7 +53,6 @@
 align-items: center;
     background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
     border: 0;
-    border-radius: 10px;
     color: #fff;
     cursor: pointer;
     display: flex;
@@ -61,7 +64,18 @@ align-items: center;
     padding-right: 20px;
     padding-top: 3px;
     text-transform: uppercase;
+}
 
+#match {
+    width: 60px;
+    height: 120px;
+    border-radius: 0 12rem 12rem 0;
+}
+
+#noMatch {
+    width: 60px;
+    height: 120px;
+    border-radius: 12rem 0 0 12rem;
 }
 
 #noPotentialMatch{

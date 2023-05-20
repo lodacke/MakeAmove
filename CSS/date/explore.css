@@ -1,5 +1,6 @@
 #explore-main {
-    margin-top: 9vh;
+    margin-top: 4vh;
+    position: relative;
 }
 
 .header-logo {
@@ -7,35 +8,16 @@
     justify-content: flex-end;
 }
 
-#bio{
+#bio {
     border: 1px solid gray;
     border-radius: 10px;
     padding: 20px;
 }
 
-#exploreBio{
-    border-radius: 5px;
-    padding: 10px;
-    width: 80vw;
-    background-color: rgba(255, 255, 255, 0.6);
-    ;
-}
-
-#exploreInterestsBox{
-    display: flex;
-}
-
-#exploreInterestsBox > div {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 5px;
-    margin: 4px;
-    padding: 7px;
-}
-
 #potentialMatchPic {
     border-radius: 16px;
     border: 2px solid white;
-    height: 56vh;
+    height: 68vh;
 }
 
 #potentialMatchInfo {
@@ -45,7 +27,7 @@
     width: 100%;
     position: absolute;
     bottom: 14vh;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     justify-content: space-around;
     align-items: center;
 }
@@ -89,16 +71,61 @@ align-items: center;
     justify-content: center;
 }
 
-#exploreProfile{
+.explore-profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 3vh;
 }
 
-#exploreProfileImage{
-    border-radius: 2px;
+.explore-profile-image {
+    border-radius: 50%;
     border: 2px solid white;
-    height: 35vh;
+    height: 30vh;
+}
 
+.profile-pop {
+    height: 93vh;
+    width: 89vw;
+    /* position: absolute; */
+    top: -8vh;
+    left: 2vh;
+    border-radius: 14px;
+    z-index: 1;
+    border: 9px dotted blanchedalmond;
+    position: absolute;
+    background: linear-gradient(35deg, #ccffff, #ffcccc);
+
+}
+
+.black-cross {
+    position: absolute;
+    width: 1.5vh;
+    height: 2vh;
+    top: 2vh;
+    right: 5vw;
+}
+
+.explore-bio {
+    border-radius: 5px;
+    padding: 10px;
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.explore-interests-boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    gap: 4px;
+}
+
+.explore-interests-boxes li {
+    background-color: mediumslateblue;
+    color: white;
+    padding: 1vh;
+    border-radius: 5px;
 }

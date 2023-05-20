@@ -116,36 +116,34 @@ function logoutFromAccount() {
 }
 
 function showUser(userDATA) {
-  mainDom.innerHTML = `
-    <div id="exploreProfile">
-      <h3> ${userDATA.name}, ${userDATA.age} y/o</h3>
-      <img id="exploreProfileImage" src="${userDATA.imageSource}"></img>
-      <h3> bio: </h3>
-      <div id="exploreBio">
-        ${userDATA.general.bio}
-      </div>
-      <div id="exploreInterestsBox"></div>
-    </div>`;
+  let profilePopup = document.createElement("div");
+  mainDom.appendChild(profilePopup);
+  profilePopup.classList.add("profile-pop");
 
-  let interests = [
-    userDATA.interests.interestsOne,
-    userDATA.interests.interestsTwo,
-    userDATA.interests.interestsThree,
-    userDATA.interests.interestsFour,
-    userDATA.interests.interestsFive,
-  ];
+  profilePopup.innerHTML = `
+    <img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross">
+    <div class="explore-profile">
+      <h3>${userDATA.name}, ${userDATA.age}y/o (${userDATA.city})</h3>
+      <img class="explore-profile-image" src="${userDATA.imageSource}"></img>
+      <h3>Bio:</h3>
+      <div class="explore-bio">${userDATA.general.bio}</div>
+      <h3>Interests:</h3>
+      <ul class="explore-interests-boxes">
+        <li>${userDATA.interests[0]}</li>
+        <li>${userDATA.interests[1]}</li>
+        <li>${userDATA.interests[2]}</li>
+        <li>${userDATA.interests[3]}</li>
+        <li>${userDATA.interests[4]}</li>
+      </ul>
+    </div>
+  `;
 
-  let interestsBox = mainDom.querySelector("#exploreInterestsBox");
+  profilePopup
+    .querySelector(".white-cross")
+    .addEventListener("click", closeExploreProfilePopup);
+}
 
-  interests.forEach((intrest) => {
-    const div = document.createElement("div");
-    div.textContent = intrest;
-    interestsBox.append(div);
-  });
-
-  mainDom
-    .querySelector("#exploreProfileImage")
-    .addEventListener("click", (e) => {
-      renderCurrentDate();
-    });
+function closeExploreProfilePopup() {
+  let profilePopup = document.querySelector(".profile-pop");
+  profilePopup.classList.add("hide");
 }

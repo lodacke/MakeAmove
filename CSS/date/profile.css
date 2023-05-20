@@ -4,7 +4,7 @@
   }
 
   .profile-page-container {
-    height: 91vh;
+    height: 85vh;
     overflow-y: auto;
     padding: 5vw;
     box-sizing: border-box;
@@ -80,7 +80,12 @@
   }
 
   /* Gender buttons of user*/
-  .profile-button label {
+  .profile-button .a-gender {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .a-gender label {
     display: inline-block;
     padding: 10px;
     margin: 3px;
@@ -89,17 +94,17 @@
     cursor: pointer;
   }
 
-  .info-button {
+  .a-gender .info-button {
     display: none;
   }
 
-  .info-button+label {
+  .a-gender .info-button+label {
     display: inline-block;
     width: auto;
     background-color: #eee;
   }
 
-  .info-button:checked+label {
+  .a-gender .info-button:checked+label {
     background-color: rgb(213, 80, 140);
     color: #fff;
   }
@@ -150,12 +155,7 @@
     align-items: center;
   }
 
-  /* Checkbox */
-  /* input[type="checkbox"] {
-    display: none;
-  } */
-
-  label {
+  .my-interest {
     display: inline-block;
     padding: 8px 16px;
     background-color: #e0e0e0;
@@ -195,6 +195,10 @@
   .emailaddress {
     font-size: 2vh;
     margin-left: 2vw;
+  }
+
+  .gender-buttons {
+    display: flex;
   }
 
   .user-setting-top {
@@ -238,9 +242,9 @@
 
   .popup-background {
     background-color: rgba(0, 0, 0, 0.4);
-    top: 3vh;
+    top: 22vh;
     left: 6vw;
-    height: 86vh;
+    height: 72vh;
     width: 88vw;
     border-radius: 32px;
     position: relative;
@@ -249,11 +253,11 @@
   .popup-content {
     background-color: rgb(213, 80, 140);
     color: white;
-    height: 50%;
+    height: 62%;
     width: 77%;
     position: absolute;
-    top: 140px;
-    left: 5%;
+    top: 98px;
+    left: 6%;
     border-radius: 14px;
     display: flex;
     flex-direction: column;
@@ -273,6 +277,7 @@
   }
 
   .password-row {
+    padding: 2px;
     text-align: left;
     font-size: 2.5vh;
   }
@@ -285,6 +290,7 @@
 
   .password-input {
     height: 3vh;
+    width: 100%;
     border-radius: 5px;
     border: 1px solid white;
   }
@@ -303,7 +309,7 @@
   .confirm-delete-no {
     position: absolute;
     right: 5vw;
-    bottom: 6vh;
+    bottom: 5vh;
     width: 29vw;
     height: 3.5vh;
     font-weight: bold;

@@ -62,3 +62,20 @@ export function errorMessage(){
         }
     })
 };
+
+export function formDataToJson(formData) {
+  const jsonData = {};
+
+  for (const [key, value] of formData.entries()) {
+    if (jsonData.hasOwnProperty(key)) {
+      if (!Array.isArray(jsonData[key])) {
+        jsonData[key] = [jsonData[key]];
+      }
+      jsonData[key].push(value);
+    } else {
+      jsonData[key] = value;
+    }
+  }
+
+  return JSON.stringify(jsonData);
+}

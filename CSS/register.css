@@ -49,14 +49,14 @@ body{
     transition: 0.5s;
 }
 
-.inputbox input:valid ~ label, 
+.inputbox input:valid ~ label,
 .inputbox input:focus ~ label {
     transform: translateX(10px) translateY(-12px);
     font-size: 12px;
     padding: 0 10px;
 }
 
-.inputbox input:valid, 
+.inputbox input:valid,
 .inputbox input:focus {
     border: 3px solid #469dff;
 }
@@ -74,7 +74,7 @@ body{
     justify-content: space-around;
 }
 
-.ageAndGender input, 
+.ageAndGender input,
 .ageAndGender select {
     border: 1px solid #a2a2a2;
     border-radius: 5px;
@@ -90,13 +90,13 @@ body{
     gap: 5px;
 }
 
-  .sticky-nav {
+/* .sticky-nav {
     margin: 10px;
     display: flex;
     justify-content: space-around;
     height: 6vh;
     gap: 1vw;
-}
+} */
 
 #pageNavigation button {
     width: 100%;

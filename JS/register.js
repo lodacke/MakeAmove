@@ -3,14 +3,14 @@ import { renderDatingPage } from "./date/explore.js";
 import { renderCityDropdownListReg } from "./helper.js";
 import { renderFrontPage } from "./index.js";
 
-"use strict"
+("use strict");
 
 function renderPageNavigation(previousPage){
     let pageNavDom = document.getElementById("pageNavigation");
 
-    pageNavDom.innerHTML = `
-        <button id="previousPage"> Previous Page </button>
-        <button id="nextPage"> Next Page </button>`;
+  pageNavDom.innerHTML = `
+    <button id="previousPage"> Previous Page </button>
+    <button id="nextPage"> Next Page </button>`;
 
     pageNavDom.querySelector("#previousPage").addEventListener("click", e => {
         previousPage();
@@ -22,7 +22,7 @@ export function renderRegisterPage (){
     let mainDom = document.querySelector("main");
 
     renderBasicInfoPage();
-    
+
     document.getElementById("startPageHeader").id = "registerPageHeader";
     document.getElementById("startPageMain").id = "registerPageMain";
 
@@ -53,7 +53,7 @@ export function renderRegisterPage (){
         </select>
 
         <label for "age"> Age: <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required" required="required"> </label>
-            <label for "gender"> Gender: 
+            <label for "gender"> Gender:
                 <select name="gender" class="required">
                     <option value="none">Choose an option </option>
                     <option value="female"> Woman </option>
@@ -65,7 +65,7 @@ export function renderRegisterPage (){
         </div>
 
         ${renderPageNavigation(renderFrontPage)};
-    
+
         `;
 
         let nameDom = mainDom.querySelector("input[name='name']");
@@ -112,7 +112,7 @@ export function renderRegisterPage (){
              <div id="userImage"></div>
              <p id="imageMessage"></p>
          </div>
-    
+
         ${renderPageNavigation(renderBasicInfoPage)}`;
         const form = document.getElementById("upload");
         const imageMessage = document.getElementById("imageMessage");
@@ -163,20 +163,16 @@ export function renderRegisterPage (){
 
         <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile </p>
 
-         ${renderPageNavigation(imagePage)} 
+         ${renderPageNavigation(imagePage)}
          `;
 
          const interests = [
-          "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing",
+          "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing", "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night", "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing", "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking", "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"];
 
-          "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night",
-          "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing",
+          const interestsList = document.getElementById("interestsList");
 
-          "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking",
-          "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"];
-        const interestsList = document.getElementById("interestsList");
-        interests.forEach(interest => {
-          const div = document.createElement("div"); 
+          interests.forEach(interest => {
+          const div = document.createElement("div");
 
           const input = document.createElement("input");
           input.type = "checkbox";
@@ -194,7 +190,7 @@ export function renderRegisterPage (){
         let contact = mainDom.querySelector("input[name='contact']");
 
         let interestsBoxes = document.querySelectorAll("input[type='checkbox']");
-        let count = 0; 
+        let count = 0;
 
         let checkedIntrests = [];
         for(let i = 0; i < interestsBoxes.length; i++){
@@ -209,12 +205,12 @@ export function renderRegisterPage (){
                     let index = checkedIntrests.indexOf(interestsBoxes[i].name);
                     checkedIntrests.splice(index, 1);
                     console.log(checkedIntrests);
-                }          
+                }
                 if(count === 5){
                     interestsBoxes.forEach(box => {
                         if(!box.checked){
                              box.disabled = true;
-                        }                   
+                        }
                     })
                 } else {
                     interestsBoxes.forEach( box => {
@@ -229,14 +225,14 @@ export function renderRegisterPage (){
             console.log(contact.value.length); //Funkar för att mäta längden, ska användas i en kontroll senare för det är ett telefo
 
             if(contact.value != "" && count === 5){
-
-                let interests = {
-                     interestsOne: checkedIntrests[0],
-                     interestsTwo: checkedIntrests[1],
-                     interestsThree: checkedIntrests[2],
-                     interestsFour: checkedIntrests[3],
-                     interestsFive: checkedIntrests[4],
-                }
+                let interests = checkedIntrests.map((value) => value);
+                // let interests = {
+                //      interestsOne: checkedIntrests[0],
+                //      interestsTwo: checkedIntrests[1],
+                //      interestsThree: checkedIntrests[2],
+                //      interestsFour: checkedIntrests[3],
+                //      interestsFive: checkedIntrests[4],
+                // }
                 let general = {
                     bio: bio.value,
                     contact: contact.value
@@ -321,7 +317,6 @@ export function renderRegisterPage (){
 
 
 
-
 // ---FUNKTION DÄR NAV SKAPAS ISTÄLLET FÖR ATT ANVÄNDA DEN I HTML, PROBLEM MED ATT KALLA PÅ DEN IGEN I ANDRA FUNKTIONER.
 //function renderPageNavigation(previousFunction){
 //    let pageNavDom = document.createElement("div");
@@ -337,5 +332,3 @@ export function renderRegisterPage (){
 //
 //     })
 //}
-
-

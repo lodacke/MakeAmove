@@ -1,32 +1,16 @@
-#exploreHeader{
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
-
+#explore-main {
+    margin-top: 9vh;
 }
 
-#exploreMain{
-    height: 80vh;
+.header-logo {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.explore-logo {
-    width: 10vh;
-    margin: 3vh 0 2vh;
+    justify-content: flex-end;
 }
 
 #bio{
     border: 1px solid gray;
     border-radius: 10px;
     padding: 20px;
-}
-
-#exploreLogo{
-    height: 5vh;
-    width: 14vw;
 }
 
 #exploreBio{
@@ -48,16 +32,8 @@
     padding: 7px;
 }
 
-#potentialMatch {
-    /* position: relative; */
-}
-
-#potentialMatchPicIndo {
-
-}
-
 #potentialMatchPic {
-    border-radius: 2px;
+    border-radius: 16px;
     border: 2px solid white;
     height: 56vh;
 }
@@ -66,7 +42,7 @@
     font-weight: bold;
     display: flex;
     height: 7vh;
-    width: 92vw;
+    width: 100%;
     position: absolute;
     bottom: 14vh;
     background-color: rgba(255, 255, 255, 0.5);
@@ -76,10 +52,11 @@
 
 #matchButtons{
     position: absolute;
-    width: 94%;
+    top: 43%;
+    left: 12px;
+    width: 95%;
     display: flex;
     justify-content: space-between;
-    bottom: 30vh;
 }
 
 #matchButtons button{

@@ -4,29 +4,34 @@
         "name": "Anna",
         "email": "anna@mail.com",
         "password": "anna",
-        "age": "21",
-        "city": "Lund",
+        "age": "20",
+        "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": {
-            "interestsOne": "reading",
-            "interestsTwo": "astrology",
-            "interestsThree": "fishing",
-            "interestsFour": "beer",
-            "interestsFive": "yoga"
-        },
+        "interests": [
+            "reading",
+            "yoga",
+            "astrology",
+            "beer",
+            "fishing",
+            "fishing"
+        ],
         "general": {
-            "bio": "",
+            "bio": "This is Anna!",
             "contact": "0764537832"
         },
         "preference": {
             "genderOf": "male",
-            "ageOfMax": "29",
-            "ageOfMin": "18"
+            "ageOfMax": "30",
+            "ageOfMin": "20"
         },
         "matches": {
-            "yes": [],
-            "no": []
+            "yes": [
+                "64660f47636ce"
+            ],
+            "no": [
+                "64660f47636ce"
+            ]
         }
     },
     {
@@ -852,6 +857,126 @@
             "genderOf": "male",
             "ageOfMax": "27",
             "ageOfMin": "23"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "6468f643de4ae",
+        "name": "ghj",
+        "email": "ghjk",
+        "password": "12345",
+        "age": "22",
+        "city": "G\u00f6teborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+        "interests": {
+            "interestsOne": null,
+            "interestsTwo": null,
+            "interestsThree": null,
+            "interestsFour": null,
+            "interestsFive": null
+        },
+        "general": {
+            "bio": "2345",
+            "contact": "234534567"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "26",
+            "ageOfMin": "22"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "6468f6c52a5cb",
+        "name": "234567",
+        "email": "ghsjgksh",
+        "password": "sjhfjkshef",
+        "age": "22",
+        "city": "Stockholm",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+        "interests": {
+            "interestsOne": "reading",
+            "interestsTwo": "beer",
+            "interestsThree": "art",
+            "interestsFour": "stand-upcomedy",
+            "interestsFive": "dancing"
+        },
+        "general": {
+            "bio": "wtgskrngjs",
+            "contact": "456789234"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "30",
+            "ageOfMin": "22"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "6468f7ab684a4",
+        "name": "esrdgth",
+        "email": "srdthfygj",
+        "password": "aesrfdgtfh",
+        "age": "22",
+        "city": "G\u00f6teborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+        "interests": [
+            "reading",
+            "beer",
+            "yoga",
+            "dancing",
+            "fishing"
+        ],
+        "general": {
+            "bio": "aerstdg",
+            "contact": "2345678"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "26",
+            "ageOfMin": "22"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "6468f8e5897f1",
+        "name": "yvonne",
+        "email": "yvonne@gmail.com",
+        "password": "y",
+        "age": "20",
+        "city": "Malm\u00f6",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+        "interests": [
+            "traveling",
+            "yoga",
+            "astrology",
+            "dancing",
+            "art"
+        ],
+        "general": {
+            "bio": "Hi! This is Yvonne :)",
+            "contact": "1234567890"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "30",
+            "ageOfMin": "20"
         },
         "matches": {
             "yes": [],

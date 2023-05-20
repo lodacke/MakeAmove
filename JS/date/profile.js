@@ -1,7 +1,7 @@
 "use strict";
 
 import { stickyNav } from "./stickyNav.js";
-import { getUserData, renderCityDropdownList } from "../helper.js";
+import { getUserData, renderCityDropdownList, formDataToJson } from "../helper.js";
 import { renderFrontPage } from "../index.js";
 import { renderDatingPage } from "./explore.js";
 import { renderMatchesPage } from "./matches.js";
@@ -70,8 +70,7 @@ export async function renderProfilePage() {
           </div>
 
           <div class="title">I am looking for</div>
-
-          ${createPreferGenderButton(genders)}
+          <div class="gender-buttons">${createPreferGenderButton(genders)}</div>
 
         </div>
 
@@ -154,7 +153,10 @@ function renderInterestBox(interest) {
   const anInterest = document.createElement("div");
   const input = document.createElement("input");
   input.type = "checkbox";
-  input.setAttribute("id", "interest-checkbox");
+  input.name = "interests";
+  input.id = interest.toLowerCase().replace(" ", "");
+  input.value = interest.toLowerCase().replace(" ", "");
+  input.classList.add("interest-checkbox");
   const label = document.createElement("label");
   label.htmlFor = input.name;
   label.textContent = interest;
@@ -162,9 +164,6 @@ function renderInterestBox(interest) {
   anInterest.append(input);
   anInterest.append(label);
 
-  anInterest
-    .querySelector("input")
-    .name = "my-" + interest.toLowerCase().replace(" ", "");
   anInterest.classList.add("an-interest");
   anInterest.querySelector("label").classList.add("my-interest");
 
@@ -375,20 +374,19 @@ async function deleteUserAccount(event) {
 }
 
 function createPreferGenderButton(genders) {
-  let html = '<div class="profile-button prefer-gender-button">';
+  let html = '';
 
   for (let gender of genders) {
     html += `
+      <div class="a-gender">
         <input type="checkbox" name="genderOf" value="${gender}" id="${gender}" class="info-button">
-      `;
-    html += `
         <label class="${gender}" for="${gender}">
           ${gender}
         </label>
-      `;
+      </div>
+    `;
   }
 
-  html += '</div>';
   return html;
 }
 
@@ -405,17 +403,18 @@ async function saveProfile(event) {
   event.preventDefault();
 
   let message = document.querySelector(".profile-message");
-  const formData = new FormData(event.target);
 
-  formData.append("email", getUserData().email);
+  const formData = new FormData(event.target);
+  formData.append("id", getUserData().id);
+  const jsonData = formDataToJson(formData);
 
   try {
     let response = await fetch("../PHP/date/updateProfile.php", {
       method: "PATCH",
-      body: JSON.stringify(Object.fromEntries(formData.entries())),
+      body: jsonData,
       headers: {
-        "Content-Type": "application/json"
-      }
+        "Content-Type": "application/json",
+      },
     });
 
     message.textContent = "The profile is updated successfully! ٩( ̆◡ ̆)۶";

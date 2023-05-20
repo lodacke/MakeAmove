@@ -2,4 +2,20 @@
   .dateTitle {
     font-family: Helvetica;
   }
+
+  #date-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 3vh;
+  }
+
+  #date-main {
+    position: relative;
+    padding-bottom: 110px;
+  }
+
+  #explore-logo {
+    height: 5vh;
+    width: 14vw;
+  }
 }

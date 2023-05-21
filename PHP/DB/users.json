@@ -486,5 +486,34 @@
             "yes": [],
             "no": []
         }
+    },
+    {
+        "name": "biubub",
+        "email": "ohunianna@gmail.com",
+        "password": "anna123oiho",
+        "age": "23",
+        "city": "Alvhem",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
+        "interests": {
+            "interestsOne": "traveling",
+            "interestsTwo": "movies",
+            "interestsThree": "astrology",
+            "interestsFour": "reading",
+            "interestsFive": "yoga"
+        },
+        "general": {
+            "bio": "",
+            "contact": "345678"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "25",
+            "ageOfMin": "20"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
     }
 ]

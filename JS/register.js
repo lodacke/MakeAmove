@@ -33,7 +33,7 @@ export function renderRegisterPage (){
 
     <div class="inputbox">
         <input type="email" name="email" class="required" required="required">
-        <label for "email"> Email-adress </label>
+        <label for "email"> Email-address </label>
     </div>
 
     <div class="inputbox">
@@ -111,7 +111,7 @@ export function renderRegisterPage (){
 
 function imagePage(userData){
     mainDom.innerHTML = `
-    <h1> Upload a profile picture! </h1>
+    <h1> Upload a profile picture </h1>
     <form id="upload" action="register.php" method="POST" enctype="multipart/form-data">
         <input type="file" name="profilePicture">
         <button type="submit">Upload</button>
@@ -172,7 +172,7 @@ function QuestionPage(userData){
 
     <input name="contact" type="tel" placeholder="phonenumber" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
 
-    <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile </p>
+    <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile! </p>
 
      ${renderPageNavigation()} 
      `;

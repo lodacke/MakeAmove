@@ -2,21 +2,36 @@
   * {
     font-family: Helvetica;
   }
-/*
-  body {
+
+  #loginPageHeader {
+    height: 30vh;
+  }
+
+  #loginPageHeader .logo {
+    height: 20vh;
+  }
+
+  #loginPageMain {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /*margin: 0 6vw;*/
+    align-items: center;
   }
 
-
-  h2 {
-    font-size: 4.2vh;
-    margin: 0 0 1vh 0;
-    text-align: left;
+  .loginField {
+    position: relative;
+    margin-top: 20px;
   }
 
+  .loginField input {
+    width: 80vw;
+    padding: 15px;
+    border-radius: 13px;
+    border: 1px solid #a2a2a2;
+    background-color: #ffffffc9;
+    outline: none;
+    margin-bottom: 15px;
+}
+/*
   .login-form input {
     margin: 2vw;
     margin-left: 0;
@@ -24,39 +39,47 @@
     height: 4vh;
     border: 1px solid gray;
     border-radius: 5px;
-  }
+  }*/
 
-  .login-button {
-    background-color: rgb(144, 144, 144);
-    color: white;
-    font-size: 1.8vh;
+  .loginButton {
+    background-color: rgba(142, 142, 142, 0.68);
+    color: #fffc;
+    font-size: 2vh;
     width: 100%;
-    padding: 1.2vh;
-    margin: 10px 2px;
-    border-radius: 5px;
+    margin: 10px 0 5px 0;
+    border-radius: 7px;
     border: 1px solid darkgrey;
+    height: 7vh;
+    font-weight: bold;
   }
 
   .loading {
     height: 4vh;
   }
 
-  .go-to-register {
+  .goToRegister {
+    color: #ffffffe0;
+    background-color: rgba(142, 142, 142, 0.8);
+    border: 1px solid darkgrey;
     border: none;
     text-align: right;
-    font-size: 1.8vh;
-    width: 100%;
+    font-size: 1.9vh;
     padding: 1.2vh;
-    margin: 0 0 1vh 0;
     font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -14px;
+    right: -6px;
   }
 
-  .login-kind-words {
-    background-color: rgb(230, 230, 230);
+  .loginKindWords {
+    background-color: rgba(240, 240, 240, 0.37);
+    color: #ffffffc9;
     padding: 4vw;
-    margin: 0;
-    line-height: 2.2vh;
-    margin: 1vh 0 0 0;
+    line-height: 3vh;
+    border-radius: 5px;
+    margin: 8vh 0 0 0;
+    width: 85vw;
   }
 
 }

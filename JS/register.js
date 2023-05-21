@@ -226,13 +226,7 @@ export function renderRegisterPage (){
 
             if(contact.value != "" && count === 5){
                 let interests = checkedIntrests.map((value) => value);
-                // let interests = {
-                //      interestsOne: checkedIntrests[0],
-                //      interestsTwo: checkedIntrests[1],
-                //      interestsThree: checkedIntrests[2],
-                //      interestsFour: checkedIntrests[3],
-                //      interestsFive: checkedIntrests[4],
-                // }
+
                 let general = {
                     bio: bio.value,
                     contact: contact.value

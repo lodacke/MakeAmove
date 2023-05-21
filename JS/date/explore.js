@@ -25,11 +25,11 @@ function renderCurrentDate(request, userDATA) {
   navDom.innerHTML = stickyNav();
 
   let headerDOM = document.querySelector("header");
+  headerDOM.setAttribute("id", "date-header")
   headerDOM.innerHTML = `
-  <div id="date-header">
     <img id="explore-logo" src="/PHP/DB/image/logo.png" alt="appLogo">
     <button class="logout">Logout</button>
-  </div>`;
+  `;
 
   let logout = document.querySelector(".logout");
   logout.addEventListener("click", logoutFromAccount);

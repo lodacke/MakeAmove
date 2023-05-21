@@ -1,21 +1,27 @@
-@media (min-width: 320px) and (max-width: 480px) {
-  .dateTitle {
-    font-family: Helvetica;
-  }
+#after-login-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
-  #date-header {
-    display: flex;
-    justify-content: space-between;
-    margin: 3vh;
-  }
+.dateTitle {
+  font-family: Helvetica;
+}
 
-  #date-main {
-    position: relative;
-    padding-bottom: 110px;
-  }
+#date-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 3vh;
+  height: 40px;
+}
 
-  #explore-logo {
-    height: 5vh;
-    width: 14vw;
-  }
+#date-main {
+  position: relative;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+#explore-logo {
+  height: 5vh;
+  width: 14vw;
 }

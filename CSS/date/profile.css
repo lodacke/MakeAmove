@@ -1,331 +1,328 @@
-@media (min-width: 320px) and (max-width: 480px) {
-  body {
-    position: relative;
-  }
+body {
+  position: relative;
+}
 
-  .profile-page-container {
-    height: 85vh;
-    overflow-y: auto;
-    padding: 5vw;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.profile-page-container {
+  height: 76vh;
+  overflow-y: auto;
+  padding: 5vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .profile-page-container input,
-  .bio {
-    height: 2vh;
-    border: 2px solid darkgray;
-    width: 97%;
-  }
+.profile-page-container input,
+.bio {
+  height: 2vh;
+  border: 2px solid darkgray;
+  width: 97%;
+}
 
-  /* Profile top */
-  .profile-top {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+/* Profile top */
+.profile-top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
-  .user-picture {
-    object-fit: cover;
-    height: 18vh;
-    width: 18vh;
-    border-radius: 50%;
-  }
+.user-picture {
+  object-fit: cover;
+  height: 18vh;
+  width: 18vh;
+  border-radius: 50%;
+}
 
-  .user-name {
-    padding-top: 1vh;
-  }
+.user-name {
+  padding-top: 1vh;
+}
 
-  /* Profile main */
-  .profile-main {
-    /* overflow-y: auto; */
-    text-align: left;
-  }
+/* Profile main */
+.profile-main {
+  text-align: left;
+}
 
-  .category {
-    background-color: #fffbff;
-    border: 4px dotted darksalmon;
-    border-radius: 21px;
-    padding: 0 10px;
-    margin: 2vh 0;
-    gap: 1vh;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 3vh;
-  }
+.category {
+  background-color: #fffbff;
+  border: 4px dotted darksalmon;
+  border-radius: 21px;
+  padding: 0 10px;
+  margin: 2vh 0;
+  gap: 1vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3vh;
+}
 
-  /* About me */
-  .age,
-  .age-min,
-  .age-max {
-    display: flex;
-    align-items: center;
-  }
+/* About me */
+.age,
+.age-min,
+.age-max {
+  display: flex;
+  align-items: center;
+}
 
-  .age input,
-  .preferred-age input {
-    width: 8%;
-    margin-left: 1vw;
-  }
+.age input,
+.preferred-age input {
+  width: 8%;
+  margin-left: 1vw;
+}
 
-  .preferred-age {
-    display: flex;
-  }
+.preferred-age {
+  display: flex;
+}
 
-  .bio {
-    height: 5vh;
-    resize: vertical;
-  }
+.bio {
+  height: 5vh;
+  resize: vertical;
+}
 
-  /* Gender buttons of user*/
-  .profile-button .a-gender {
-    display: inline-block;
-    margin-right: 10px;
-  }
+/* Gender buttons of user*/
+.profile-button .a-gender {
+  display: inline-block;
+  margin-right: 10px;
+}
 
-  .a-gender label {
-    display: inline-block;
-    padding: 10px;
-    margin: 3px;
-    background-color: #eee;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.a-gender label {
+  display: inline-block;
+  padding: 10px;
+  margin: 3px;
+  background-color: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  .a-gender .info-button {
-    display: none;
-  }
+.a-gender .info-button {
+  display: none;
+}
 
-  .a-gender .info-button+label {
-    display: inline-block;
-    width: auto;
-    background-color: #eee;
-  }
+.a-gender .info-button+label {
+  display: inline-block;
+  width: auto;
+  background-color: #eee;
+}
 
-  .a-gender .info-button:checked+label {
-    background-color: rgb(213, 80, 140);
-    color: #fff;
-  }
+.a-gender .info-button:checked+label {
+  background-color: rgb(213, 80, 140);
+  color: #fff;
+}
 
-  .looking-for,
-  .five-options,
-  .emailaddress {
-    font-family: monospace;
-  }
+.looking-for,
+.five-options,
+.emailaddress {
+  font-family: monospace;
+}
 
-  .form-select {
-    font-size: 2vh;
-    width: 99%;
-    height: 3.5vh;
-  }
+.form-select {
+  font-size: 2vh;
+  width: 99%;
+  height: 3.5vh;
+}
 
-  /* Interest */
-  .interest {
-    display: flex;
-    flex-direction: column;
-  }
+/* Interest */
+.interest {
+  display: flex;
+  flex-direction: column;
+}
 
-  .interest-title-limit {
-    display: flex;
-    align-items: center;
-    gap: 2vw;
-    margin-bottom: 1vh;
-  }
+.interest-title-limit {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  margin-bottom: 1vh;
+}
 
-  .interest-list-my {
-    height: 150px;
-    width: 380px;
-    box-sizing: content-box;
-    border: 1px solid gray;
-    border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    overflow: scroll;
-    gap: 5px;
-  }
+.interest-list-my {
+  height: 150px;
+  width: 380px;
+  box-sizing: content-box;
+  border: 1px solid gray;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  overflow: scroll;
+  gap: 5px;
+}
 
-  .an-interest {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.an-interest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .my-interest {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #e0e0e0;
-    border: 1px solid #bbb;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-  }
+.my-interest {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #e0e0e0;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
 
-  input[type="checkbox"]:checked+label {
-    background-color: rgb(213, 80, 140);
-    color: #fff;
-  }
+input[type="checkbox"]:checked+label {
+  background-color: rgb(213, 80, 140);
+  color: #fff;
+}
 
-  .profile-sumbit {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
+.profile-sumbit {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
 
-  .profile-message {
-    margin: 0 0 1vh 0;
-  }
+.profile-message {
+  margin: 0 0 1vh 0;
+}
 
-  .save-profile-button {
-    border: 1px solid gray;
-    border-radius: 5px;
-    height: 4vh;
-    font-size: 2vh;
-  }
+.save-profile-button {
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 4vh;
+  font-size: 2vh;
+}
 
-  #email {
-    display: flex;
-    align-items: center;
-  }
+#email {
+  display: flex;
+  align-items: center;
+}
 
-  .emailaddress {
-    font-size: 2vh;
-    margin-left: 2vw;
-  }
+.emailaddress {
+  font-size: 2vh;
+  margin-left: 2vw;
+}
 
-  .gender-buttons {
-    display: flex;
-  }
+.gender-buttons {
+  display: flex;
+}
 
-  .user-setting-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.user-setting-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .logout-button {
-    width: 21vw;
-    height: 4vh;
-    background-color: #fbeee0;
-    border: 2px solid #422800;
-    border-radius: 30px;
-    box-shadow: #422800 4px 4px 0 0;
-    cursor: pointer;
-    font-weight: 600;
-    margin-right: 1vw;
-  }
+.logout-button {
+  width: 21vw;
+  height: 4vh;
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 1vw;
+}
 
-  .user-setting-button {
-    margin: 2vh 0;
-    display: flex;
-    gap: 2%;
-  }
+.user-setting-button {
+  margin: 2vh 0;
+  display: flex;
+  gap: 2%;
+}
 
-  .change-password,
-  .delete-account {
-    width: 48%;
-    height: 4vh;
-  }
+.change-password,
+.delete-account {
+  width: 48%;
+  height: 4vh;
+}
 
-  /* Change password */
-  .makeContentLighter {
-    opacity: 0.2;
-  }
+/* Change password */
+.makeContentLighter {
+  opacity: 0.2;
+}
 
-  .popup {
-    position: absolute;
-  }
+.popup {
+  position: absolute;
+}
 
-  .popup-background {
-    background-color: rgba(0, 0, 0, 0.4);
-    top: 22vh;
-    left: 6vw;
-    height: 72vh;
-    width: 88vw;
-    border-radius: 32px;
-    position: relative;
-  }
+.popup-background {
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 22vh;
+  left: 6vw;
+  height: 72vh;
+  width: 88vw;
+  border-radius: 32px;
+  position: relative;
+}
 
-  .popup-content {
-    background-color: rgb(213, 80, 140);
-    color: white;
-    height: 62%;
-    width: 77%;
-    position: absolute;
-    top: 98px;
-    left: 6%;
-    border-radius: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5vw;
-    gap: 1vh;
-  }
+.popup-content {
+  background-color: rgb(213, 80, 140);
+  color: white;
+  height: 62%;
+  width: 77%;
+  position: absolute;
+  top: 98px;
+  left: 6%;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vw;
+  gap: 1vh;
+}
 
-  .white-cross {
-    position: absolute;
-    width: 1.5vh;
-    height: 2vh;
-    top: 2vh;
-    right: 5vw;
-  }
+.white-cross {
+  position: absolute;
+  width: 1.5vh;
+  height: 2vh;
+  top: 2vh;
+  right: 5vw;
+}
 
-  .password-row {
-    padding: 2px;
-    text-align: left;
-    font-size: 2.5vh;
-  }
+.password-row {
+  padding: 2px;
+  text-align: left;
+  font-size: 2.5vh;
+}
 
-  .password-field {
-    display: flex;
-    position: relative;
-    padding-top: 1vh;
-  }
+.password-field {
+  display: flex;
+  position: relative;
+  padding-top: 1vh;
+}
 
-  .password-input {
-    height: 3vh;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid white;
-  }
+.password-input {
+  height: 3vh;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid white;
+}
 
-  #show-password {
-    height: 3vh;
-    width: 3vh;
-    position: absolute;
-    top: 11px;
-    right: 2vw;
-    border: transparent;
-  }
+#show-password {
+  height: 3vh;
+  width: 3vh;
+  position: absolute;
+  top: 11px;
+  right: 2vw;
+  border: transparent;
+}
 
-  .save-password,
-  .confirm-delete-yes,
-  .confirm-delete-no {
-    position: absolute;
-    right: 5vw;
-    bottom: 5vh;
-    width: 29vw;
-    height: 3.5vh;
-    font-weight: bold;
-    border: transparent;
-    border-radius: 8px;
-    font-size: 2vh;
-  }
+.save-password,
+.confirm-delete-yes,
+.confirm-delete-no {
+  position: absolute;
+  right: 5vw;
+  bottom: 5vh;
+  width: 29vw;
+  height: 3.5vh;
+  font-weight: bold;
+  border: transparent;
+  border-radius: 8px;
+  font-size: 2vh;
+}
 
-  /* Delete account */
-  .confirm-question {
-    font-size: 3vh;
-  }
+/* Delete account */
+.confirm-question {
+  font-size: 3vh;
+}
 
-  .confirm-delete-yes {
-    left: 5vw;
-  }
+.confirm-delete-yes {
+  left: 5vw;
+}
 
-  .hide {
-    display: none;
-  }
+.hide {
+  display: none;
 }

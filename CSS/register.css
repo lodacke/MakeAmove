@@ -1,4 +1,4 @@
-body{
+body {
     height: 100vh;
     margin: 0px;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -18,11 +18,11 @@ body{
 }
 
 #registerPageMain {
-    height: 80vh;
+    height: 56vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 7vh;
+    margin-top: 3vh;
 }
 
 .inputbox {
@@ -90,16 +90,10 @@ body{
     gap: 5px;
 }
 
-/* .sticky-nav {
-    margin: 10px;
-    display: flex;
-    justify-content: space-around;
-    height: 6vh;
-    gap: 1vw;
-} */
 
 #pageNavigation button {
-    width: 100%;
+    width: 40%;
+    height: 4vh;
     border-radius: 10px;
     border: 2px solid #6c6c6c;
     color: #5d626a;
@@ -108,33 +102,18 @@ body{
 #notAnswered {
     border: 1px solid red;
 }
-/*
-input{
-    width: 80vw;
-    height: 5vh;
-    border-radius: 13px;
-    border: 1px solid #a2a2a2;
-    background-color: #ffffffa1;
-}
 
-label {
-    margin-top: 2vh;
-    font-size: 15px;
-}
-*/
 #profilePicture {
     display: flex;
     flex-direction: column;
 }
-
-
 
 #imageMessage {
     text-align: center;
     font-size: 20px;
 }
 
-#bio{
+#bio {
     width: 380px;
 }
 
@@ -158,14 +137,12 @@ label {
   align-items: center;
   justify-content: center;
   margin: 5px;
-
 }
 
 #interestsList input[type="checkbox"] {
   width: 20px;
   height: 20px;
 }
-
 
 #interestsList label {
   font-size: 16px;

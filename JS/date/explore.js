@@ -10,16 +10,6 @@ export async function renderDatingPage() {
   mainDom.innerHTML = ``;
   mainDom.setAttribute("id", "date-main");
 
-  let request = await fetch(`/PHP/date/explore.php?id=${getUserData().id}`);
-  let userDATA = await request.json();
-
-  renderCurrentDate(request, userDATA);
-
-  document.querySelector(".profile").addEventListener("click", renderProfilePage);
-  document.querySelector(".match").addEventListener("click", renderMatchesPage);
-}
-
-function renderCurrentDate(request, userDATA) {
   let navDom = document.querySelector(".sticky-nav");
   navDom.classList.remove("hide");
   navDom.innerHTML = stickyNav();
@@ -31,15 +21,19 @@ function renderCurrentDate(request, userDATA) {
     <button class="logout">Logout</button>
   `;
 
+  let request = await fetch(`/PHP/date/explore.php?id=${getUserData().id}`);
+  let userDATA = await request.json();
+
+  renderCurrentDate(request, userDATA);
+
+  document.querySelector(".profile").addEventListener("click", renderProfilePage);
+  document.querySelector(".match").addEventListener("click", renderMatchesPage);
+
   let logout = document.querySelector(".logout");
   logout.addEventListener("click", logoutFromAccount);
+}
 
-  document
-    .querySelector(".profile")
-    .addEventListener("click", renderProfilePage);
-  document
-    .querySelector(".match")
-    .addEventListener("click", renderMatchesPage);
+function renderCurrentDate(request, userDATA) {
 
   if (request.status == 200) {
     mainDom.innerHTML = `

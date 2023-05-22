@@ -126,7 +126,7 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $con
   unset($userToSend["password"]);
   unset($userToSend["email"]);
 
-  $data = json_encode($users, JSON_PRETTY_PRINT);
+  $data = json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
   file_put_contents($fileName, $data);
 
    send(200, $data = $userToSend);

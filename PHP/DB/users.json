@@ -64,45 +64,6 @@
         }
     },
     {
-        "id": "64660d2f4834a",
-        "name": "Rosa",
-        "email": "Rosa@gmail.com",
-        "password": "rosa",
-        "age": "24",
-        "city": "Link\u00f6ping",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": [
-            "reading",
-            "stand-upcomedy",
-            "art",
-            "smoking",
-            "running"
-        ],
-        "general": {
-            "bio": "",
-            "contact": "076033456"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "30",
-            "ageOfMin": "20"
-        },
-        "matches": {
-            "yes": [
-                "64660d9225322"
-            ],
-            "no": [
-                "64660e2656c5d",
-                "64660e2656c5d",
-                "64660f47636ce",
-                "64660f47636ce",
-                "64660f47636ce",
-                "64660e2656c5d"
-            ]
-        }
-    },
-    {
         "id": "64660d6fe59eb",
         "name": "Emil",
         "email": "Emil@gmail.com",
@@ -616,7 +577,7 @@
             "ageOfMin": "12"
         },
         "matches": {
-            "yes": [],
+            "yes": ["646770185c2fc"],
             "no": []
         }
     },
@@ -766,13 +727,13 @@
             "ageOfMin": "21"
         },
         "matches": {
-            "yes": [],
+            "yes": ["646770185c2fc"],
             "no": []
         }
     },
     {
         "id": "646767909949f",
-        "name": "a",
+        "name": "Annie",
         "email": "a",
         "password": "a",
         "age": "21",
@@ -796,7 +757,7 @@
             "ageOfMin": "21"
         },
         "matches": {
-            "yes": [],
+            "yes": ["646770185c2fc"],
             "no": [
                 "64660d9225322"
             ]
@@ -804,7 +765,7 @@
     },
     {
         "id": "646770185c2fc",
-        "name": "a",
+        "name": "Rosa",
         "email": "Rosa@gmail.com",
         "password": "rosaa",
         "age": "23",
@@ -828,7 +789,7 @@
             "ageOfMin": "23"
         },
         "matches": {
-            "yes": [],
+            "yes": ["6468f643de4ae", "646b52d431182", "646761f6c97eb", "64660d2f4834a", "646772ebc8ebf", "646767909949f"],
             "no": []
         }
     },
@@ -838,7 +799,7 @@
         "email": "a",
         "password": "a",
         "age": "23",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": [
@@ -858,7 +819,7 @@
             "ageOfMin": "23"
         },
         "matches": {
-            "yes": [],
+            "yes": ["646770185c2fc"],
             "no": []
         }
     },
@@ -1010,6 +971,45 @@
         "matches": {
             "yes": [],
             "no": []
+        }
+    },
+    {
+        "id": "646b52d431182",
+        "name": "Sandra",
+        "email": "sandra@gmail.com",
+        "password": "sandra",
+        "age": "23",
+        "city": "Malm\u00f6",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "reading",
+            "beer",
+            "dancing",
+            "yoga",
+            "movies"
+        ],
+        "general": {
+            "bio": "",
+            "contact": "2344"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "28",
+            "ageOfMin": "21"
+        },
+        "matches": {
+            "yes": [
+                "64660f47636ce"
+            ],
+            "no": [
+                "64660f6cd01de",
+                "64660ecc168b7",
+                "64660d6fe59eb",
+                "64660e2656c5d",
+                "64660d9225322",
+                "64660ea70f618"
+            ]
         }
     }
 ]

@@ -76,9 +76,6 @@ if (count($sortedUsers) > 0) {
 }
 
 
-        
-
-
 // Need to find a solution for how we will add "both" values in if
 
 

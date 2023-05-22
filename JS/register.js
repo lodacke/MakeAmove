@@ -1,17 +1,21 @@
+"use strict";
+
 import { errorMessage } from "./helper.js";
 import { renderDatingPage } from "./date/explore.js";
 import { renderCityDropdownListReg } from "./helper.js";
 import { renderFrontPage } from "./index.js";
 
-("use strict");
-
 function renderPageNavigation(previousPage){
-    let pageNavDom = document.getElementById("pageNavigation");
+    let pageNavDom = document.querySelector(".sticky-nav");
 
-  pageNavDom.innerHTML = `
-    <button id="previousPage"> Previous Page </button>
-    <button id="nextPage"> Next Page </button>`;
+    pageNavDom.innerHTML = `
+        <button id="previousPage">Previous Page</button>
+        <button id="nextPage">Next Page</button>
+    `;
 
+    pageNavDom.setAttribute("id", "pageNavigation");
+    pageNavDom.classList.remove("sticky-nav");
+    pageNavDom.classList.remove("hide");
     pageNavDom.querySelector("#previousPage").addEventListener("click", e => {
         previousPage();
     });
@@ -47,14 +51,14 @@ export function renderRegisterPage (){
     </div>
 
     <div class="ageAndGender">
-        <label for "city"> City: 
+        <label for "city"> City:
             <select name="city" class="required">
                 <option value="none" > Choose a city </option>
                 ${renderCityDropdownListReg()}
             </select>
         </label>
         <label for "age"> Age: <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required"> </label>
-        <label for "gender"> Gender: 
+        <label for "gender"> Gender:
             <select name="gender" class="required">
                 <option value="none">Choose an option </option>
                 <option value="female"> Woman </option>
@@ -64,7 +68,7 @@ export function renderRegisterPage (){
         </label>
     </div>
     ${renderPageNavigation(renderFrontPage)};
- 
+
     `;
 
     let nameDom = mainDom.querySelector("input[name='name']");
@@ -112,7 +116,7 @@ function imagePage(userData){
          <div id="userImage"></div>
          <p id="imageMessage"></p>
      </div>
-   
+
     ${renderPageNavigation(renderBasicInfoPage)}`;
 
     const form = document.getElementById("upload");
@@ -180,7 +184,7 @@ function QuestionPage(userData){
     const interestsList = document.getElementById("interestsList");
 
     interests.forEach(interest => {
-      const div = document.createElement("div"); 
+      const div = document.createElement("div");
       const input = document.createElement("input");
       input.type = "checkbox";
       input.classList.add("required");
@@ -197,7 +201,7 @@ function QuestionPage(userData){
     let contact = mainDom.querySelector("input[name='contact']");
 
     let interestsBoxes = document.querySelectorAll("input[type='checkbox']");
-    let count = 0; 
+    let count = 0;
     let checkedIntrests = [];
 
     for(let i = 0; i < interestsBoxes.length; i++){
@@ -211,12 +215,12 @@ function QuestionPage(userData){
                 let index = checkedIntrests.indexOf(interestsBoxes[i].name);
                 checkedIntrests.splice(index, 1);
                 console.log(checkedIntrests);
-            }          
+            }
             if(count === 5){
                 interestsBoxes.forEach(box => {
                     if(!box.checked){
                          box.disabled = true;
-                    }                   
+                    }
                 })
             } else {
                 interestsBoxes.forEach( box => {
@@ -261,7 +265,7 @@ function preferencePage(userData){
         <div class="preferredAge">
             <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Min-age">
             <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Max-age">
-        </div>    
+        </div>
     </div>
     <div>${renderPageNavigation(QuestionPage)} </div>`;
 

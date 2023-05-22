@@ -42,7 +42,7 @@ export function renderLoginPage() {
   headerDom.innerHTML = `
     <img class="logo" src="/PHP/DB/image/logo.png" alt="appLogo">
   `;
-   
+
   mainDom.innerHTML = `
     <h2>Login</h2>
     <form class="login-form" action="PHP/login.php" method="POST">
@@ -62,7 +62,7 @@ export function renderLoginPage() {
     <button class="goToRegister">Register here</button>
   `;
 
-  const goToRegister = document.querySelector(".go-to-register");
+  const goToRegister = document.querySelector(".goToRegister");
   goToRegister.addEventListener("click", renderRegisterPage);
 
   let loginMain = document.querySelector("main");

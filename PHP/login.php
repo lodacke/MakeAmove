@@ -9,13 +9,8 @@ allowJSON();
 
 $filename = "../PHP/DB/users.json";
 
-if (!file_exists($filename)) {
-  $json = json_encode($users);
-  file_put_contents($filename, $json);
-} else {
-  $json = file_get_contents($filename);
-  $users = json_decode($json, true);
-}
+$json = file_get_contents($filename);
+$users = json_decode($json, true);
 
 $requestJSON = file_get_contents("php://input");
 $requestData = json_decode($requestJSON, true);

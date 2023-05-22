@@ -27,7 +27,7 @@ export async function renderProfilePage() {
 
       <div class="profile-top">
         <img class="user-picture" src="${userData.imageSource}" alt="user-picture">
-        <h2 class="user-name">[${userData.name}]</h2>
+        <h2 class="user-name">${userData.name}</h2>
       </div>
 
       <div class="profile-main">
@@ -35,12 +35,12 @@ export async function renderProfilePage() {
           <h3>About me</h3>
 
           <div class="title">Bio</div>
-          <textarea class="bio" name="bio" placeholder="Write something about yourself">${userData.general.bio || ""}</textarea>
+          <textarea class="profileBio" name="bio" placeholder="Write something about yourself">${userData.general.bio || ""}</textarea>
 
           <div class="interest">
             <div class="interest-title-limit">
               <div class="title">Interest</div>
-              <div class="five-options">list up to 5 options</div>
+              <div class="five-options">(list up to 5 options)</div>
             </div>
             <div class="interest-list-my required"></div>
           </div>

@@ -2,12 +2,8 @@
   font-family: Helvetica;
 }
 
-#loginPageHeader {
-  height: 30vh;
-}
-
 #loginPageHeader .logo {
-  height: 20vh;
+  height: 30vh;
 }
 
 #loginPageMain {
@@ -34,7 +30,7 @@
 .loginButton {
   background-color: rgba(142, 142, 142, 0.68);
   color: #fffc;
-  font-size: 2vh;
+  font-size: 2.1vh;
   width: 100%;
   margin: 10px 0 5px 0;
   border-radius: 7px;
@@ -52,22 +48,21 @@
   background-color: rgba(142, 142, 142, 0.8);
   border: 1px solid darkgrey;
   border: none;
-  text-align: right;
   font-size: 1.9vh;
-  padding: 1.2vh;
+  padding: 1.8vh;
   font-weight: bold;
   border-radius: 5px;
   position: absolute;
-  bottom: -14px;
-  right: -6px;
+  bottom: -2vh;
+  right: 1.5vw;
 }
 
 .loginKindWords {
-  background-color: rgba(240, 240, 240, 0.37);
-  color: #ffffffc9;
+  background-color: rgba(255, 255, 255, 0.47);
+  color: #686868c9;
   padding: 4vw;
   line-height: 3vh;
   border-radius: 5px;
-  margin: 8vh 0 0 0;
+  margin: 5vh 0 0 0;
   width: 85vw;
 }

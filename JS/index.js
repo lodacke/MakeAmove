@@ -16,7 +16,6 @@ function checkIfUserLoggedIn() {
 export function renderFrontPage() {
   let headerDom = document.querySelector("header");
   headerDom.setAttribute("id", "startPageHeader");
-  headerDom.classList.remove("header-logo");
 
   let frontMainDom = document.querySelector("main");
   frontMainDom.setAttribute("id", "startPageMain");

@@ -75,28 +75,13 @@ $newUser = [];
  $age = $dataREQUEST["age"];
  $city = $dataREQUEST["city"];
  $gender = $dataREQUEST["gender"];
-
-//  $interestsOne= $dataREQUEST["interests"][0]["interestsOne"];
-//  $interestsTwo = $dataREQUEST["interests"][0]["interestsTwo"];
-//  $interestsThree = $dataREQUEST["interests"][0]["interestsThree"];
-//  $interestsFour = $dataREQUEST["interests"][0]["interestsFour"];
-//  $interestsFive = $dataREQUEST["interests"][0]["interestsFive"];
-$interests = array_values($dataREQUEST["interests"][0]);
-
-
+ $interests = array_values($dataREQUEST["interests"][0]);
  $bio = $dataREQUEST["general"][0]["bio"];
  $contact = $dataREQUEST["general"][0]["contact"];
 
  $genderOf = $dataREQUEST["preference"][0]["genderOf"];
  $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
   $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
-
-
-// for($i = 0; $i < count($users); $i++){
-  //    if($email == $users[$i]["email"]){
-  //      send(409, [$data = "The email is already registered"]);
-  //    }
-  //  }
 
   if($age < 18){
     send(409, [$data = "You need to be over 18 to use this app"]);
@@ -119,13 +104,6 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $con
     "city" => $city,
     "gender" => $gender,
     "imageSource" => $imageSource,
-    // "interests" => [
-    //   "interestsOne" => $interestsOne,
-    //   "interestsTwo" => $interestsTwo,
-    //   "interestsThree" => $interestsThree,
-    //   "interestsFour" => $interestsFour,
-    //   "interestsFive" => $interestsFive,
-    // ],
     "interests" => $interests,
     "general" => [
       "bio" => $bio,

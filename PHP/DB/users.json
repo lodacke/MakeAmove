@@ -425,7 +425,9 @@
             "ageOfMin": "18"
         },
         "matches": {
-            "yes": [],
+            "yes": [
+                "646770185c2fc"
+            ],
             "no": []
         }
     },
@@ -577,7 +579,9 @@
             "ageOfMin": "12"
         },
         "matches": {
-            "yes": ["646770185c2fc"],
+            "yes": [
+                "646770185c2fc"
+            ],
             "no": []
         }
     },
@@ -727,7 +731,9 @@
             "ageOfMin": "21"
         },
         "matches": {
-            "yes": ["646770185c2fc"],
+            "yes": [
+                "646770185c2fc"
+            ],
             "no": []
         }
     },
@@ -757,7 +763,9 @@
             "ageOfMin": "21"
         },
         "matches": {
-            "yes": ["646770185c2fc"],
+            "yes": [
+                "646770185c2fc"
+            ],
             "no": [
                 "64660d9225322"
             ]
@@ -789,7 +797,8 @@
             "ageOfMin": "23"
         },
         "matches": {
-            "yes": ["6468f643de4ae", "646b52d431182", "646761f6c97eb", "64660d2f4834a", "646772ebc8ebf", "646767909949f"],
+            "yes": [
+            ],
             "no": []
         }
     },
@@ -799,7 +808,7 @@
         "email": "a",
         "password": "a",
         "age": "23",
-        "city": "Malmö",
+        "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": [
@@ -819,7 +828,9 @@
             "ageOfMin": "23"
         },
         "matches": {
-            "yes": ["646770185c2fc"],
+            "yes": [
+                "646770185c2fc"
+            ],
             "no": []
         }
     },

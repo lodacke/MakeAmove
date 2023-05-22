@@ -14,12 +14,14 @@ $json = file_get_contents($filename);
 $users = json_decode($json, true);
 
 $sortedUsers = [];
-$matchedUsers = [];
-$userMatches = [];
+$UserWhoLikesLoggedin = [];
+$userWhoLoggedInLikes = [];
+
+//Array av användare som gillar den inloggad användare 
 
 forEach ($users as &$user) {
     if (in_array($_GET["id"], $user["matches"]["yes"])) {
-        $matchedUsers[] = $user["id"];
+        $UserWhoLikesLoggedin[] = $user["id"];
     }
 }
 
@@ -30,12 +32,15 @@ forEach ($users as &$user) {
         $preferenceAgeMin = $user["preference"]["ageOfMin"];
         $gender = $user["gender"];
         $age = $user["age"];
-        foreach ($user["matches"]["yes"] as $matches) {
-            $userMatches[] = $matches;
+        foreach ($user["matches"]["yes"] as &$user) {
+            $userWhoLoggedInLikes[] = $user;
         }
         break;
     }
 }
+
+//Här filtreras fram de användarna som stämmer för den inloggades preferenser 
+//och läggs till en arrayen sortedUsers.
 
 forEach ($users as &$user) {
     if (
@@ -56,16 +61,16 @@ forEach ($users as &$user) {
     }
 }
 
-forEach($matchedUsers as $matches){
-    if(in_array($matches, $userMatches)){
-        forEach($sortedUsers as $value =>  &$user){
-            if($user["id"] === $matches &&
-            in_array($user["id"], $userMatches)){
-                unset($sortedUsers[$value]);
-            }
-        }
+$match = array_intersect($UserWhoLikesLoggedin, $userWhoLoggedInLikes);
+
+
+forEach($sortedUsers as $index => $user){
+    if(in_array($user["id"], $match)){
+        unset($sortedUsers[$index]);
+    } elseif (in_array($user["id"], $userWhoLoggedInLikes)){
+        unset($sortedUsers[$index]);
     }
-}  
+}
 
 if (count($sortedUsers) > 0) {
     $randIndex = array_rand($sortedUsers, 1);
@@ -77,65 +82,5 @@ if (count($sortedUsers) > 0) {
 
 
 // Need to find a solution for how we will add "both" values in if
-
-
-//    function sortUsers($users, $userEmail, $preferenceAgeMin, $preferenceAgeMax){
-//
-//        $sortedUsers = [];
-//        forEach($users as $user){
-//            if($user["email"] != $userEmail && $user["age"] >= $preferenceAgeMin && $user["age"] <= $preferenceAgeMax){
-//                $sortedUsers[] = $user;
-//
-//                sortByGender($sortedUsers);
-//            }
-//        }
-//    };
-//
-//    sortUsers($users);
-//
-//    function sortByGender($sortedUsers){
-//        $sortedByGenderUsers = [];
-//        foreach($sortedUsers as $user){
-//            if($preferenceGender === "both"){
-//               sortByPreference($sortedUsers);
-//        } else if($user["gender"] === $preferenceGender) {
-//             $sortedByGenderUsers[] = $user;
-//                sortByPreference($sortedByGenderUsers);
-//            }
-//        }
-//    }
-//
-//    function sortByPreference($sortedByGenderUsers){
-//        $sortedByPereferance = [];
-//        forEach ($sortedByGenderUsers as $user){
-//        if($user["preference"]["ageOfMin"] <= $age && $user["preference"]["ageOfMax"] >= $age){
-//                $sortedByPereferance[] = $user;
-//                sortByPreferanceGender($sortedByPereferance);
-//            }
-//        }
-//    }
-//
-//    function  sortByPreferanceGender($sortedByPereferance){
-//        $finalSorting = [];
-//        forEach($sortedByPereferance as $user){
-//            if($user["preference"]["gender"] === "both"){
-//                createUserArray($sortedByPereferance);
-//            } else if($user["preference"]["gender"] === $preferenceGender){
-//                $finalSorting[] = $user;
-//                createUserArray($finalSorting);
-//            }
-//        }
-//    }
-//
-//    function createUserArray($userArray){
-//         $prefUser = [];
-//        forEach($userArray as $user){
-//            unset($user["interests"]["contact"]);
-//            unset($user["password"]);
-//            unset($user["preference"]);
-//
-//             $prefUser[] = $user;
-//        }
-//
 
 ?>

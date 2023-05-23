@@ -177,22 +177,26 @@ function imagePage(userData){
 function QuestionPage(userData){
 
     mainDom.innerHTML = `
-    <h1>Interests</h1>
-    <label for "bio"> Bio:</label>
-    <textarea name="bio" rows="7" id="registerBio" placeholder="Add more info about yourself..."></textarea>
+        <h1>Interests</h1>
+        <label for "bio">Bio:</label>
+        <textarea name="bio" rows="7" id="registerBio" placeholder="Add more info about yourself..."></textarea>
 
-    <p>Choose 5 interests</p>
-    <div id="interestsList" class="required">
-    </div>
+        <p>Choose 5 interests</p>
+        <div id="interestsList" class="required">
+        </div>
 
-    <p>How do you want people to contact you?</p>
+        <p>How do you want people to contact you?</p>
 
-    <input name="contact" type="tel" placeholder="phonenumber" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+        <div class="contact-methods">
+            <input name="contact" type="tel" placeholder="Phone number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+            <input name="facebook" placeholder="Facebook"></input>
+            <input name="instagram" placeholder="Instagram"></input>
+        </div>
 
-    <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile! </p>
+        <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile! </p>
 
-    ${renderPageNavigation(imagePage)}
-     `;
+        ${renderPageNavigation(imagePage)}
+    `;
 
      const interests = [
       "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing",

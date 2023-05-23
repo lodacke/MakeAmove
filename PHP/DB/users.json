@@ -26,7 +26,8 @@
         },
         "matches": {
             "yes": [
-                "64660f47636ce"
+                "64660f47636ce",
+                "64660d07a43ac"
             ],
             "no": [
                 "64660f47636ce"
@@ -972,7 +973,7 @@
         "name": "hvj,hv",
         "email": "anna@gmail.com",
         "password": "anna123",
-        "age": "34",
+        "age": "25",
         "city": "Karlstad",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
@@ -989,12 +990,19 @@
         },
         "preference": {
             "genderOf": "female",
-            "ageOfMax": "45",
-            "ageOfMin": "34"
+            "ageOfMax": "50",
+            "ageOfMin": "20"
         },
         "matches": {
-            "yes": ["646b52d431182",
-                    "6468f8e5897f1"
+            "yes": [
+                "646b52d431182",
+                "6468f8e5897f1",
+                "646c7451e174e",
+                "64660f22587e5",
+                "64660ddeac576",
+                "64660ecc168b7",
+                "64660d07a43ac",
+                "6468f643de4ae"
             ],
             "no": []
         }
@@ -1066,7 +1074,8 @@
         },
         "matches": {
             "yes": [
-                "64660e5833550"
+                "64660e5833550",
+                "646b2c76cdaea"
             ],
             "no": []
         }

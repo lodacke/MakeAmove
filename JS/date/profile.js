@@ -256,7 +256,7 @@ function renderChangePasswordBox(event) {
   const whiteCross = popupContent.querySelector(".white-cross");
 
   allShowPasswordIcons.forEach(icon => {
-    icon.addEventListener("click", () => showPassword(icon));
+    icon.addEventListener("click", () => togglePassword(icon));
   });
   whiteCross.addEventListener("click", closePopUpBox);
   popupContent.addEventListener("submit", saveNewPassword);
@@ -298,7 +298,7 @@ function closePopUpBox() {
   profileMain.classList.remove("makeContentLighter");
 }
 
-function showPassword(checkbox) {
+function togglePassword(checkbox) {
   let passwordOutlook = checkbox.parentNode.querySelector(".password-input");
   if (passwordOutlook.type === "password") {
     passwordOutlook.type = "text";
@@ -408,7 +408,6 @@ function colorThePreferredGender(preferredGender) {
     } else {
       gender.disabled = true;
     }
-    
     gender.addEventListener("change", e => {
       if (gender.checked === true) {
         counter++;

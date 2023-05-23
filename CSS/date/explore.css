@@ -41,8 +41,7 @@
 #matchButtons{
     position: absolute;
     top: 40%;
-    left: 12px;
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }

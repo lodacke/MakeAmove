@@ -48,8 +48,8 @@ export function errorMessage(){
             case "age":
                 required.placeholder = "You need to be atleast 18 years old to use this app.";
                 break;
-            case "contact":
-                required.placeholder = "This does not look like a phone number?";
+            case "tel":
+                required.placeholder = "Phone number is needed!";
                 break;
             case "ageOfMax":
                 required.placeholder = "Here you add the max age.";

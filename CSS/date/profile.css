@@ -53,33 +53,46 @@ body {
 }
 
 /* About me */
+.telephone-number,
+.facebook,
+.instagram,
 .age,
 .age-min,
 .age-max {
   display: flex;
-  align-items: center;
   margin-bottom: 1vh;
 }
 
+.telephone-number input,
+.facebook input,
+.instagram input,
 .age input,
 .preferred-age input {
-  width: 17px;
+  width: 20vw;
   margin-left: 1vw;
   outline: none;
-  border-radius: 2px;
+  border-radius: 5px;
   border: 2px solid #a9a9a9;
 }
 
+.facebook img,
+.instagram img {
+  height: 30px;
+}
+
 .age input:focus,
-.preferred-age input:focus {
+.preferred-age input:focus,
+.telephone-number input:focus,
+.facebook input:focus,
+.instagram input:focus {
   border: 2px solid #c6ccff;
 }
 
-.preferred-age {
+.preferred-age, .social-media {
   display: flex;
-  gap: 8vw;
+  justify-content: space-around;
   background-color: #eee;
-  padding: 5px 0 0 2px;
+  padding-top: 5px;
   border-radius: 5px;
   margin-bottom: 1vh;
 }
@@ -141,13 +154,12 @@ body {
 .interest {
   display: flex;
   flex-direction: column;
-  margin: 2vh 0 2vh 0;
 }
 
 .interest-title-limit {
   display: flex;
   gap: 2vw;
-  margin: 2vh 0 1vh 0;
+  margin: 0 0 1vh 0;
 }
 
 .interest-list-my {

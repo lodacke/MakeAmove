@@ -32,6 +32,9 @@ if(isset($requestData["id"])) {
       $user["city"] = isset($requestData["city"]) ? $requestData["city"] : $user["city"];
       $user["age"] = isset($requestData["age-my"]) ? $requestData["age-my"] : $user["age"];
       $user["general"]["bio"] = isset($requestData["bio"]) ? $requestData["bio"] : $user["general"]["bio"];
+      $user["general"]["tel"] = isset($requestData["tel"]) ? $requestData["tel"] : $user["general"]["tel"];
+      $user["general"]["facebook"] = isset($requestData["facebook"]) ? $requestData["facebook"] : $user["general"]["facebook"];
+      $user["general"]["instagram"] = isset($requestData["instagram"]) ? $requestData["instagram"] : $user["general"]["instagram"];
       $user["interests"] = isset($requestData["interests"]) ? $requestData["interests"] : $user["interests"];
       $user["preference"]["genderOf"] = isset($requestData["genderOf"]) ? $requestData["genderOf"] : $user["preference"]["genderOf"];
       $user["preference"]["ageOfMax"] = isset($requestData["age-max"]) ? $requestData["age-max"] : $user["preference"]["ageOfMax"];

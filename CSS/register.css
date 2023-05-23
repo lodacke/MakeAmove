@@ -37,14 +37,14 @@
     transition: 0.5s;
 }
 
-.inputbox input:valid ~ label, 
+.inputbox input:valid ~ label,
 .inputbox input:focus ~ label {
     transform: translateX(10px) translateY(-12px);
     font-size: 12px;
     padding: 0 10px;
 }
 
-.inputbox input:valid, 
+.inputbox input:valid,
 .inputbox input:focus {
     border: 3px solid #469dff;
 }
@@ -62,7 +62,7 @@
     justify-content: space-around;
 }
 
-.ageAndGender input, 
+.ageAndGender input,
 .ageAndGender select {
     border: 1px solid #a2a2a2;
     border-radius: 5px;
@@ -123,7 +123,7 @@ label {
     background-image: url(../PHP/DB/image/blank-profile-picture.webp);
     height: 40vh;
     width: 65vw;
-    border-radius: 8px; 
+    border-radius: 8px;
     border: 2px solid white;
     background-position: center;
     background-size: cover;
@@ -132,7 +132,7 @@ label {
 #userImage img {
     height: 40vh;
     width: 65vw;
-    border-radius: 8px; 
+    border-radius: 8px;
     border: 2px solid white;
     object-fit: cover;
 }
@@ -179,15 +179,19 @@ label {
     background-color: #ffffff54
 }
 
-input[name="contact"][type="tel"] {
-    height: 30px;
-    width: 100px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    outline: none;
+.contact-methods {
+    display: flex;
+    gap: 5px;
 }
 
-input[name="contact"][type="tel"]:focus {
+.contact-methods input {
+    height: 30px;
+    width: 180px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.contact-methods input:focus {
     border: 2px solid #3593ff;
 }
 
@@ -204,7 +208,6 @@ input[name="contact"][type="tel"]:focus {
   width: 12px;
   height: 12px;
 }
-
 
 #interestsList label {
   font-size: 16px;

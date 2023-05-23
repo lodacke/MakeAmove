@@ -176,22 +176,26 @@ function imagePage(userData){
 function QuestionPage(userData){
 
     mainDom.innerHTML = `
-    <h1>Interests</h1>
-    <label for "bio"> Bio:</label>
-    <textarea name="bio" rows="7" id="registerBio" placeholder="Add more info about yourself..."></textarea>
+        <h1>Interests</h1>
+        <label for "bio">Bio:</label>
+        <textarea name="bio" rows="7" id="registerBio" placeholder="Add more info about yourself..."></textarea>
 
-    <p>Choose 5 interests</p>
-    <div id="interestsList" class="required">
-    </div>
+        <p>Choose 5 interests</p>
+        <div id="interestsList" class="required">
+        </div>
 
-    <p>How do you want people to contact you?</p>
+        <p>How do you want people to contact you?</p>
 
-    <input name="contact" type="tel" placeholder="phonenumber" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+        <div class="contact-methods">
+            <input name="tel" type="tel" placeholder="Phone number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+            <input name="facebook" placeholder="Facebook"></input>
+            <input name="instagram" placeholder="Instagram"></input>
+        </div>
 
-    <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile! </p>
+        <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile! </p>
 
-    ${renderPageNavigation(imagePage)}
-     `;
+        ${renderPageNavigation(imagePage)}
+    `;
 
      const interests = [
       "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing",
@@ -217,7 +221,9 @@ function QuestionPage(userData){
     });
 
     let bio = mainDom.querySelector("textarea[name='bio']");
-    let contact = mainDom.querySelector("input[name='contact']");
+    let tel = mainDom.querySelector("input[name='tel']");
+    let facebook = mainDom.querySelector("input[name='facebook']");
+    let instagram = mainDom.querySelector("input[name='instagram']");
 
     let interestsBoxes = document.querySelectorAll("input[type='checkbox']");
     let count = 0;
@@ -228,12 +234,10 @@ function QuestionPage(userData){
             if(interestsBoxes[i].checked === true){
                 count++;
                 checkedIntrests.push(interestsBoxes[i].name);
-                console.log(checkedIntrests);
             } else {
                 count--;
                 let index = checkedIntrests.indexOf(interestsBoxes[i].name);
                 checkedIntrests.splice(index, 1);
-                console.log(checkedIntrests);
             }
             if(count === 5){
                 interestsBoxes.forEach(box => {
@@ -250,13 +254,15 @@ function QuestionPage(userData){
     }
 
     document.getElementById("nextPage").addEventListener("click", e => {
-        if(contact.value != "" && count === 5){
+        if(tel.value != "" && count === 5){
             let interests = checkedIntrests.map((value) => value);
 
             let general = {
-                bio: bio.value,
-                contact: contact.value
-            }
+              bio: bio.value,
+              tel: tel.value,
+              facebook: facebook.value,
+              instagram: instagram.value,
+            };
 
             userData.interests.push(interests);
             userData.general.push(general);

@@ -992,10 +992,10 @@
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
-            "reading",
-            "beer",
-            "astrology",
             "traveling",
+            "reading",
+            "astrology",
+            "beer",
             "art"
         ],
         "general": {

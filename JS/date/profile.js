@@ -414,7 +414,7 @@ async function saveProfile(event) {
       },
     });
 
-    message.textContent = "The profile is updated successfully! ٩( ̆◡ ̆)۶";
+    message.textContent = "The profile is updated successfully!";
 
     setTimeout(() => {
       message.textContent = "";

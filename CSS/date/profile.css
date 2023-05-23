@@ -189,11 +189,12 @@ input[type="checkbox"]:checked+label {
 .profile-sumbit {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  width: 50vw;
 }
 
 .profile-message {
   margin: 0 0 1vh 0;
+  font-size: 2.5vh;
 }
 
 .save-profile-button {
@@ -201,10 +202,11 @@ input[type="checkbox"]:checked+label {
   border-radius: 7px;
   height: 6vh;
   font-size: 2.3vh;
-  width: 50vw;
+  width: 100%;
   background-color: #fffbff;
   color: #444;
   font-weight: bold;
+  cursor: pointer;
 }
 
 #email {
@@ -271,26 +273,26 @@ input[type="checkbox"]:checked+label {
 }
 
 .popup {
-  position: absolute;
+  /*position: absolute;*/
 }
 
 .popup-background {
   background-color: rgba(0, 0, 0, 0.4);
-  top: 22vh;
-  left: 6vw;
-  height: 72vh;
-  width: 88vw;
+  bottom: 10vh;
+  height: 70vh;
+  width: 90vw;
   border-radius: 32px;
-  position: relative;
+  left: 3.5vw;
+  position: absolute;
 }
 
 .popup-content {
-  background-color: rgb(213, 80, 140);
+  background-color: rgb(170, 179, 255);
   color: white;
-  height: 62%;
+  height: 65%;
   width: 77%;
   position: absolute;
-  top: 98px;
+  top: 15%;
   left: 6%;
   border-radius: 14px;
   display: flex;
@@ -306,6 +308,7 @@ input[type="checkbox"]:checked+label {
   height: 2vh;
   top: 2vh;
   right: 5vw;
+  cursor: pointer;
 }
 
 .password-row {
@@ -321,10 +324,15 @@ input[type="checkbox"]:checked+label {
 }
 
 .password-input {
-  height: 3vh;
+  height: 4vh;
   width: 100%;
   border-radius: 5px;
   border: 1px solid white;
+  outline: none;
+}
+
+.password-input:focus {
+  border: 3px solid gray;
 }
 
 #show-password {
@@ -343,11 +351,12 @@ input[type="checkbox"]:checked+label {
   right: 5vw;
   bottom: 5vh;
   width: 29vw;
-  height: 3.5vh;
+  height: 4vh;
   font-weight: bold;
   border: transparent;
   border-radius: 8px;
   font-size: 2vh;
+  cursor: pointer;
 }
 
 /* Delete account */

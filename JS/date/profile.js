@@ -26,7 +26,9 @@ export async function renderProfilePage() {
     <form class="profile-page-container">
 
       <div class="profile-top">
-        <img class="user-picture" src="${userData.imageSource}" alt="user-picture">
+        <img class="user-picture" src="${
+          userData.imageSource
+        }" alt="user-picture">
         <h2 class="user-name">${userData.name}</h2>
       </div>
 
@@ -35,7 +37,26 @@ export async function renderProfilePage() {
           <h3>About me</h3>
 
           <div class="title">Bio</div>
-          <textarea class="profileBio" name="bio" placeholder="Write something about yourself">${userData.general.bio || ""}</textarea>
+          <textarea class="profileBio" name="bio" placeholder="Write something about yourself">${
+            userData.general.bio || ""
+          }</textarea>
+
+          <div class="telephone-number">
+            <div class="title">Tel</div>
+            <input type="text" name="age-my" value="${userData.general.contact}">
+          </div>
+
+          <div class="social-media">
+            <div class="facebook">
+              <div class="title">Facebook</div>
+              <input type="text" name="facebook" value="">
+            </div>
+
+            <div class="instagram">
+              <div class="title">Instagram</div>
+              <input type="text" name="instagram" value="">
+            </div>
+          </div>
 
           <div class="interest">
             <div class="interest-title-limit">
@@ -61,11 +82,15 @@ export async function renderProfilePage() {
           <div class="preferred-age">
             <div class="age-min">
               <div class="title">Minimum age</div>
-              <input type="text" name="age-min" value="${userData.preference.ageOfMin}">
+              <input type="text" name="age-min" value="${
+                userData.preference.ageOfMin
+              }">
             </div>
             <div class="age-max">
               <div class="title">Maximum age</div>
-              <input type="text" name="age-max" value="${userData.preference.ageOfMax}">
+              <input type="text" name="age-max" value="${
+                userData.preference.ageOfMax
+              }">
             </div>
           </div>
           <div class="title">I am looking for</div>

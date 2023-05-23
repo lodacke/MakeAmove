@@ -353,8 +353,8 @@ input[type="checkbox"]:checked+label {
   height: 3vh;
   width: 3vh;
   position: absolute;
-  top: 11px;
-  right: 2vw;
+  top: 13px;
+  right: 4vw;
   border: transparent;
 }
 

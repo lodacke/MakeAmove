@@ -68,10 +68,8 @@ export async function renderProfilePage() {
               <input type="text" name="age-max" value="${userData.preference.ageOfMax}">
             </div>
           </div>
-
           <div class="title">I am looking for</div>
           <div class="gender-buttons">${createPreferGenderButton(genders)}</div>
-
         </div>
 
         <div class="category user-setting">
@@ -89,7 +87,6 @@ export async function renderProfilePage() {
             <button class="change-password">Change password</button>
             <button class="delete-account">Delete account</button>
           </div>
-
         </div>
 
       </div>

@@ -12,6 +12,8 @@ export async function renderDatingPage() {
 
   let navDom = document.querySelector("nav");
   navDom.classList.remove("hide");
+  navDom.removeAttribute("id", "pageNavigation");
+  navDom.classList.add("sticky-nav");
   navDom.innerHTML = stickyNav();
 
   let headerDOM = document.querySelector("header");

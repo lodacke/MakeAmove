@@ -30,7 +30,7 @@ export function renderRegisterPage (){
     document.getElementById("startPageHeader").id = "registerPageHeader";
     document.getElementById("startPageMain").id = "registerPageMain";
 
-    function renderBasicInfoPage (){
+function renderBasicInfoPage (){
 
         mainDom.innerHTML = `
         <h1> Basic Info </h1>
@@ -109,8 +109,7 @@ export function renderRegisterPage (){
         } else {
         } errorMessage();
     })
-    }
-
+}
 
 function imagePage(userData){
     mainDom.innerHTML = `

@@ -10,7 +10,7 @@ export async function renderDatingPage() {
   mainDom.innerHTML = ``;
   mainDom.setAttribute("id", "date-main");
 
-  let navDom = document.querySelector(".sticky-nav");
+  let navDom = document.querySelector("nav");
   navDom.classList.remove("hide");
   navDom.innerHTML = stickyNav();
 

@@ -6,16 +6,16 @@ import { renderCityDropdownListReg } from "./helper.js";
 import { renderFrontPage } from "./index.js";
 
 function renderPageNavigation(previousPage){
-    let pageNavDom = document.querySelector(".sticky-nav");
+    let pageNavDom = document.querySelector("nav");
+    pageNavDom.setAttribute("id", "pageNavigation");
+    pageNavDom.classList.remove("sticky-nav");
+    pageNavDom.classList.remove("hide");
 
     pageNavDom.innerHTML = `
         <button id="previousPage">Previous Page</button>
         <button id="nextPage">Next Page</button>
     `;
 
-    pageNavDom.setAttribute("id", "pageNavigation");
-    pageNavDom.classList.remove("sticky-nav");
-    pageNavDom.classList.remove("hide");
     pageNavDom.querySelector("#previousPage").addEventListener("click", e => {
         previousPage();
     });

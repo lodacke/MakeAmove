@@ -16,6 +16,7 @@ $users = json_decode($json, true);
 $sortedUsers = [];
 $UserWhoLikesLoggedin = [];
 $userWhoLoggedInLikes = [];
+$usersWhoLoggedinDisliked = [];
 
 //Array av användare som gillar den inloggad användare 
 
@@ -32,9 +33,16 @@ forEach ($users as &$user) {
         $preferenceAgeMin = $user["preference"]["ageOfMin"];
         $gender = $user["gender"];
         $age = $user["age"];
-        foreach ($user["matches"]["yes"] as &$user) {
+        if(count($user["matches"]["yes"]) > 1){
+            foreach ($user["matches"]["yes"] as &$user) {
             $userWhoLoggedInLikes[] = $user;
+            }
         }
+        //if(count($user["matches"]["no"]) > 1){
+        //    foreach($user["matches"]["no"] as &$user) {
+        //    $usersWhoLoggedinDisliked[] = $user;                 <-- Ska vi ha en filtrering på dom som man sagt nej till?
+        //    }
+        //}
         break;
     }
 }
@@ -50,8 +58,7 @@ forEach ($users as &$user) {
         $user["gender"] === $preferenceGender &&
         $user["preference"]["ageOfMin"] <= $age &&
         $user["preference"]["ageOfMax"] >= $age &&
-        $user["preference"]["genderOf"] === $gender &&
-        !in_array($_GET["id"], $user["matches"]["no"])
+        $user["preference"]["genderOf"] === $gender
     ) {
         unset($user["general"]["contact"]);
         unset($user["password"]);
@@ -63,6 +70,7 @@ forEach ($users as &$user) {
 
 $match = array_intersect($UserWhoLikesLoggedin, $userWhoLoggedInLikes);
 
+// Här tas de användarna som har matchat med inloggad användare och de användare som inloggad invändare tryckt ja på.
 
 forEach($sortedUsers as $index => $user){
     if(in_array($user["id"], $match)){

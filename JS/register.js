@@ -46,8 +46,9 @@ function renderBasicInfoPage (){
         </div>
 
     <div class="inputbox">
-        <input type="password" name="password" class="required" required="required">
+        <input type="password" name="password" class="required password-input-register" required="required">
         <label for "password"> Password </label>
+        <img src="../PHP/DB/image/eye.png" alt="show-password" id="show-password">
     </div>
 
     <div class="ageAndGender">
@@ -71,6 +72,19 @@ function renderBasicInfoPage (){
 
     `;
 
+    let showPassword = mainDom.querySelector(".inputbox img");
+    showPassword.addEventListener("click", togglePassword);
+
+    function togglePassword() {
+    let passwordInput = mainDom.querySelector(
+        ".password-input-register");
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+    }
+
     let nameDom = mainDom.querySelector("input[name='name']");
     let passwordDom = mainDom.querySelector("input[name='password']");
     let ageDom = mainDom.querySelector("input[name='age']");
@@ -82,11 +96,11 @@ function renderBasicInfoPage (){
     document.getElementById("nextPage").addEventListener("click", e => {
 
         if(
-            nameDom.value != "" && 
-            emailDom.value != "" && 
-            passwordDom.value != "" 
-            && ageDom.value != null && 
-            genderDom.value != "none" 
+            nameDom.value != "" &&
+            emailDom.value != "" &&
+            passwordDom.value != ""
+            && ageDom.value != null &&
+            genderDom.value != "none"
             && cityDom.value != "none"
         ){
 

@@ -46,7 +46,7 @@ export function errorMessage(){
                 required.placeholder = "The password must be at least 8 characters";
                 break;
             case "age":
-                required.placeholder = "You need to be at least 18 years old to use this app";
+                required.placeholder = "You need to be at least 18 years old";
                 break;
             case "tel":
                 required.placeholder = "Phone number is needed";

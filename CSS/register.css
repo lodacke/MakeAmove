@@ -49,39 +49,45 @@
     border: 3px solid #469dff;
 }
 
-.ageAndGender {
+.cityGenderAge {
     color: #686868;
     width: 80vw;
     margin-top: 20px;
-    padding: 15px;
+    padding: 28px 15px;
     border-radius: 13px;
     border: 1px solid #a2a2a2;
     background-color: #ffffffa1;
     height: 8vh;
     display: flex;
     justify-content: space-around;
+    gap: 12px;
+    flex-direction: column;
 }
 
-.ageAndGender input,
-.ageAndGender select {
+.cityGenderAge input,
+.cityGenderAge select {
     border: 1px solid #a2a2a2;
     border-radius: 5px;
 }
 
-.ageAndGender input:first-child {
-    width: 12vw;
+.cityGenderAge input:first-child {
+    width: 100%;
+    margin-left: 25px;
 }
 
-.ageAndGender select {
-    width: 32vw;
+.cityGenderAge select {
+    width: 100%;
     display: flex;
     align-self: center;
 }
 
-.ageAndGender label {
+.cityGenderAge label {
     display: flex;
-    flex-direction: column;
     gap: 5px;
+}
+
+.city {
+    margin-left: 26px;
 }
 
 #pageNavigation {

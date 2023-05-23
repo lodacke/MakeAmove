@@ -52,17 +52,16 @@ export function renderRegisterPage (){
                 <img src="../PHP/DB/image/eye.png" alt="show-password" id="show-password">
             </div>
 
-            <div class="ageAndGender">
-                <label for "city"> City:
-                    <select name="city" class="required">
+            <div class="cityGenderAge">
+
+                <label for "city">City:
+                    <select name="city" class="required city">
                         <option value="none" > Choose a city </option>
                         ${renderCityDropdownListReg()}
                     </select>
                 </label>
 
-                <label for "age"> Age: <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required"> </label>
-
-                <label for "gender"> Gender:
+                <label for "gender">Gender:
                     <select name="gender" class="required">
                         <option value="none">Choose an option </option>
                         <option value="female"> Woman </option>
@@ -70,6 +69,11 @@ export function renderRegisterPage (){
                         <option value="both">Neither</option>
                     </select>
                 </label>
+
+                <label for "age">Age:
+                    <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+                </label>
+
             </div>
 
             <div> ${renderPageNavigation(renderBasicInfoPage)} </div>

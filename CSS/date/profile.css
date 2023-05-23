@@ -272,9 +272,11 @@ input[type="checkbox"]:checked+label {
   opacity: 0.2;
 }
 
+/*
 .popup {
-  /*position: absolute;*/
+  position: absolute;
 }
+*/
 
 .popup-background {
   background-color: rgba(0, 0, 0, 0.4);

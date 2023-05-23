@@ -129,7 +129,7 @@ export function renderRegisterPage (){
 
     function imagePage(userData){
         mainDom.innerHTML = `
-            <h1> Upload a profile picture </h1>
+            <h1>Upload a profile picture</h1>
             <form id="upload" action="register.php" method="POST" enctype="multipart/form-data">
                 <input type="file" name="profilePicture">
                 <button type="submit">Upload</button>
@@ -178,7 +178,7 @@ export function renderRegisterPage (){
         mainDom.innerHTML = `
             <h1>Interests</h1>
             <label for "bio">Bio:</label>
-            <textarea name="bio" rows="7" id="registerBio" placeholder="Add more info about yourself..."></textarea>
+            <textarea name="bio" rows="7" id="registerBio" placeholder="Say something about yourself"></textarea>
 
             <p>Choose 5 interests</p>
             <div id="interestsList" class="required">
@@ -274,19 +274,24 @@ export function renderRegisterPage (){
 
     function preferencePage(userData){
         mainDom.innerHTML = `
-            <h1> What are you looking for? </h1>
+            <h1>What are you looking for?</h1>
             <div id="lookingFor">
-                <lable for "genderOf"> I'm intrested in: </lable>
-                <select name="genderOf" class="required">
-                    <option value="none"> Choose an option </option>
-                    <option value="female"> Female </option>
-                    <option value="male"> Male </option>
-                    <option value="both">Both</option>
-                </select>
-                <p> What age do you prefer? </p>
-                <div class="preferredAge">
-                    <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Min-age">
-                    <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Max-age">
+                <div class="preferred-gender">
+                    <lable for "genderOf">I am intrested in</lable>
+                    <select name="genderOf" class="required">
+                        <option value="none">Choose an option</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="both">Both</option>
+                    </select>
+                </div>
+
+                <div class="preferred-min-max-age">
+                    <p> What age do you prefer? </p>
+                    <div class="preferred-min-max">
+                        <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Min-age">
+                        <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Max-age">
+                    </div>
                 </div>
             </div>
             <div>${renderPageNavigation(QuestionPage)} </div>

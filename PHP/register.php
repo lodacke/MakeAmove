@@ -77,7 +77,7 @@ $newUser = [];
  $gender = $dataREQUEST["gender"];
  $interests = array_values($dataREQUEST["interests"][0]);
  $bio = $dataREQUEST["general"][0]["bio"];
- $contact = $dataREQUEST["general"][0]["contact"];
+ $tel = $dataREQUEST["general"][0]["tel"];
 
  $genderOf = $dataREQUEST["preference"][0]["genderOf"];
  $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
@@ -87,7 +87,7 @@ $newUser = [];
     send(409, [$data = "You need to be over 18 to use this app"]);
   }
 
-if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $contact == "" && $age == null && $city == null)){
+if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel == "" && $age == null && $city == null)){
   $imagesJSON = "DB/imageSource.json";
     if(file_exists($imagesJSON)) {
       $json = file_get_contents($imagesJSON);
@@ -107,7 +107,7 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $con
     "interests" => $interests,
     "general" => [
       "bio" => $bio,
-      "contact" => $contact,
+      "tel" => $tel,
     ],
     "preference" => [
       "genderOf" => $genderOf,

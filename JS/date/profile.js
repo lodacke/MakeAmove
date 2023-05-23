@@ -44,7 +44,7 @@ export async function renderProfilePage() {
           <div class="telephone-number">
             <div class="title">Tel</div>
             <input type="text" name="age-my" value="${
-              userData.general.contact
+              userData.general.tel
             }">
           </div>
 

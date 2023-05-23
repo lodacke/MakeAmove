@@ -188,7 +188,7 @@ function QuestionPage(userData){
         <p>How do you want people to contact you?</p>
 
         <div class="contact-methods">
-            <input name="contact" type="tel" placeholder="Phone number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+            <input name="tel" type="tel" placeholder="Phone number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
             <input name="facebook" placeholder="Facebook"></input>
             <input name="instagram" placeholder="Instagram"></input>
         </div>
@@ -222,7 +222,7 @@ function QuestionPage(userData){
     });
 
     let bio = mainDom.querySelector("textarea[name='bio']");
-    let contact = mainDom.querySelector("input[name='contact']");
+    let tel = mainDom.querySelector("input[name='tel']");
 
     let interestsBoxes = document.querySelectorAll("input[type='checkbox']");
     let count = 0;
@@ -255,12 +255,12 @@ function QuestionPage(userData){
     }
 
     document.getElementById("nextPage").addEventListener("click", e => {
-        if(contact.value != "" && count === 5){
+        if(tel.value != "" && count === 5){
             let interests = checkedIntrests.map((value) => value);
 
             let general = {
                 bio: bio.value,
-                contact: contact.value
+                tel: tel.value
             }
 
             userData.interests.push(interests);

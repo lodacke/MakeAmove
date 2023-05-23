@@ -61,7 +61,7 @@ forEach ($users as &$user) {
         $user["preference"]["ageOfMax"] >= $age &&
         $user["preference"]["genderOf"] === $gender
     ) {
-        unset($user["general"]["contact"]);
+        unset($user["general"]["tel"]);
         unset($user["password"]);
         unset($user["email"]);
         unset($user["preference"]);

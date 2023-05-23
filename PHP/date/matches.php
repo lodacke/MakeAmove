@@ -42,7 +42,7 @@ foreach ($users as &$user) {
 }
 
 if ($foundUserMatch) {
-    $userContact = $foundUserMatch["general"]["contact"];
+    $userContact = $foundUserMatch["general"]["tel"];
     send(200, $userContact);
 } else {
     send(404, ["user not found"]);

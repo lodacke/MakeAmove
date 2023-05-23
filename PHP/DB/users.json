@@ -25,8 +25,12 @@
             "ageOfMin": "20"
         },
         "matches": {
-            "yes": [],
-            "no": []
+            "yes": [
+                "6468f8e5897f1"
+            ],
+            "no": [
+                "646b2c76cdaea"
+            ]
         }
     },
     {
@@ -55,7 +59,9 @@
             "ageOfMin": "18"
         },
         "matches": {
-            "yes": [],
+            "yes": [
+                "64660bd13d77b"
+            ],
             "no": []
         }
     },
@@ -85,7 +91,10 @@
             "ageOfMin": "20"
         },
         "matches": {
-            "yes": [],
+            "yes": [
+                "64660e5833550",
+                "64660ef3195d9"
+            ],
             "no": []
         }
     },
@@ -115,7 +124,9 @@
             "ageOfMin": "18"
         },
         "matches": {
-            "yes": [],
+            "yes": [
+                "64660e0328c77"
+            ],
             "no": []
         }
     },
@@ -145,8 +156,12 @@
             "ageOfMin": "22"
         },
         "matches": {
-            "yes": [],
-            "no": []
+            "yes": [
+                "64663f0f47181"
+            ],
+            "no": [
+                "64660e2656c5d"
+            ]
         }
     },
     {
@@ -175,7 +190,9 @@
             "ageOfMin": "20"
         },
         "matches": {
-            "yes": [],
+            "yes": [
+                "64660e5833550"
+            ],
             "no": []
         }
     },
@@ -205,7 +222,9 @@
             "ageOfMin": "18"
         },
         "matches": {
-            "yes": [],
+            "yes": [
+                "64660f6cd01de"
+            ],
             "no": []
         }
     },
@@ -265,8 +284,11 @@
             "ageOfMin": "23"
         },
         "matches": {
-            "yes": [],
-            "no": []
+            "yes": [
+                "6467638ae6997"
+            ],
+            "no": [
+                "64663f0f47181"            ]
         }
     },
     {
@@ -503,36 +525,6 @@
             "genderOf": "male",
             "ageOfMax": "28",
             "ageOfMin": "21"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "id": "6467499703dbd",
-        "name": "Amina",
-        "email": "amina@gmail.com",
-        "password": "amina",
-        "age": "27",
-        "city": "Falun",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": [
-            "astrology",
-            "wine",
-            "movienight",
-            "art",
-            "dancing"
-        ],
-        "general": {
-            "bio": "",
-            "contact": "0783543742"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "28",
-            "ageOfMin": "18"
         },
         "matches": {
             "yes": [],
@@ -817,7 +809,7 @@
         "age": "28",
         "city": "Malm\u00f6",
         "gender": "female",
-        "imageSource": "PHP/DB/uploads/yvonne-mitchell.jpg",
+        "imageSource": "PHP\/DB\/uploads\/yvonne-mitchell.jpg",
         "interests": [
             "traveling",
             "yoga",
@@ -847,7 +839,7 @@
         "age": "34",
         "city": "Karlstad",
         "gender": "female",
-        "imageSource": "PHP/DB/uploads/emily-foster.jpg",
+        "imageSource": "PHP\/DB\/uploads\/emily-foster.jpg",
         "interests": [
             "reading",
             "beer",
@@ -877,7 +869,7 @@
         "age": "29",
         "city": "Malm\u00f6",
         "gender": "female",
-        "imageSource": "PHP/DB/uploads/alexander-allen.jpg",
+        "imageSource": "PHP\/DB\/uploads\/alexander-allen.jpg",
         "interests": [
             "reading",
             "beer",

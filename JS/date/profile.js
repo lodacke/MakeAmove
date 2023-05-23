@@ -40,7 +40,7 @@ export async function renderProfilePage() {
           <div class="interest">
             <div class="interest-title-limit">
               <div class="title">Interest</div>
-              <div class="five-options">(list up to 5 options)</div>
+              <div class="five-options">(list 5 options)</div>
             </div>
             <div class="interest-list-my required"></div>
           </div>
@@ -391,14 +391,6 @@ function createPreferGenderButton(genders) {
 }
 
 function colorThePreferredGender(preferredGender) {
-    //  allGenders.forEach( gender => {
-    //      if(gender.checked = true){
-    //        gender.disable = true;
-    //          gender.addEventListener("change", e => {
-    //            console.log(gender);
-    //          })
-    //        }       
-    //      })
 
   genders.forEach(function (gender) {
     if (gender === preferredGender) {
@@ -407,22 +399,36 @@ function colorThePreferredGender(preferredGender) {
     }
   });
 
-    let allGenders = document.querySelectorAll(".info-button");
-    let unchecked = [];
+  let allGenders = document.querySelectorAll(".info-button");
+  let counter = 0;
 
-    for(let i = 0; i < allGenders.length; i++){
-      if(allGenders[i].checked === true){
-        if(allGenders[i].checked != true){
-          unchecked.push(allGenders[i]);
-          allGenders[i].disable = true;
-        }
-        allGenders.forEach(gender => {
-          console.log(gender);
-        })
-        allGenders[i].disable = true;
-      }
+  allGenders.forEach(gender => {
+    if (gender.checked === true) {
+      counter++;
+    } else {
+      gender.disabled = true;
     }
+    
+    gender.addEventListener("change", e => {
+      if (gender.checked === true) {
+        counter++;
+      } else {
+        counter--;
+      }
 
+      if (counter === 1) {
+        allGenders.forEach(gender => {
+          if (!gender.checked) {
+            gender.disabled = true;
+          }
+        });
+      } else {
+        allGenders.forEach(gender => {
+          gender.disabled = false;
+        });
+      }
+    });
+  });
 }
 
 async function saveProfile(event) {

@@ -101,10 +101,9 @@
 }
 
 .profile-pop {
-    height: 93vh;
+    height: 90vh;
     width: 89vw;
-    /* position: absolute; */
-    top: -8vh;
+    top: 1vh;
     left: 2vh;
     border-radius: 14px;
     z-index: 1;

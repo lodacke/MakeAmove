@@ -18,6 +18,8 @@
     border-radius: 16px;
     border: 2px solid white;
     height: 68vh;
+    object-fit: cover;
+    max-width: 90%;
 }
 
 #potentialMatchInfo {

@@ -223,6 +223,8 @@ function QuestionPage(userData){
 
     let bio = mainDom.querySelector("textarea[name='bio']");
     let tel = mainDom.querySelector("input[name='tel']");
+    let facebook = mainDom.querySelector("input[name='facebook']");
+    let instagram = mainDom.querySelector("input[name='instagram']");
 
     let interestsBoxes = document.querySelectorAll("input[type='checkbox']");
     let count = 0;
@@ -233,12 +235,10 @@ function QuestionPage(userData){
             if(interestsBoxes[i].checked === true){
                 count++;
                 checkedIntrests.push(interestsBoxes[i].name);
-                console.log(checkedIntrests);
             } else {
                 count--;
                 let index = checkedIntrests.indexOf(interestsBoxes[i].name);
                 checkedIntrests.splice(index, 1);
-                console.log(checkedIntrests);
             }
             if(count === 5){
                 interestsBoxes.forEach(box => {
@@ -259,9 +259,11 @@ function QuestionPage(userData){
             let interests = checkedIntrests.map((value) => value);
 
             let general = {
-                bio: bio.value,
-                tel: tel.value
-            }
+              bio: bio.value,
+              tel: tel.value,
+              facebook: facebook.value,
+              instagram: instagram.value,
+            };
 
             userData.interests.push(interests);
             userData.general.push(general);

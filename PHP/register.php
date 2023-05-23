@@ -78,10 +78,11 @@ $newUser = [];
  $interests = array_values($dataREQUEST["interests"][0]);
  $bio = $dataREQUEST["general"][0]["bio"];
  $tel = $dataREQUEST["general"][0]["tel"];
-
+ $facebook = $dataREQUEST["general"][0]["facebook"];
+ $instagram = $dataREQUEST["general"][0]["instagram"];
  $genderOf = $dataREQUEST["preference"][0]["genderOf"];
  $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
-  $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
+ $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
 
   if($age < 18){
     send(409, [$data = "You need to be over 18 to use this app"]);
@@ -108,6 +109,8 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel
     "general" => [
       "bio" => $bio,
       "tel" => $tel,
+      "facebook" => $facebook,
+      "instagram" => $instagram,
     ],
     "preference" => [
       "genderOf" => $genderOf,

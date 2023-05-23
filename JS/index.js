@@ -16,6 +16,7 @@ function checkIfUserLoggedIn() {
 export function renderFrontPage() {
 
   let navDom = document.querySelector("nav");
+  navDom.removeAttribute("id", "pageNavigation");
   navDom.classList.add("hide");
   
   let headerDom = document.querySelector("header");

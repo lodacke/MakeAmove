@@ -21,6 +21,7 @@ function renderPageNavigation(previousPage){
     });
 };
 
+
 export function renderRegisterPage (){
 
     let mainDom = document.querySelector("main");
@@ -68,9 +69,7 @@ function renderBasicInfoPage (){
             </select>
         </label>
     </div>
-    ${renderPageNavigation(renderFrontPage)};
-
-    `;
+    <div> ${renderPageNavigation(renderBasicInfoPage)} </div>`;
 
     let showPassword = mainDom.querySelector(".inputbox img");
     showPassword.addEventListener("click", togglePassword);
@@ -82,7 +81,7 @@ function renderBasicInfoPage (){
         passwordInput.type = "text";
     } else {
         passwordInput.type = "password";
-    }
+        }
     }
 
     let nameDom = mainDom.querySelector("input[name='name']");

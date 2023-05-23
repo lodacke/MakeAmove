@@ -12,21 +12,22 @@ $fileName = "../DB/users.json";
 $json = file_get_contents($fileName);
 $users = json_decode($json, true);
 $userToSend = [];
-
+$userWhoLoggedInLikes = [];
+$othersMatches = [];
 $loggedInUser = $_GET["id"];
 
 
 forEach($users as $user){
     if($user["id"] === $loggedInUser){
-    $loggedinUserMatches = array_column($user["matches"]["yes"], null);
+    $userWhoLoggedInLikes = array_column($user["matches"]["yes"], null);
     break;
     }
     if(in_array($loggedInUser, $user["matches"]["yes"])){
-       $otherMatches[] = $user["id"];
+       $othersMatches[] = $user["id"];
     }
 };
 
-$match = array_intersect($otherMatches, $loggedinUserMatches);
+$match = array_intersect($othersMatches, $userWhoLoggedInLikes);
 
 if($match){
 
@@ -44,7 +45,7 @@ forEach($userToSend as &$user){
 send(200, $userToSend);
 
 } else {
-    send(200, "No matches to show");
+    abort(400, "No matches to show");
 }
 
 

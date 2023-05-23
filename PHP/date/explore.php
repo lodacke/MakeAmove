@@ -18,16 +18,17 @@ $UserWhoLikesLoggedin = [];
 $userWhoLoggedInLikes = [];
 $usersWhoLoggedinDisliked = [];
 
+$loggedInUser = $_GET["id"];
 //Array av användare som gillar den inloggad användare 
 
 forEach ($users as &$user) {
-    if (in_array($_GET["id"], $user["matches"]["yes"])) {
+    if (in_array($loggedInUser, $user["matches"]["yes"])) {
         $UserWhoLikesLoggedin[] = $user["id"];
     }
 }
 
 forEach ($users as &$user) {
-    if ($user["id"] === $_GET["id"]) {
+    if ($user["id"] === $loggedInUser) {
         $preferenceGender = $user["preference"]["genderOf"];
         $preferenceAgeMax = $user["preference"]["ageOfMax"];
         $preferenceAgeMin = $user["preference"]["ageOfMin"];
@@ -52,7 +53,7 @@ forEach ($users as &$user) {
 
 forEach ($users as &$user) {
     if (
-        $user["id"] != $_GET["id"] &&
+        $user["id"] != $loggedInUser &&
         $user["age"] >= $preferenceAgeMin &&
         $user["age"] <= $preferenceAgeMax &&
         $user["gender"] === $preferenceGender &&
@@ -69,6 +70,7 @@ forEach ($users as &$user) {
 }
 
 $match = array_intersect($UserWhoLikesLoggedin, $userWhoLoggedInLikes);
+
 
 // Här tas de användarna som har matchat med inloggad användare och de användare som inloggad invändare tryckt ja på.
 

@@ -128,7 +128,7 @@ export async function renderProfilePage() {
 function logoutFromAccount() {
   window.localStorage.removeItem("user");
   renderFrontPage();
-  let navBar = document.querySelector(".sticky-nav");
+  let navBar = document.querySelector("nav");
   navBar.classList.add("hide");
 }
 

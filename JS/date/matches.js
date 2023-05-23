@@ -8,7 +8,7 @@ import { getUserData } from "../helper.js";
 export async function renderMatchesPage(){
   let mainDom = document.querySelector("main");
   mainDom.innerHTML = ``;
-  let navBar = document.querySelector(".sticky-nav");
+  let navBar = document.querySelector("nav");
 
   navBar.innerHTML = stickyNav();
 
@@ -18,7 +18,14 @@ export async function renderMatchesPage(){
   let request = await fetch(`/PHP/date/showMatches.php?id=${getUserData().id}`);
   let matches = await request.json();
 
-mainDom.innerHTML = `
+
+if(request.ok){
+  mainDom.innerHTML = `
 <h1> ${matches.name} </h1>`; //Bara för å se om det funkade, snälla stryk!!
+} else {
+  mainDom.innerHTML = `
+  <h1> ${matches} </h1>`
+}
+
 
 }

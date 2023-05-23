@@ -75,8 +75,16 @@ body {
   border: 2px solid #a9a9a9;
 }
 
+.facebook img,
+.instagram img {
+  height: 30px;
+}
+
 .age input:focus,
-.preferred-age input:focus {
+.preferred-age input:focus,
+.telephone-number input:focus,
+.facebook input:focus,
+.instagram input:focus {
   border: 2px solid #c6ccff;
 }
 

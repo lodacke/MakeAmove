@@ -43,17 +43,19 @@ export async function renderProfilePage() {
 
           <div class="telephone-number">
             <div class="title">Tel</div>
-            <input type="text" name="age-my" value="${userData.general.contact}">
+            <input type="text" name="age-my" value="${
+              userData.general.contact
+            }">
           </div>
 
           <div class="social-media">
             <div class="facebook">
-              <div class="title">Facebook</div>
+              <img class="facebook-icon" src="../PHP/DB/image/facebook.png" alt="facebook-icon">
               <input type="text" name="facebook" value="">
             </div>
 
             <div class="instagram">
-              <div class="title">Instagram</div>
+              <img class="instagram-icon" src="../PHP/DB/image/instagram.png" alt="instagram-icon">
               <input type="text" name="instagram" value="">
             </div>
           </div>

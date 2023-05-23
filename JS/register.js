@@ -81,7 +81,14 @@ export function renderRegisterPage (){
 
     document.getElementById("nextPage").addEventListener("click", e => {
 
-        if(nameDom.value != "" && emailDom.value != "" && passwordDom.value != "" && ageDom.value != null && genderDom.value != "none" && cityDom.value != "none"){
+        if(
+            nameDom.value != "" && 
+            emailDom.value != "" && 
+            passwordDom.value != "" 
+            && ageDom.value != null && 
+            genderDom.value != "none" 
+            && cityDom.value != "none"
+        ){
 
             let userData = {
                 image: {},

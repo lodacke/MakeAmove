@@ -386,17 +386,42 @@ function createPreferGenderButton(genders) {
       </div>
     `;
   }
-
   return html;
 }
 
 function colorThePreferredGender(preferredGender) {
+    //  allGenders.forEach( gender => {
+    //      if(gender.checked = true){
+    //        gender.disable = true;
+    //          gender.addEventListener("change", e => {
+    //            console.log(gender);
+    //          })
+    //        }       
+    //      })
+
   genders.forEach(function (gender) {
     if (gender === preferredGender) {
       const preferredGenderButton = document.querySelector(`#${gender}`);
       preferredGenderButton.checked = true;
     }
   });
+
+    let allGenders = document.querySelectorAll(".info-button");
+    let unchecked = [];
+
+    for(let i = 0; i < allGenders.length; i++){
+      if(allGenders[i].checked === true){
+        if(allGenders[i].checked != true){
+          unchecked.push(allGenders[i]);
+          allGenders[i].disable = true;
+        }
+        allGenders.forEach(gender => {
+          console.log(gender);
+        })
+        allGenders[i].disable = true;
+      }
+    }
+
 }
 
 async function saveProfile(event) {

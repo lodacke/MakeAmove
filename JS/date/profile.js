@@ -27,7 +27,7 @@ export async function renderProfilePage() {
 
       <div class="profile-top">
         <img class="user-picture" src="${userData.imageSource}" alt="user-picture">
-        <h2 class="user-name">[${userData.name}]</h2>
+        <h2 class="user-name">${userData.name}</h2>
       </div>
 
       <div class="profile-main">
@@ -35,12 +35,12 @@ export async function renderProfilePage() {
           <h3>About me</h3>
 
           <div class="title">Bio</div>
-          <textarea class="bio" name="bio" placeholder="Write something about yourself">${userData.general.bio || ""}</textarea>
+          <textarea class="profileBio" name="bio" placeholder="Write something about yourself">${userData.general.bio || ""}</textarea>
 
           <div class="interest">
             <div class="interest-title-limit">
               <div class="title">Interest</div>
-              <div class="five-options">list up to 5 options</div>
+              <div class="five-options">(list up to 5 options)</div>
             </div>
             <div class="interest-list-my required"></div>
           </div>
@@ -68,10 +68,8 @@ export async function renderProfilePage() {
               <input type="text" name="age-max" value="${userData.preference.ageOfMax}">
             </div>
           </div>
-
           <div class="title">I am looking for</div>
           <div class="gender-buttons">${createPreferGenderButton(genders)}</div>
-
         </div>
 
         <div class="category user-setting">
@@ -89,7 +87,6 @@ export async function renderProfilePage() {
             <button class="change-password">Change password</button>
             <button class="delete-account">Delete account</button>
           </div>
-
         </div>
 
       </div>
@@ -390,17 +387,42 @@ function createPreferGenderButton(genders) {
       </div>
     `;
   }
-
   return html;
 }
 
 function colorThePreferredGender(preferredGender) {
+    //  allGenders.forEach( gender => {
+    //      if(gender.checked = true){
+    //        gender.disable = true;
+    //          gender.addEventListener("change", e => {
+    //            console.log(gender);
+    //          })
+    //        }       
+    //      })
+
   genders.forEach(function (gender) {
     if (gender === preferredGender) {
       const preferredGenderButton = document.querySelector(`#${gender}`);
       preferredGenderButton.checked = true;
     }
   });
+
+    let allGenders = document.querySelectorAll(".info-button");
+    let unchecked = [];
+
+    for(let i = 0; i < allGenders.length; i++){
+      if(allGenders[i].checked === true){
+        if(allGenders[i].checked != true){
+          unchecked.push(allGenders[i]);
+          allGenders[i].disable = true;
+        }
+        allGenders.forEach(gender => {
+          console.log(gender);
+        })
+        allGenders[i].disable = true;
+      }
+    }
+
 }
 
 async function saveProfile(event) {
@@ -421,7 +443,7 @@ async function saveProfile(event) {
       },
     });
 
-    message.textContent = "The profile is updated successfully! ٩( ̆◡ ̆)۶";
+    message.textContent = "The profile is updated successfully!";
 
     setTimeout(() => {
       message.textContent = "";

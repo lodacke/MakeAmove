@@ -14,6 +14,10 @@ function checkIfUserLoggedIn() {
 }
 
 export function renderFrontPage() {
+
+  let navDom = document.querySelector("nav");
+  navDom.classList.add("hide");
+  
   let headerDom = document.querySelector("header");
   headerDom.setAttribute("id", "startPageHeader");
 

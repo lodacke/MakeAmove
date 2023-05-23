@@ -192,7 +192,7 @@ export function renderRegisterPage (){
                 <input name="instagram" placeholder="Instagram"></input>
             </div>
 
-            <p> Dont worry, you can change the way you wish to be contacted once you're registered your profile! </p>
+            <p> Don't worry! You can easily change your profile after registration ^_^ </p>
 
             ${renderPageNavigation(imagePage)}
         `;

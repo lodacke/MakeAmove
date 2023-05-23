@@ -14,6 +14,8 @@ export async function renderMatchesPage(){
 
   document.querySelector(".explore").addEventListener("click", renderDatingPage);
   document.querySelector(".profile").addEventListener("click", renderProfilePage);
+  document.querySelector(".match").classList.add("current-page");
+
 
   let request = await fetch(`/PHP/date/showMatches.php?id=${getUserData().id}`);
   let matches = await request.json();

@@ -123,6 +123,10 @@ export async function renderProfilePage() {
 
   document.querySelector(".explore").addEventListener("click", renderDatingPage);
   document.querySelector(".match").addEventListener("click", renderMatchesPage);
+  document.querySelector(".profile").classList.add("current-page");
+  document.querySelector(".explore").classList.remove("current-page");
+  document.querySelector(".match").classList.remove("current-page");
+
 }
 
 function logoutFromAccount() {

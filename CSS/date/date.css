@@ -23,5 +23,10 @@
 
 #explore-logo {
   height: 5vh;
-  width: 14vw;
+}
+
+.current-page {
+  color: white;
+  font-weight: bold;
+  background-color: #b8d3ff;
 }

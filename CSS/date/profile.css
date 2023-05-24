@@ -50,6 +50,7 @@ body {
   gap: 1vh;
   display: flex;
   flex-direction: column;
+  width: 85vw;
 }
 
 /* About me */

@@ -5,9 +5,7 @@ import { renderRegisterPage } from "./register.js";
 
 async function submitLogin(event) {
   event.preventDefault();
-  // renderDatingPage();
-
-  let message = document.querySelector("main .message");
+  let message = document.querySelector(".message");
 
   try {
     let response = await fetch("../PHP/login.php", {
@@ -21,8 +19,7 @@ async function submitLogin(event) {
 
     let data = await response.json();
     if (!response.ok) {
-      message.innerHTML = `Oops! Something went wrong, it looks like <span>${data.message}</span>.`;
-      // errorMessage();
+      message.textContent = data.message;
     } else {
       window.localStorage.setItem("user", JSON.stringify(data));
       renderDatingPage();
@@ -33,7 +30,6 @@ async function submitLogin(event) {
 }
 
 export function renderLoginPage() {
-  let bodyDom = document.querySelector("body");
   let headerDom = document.querySelector("header");
   headerDom.setAttribute("id", "loginPageHeader");
   let mainDom = document.querySelector("main");
@@ -55,9 +51,8 @@ export function renderLoginPage() {
         <label for "password"> Password </label>
       </div>
       <button class="loginButton" type="submit">Login</button>
-      <p class="message"></p>` +
-      // TODO: <img class="loading" src="image/spinner.svg" alt="loading">
-    `</form>
+      <p class="message"></p>
+    </form>
     <p class="loginKindWords">You're not alone! Many like-minded people are looking for their love from Make A Move. <br> Let us help you!</p>
     <button class="goToRegister">Register here</button>
   `;

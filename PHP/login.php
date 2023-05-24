@@ -24,7 +24,7 @@ if(
     $requestData["password"] === ""
   )
 ) {
-  $error = ["message" => "wrong values or no values were added"];
+  $error = ["message" => "Wrong values or no values were added"];
   abort(400, $error);
 } else {
   $email = $requestData["email"];

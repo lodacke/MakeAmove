@@ -103,8 +103,9 @@ body {
   resize: vertical;
   outline: none;
   border-radius: 5px;
-  width: 80vw;
+  width: 95%;
   border: 2px solid darkgray;
+  padding: 4px;
 }
 
 .profileBio:focus {

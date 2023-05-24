@@ -278,7 +278,7 @@ export function renderRegisterPage (){
             <h1>Preferences</h1>
             <div id="lookingFor">
                 <div class="preferred-gender">
-                    <lable for "genderOf">I am intrested in</lable>
+                    <lable for "genderOf">I am interested in</lable>
                     <select name="genderOf" class="required">
                         <option value="none">this/these gender(s) 🧑</option>
                         <option value="female">Female</option>

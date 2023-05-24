@@ -39,7 +39,7 @@ export async function renderProfilePage() {
 
           <div class="contactMethods">Contact Methods
             <div class="telephone-number">
-              <div class="title">☎️</div>
+              <img class="telephone-icon" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
               <input type="text" name="tel" placeholder="Your phone number" value="${
                 userData.general.tel
               }">

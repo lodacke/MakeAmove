@@ -68,6 +68,7 @@ export async function renderMatchesPage(){
           popupInfo.innerHTML = `
             <h2> ${matches[i].name}</h2>
             <div class="infoMatch">
+              <div class="showContact"
               <div class="bioOfMatch"> ${matches[i].general.bio} </div>
             </div
             `;

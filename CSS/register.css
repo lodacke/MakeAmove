@@ -202,6 +202,10 @@ label {
     border: 1px solid gray;
 }
 
+.contact-methods input:last-child {
+    margin-bottom: 2vh;
+}
+
 .contact-methods input:focus {
     border: 2px solid #3593ff;
 }

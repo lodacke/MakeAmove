@@ -55,6 +55,9 @@ if(
       } else if ($newPassword !== $passwordRepeat) {
         $error = ["message" => "New password and repeated new password do not match! (☉̃o☉)"];
         abort(400, $error);
+      } else if ($newPassword === $oldPassword) {
+        $error = ["message" => "New password and old password should not be the same! (☉̃o☉)"];
+        abort(400, $error);
       } else {
         $user["password"] = $newPassword;
 

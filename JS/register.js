@@ -34,21 +34,21 @@ export function renderRegisterPage (){
     function renderBasicInfoPage() {
 
         mainDom.innerHTML = `
-            <h1> Basic Info </h1>
+            <h1>Basic Info</h1>
 
             <div class="inputbox">
-                <input type="username" name="name" class="required" required="required">
-                <label for "name"> First name </label>
+                <input type="username" name="name" class="required firstname" required="required">
+                <label for "name">First name</label>
             </div>
 
             <div class="inputbox">
-                <input type="email" name="email" class="required" required="required">
-                <label for "email"> Email address </label>
+                <input type="email" name="email" class="required email" required="required">
+                <label for "email">Email address</label>
             </div>
 
             <div class="inputbox">
                 <input type="password" name="password" class="required password-input-register" required="required">
-                <label for "password"> Password </label>
+                <label for "password">Password</label>
                 <img src="../PHP/DB/image/eye.png" alt="show-password" class="show-password-register">
             </div>
 
@@ -56,7 +56,7 @@ export function renderRegisterPage (){
 
                 <label for "city">City:
                     <select name="city" class="required city">
-                        <option value="none" > Choose a city </option>
+                        <option value="none" >Choose a city</option>
                         ${renderCityDropdownListReg()}
                     </select>
                 </label>
@@ -64,8 +64,8 @@ export function renderRegisterPage (){
                 <label for "gender">Gender:
                     <select name="gender" class="required">
                         <option value="none">Choose an option </option>
-                        <option value="female"> Woman </option>
-                        <option value="male"> Man </option>
+                        <option value="female">Woman</option>
+                        <option value="male">Man</option>
                         <option value="both">Neither</option>
                     </select>
                 </label>
@@ -77,6 +77,7 @@ export function renderRegisterPage (){
             </div>
 
         `;
+
         renderPageNavigation(renderFrontPage);
 
         let showPassword = mainDom.querySelector(".inputbox img");
@@ -128,7 +129,6 @@ export function renderRegisterPage (){
     }
 
     function imagePage(userData){
-
         mainDom.innerHTML = `
             <h1>Upload a profile picture</h1>
             <form id="upload" action="register.php" method="POST" enctype="multipart/form-data">
@@ -194,7 +194,7 @@ export function renderRegisterPage (){
             </div>
         `;
 
-            renderPageNavigation(imagePage);
+        renderPageNavigation(imagePage);
 
         const interests = [
             "Art", "Photographing", "Fashion", "Writing", "Poetry", "Reading", "Movies & TV shows", "Music Festivals", "Stand-up Comedy", "Board Games", "Gaming", "Cooking", "Beer", "Wine", "Night Out", "Dancing", "Singing", "Playing Instruments", "Sport", "Running", "Hiking", "Yoga", "Gym", "Backpacking", "Traveling", "Sailing", "Gardening", "Fishing", "Smoking", "Snus", "Astrology",
@@ -299,6 +299,7 @@ export function renderRegisterPage (){
 
             </div>
         `;
+
         renderPageNavigation(QuestionPage);
 
         let genderOf = mainDom.querySelector("select[name='genderOf']");
@@ -308,7 +309,7 @@ export function renderRegisterPage (){
         document.getElementById("nextPage").innerText = "Start Dating!";
         document.getElementById("nextPage").addEventListener("click", e => {
 
-        if(genderOf.value != "none" && ageOfMin.value != null && ageOfMax.value != null){
+        if (genderOf.value != "none" && ageOfMin.value != null && ageOfMax.value != null){
             let preference = {
                 genderOf: genderOf.value,
                 ageOfMin: ageOfMin.value,

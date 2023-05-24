@@ -49,7 +49,7 @@ export function renderRegisterPage (){
             <div class="inputbox">
                 <input type="password" name="password" class="required password-input-register" required="required">
                 <label for "password"> Password </label>
-                <img src="../PHP/DB/image/eye.png" alt="show-password" id="show-password">
+                <img src="../PHP/DB/image/eye.png" alt="show-password" class="show-password-register">
             </div>
 
             <div class="cityGenderAge">

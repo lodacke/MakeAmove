@@ -259,7 +259,6 @@ label {
 
 .preferred-min-max {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 5px;
 }
@@ -268,13 +267,18 @@ label {
 .preferred-min-max input[name="ageOfMax"] {
     width: 90%;
     border-radius: 3px;
-    border: 1px solid gray;
-    outline: none;
+    border: 1px solid #a4a4a4;
+    height: 3vh;
 }
 
 .preferred-min-max input[name="ageOfMin"]:focus,
 .preferred-min-max input[name="ageOfMax"]:focus {
     border: 2px solid #469dff;
+}
+
+.preferred-min-max input[name="ageOfMin"]::placeholder,
+.preferred-min-max input[name="ageOfMax"]::placeholder {
+    text-align: center;
 }
 
 .preferred-min-max-age {

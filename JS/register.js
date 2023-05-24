@@ -274,12 +274,12 @@ export function renderRegisterPage (){
 
     function preferencePage(userData){
         mainDom.innerHTML = `
-            <h1>What are you looking for?</h1>
+            <h1>Ideal Match Preferences</h1>
             <div id="lookingFor">
                 <div class="preferred-gender">
                     <lable for "genderOf">I am intrested in</lable>
                     <select name="genderOf" class="required">
-                        <option value="none">Choose an option</option>
+                        <option value="none">this/these gender(s) 🧑</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                         <option value="both">Both</option>
@@ -287,10 +287,10 @@ export function renderRegisterPage (){
                 </div>
 
                 <div class="preferred-min-max-age">
-                    <p> What age do you prefer? </p>
+                    <p>Age Range for Perfect Matches</p>
                     <div class="preferred-min-max">
-                        <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Min-age">
-                        <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Max-age">
+                        <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Minimum age">
+                        <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Maximum age">
                     </div>
                 </div>
             </div>

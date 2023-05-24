@@ -6,7 +6,7 @@ import { renderCityDropdownListReg } from "./helper.js";
 import { renderFrontPage } from "./index.js";
 
 function renderPageNavigation(previousPage){
-    
+
     let pageNavDom = document.querySelector("nav");
     pageNavDom.setAttribute("id", "pageNavigation");
     pageNavDom.classList.remove("sticky-nav");
@@ -198,7 +198,7 @@ export function renderRegisterPage (){
             renderPageNavigation(imagePage);
 
         const interests = [
-            "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing", "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night", "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing", "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking", "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"
+            "Art", "Photographing", "Fashion", "Writing", "Poetry", "Reading", "Movies & TV shows", "Music Festivals", "Stand-up Comedy", "Board Games", "Gaming", "Cooking", "Beer", "Wine", "Night Out", "Dancing", "Singing", "Playing Instruments", "Sport", "Running", "Hiking", "Yoga", "Gym", "Backpacking", "Traveling", "Sailing", "Gardening", "Fishing", "Smoking", "Snus", "Astrology",
         ];
 
         const interestsList = document.getElementById("interestsList");

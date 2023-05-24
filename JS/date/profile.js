@@ -8,17 +8,13 @@ import { renderMatchesPage } from "./matches.js";
 
 const genders = ["female", "male", "both"];
 const interests = [
-  "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing", "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night", "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing", "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking", "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"];
+  "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing", "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night", "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing", "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking", "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"
+];
 
 export async function renderProfilePage() {
   let response = await fetch(`../PHP/date/getProfile.php?id=${getUserData().id}`);
 
   const userData = await response.json();
-
-  if (!response.ok) {
-    // TODO: Show to user: "Network response was not ok"
-    return;
-  }
 
   let mainDom = document.querySelector("main");
 
@@ -154,7 +150,6 @@ export async function renderProfilePage() {
   document.querySelector(".profile").classList.add("current-page");
   document.querySelector(".explore").classList.remove("current-page");
   document.querySelector(".match").classList.remove("current-page");
-
 }
 
 function logoutFromAccount() {
@@ -190,10 +185,8 @@ function renderInterestBox(interest) {
   input.value = interest.toLowerCase().replace(" ", "");
   input.classList.add("interest-checkbox");
   const label = document.createElement("label");
-  // label.htmlFor = input.name;
   label.htmlFor = input.id;
   label.textContent = interest;
-  // label.setAttribute("for", "myCheckbox");
   anInterest.append(input);
   anInterest.append(label);
 
@@ -221,7 +214,6 @@ function renderInterestBoxes(myChosenInterestAtRegister) {
         let index = checkedInterests.indexOf(boxes[i].name);
         checkedInterests.splice(index, 1);
       }
-
       disableInterestBoxes();
     })
   }
@@ -374,7 +366,6 @@ function renderConfirmDeleteAccountBox(event) {
   whiteCross.addEventListener("click", closePopUpBox);
   confirmDeleteNo.addEventListener("click", closePopUpBox);
   popupContent.addEventListener("submit", deleteUserAccount);
-
 }
 
 async function deleteUserAccount(event) {
@@ -406,7 +397,7 @@ async function deleteUserAccount(event) {
 }
 
 function createPreferGenderButton(genders) {
-  let html = '';
+  let html = "";
 
   for (let gender of genders) {
     html += `
@@ -422,7 +413,6 @@ function createPreferGenderButton(genders) {
 }
 
 function colorThePreferredGender(preferredGender) {
-
   genders.forEach(function (gender) {
     if (gender === preferredGender) {
       const preferredGenderButton = document.querySelector(`#${gender}`);

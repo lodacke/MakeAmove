@@ -188,12 +188,11 @@ export function renderRegisterPage (){
             <p>How do you want people to contact you?</p>
 
             <div class="contact-methods">
-                <input name="tel" type="tel" placeholder="Phone number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
-                <input name="facebook" placeholder="Facebook"></input>
-                <input name="instagram" placeholder="Instagram"></input>
+                <input name="tel" type="tel" placeholder="Your phone number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+                <input name="facebook" placeholder="Your Facebook username"></input>
+                <input name="instagram" placeholder="Your Instagram username"></input>
             </div>
-
-            <p> Don't worry! You can easily change your profile after registration </p> `;
+        `;
 
             renderPageNavigation(imagePage);
 
@@ -205,9 +204,11 @@ export function renderRegisterPage (){
 
         interests.forEach(interest => {
             const div = document.createElement("div");
+            div.classList.add("checkbox-wrapper");
             const input = document.createElement("input");
             input.type = "checkbox";
             input.classList.add("required");
+            input.id = interest.toLowerCase().replace(" ", "");
             input.name = interest.toLowerCase().replace(" ", "");
             const label = document.createElement("label");
             label.htmlFor = input.name;
@@ -274,10 +275,10 @@ export function renderRegisterPage (){
 
     function preferencePage(userData){
         mainDom.innerHTML = `
-            <h1>Ideal Match Preferences</h1>
+            <h1>Preferences</h1>
             <div id="lookingFor">
                 <div class="preferred-gender">
-                    <lable for "genderOf">I am intrested in</lable>
+                    <lable for "genderOf">I am interested in</lable>
                     <select name="genderOf" class="required">
                         <option value="none">this/these gender(s) 🧑</option>
                         <option value="female">Female</option>
@@ -293,6 +294,9 @@ export function renderRegisterPage (){
                         <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Maximum age">
                     </div>
                 </div>
+
+                <p>Don't worry! You can easily change your profile after registration (o˘◡˘o)</p>
+
             </div>
         `;
         renderPageNavigation(QuestionPage);

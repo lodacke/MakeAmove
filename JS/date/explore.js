@@ -94,19 +94,14 @@ function renderCurrentDate(request, userDATA) {
         let facebookDom;
         let instagramDom;
 
-        if(response.instagram === ""){
+        if(response.facebook === "" || response.instagram === ""){
+          facebookDom = "Not available";
           instagramDom = "Not available";
         } else {
-          instagramDom = response.instagram;
-        };
-
-        if(response.facebook === ""){
-          facebookDom = "Not availble";
-        } else {
           facebookDom = response.facebook;
+          instagramDom = response.instagram;
         }
         
-
         popupContent.innerHTML = 
         `<img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross"></img>
           <h1>It's a match! </h1>

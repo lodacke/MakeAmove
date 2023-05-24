@@ -19,15 +19,24 @@ $loggedInUser = $_GET["id"];
 
 forEach($users as $user){
     if($user["id"] === $loggedInUser){
-    $userWhoLoggedInLikes = array_column($user["matches"], null);
+    if(count($user["matches"]) >= 1){
+        foreach ($user["matches"] as &$user) {
+            $userWhoLoggedInLikes[] = $user;
+            }
+        }
     break;
     }
+};
+
+forEach($users as $user){
     if(in_array($loggedInUser, $user["matches"])){
        $othersMatches[] = $user["id"];
     }
 };
 
 $match = array_intersect($othersMatches, $userWhoLoggedInLikes);
+
+
 
 if($match){
 

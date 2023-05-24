@@ -390,6 +390,7 @@ async function deleteUserAccount(event) {
       message.textContent = data.message;
     } else {
       message.textContent = "Your account is successfully deleted!";
+      renderFrontPage();
     }
   } catch (err) {
     message.textContent = `Error: ${err.message}`;

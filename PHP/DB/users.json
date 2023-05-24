@@ -27,7 +27,8 @@
             "ageOfMin": "20"
         },
         "matches": [
-            "6468f8e5897f1"
+            "6468f8e5897f1",
+            "64660d07a43ac"
         ]
     },
     {
@@ -866,30 +867,35 @@
     },
     {
         "id": "6468f8e5897f1",
-        "name": "yvonne",
+        "name": "Yvonne",
         "email": "yvonne@gmail.com",
         "password": "y",
-        "age": "20",
+        "age": "25",
         "city": "Malm\u00f6",
         "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+        "imageSource": "PHP/DB/uploads/yvonne-mitchell.jpg",
         "interests": [
             "traveling",
-            "yoga",
-            "astrology",
-            "dancing",
-            "art"
+            "movies",
+            "movienight",
+            "photographing",
+            "gaming"
         ],
         "general": {
-            "bio": "Hi! This is Yvonne :)",
-            "contact": "1234567890"
+            "bio": "Travel enthusiast and wanderlust seeker. I'm always planning my next adventure, seeking new cultures and experiences. Searching for a partner who shares my love for exploration and wants to create unforgettable memories around the globe.",
+            "contact": "1234567890",
+            "tel": "98769876",
+            "facebook": "yvonneM",
+            "instagram": "yvonneM"
         },
         "preference": {
-            "genderOf": "male",
-            "ageOfMax": "30",
-            "ageOfMin": "20"
+            "genderOf": "female",
+            "ageOfMax": "32",
+            "ageOfMin": "22"
         },
-        "matches": []
+        "matches": [
+            "64660bd13d77b"
+        ]
     },
     {
         "id": "646b2c76cdaea",
@@ -1255,6 +1261,35 @@
             "genderOf": "female",
             "ageOfMax": "26",
             "ageOfMin": "18"
+        },
+        "matches": []
+    },
+    {
+        "id": "646e262edc92d",
+        "name": "sdfsd",
+        "email": "sdfsd",
+        "password": "sdf",
+        "age": "22",
+        "city": "Bor\u00e5s",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "reading",
+            "beer",
+            "dancing",
+            "yoga",
+            "movies"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "34567",
+            "facebook": "",
+            "instagram": ""
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "39",
+            "ageOfMin": "22"
         },
         "matches": []
     }

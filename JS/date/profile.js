@@ -8,7 +8,7 @@ import { renderMatchesPage } from "./matches.js";
 
 const genders = ["female", "male", "both"];
 const interests = [
-  "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing", "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night", "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing", "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking", "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"
+  "Art", "Photographing", "Fashion", "Writing", "Poetry", "Reading", "Movies & TV shows", "Music Festivals", "Stand-up Comedy", "Board Games", "Gaming", "Cooking", "Beer", "Wine", "Night Out", "Dancing", "Singing", "Playing Instruments", "Sport", "Running", "Hiking", "Yoga", "Gym", "Backpacking", "Traveling", "Sailing", "Gardening", "Fishing", "Smoking", "Snus", "Astrology",
 ];
 
 export async function renderProfilePage() {
@@ -39,7 +39,7 @@ export async function renderProfilePage() {
 
           <div class="contactMethods">Contact Methods
             <div class="telephone-number">
-              <div class="title">☎️</div>
+              <img class="telephone-icon" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
               <input type="text" name="tel" placeholder="Your phone number" value="${
                 userData.general.tel
               }">
@@ -318,7 +318,10 @@ function closePopUpBox() {
   const popup = document.querySelector(".popup");
   const profileMain = document.querySelector(".profile-main");
   popup.remove();
-  profileMain.classList.remove("makeContentLighter");
+
+  if(profileMain) {
+    profileMain.classList.remove("makeContentLighter");
+  }
 }
 
 function togglePassword(checkbox) {
@@ -390,6 +393,7 @@ async function deleteUserAccount(event) {
       message.textContent = data.message;
     } else {
       message.textContent = "Your account is successfully deleted!";
+      renderFrontPage();
     }
   } catch (err) {
     message.textContent = `Error: ${err.message}`;

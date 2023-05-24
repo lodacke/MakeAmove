@@ -117,10 +117,7 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel
       "ageOfMax" => $ageOfMax,
       "ageOfMin" => $ageOfMin,
     ],
-    "matches" => [
-      "yes" => [],
-      "no" => [],
-    ],
+    "matches" => [],
   ];
 
   $users[] = $newUser;

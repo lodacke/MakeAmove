@@ -5,7 +5,7 @@
         "email": "aiony@mail.com",
         "password": "aiony",
         "age": "30",
-        "city": "Malmö",
+        "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/aiony-haust.jpg",
         "interests": [
@@ -26,14 +26,9 @@
             "ageOfMax": "40",
             "ageOfMin": "20"
         },
-        "matches": {
-            "yes": [
-                "6468f8e5897f1"
-            ],
-            "no": [
-                "646b2c76cdaea"
-            ]
-        }
+        "matches": [
+            "6468f8e5897f1"
+        ]
     },
     {
         "id": "64660d07a43ac",
@@ -41,7 +36,7 @@
         "email": "sara@gmail.com",
         "password": "sara",
         "age": "24",
-        "city": "Malmö",
+        "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/sara-doe.jpg",
         "interests": [
@@ -62,12 +57,9 @@
             "ageOfMax": "30",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [
-                "64660bd13d77b"
-            ],
-            "no": []
-        }
+        "matches": [
+            "64660bd13d77b"
+        ]
     },
     {
         "id": "64660d6fe59eb",
@@ -75,7 +67,7 @@
         "email": "brooke@gmail.com",
         "password": "brooke",
         "age": "27",
-        "city": "Göteborg",
+        "city": "G\u00f6teborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/brooke-cagle.jpg",
         "interests": [
@@ -96,13 +88,10 @@
             "ageOfMax": "30",
             "ageOfMin": "20"
         },
-        "matches": {
-            "yes": [
-                "64660e5833550",
-                "64660ef3195d9"
-            ],
-            "no": []
-        }
+        "matches": [
+            "64660e5833550",
+            "64660ef3195d9"
+        ]
     },
     {
         "id": "64660d9225322",
@@ -123,20 +112,18 @@
         "general": {
             "bio": "Avid reader, coffee lover, and tech geek. Seeking someone to join me in intellectual conversations and endless cups of coffee. Let's explore the world of books and create our own story together.",
             "tel": "0768889431",
-            "facebook": "Derek",
-            "instagram": "Derek"
+            "facebook": "",
+            "instagram": "@dereksInsta"
         },
         "preference": {
             "genderOf": "female",
             "ageOfMax": "28",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [
-                "64660e0328c77"
-            ],
-            "no": []
-        }
+        "matches": [
+            "646cb029edc07",
+            "64660e0328c77"
+        ]
     },
     {
         "id": "64660db9d6489",
@@ -144,7 +131,7 @@
         "email": "sofia@gmail.com",
         "password": "sofia",
         "age": "22",
-        "city": "Gävle",
+        "city": "G\u00e4vle",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/sofia-miller.jpg",
         "interests": [
@@ -165,14 +152,7 @@
             "ageOfMax": "35",
             "ageOfMin": "22"
         },
-        "matches": {
-            "yes": [
-                "64663f0f47181"
-            ],
-            "no": [
-                "64660e2656c5d"
-            ]
-        }
+        "matches": []
     },
     {
         "id": "64660ddeac576",
@@ -180,7 +160,7 @@
         "email": "irene@gmail.com",
         "password": "irene",
         "age": "27",
-        "city": "Örebro",
+        "city": "\u00d6rebro",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/irene-strong.jpg",
         "interests": [
@@ -201,12 +181,10 @@
             "ageOfMax": "34",
             "ageOfMin": "20"
         },
-        "matches": {
-            "yes": [
-                "64660e5833550"
-            ],
-            "no": []
-        }
+        "matches": [
+            "64660e5833550",
+            "646cb029edc07"
+        ]
     },
     {
         "id": "64660e0328c77",
@@ -235,12 +213,7 @@
             "ageOfMax": "27",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [
-                "64660f6cd01de"
-            ],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "64660e2656c5d",
@@ -248,7 +221,7 @@
         "email": "ludovic@gmail.com",
         "password": "ludovic",
         "age": "25",
-        "city": "Luleå",
+        "city": "Lule\u00e5",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/ludovic-migneault.jpg",
         "interests": [
@@ -269,10 +242,7 @@
             "ageOfMax": "30",
             "ageOfMin": "20"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "64660e5833550",
@@ -280,7 +250,7 @@
         "email": "scarlett@gmail.com",
         "password": "scarlett",
         "age": "23",
-        "city": "Umeå",
+        "city": "Ume\u00e5",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/scarlett-johnson.jpg",
         "interests": [
@@ -301,14 +271,7 @@
             "ageOfMax": "31",
             "ageOfMin": "23"
         },
-        "matches": {
-            "yes": [
-                "6467638ae6997"
-            ],
-            "no": [
-                "64663f0f47181"
-            ]
-        }
+        "matches": []
     },
     {
         "id": "64660ea70f618",
@@ -337,10 +300,7 @@
             "ageOfMax": "40",
             "ageOfMin": "25"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "64660ecc168b7",
@@ -369,10 +329,7 @@
             "ageOfMax": "34",
             "ageOfMin": "23"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "64660ef3195d9",
@@ -401,10 +358,7 @@
             "ageOfMax": "35",
             "ageOfMin": "25"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "64660f22587e5",
@@ -433,10 +387,7 @@
             "ageOfMax": "35",
             "ageOfMin": "25"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "64660f47636ce",
@@ -465,10 +416,7 @@
             "ageOfMax": "32",
             "ageOfMin": "20"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "64660f6cd01de",
@@ -497,10 +445,7 @@
             "ageOfMax": "35",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "64663f0f47181",
@@ -529,10 +474,7 @@
             "ageOfMax": "25",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "646748b1103a6",
@@ -540,7 +482,7 @@
         "email": "ava@gmail.com",
         "password": "ava",
         "age": "23",
-        "city": "Skövde",
+        "city": "Sk\u00f6vde",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/ava-collins.jpg",
         "interests": [
@@ -561,10 +503,7 @@
             "ageOfMax": "28",
             "ageOfMin": "21"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "646761f6c97eb",
@@ -572,7 +511,7 @@
         "email": "albert@gmail.com",
         "password": "albert",
         "age": "28",
-        "city": "Umeå",
+        "city": "Ume\u00e5",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/albert-dera.jpg",
         "interests": [
@@ -593,10 +532,7 @@
             "ageOfMax": "34",
             "ageOfMin": "22"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "6467629716a2a",
@@ -604,7 +540,7 @@
         "email": "ben@gmail.com",
         "password": "ben",
         "age": "23",
-        "city": "Malmö",
+        "city": "Malm\u00f6",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/ben-smith.jpg",
         "interests": [
@@ -625,10 +561,7 @@
             "ageOfMax": "30",
             "ageOfMin": "21"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "6467638ae6997",
@@ -636,7 +569,7 @@
         "email": "leilani@gmail.com",
         "password": "leilani",
         "age": "23",
-        "city": "Göteborg",
+        "city": "G\u00f6teborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/leilani-angel.jpg",
         "interests": [
@@ -657,10 +590,7 @@
             "ageOfMax": "27",
             "ageOfMin": "23"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "6467641273861",
@@ -668,7 +598,7 @@
         "email": "philipp@gmail.com",
         "password": "philipp",
         "age": "30",
-        "city": "Göteborg",
+        "city": "G\u00f6teborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/philipp-wuthrich.jpg",
         "interests": [
@@ -689,10 +619,7 @@
             "ageOfMax": "40",
             "ageOfMin": "20"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "6467650373fa6",
@@ -700,7 +627,7 @@
         "email": "a",
         "password": "a",
         "age": "21",
-        "city": "Gävle",
+        "city": "G\u00e4vle",
         "gender": "both",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": [
@@ -721,10 +648,7 @@
             "ageOfMax": "28",
             "ageOfMin": "21"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "646766e59757b",
@@ -732,7 +656,7 @@
         "email": "jasmine@mail.com",
         "password": "jasmine",
         "age": "32",
-        "city": "Göteborg",
+        "city": "G\u00f6teborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/jasmine-hayes.jpg",
         "interests": [
@@ -753,10 +677,7 @@
             "ageOfMax": "45",
             "ageOfMin": "35"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "646767909949f",
@@ -764,7 +685,7 @@
         "email": "david@email.com",
         "password": "david",
         "age": "42",
-        "city": "Göteborg",
+        "city": "G\u00f6teborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/david-collins.jpg",
         "interests": [
@@ -785,10 +706,7 @@
             "ageOfMax": "40",
             "ageOfMin": "30"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "646770185c2fc",
@@ -819,7 +737,9 @@
         },
         "matches": {
             "yes": [],
-            "no": []
+            "no": [
+                "64660f47636ce"
+            ]
         }
     },
     {
@@ -828,7 +748,7 @@
         "email": "a",
         "password": "a",
         "age": "23",
-        "city": "Malmö",
+        "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": [
@@ -862,7 +782,7 @@
         "email": "ghjk",
         "password": "12345",
         "age": "22",
-        "city": "Göteborg",
+        "city": "G\u00f6teborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
         "interests": [
@@ -894,7 +814,7 @@
         "email": "jakob@mail.com",
         "password": "jakob",
         "age": "36",
-        "city": "Malmö",
+        "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/jakob-addison.jpg",
         "interests": [
@@ -913,38 +833,6 @@
         "preference": {
             "genderOf": "male",
             "ageOfMax": "30",
-            "ageOfMin": "40"
-        },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
-    },
-    {
-        "id": "6468f8e5897f1",
-        "name": "Yvonne",
-        "email": "yvonne@gmail.com",
-        "password": "y",
-        "age": "28",
-        "city": "Malmö",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/yvonne-mitchell.jpg",
-        "interests": [
-            "traveling",
-            "movienight",
-            "photographing",
-            "boardgames",
-            "backpacking"
-        ],
-        "general": {
-            "bio": "Wanderlust-driven adventurer with a free spirit. I'm always planning my next solo travel expedition. Seeking a fellow explorer to share thrilling adventures, spontaneous road trips, and the joy of discovering new cultures.",
-            "tel": "98769876",
-            "facebook": "yvonneM",
-            "instagram": "yvonneM"
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "38",
             "ageOfMin": "22"
         },
         "matches": {
@@ -953,10 +841,70 @@
         }
     },
     {
+        "id": "6468f7ab684a4",
+        "name": "esrdgth",
+        "email": "srdthfygj",
+        "password": "aesrfdgtfh",
+        "age": "22",
+        "city": "G\u00f6teborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+        "interests": [
+            "reading",
+            "beer",
+            "yoga",
+            "dancing",
+            "fishing"
+        ],
+        "general": {
+            "bio": "aerstdg",
+            "contact": "2345678"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "26",
+            "ageOfMin": "22"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "6468f8e5897f1",
+        "name": "yvonne",
+        "email": "yvonne@gmail.com",
+        "password": "y",
+        "age": "20",
+        "city": "Malm\u00f6",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+        "interests": [
+            "traveling",
+            "yoga",
+            "astrology",
+            "dancing",
+            "art"
+        ],
+        "general": {
+            "bio": "Hi! This is Yvonne :)",
+            "contact": "1234567890"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "30",
+            "ageOfMin": "20"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
         "id": "646b2c76cdaea",
-        "name": "Emily",
-        "email": "emily@gmail.com",
-        "password": "emily",
+        "name": "hvj,hv",
+        "email": "anna@gmail.com",
+        "password": "anna123",
         "age": "34",
         "city": "Karlstad",
         "gender": "female",
@@ -970,14 +918,12 @@
         ],
         "general": {
             "bio": "",
-            "tel": "23456789",
-            "facebook": "Emily",
-            "instagram": "Emily"
+            "contact": "23456789"
         },
         "preference": {
             "genderOf": "female",
-            "ageOfMax": "40",
-            "ageOfMin": "28"
+            "ageOfMax": "45",
+            "ageOfMin": "34"
         },
         "matches": {
             "yes": [],
@@ -986,11 +932,11 @@
     },
     {
         "id": "646b52d431182",
-        "name": "alexander",
-        "email": "alexander@gmail.com",
+        "name": "Sandra",
+        "email": "sandra@gmail.com",
         "password": "sandra",
-        "age": "29",
-        "city": "Malmö",
+        "age": "23",
+        "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/alexander-allen.jpg",
         "interests": [
@@ -1002,18 +948,25 @@
         ],
         "general": {
             "bio": "",
-            "tel": "2344",
-            "facebook": "alexander",
-            "instagram": "alexander"
+            "contact": "2344"
         },
         "preference": {
-            "genderOf": "female",
-            "ageOfMax": "35",
-            "ageOfMin": "27"
+            "genderOf": "male",
+            "ageOfMax": "28",
+            "ageOfMin": "21"
         },
         "matches": {
-            "yes": [],
-            "no": []
+            "yes": [
+                "64660f47636ce"
+            ],
+            "no": [
+                "64660f6cd01de",
+                "64660ecc168b7",
+                "64660d6fe59eb",
+                "64660e2656c5d",
+                "64660d9225322",
+                "64660ea70f618"
+            ]
         }
     },
     {
@@ -1022,7 +975,7 @@
         "email": "a",
         "password": "a",
         "age": "23",
-        "city": "Göteborg",
+        "city": "G\u00f6teborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1034,34 +987,14 @@
         ],
         "general": {
             "bio": "",
-            "tel": "75842211",
-            "facebook": "a",
-            "instagram": "a"
+            "contact": "75842211"
         },
         "preference": {
             "genderOf": "female",
             "ageOfMax": "26",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [
-                "64660e5833550",
-                "6467641273861",
-                "646767909949f",
-                "6468f6c52a5cb",
-                "64660e0328c77",
-                "646b52d431182",
-                "64660bd13d77b",
-                "6468f7ab684a4",
-                "646772ebc8ebf",
-                "6468f8e5897f1",
-                "646766e59757b",
-                "64660db9d6489",
-                "646748b1103a6",
-                "646770185c2fc"
-            ],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "646c99cb1f2fd",
@@ -1069,7 +1002,7 @@
         "email": "lo",
         "password": "lo",
         "age": "23",
-        "city": "Göteborg",
+        "city": "G\u00f6teborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1090,10 +1023,7 @@
             "ageOfMax": "34",
             "ageOfMin": "23"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "646ca7b8d5e92",
@@ -1101,7 +1031,7 @@
         "email": "Hanna@gmail.com",
         "password": "Hanna",
         "age": "23",
-        "city": "Norrköping",
+        "city": "Norrk\u00f6ping",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1122,28 +1052,7 @@
             "ageOfMax": "28",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [
-                "6467638ae6997",
-                "64660d6fe59eb",
-                "64660e2656c5d",
-                "64660f6cd01de",
-                "64660f47636ce",
-                "64660ddeac576",
-                "64660ecc168b7",
-                "64660d9225322",
-                "646c7451e174e"
-            ],
-            "no": [
-                "646c7451e174e",
-                "646c7451e174e",
-                "646c7451e174e",
-                "646c7451e174e",
-                "646c7451e174e",
-                "646c7451e174e",
-                "646c7451e174e"
-            ]
-        }
+        "matches": []
     },
     {
         "id": "646ca8604427b",
@@ -1151,7 +1060,7 @@
         "email": "liam@gmail.com",
         "password": "liam",
         "age": "31",
-        "city": "Linköping",
+        "city": "Link\u00f6ping",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1172,13 +1081,7 @@
             "ageOfMax": "35",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [],
-            "no": [
-                "646761f6c97eb",
-                "6467641273861"
-            ]
-        }
+        "matches": []
     },
     {
         "id": "646caa7b0523e",
@@ -1207,35 +1110,17 @@
             "ageOfMax": "29",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [
-                "6467638ae6997",
-                "64660d9225322",
-                "64660ecc168b7",
-                "646c7451e174e",
-                "64660f6cd01de",
-                "64660e2656c5d",
-                "64660f47636ce",
-                "64660ddeac576",
-                "64660d6fe59eb"
-            ],
-            "no": [
-                "64660f47636ce",
-                "64660ddeac576",
-                "64660d6fe59eb",
-                "64660f6cd01de",
-                "64660ddeac576",
-                "64660ecc168b7",
-                "6467638ae6997",
-                "64660d9225322",
-                "64660ecc168b7",
-                "64660e2656c5d",
-                "646c7451e174e",
-                "64660f6cd01de",
-                "64660e2656c5d",
-                "646c7451e174e"
-            ]
-        }
+        "matches": [
+            "6467638ae6997",
+            "64660d9225322",
+            "64660ecc168b7",
+            "646c7451e174e",
+            "64660f6cd01de",
+            "64660e2656c5d",
+            "64660f47636ce",
+            "64660ddeac576",
+            "64660d6fe59eb"
+        ]
     },
     {
         "id": "646cb029edc07",
@@ -1243,7 +1128,7 @@
         "email": "Rosa@gmail.com",
         "password": "rosaa",
         "age": "24",
-        "city": "Södertälje",
+        "city": "S\u00f6dert\u00e4lje",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1256,18 +1141,17 @@
         "general": {
             "bio": "",
             "tel": "07345579685",
-            "facebook": "Rosa",
-            "instagram": "Rosa"
+            "facebook": "",
+            "instagram": ""
         },
         "preference": {
             "genderOf": "male",
             "ageOfMax": "31",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": [
+            "64660d9225322"
+        ]
     },
     {
         "id": "646deadfd3736",
@@ -1275,7 +1159,7 @@
         "email": "lisa@gmail.com",
         "password": "lisa",
         "age": "24",
-        "city": "Göteborg",
+        "city": "G\u00f6teborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1296,18 +1180,12 @@
             "ageOfMax": "35",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [
-                "64660d07a43ac",
-                "6468f8e5897f1",
-                "64660bd13d77b",
-                "646c99cb1f2fd"
-            ],
-            "no": [
-                "646c99cb1f2fd",
-                "646c99cb1f2fd"
-            ]
-        }
+        "matches": [
+            "64660d07a43ac",
+            "6468f8e5897f1",
+            "64660bd13d77b",
+            "646c99cb1f2fd"
+        ]
     },
     {
         "id": "646deb16907f7",
@@ -1315,7 +1193,7 @@
         "email": "sam@gmail.com",
         "password": "sam",
         "age": "24",
-        "city": "Göteborg",
+        "city": "G\u00f6teborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1336,35 +1214,7 @@
             "ageOfMax": "30",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [
-                "6468f8e5897f1",
-                "64660d07a43ac",
-                "64660bd13d77b"
-            ],
-            "no": [
-                "6467638ae6997",
-                "64660e2656c5d",
-                "64660ecc168b7",
-                "64660f47636ce",
-                "64663f0f47181",
-                "64660ecc168b7",
-                "64660d9225322",
-                "64660d6fe59eb",
-                "64663f0f47181",
-                "64660f47636ce",
-                "64660bd13d77b",
-                "64660f47636ce",
-                "64660d6fe59eb",
-                "64660d6fe59eb",
-                "64663f0f47181",
-                "646c7451e174e",
-                "64660d9225322",
-                "646c7451e174e",
-                "64660f6cd01de",
-                "64660e2656c5d"
-            ]
-        }
+        "matches": []
     },
     {
         "id": "646deb570f905",
@@ -1372,7 +1222,7 @@
         "email": "gabbie@gmail.com",
         "password": "gabbie",
         "age": "20",
-        "city": "Malmö",
+        "city": "Malm\u00f6",
         "gender": "both",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1393,33 +1243,7 @@
             "ageOfMax": "30",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [],
-            "no": [
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7",
-                "646deb16907f7"
-            ]
-        }
+        "matches": []
     },
     {
         "id": "646decc43ccbb",
@@ -1427,7 +1251,7 @@
         "email": "a",
         "password": "a",
         "age": "23",
-        "city": "Göteborg",
+        "city": "G\u00f6teborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1448,9 +1272,6 @@
             "ageOfMax": "26",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     }
 ]

@@ -142,3 +142,10 @@
     padding: 1vh;
     border-radius: 5px;
 }
+
+#exploreMatchBoxContact{
+    margin-top: 0px;
+    background-color: rgba(173, 216, 230, 0.6);
+    padding: 4px;
+    border-radius: 5px;
+}

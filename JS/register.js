@@ -77,7 +77,7 @@ export function renderRegisterPage (){
             </div>
 
         `;
-        renderPageNavigation(renderFrontPage)
+        renderPageNavigation(renderFrontPage);
 
         let showPassword = mainDom.querySelector(".inputbox img");
         showPassword.addEventListener("click", togglePassword);
@@ -141,7 +141,7 @@ export function renderRegisterPage (){
             </div>
         `;
 
-        renderPageNavigation(renderBasicInfoPage)
+        renderPageNavigation(renderBasicInfoPage);
 
         const form = document.getElementById("upload");
         const imageMessage = document.getElementById("imageMessage");

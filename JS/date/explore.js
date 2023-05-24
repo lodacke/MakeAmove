@@ -54,7 +54,9 @@ function renderCurrentDate(request, userDATA) {
   `;
 
     mainDom.querySelector("#match").addEventListener("click", matches);
-    mainDom.querySelector("#noMatch").addEventListener("click", noMatch);
+    mainDom.querySelector("#noMatch").addEventListener("click", e => {
+      renderDatingPage();
+    });
     mainDom
       .querySelector("#potentialMatchPic")
       .addEventListener("click", () => showUser(userDATA));
@@ -77,20 +79,58 @@ function renderCurrentDate(request, userDATA) {
       let response = await requestPOST.json();
 
       if (response != "no match") {
-        alert(`its a match! ${response}`);
-      }
 
-      renderDatingPage();
-    }
+        let popup = document.createElement("div");
+        let popupContent = document.createElement("div");
+        let popupBackground = document.createElement("div");
+        let bodyDom = document.querySelector("body");
+        bodyDom.append(popup);
+        popup.classList.add("popup");
+        mainDom.classList.add("makeContentLighter");
+        popup.append(popupBackground);
+        popupBackground.append(popupContent);
+        popupContent.classList.add("popup-content");
 
-    async function noMatch() {
-      let requestPOST = await fetch(
-        new Request("/PHP/date/nomatch.php", {
-          method: "POST",
-          headers: { "Content-type": "application/json; charset=UTF-8" },
-          body: JSON.stringify(match),
+        let facebookDom;
+        let instagramDom;
+
+        if(response.instagram === ""){
+          instagramDom = "Not available";
+        } else {
+          instagramDom = response.instagram;
+        };
+
+        if(response.facebook === ""){
+          facebookDom = "Not availble";
+        } else {
+          facebookDom = response.facebook;
+        }
+        
+
+        popupContent.innerHTML = 
+        `<img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross"></img>
+          <h1>It's a match! </h1>
+          <h3> Time to Make a Move... </h3>
+          <p> You can reach you're match via: </p>
+          <div id="exploreMatchBoxContact">
+            phone: ${response.phone}
+            <br>
+            facebook: ${facebookDom}
+            <br>
+            instagram: ${instagramDom}</p>
+          </div>
+
+          <p> (You can find you're match later under "matches" in the navigation-bar.)
+        </p>
+        `;
+
+        let whiteCross = document.querySelector(".white-cross");
+          whiteCross.addEventListener("click", e => {
+          const popup = document.querySelector(".popup");
+          popup.remove();
+          mainDom.classList.remove("makeContentLighter");
         })
-      );
+      }
 
       renderDatingPage();
     }

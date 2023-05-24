@@ -134,12 +134,14 @@ body {
 }
 
 /* Gender buttons of user*/
-.checkbox-wrapper {
+.checkbox-wrapper,
+.radio-wrapper {
   display: inline-block;
   margin-right: 10px;
 }
 
-.checkbox-wrapper label {
+.checkbox-wrapper label,
+.radio-wrapper label {
   display: inline-block;
   padding: 10px;
   margin: 2px;
@@ -148,11 +150,13 @@ body {
   cursor: pointer;
 }
 
-.checkbox-wrapper input {
+.checkbox-wrapper input,
+.radio-wrapper input {
   display: none;
 }
 
-.checkbox-wrapper .info-button+label {
+.checkbox-wrapper .info-button+label,
+.radio-wrapper .info-button+label {
   display: inline-block;
   width: auto;
   background-color: #eee;
@@ -213,6 +217,7 @@ body {
   font-size: 2vh;
 }
 
+input[type="radio"]:checked+label,
 input[type="checkbox"]:checked+label {
   background-color: #aab3ff;
   color: #fff;

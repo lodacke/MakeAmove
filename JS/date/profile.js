@@ -410,8 +410,8 @@ function createPreferGenderButton(genders) {
 
   for (let gender of genders) {
     html += `
-      <div class="checkbox-wrapper">
-        <input type="checkbox" name="genderOf" value="${gender}" id="${gender}">
+      <div class="radio-wrapper">
+        <input type="radio" name="genderOf" value="${gender}" id="${gender}">
         <label class="${gender}" for="${gender}">
           ${gender}
         </label>

@@ -280,7 +280,6 @@ function renderChangePasswordBox(event) {
 
     <p class="password-message"></p>
     <button class="save-password">Save</button>
-
   `;
 
   const allShowPasswordIcons = popupContent.querySelectorAll("#show-password");

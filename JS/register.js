@@ -188,9 +188,9 @@ export function renderRegisterPage (){
             <p>How do you want people to contact you?</p>
 
             <div class="contact-methods">
-                <input name="tel" type="tel" placeholder="Phone number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
-                <input name="facebook" placeholder="Facebook"></input>
-                <input name="instagram" placeholder="Instagram"></input>
+                <input name="tel" type="tel" placeholder="Your phone number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+                <input name="facebook" placeholder="Your Facebook username"></input>
+                <input name="instagram" placeholder="Your Instagram username"></input>
             </div>
         `;
 

@@ -1,3 +1,9 @@
 .notAnswered {
     border: 1px solid red;
 }
+
+.firstname::placeholder,
+.email::placeholder,
+.password-input-register::placeholder {
+    text-align: end;
+}

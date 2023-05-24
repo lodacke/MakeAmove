@@ -190,13 +190,14 @@ function renderInterestBox(interest) {
   input.value = interest.toLowerCase().replace(" ", "");
   input.classList.add("interest-checkbox");
   const label = document.createElement("label");
-  label.htmlFor = input.name;
+  // label.htmlFor = input.name;
+  label.htmlFor = input.id;
   label.textContent = interest;
-  label.setAttribute("for", "myCheckbox");
+  // label.setAttribute("for", "myCheckbox");
   anInterest.append(input);
   anInterest.append(label);
 
-  anInterest.classList.add("an-interest");
+  anInterest.classList.add("checkbox-wrapper");
   anInterest.querySelector("label").classList.add("my-interest");
 
   interestListMy.append(anInterest);
@@ -409,8 +410,8 @@ function createPreferGenderButton(genders) {
 
   for (let gender of genders) {
     html += `
-      <div class="a-gender">
-        <input type="checkbox" name="genderOf" value="${gender}" id="${gender}" class="info-button">
+      <div class="checkbox-wrapper">
+        <input type="checkbox" name="genderOf" value="${gender}" id="${gender}">
         <label class="${gender}" for="${gender}">
           ${gender}
         </label>

@@ -16,6 +16,7 @@ $users = json_decode($json, true);
 $jsonREQUEST = file_get_contents("php://input");
 $dataREQUEST = json_decode($jsonREQUEST, true);
 
+$userContact = [];
 $foundUserMatch = null;
 $loggedInUser = $dataREQUEST["loggedInUser"];
 $foundUser = $dataREQUEST["matchedUser"];
@@ -33,7 +34,6 @@ foreach ($users as &$user) {
     if ($foundUser === $user["id"]) {
         if (in_array($loggedInUser, $user["matches"])) {
             $foundUserMatch[] = ($user);
-            var_dump($foundUserMatch);
             break;
         } else {
             send(200, "no match");
@@ -43,11 +43,13 @@ foreach ($users as &$user) {
 
 if ($foundUserMatch) {
 
-    $userContact = [
-        "phone" => $foundUserMatch["general"]["tel"],
-        "facebook" => $foundUserMatch["general"]["facebook"],
-        "instagram" => $foundUserMatch["general"]["instagram"],
+  forEach($foundUserMatch as $userMatch){
+        $userContact = [
+        "phone" => $userMatch["general"]["tel"],
+        "facebook" => $userMatch["general"]["facebook"],
+        "instagram" => $userMatch["general"]["instagram"],
     ];
+  }
 
     send(200, $userContact);
 } else {

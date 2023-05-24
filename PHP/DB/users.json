@@ -369,7 +369,16 @@
             "ageOfMax": "35",
             "ageOfMin": "25"
         },
-        "matches": []
+        "matches": [
+            "64660f6cd01de",
+            "64663f0f47181",
+            "64660d6fe59eb",
+            "64660ddeac576",
+            "64660f22587e5",
+            "64660ecc168b7",
+            "64660ea70f618",
+            "646e59b876115"
+        ]
     },
     {
         "id": "64660f22587e5",
@@ -1325,6 +1334,41 @@
         },
         "matches": [
             "646772ebc8ebf"
+        ]
+    },
+    {
+        "id": "646e59b876115",
+        "name": "Johan",
+        "email": "johan@gmail.com",
+        "password": "johan123",
+        "age": "27",
+        "city": "G\u00e4vle",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/realistic-photo.jpg",
+        "interests": [
+            "cooking",
+            "dancing",
+            "beer",
+            "nightout",
+            "playinginstruments"
+        ],
+        "general": {
+            "bio": "G\u00e5r g\u00e4rna p\u00e5 en dejt!",
+            "tel": "234567890",
+            "facebook": "johan p",
+            "instagram": "johanp"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "40",
+            "ageOfMin": "20"
+        },
+        "matches": [
+            "646b52d431182",
+            "64660e5833550",
+            "646772ebc8ebf",
+            "64660ef3195d9",
+            "646748b1103a6"
         ]
     }
 ]

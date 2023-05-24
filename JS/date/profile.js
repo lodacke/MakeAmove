@@ -8,17 +8,13 @@ import { renderMatchesPage } from "./matches.js";
 
 const genders = ["female", "male", "both"];
 const interests = [
-  "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing", "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night", "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing", "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking", "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"];
+  "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing", "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night", "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing", "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking", "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"
+];
 
 export async function renderProfilePage() {
   let response = await fetch(`../PHP/date/getProfile.php?id=${getUserData().id}`);
 
   const userData = await response.json();
-
-  if (!response.ok) {
-    // TODO: Show to user: "Network response was not ok"
-    return;
-  }
 
   let mainDom = document.querySelector("main");
 
@@ -41,20 +37,26 @@ export async function renderProfilePage() {
             userData.general.bio || ""
           }</textarea>
 
-          <div class="telephone-number">
-            <div class="title">Tel</div>
-            <input type="text" name="tel" value="${userData.general.tel}">
-          </div>
+          <div class="contactMethods">Contact Methods
+            <div class="telephone-number">
+              <div class="title">☎️</div>
+              <input type="text" name="tel" placeholder="Your phone number" value="${
+                userData.general.tel
+              }">
+            </div>
 
-          <div class="social-media">
             <div class="facebook">
               <img class="facebook-icon" src="../PHP/DB/image/facebook.png" alt="facebook-icon">
-              <input type="text" name="facebook" value="${userData.general.facebook}">
+              <input type="text" name="facebook" placeholder="Your Facebook username" value="${
+                userData.general.facebook
+              }">
             </div>
 
             <div class="instagram">
               <img class="instagram-icon" src="../PHP/DB/image/instagram.png" alt="instagram-icon">
-              <input type="text" name="instagram" value="${userData.general.instagram}">
+              <input type="text" name="instagram" placeholder="Your Instagram username" value="${
+                userData.general.instagram
+              }">
             </div>
           </div>
 
@@ -148,7 +150,6 @@ export async function renderProfilePage() {
   document.querySelector(".profile").classList.add("current-page");
   document.querySelector(".explore").classList.remove("current-page");
   document.querySelector(".match").classList.remove("current-page");
-
 }
 
 function logoutFromAccount() {
@@ -184,13 +185,12 @@ function renderInterestBox(interest) {
   input.value = interest.toLowerCase().replace(" ", "");
   input.classList.add("interest-checkbox");
   const label = document.createElement("label");
-  label.htmlFor = input.name;
+  label.htmlFor = input.id;
   label.textContent = interest;
-  label.setAttribute("for", "myCheckbox");
   anInterest.append(input);
   anInterest.append(label);
 
-  anInterest.classList.add("an-interest");
+  anInterest.classList.add("checkbox-wrapper");
   anInterest.querySelector("label").classList.add("my-interest");
 
   interestListMy.append(anInterest);
@@ -214,7 +214,6 @@ function renderInterestBoxes(myChosenInterestAtRegister) {
         let index = checkedInterests.indexOf(boxes[i].name);
         checkedInterests.splice(index, 1);
       }
-
       disableInterestBoxes();
     })
   }
@@ -274,7 +273,6 @@ function renderChangePasswordBox(event) {
 
     <p class="password-message"></p>
     <button class="save-password">Save</button>
-
   `;
 
   const allShowPasswordIcons = popupContent.querySelectorAll("#show-password");
@@ -368,7 +366,6 @@ function renderConfirmDeleteAccountBox(event) {
   whiteCross.addEventListener("click", closePopUpBox);
   confirmDeleteNo.addEventListener("click", closePopUpBox);
   popupContent.addEventListener("submit", deleteUserAccount);
-
 }
 
 async function deleteUserAccount(event) {
@@ -400,12 +397,12 @@ async function deleteUserAccount(event) {
 }
 
 function createPreferGenderButton(genders) {
-  let html = '';
+  let html = "";
 
   for (let gender of genders) {
     html += `
-      <div class="a-gender">
-        <input type="checkbox" name="genderOf" value="${gender}" id="${gender}" class="info-button">
+      <div class="radio-wrapper">
+        <input type="radio" name="genderOf" value="${gender}" id="${gender}">
         <label class="${gender}" for="${gender}">
           ${gender}
         </label>
@@ -416,7 +413,6 @@ function createPreferGenderButton(genders) {
 }
 
 function colorThePreferredGender(preferredGender) {
-
   genders.forEach(function (gender) {
     if (gender === preferredGender) {
       const preferredGenderButton = document.querySelector(`#${gender}`);

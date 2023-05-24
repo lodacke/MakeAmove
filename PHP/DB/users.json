@@ -5,7 +5,7 @@
         "email": "aiony@mail.com",
         "password": "aiony",
         "age": "30",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/aiony-haust.jpg",
         "interests": [
@@ -41,7 +41,7 @@
         "email": "sara@gmail.com",
         "password": "sara",
         "age": "24",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/sara-doe.jpg",
         "interests": [
@@ -75,7 +75,7 @@
         "email": "brooke@gmail.com",
         "password": "brooke",
         "age": "27",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/brooke-cagle.jpg",
         "interests": [
@@ -144,7 +144,7 @@
         "email": "sofia@gmail.com",
         "password": "sofia",
         "age": "22",
-        "city": "G\u00e4vle",
+        "city": "Gävle",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/sofia-miller.jpg",
         "interests": [
@@ -180,7 +180,7 @@
         "email": "irene@gmail.com",
         "password": "irene",
         "age": "27",
-        "city": "\u00d6rebro",
+        "city": "Örebro",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/irene-strong.jpg",
         "interests": [
@@ -248,7 +248,7 @@
         "email": "ludovic@gmail.com",
         "password": "ludovic",
         "age": "25",
-        "city": "Lule\u00e5",
+        "city": "Luleå",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/ludovic-migneault.jpg",
         "interests": [
@@ -280,7 +280,7 @@
         "email": "scarlett@gmail.com",
         "password": "scarlett",
         "age": "23",
-        "city": "Ume\u00e5",
+        "city": "Umeå",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/scarlett-johnson.jpg",
         "interests": [
@@ -540,7 +540,7 @@
         "email": "ava@gmail.com",
         "password": "ava",
         "age": "23",
-        "city": "Sk\u00f6vde",
+        "city": "Skövde",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/ava-collins.jpg",
         "interests": [
@@ -572,7 +572,7 @@
         "email": "albert@gmail.com",
         "password": "albert",
         "age": "28",
-        "city": "Ume\u00e5",
+        "city": "Umeå",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/albert-dera.jpg",
         "interests": [
@@ -604,7 +604,7 @@
         "email": "ben@gmail.com",
         "password": "ben",
         "age": "23",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/ben-smith.jpg",
         "interests": [
@@ -636,7 +636,7 @@
         "email": "leilani@gmail.com",
         "password": "leilani",
         "age": "23",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/leilani-angel.jpg",
         "interests": [
@@ -668,7 +668,7 @@
         "email": "philipp@gmail.com",
         "password": "philipp",
         "age": "30",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/philipp-wuthrich.jpg",
         "interests": [
@@ -700,7 +700,7 @@
         "email": "a",
         "password": "a",
         "age": "21",
-        "city": "G\u00e4vle",
+        "city": "Gävle",
         "gender": "both",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": [
@@ -732,7 +732,7 @@
         "email": "jasmine@mail.com",
         "password": "jasmine",
         "age": "32",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/jasmine-hayes.jpg",
         "interests": [
@@ -764,7 +764,7 @@
         "email": "david@email.com",
         "password": "david",
         "age": "42",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/david-collins.jpg",
         "interests": [
@@ -828,7 +828,7 @@
         "email": "a",
         "password": "a",
         "age": "23",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
         "interests": [
@@ -862,7 +862,7 @@
         "email": "ghjk",
         "password": "12345",
         "age": "22",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
         "interests": [
@@ -894,7 +894,7 @@
         "email": "jakob@mail.com",
         "password": "jakob",
         "age": "36",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/jakob-addison.jpg",
         "interests": [
@@ -926,7 +926,7 @@
         "email": "yvonne@gmail.com",
         "password": "y",
         "age": "28",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/yvonne-mitchell.jpg",
         "interests": [
@@ -990,7 +990,7 @@
         "email": "alexander@gmail.com",
         "password": "sandra",
         "age": "29",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/alexander-allen.jpg",
         "interests": [
@@ -1022,7 +1022,7 @@
         "email": "a",
         "password": "a",
         "age": "23",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1069,7 +1069,7 @@
         "email": "lo",
         "password": "lo",
         "age": "23",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1101,7 +1101,7 @@
         "email": "Hanna@gmail.com",
         "password": "Hanna",
         "age": "23",
-        "city": "Norrk\u00f6ping",
+        "city": "Norrköping",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1151,7 +1151,7 @@
         "email": "liam@gmail.com",
         "password": "liam",
         "age": "31",
-        "city": "Link\u00f6ping",
+        "city": "Linköping",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1243,7 +1243,7 @@
         "email": "Rosa@gmail.com",
         "password": "rosaa",
         "age": "24",
-        "city": "S\u00f6dert\u00e4lje",
+        "city": "Södertälje",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
@@ -1262,6 +1262,190 @@
         "preference": {
             "genderOf": "male",
             "ageOfMax": "31",
+            "ageOfMin": "18"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "646deadfd3736",
+        "name": "Lisa",
+        "email": "lisa@gmail.com",
+        "password": "lisa",
+        "age": "24",
+        "city": "Göteborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "reading",
+            "beer",
+            "dancing",
+            "yoga",
+            "movies"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "076045777",
+            "facebook": "",
+            "instagram": ""
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "35",
+            "ageOfMin": "18"
+        },
+        "matches": {
+            "yes": [
+                "64660d07a43ac",
+                "6468f8e5897f1",
+                "64660bd13d77b",
+                "646c99cb1f2fd"
+            ],
+            "no": [
+                "646c99cb1f2fd",
+                "646c99cb1f2fd"
+            ]
+        }
+    },
+    {
+        "id": "646deb16907f7",
+        "name": "Sam",
+        "email": "sam@gmail.com",
+        "password": "sam",
+        "age": "24",
+        "city": "Göteborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "beer",
+            "dancing",
+            "yoga",
+            "movies",
+            "reading"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "07622",
+            "facebook": "",
+            "instagram": ""
+        },
+        "preference": {
+            "genderOf": "both",
+            "ageOfMax": "30",
+            "ageOfMin": "18"
+        },
+        "matches": {
+            "yes": [
+                "6468f8e5897f1",
+                "64660d07a43ac",
+                "64660bd13d77b"
+            ],
+            "no": [
+                "6467638ae6997",
+                "64660e2656c5d",
+                "64660ecc168b7",
+                "64660f47636ce",
+                "64663f0f47181",
+                "64660ecc168b7",
+                "64660d9225322",
+                "64660d6fe59eb",
+                "64663f0f47181",
+                "64660f47636ce",
+                "64660bd13d77b",
+                "64660f47636ce",
+                "64660d6fe59eb",
+                "64660d6fe59eb",
+                "64663f0f47181",
+                "646c7451e174e",
+                "64660d9225322",
+                "646c7451e174e",
+                "64660f6cd01de",
+                "64660e2656c5d"
+            ]
+        }
+    },
+    {
+        "id": "646deb570f905",
+        "name": "Gabbie",
+        "email": "gabbie@gmail.com",
+        "password": "gabbie",
+        "age": "20",
+        "city": "Malmö",
+        "gender": "both",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "traveling",
+            "astrology",
+            "beer",
+            "reading",
+            "yoga"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "076",
+            "facebook": "",
+            "instagram": ""
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "30",
+            "ageOfMin": "18"
+        },
+        "matches": {
+            "yes": [],
+            "no": [
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7",
+                "646deb16907f7"
+            ]
+        }
+    },
+    {
+        "id": "646decc43ccbb",
+        "name": "a",
+        "email": "a",
+        "password": "a",
+        "age": "23",
+        "city": "Göteborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "traveling",
+            "reading",
+            "beer",
+            "dancing",
+            "yoga"
+        ],
+        "general": {
+            "bio": "bio",
+            "tel": "076",
+            "facebook": "",
+            "instagram": ""
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "26",
             "ageOfMin": "18"
         },
         "matches": {

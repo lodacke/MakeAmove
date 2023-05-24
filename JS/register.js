@@ -6,6 +6,7 @@ import { renderCityDropdownListReg } from "./helper.js";
 import { renderFrontPage } from "./index.js";
 
 function renderPageNavigation(previousPage){
+    
     let pageNavDom = document.querySelector("nav");
     pageNavDom.setAttribute("id", "pageNavigation");
     pageNavDom.classList.remove("sticky-nav");
@@ -20,7 +21,6 @@ function renderPageNavigation(previousPage){
         previousPage();
     });
 };
-
 
 export function renderRegisterPage (){
 
@@ -76,8 +76,8 @@ export function renderRegisterPage (){
 
             </div>
 
-            <div> ${renderPageNavigation(renderBasicInfoPage)} </div>
         `;
+        renderPageNavigation(renderFrontPage)
 
         let showPassword = mainDom.querySelector(".inputbox img");
         showPassword.addEventListener("click", togglePassword);
@@ -128,6 +128,7 @@ export function renderRegisterPage (){
     }
 
     function imagePage(userData){
+
         mainDom.innerHTML = `
             <h1>Upload a profile picture</h1>
             <form id="upload" action="register.php" method="POST" enctype="multipart/form-data">
@@ -138,9 +139,9 @@ export function renderRegisterPage (){
                 <div id="userImage"></div>
                 <p id="imageMessage"></p>
             </div>
-
-            ${renderPageNavigation(renderBasicInfoPage)}
         `;
+
+        renderPageNavigation(renderBasicInfoPage)
 
         const form = document.getElementById("upload");
         const imageMessage = document.getElementById("imageMessage");
@@ -192,10 +193,9 @@ export function renderRegisterPage (){
                 <input name="instagram" placeholder="Instagram"></input>
             </div>
 
-            <p> Don't worry! You can easily change your profile after registration ^_^ </p>
+            <p> Don't worry! You can easily change your profile after registration </p> `;
 
-            ${renderPageNavigation(imagePage)}
-        `;
+            renderPageNavigation(imagePage);
 
         const interests = [
             "Traveling", "Reading", "Yoga", "Movies", "Astrology", "Beer", "Dancing", "Fishing", "Wine", "Art", "Stand-up Comedy", "Running", "Movie Night", "Smoking", "Snus", "Poetry", "Night Out", "Fishing", "Sport", "Singing", "Photographing", "Gaming", "Hiking", "Playing Instruments", "Cooking", "Board Games", "Gym", "Sailing", "Fashion", "Backpacking", "Music Festivals"
@@ -294,8 +294,8 @@ export function renderRegisterPage (){
                     </div>
                 </div>
             </div>
-            <div>${renderPageNavigation(QuestionPage)} </div>
         `;
+        renderPageNavigation(QuestionPage);
 
         let genderOf = mainDom.querySelector("select[name='genderOf']");
         let ageOfMin = mainDom.querySelector("input[name='ageOfMin']");

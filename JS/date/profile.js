@@ -318,7 +318,10 @@ function closePopUpBox() {
   const popup = document.querySelector(".popup");
   const profileMain = document.querySelector(".profile-main");
   popup.remove();
-  profileMain.classList.remove("makeContentLighter");
+
+  if(profileMain) {
+    profileMain.classList.remove("makeContentLighter");
+  }
 }
 
 function togglePassword(checkbox) {

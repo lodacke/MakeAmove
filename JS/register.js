@@ -192,8 +192,7 @@ export function renderRegisterPage (){
                 <input name="facebook" placeholder="Facebook"></input>
                 <input name="instagram" placeholder="Instagram"></input>
             </div>
-
-            <p> Don't worry! You can easily change your profile after registration </p> `;
+        `;
 
             renderPageNavigation(imagePage);
 
@@ -295,6 +294,9 @@ export function renderRegisterPage (){
                         <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Maximum age">
                     </div>
                 </div>
+
+                <p>Don't worry! You can easily change your profile after registration (o˘◡˘o)</p>
+
             </div>
         `;
         renderPageNavigation(QuestionPage);

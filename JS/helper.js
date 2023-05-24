@@ -52,10 +52,10 @@ export function errorMessage(){
                 required.placeholder = "Phone number is needed";
                 break;
             case "ageOfMax":
-                required.placeholder = "Enter the preferred max age of your date";
+                required.placeholder = "Your preferred max age";
                 break;
             case "ageOfMin":
-                required.placeholder = "Enter the preferred min age of your date"
+                required.placeholder = "Your preferred min age";
             }
     }  else {
             required.classList.remove("notAnswered");

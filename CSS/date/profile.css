@@ -56,9 +56,14 @@ body {
 .telephone-number,
 .facebook,
 .instagram,
-.age,
 .age-min,
 .age-max {
+  display: flex;
+  margin-bottom: 1vh;
+  padding: 4px;
+}
+
+.age {
   display: flex;
   margin-bottom: 1vh;
 }
@@ -68,7 +73,7 @@ body {
 .instagram input,
 .age input,
 .preferred-age input {
-  width: 20vw;
+  width: 44vw;
   margin-left: 1vw;
   outline: none;
   border-radius: 5px;
@@ -77,7 +82,7 @@ body {
 
 .facebook img,
 .instagram img {
-  height: 30px;
+  height: 33px;
 }
 
 .age input:focus,
@@ -88,13 +93,30 @@ body {
   border: 2px solid #c6ccff;
 }
 
-.preferred-age, .social-media {
-  display: flex;
-  justify-content: space-around;
+.preferred-age {
   background-color: #eee;
   padding-top: 5px;
   border-radius: 5px;
   margin-bottom: 1vh;
+}
+
+.contactMethods {
+  padding: 8px;
+  padding-bottom: 0;
+  margin-top: 5px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-bottom: 1vh;
+}
+
+.contactMethods div {
+  display: flex;
+  align-items: center;
+}
+
+.telephone-number .title {
+  padding-right: 8px;
+  font-size: 23px;
 }
 
 .profileBio {
@@ -102,8 +124,9 @@ body {
   resize: vertical;
   outline: none;
   border-radius: 5px;
-  width: 80vw;
+  width: 95%;
   border: 2px solid darkgray;
+  padding: 4px;
 }
 
 .profileBio:focus {
@@ -111,25 +134,29 @@ body {
 }
 
 /* Gender buttons of user*/
-.profile-button .a-gender {
+.checkbox-wrapper,
+.radio-wrapper {
   display: inline-block;
   margin-right: 10px;
 }
 
-.a-gender label {
+.checkbox-wrapper label,
+.radio-wrapper label {
   display: inline-block;
   padding: 10px;
-  margin: 3px;
+  margin: 2px;
   background-color: #eee;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.a-gender .info-button {
+.checkbox-wrapper input,
+.radio-wrapper input {
   display: none;
 }
 
-.a-gender .info-button+label {
+.checkbox-wrapper .info-button+label,
+.radio-wrapper .info-button+label {
   display: inline-block;
   width: auto;
   background-color: #eee;
@@ -170,10 +197,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  padding: 5px;
+  padding: 7px;
   overflow: scroll;
-  gap: 8px;
 }
 
 .an-interest {
@@ -190,9 +215,9 @@ body {
   border-radius: 10px;
   cursor: pointer;
   font-size: 2vh;
-  width: 100%;
 }
 
+input[type="radio"]:checked+label,
 input[type="checkbox"]:checked+label {
   background-color: #aab3ff;
   color: #fff;
@@ -256,6 +281,7 @@ input[type="checkbox"]:checked+label {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-top: 6px;
 }
 
 .change-password {
@@ -284,19 +310,12 @@ input[type="checkbox"]:checked+label {
   opacity: 0.2;
 }
 
-/*
-.popup {
-  position: absolute;
-}
-*/
-
 .popup-background {
   background-color: rgba(0, 0, 0, 0.4);
   bottom: 10vh;
-  height: 70vh;
-  width: 90vw;
-  border-radius: 32px;
-  left: 3.5vw;
+  height: 100vh;
+  width: 100vw;
+  top: 0vw;
   position: absolute;
 }
 
@@ -364,7 +383,7 @@ input[type="checkbox"]:checked+label {
   position: absolute;
   right: 5vw;
   bottom: 5vh;
-  width: 29vw;
+  width: 36vw;
   height: 4vh;
   font-weight: bold;
   border: transparent;

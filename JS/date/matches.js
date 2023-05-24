@@ -61,6 +61,17 @@ export async function renderMatchesPage(){
           popupInfo.classList.add("popupInfoMatch");
           bodyDom.append(popupInfo);
 
+        let facebookDom;
+        let instagramDom;
+
+        if(matches[i].general.facebook === "" || matches[i].general.instagram){
+          facebookDom = "Not availble";
+          instagramDom = "Not availble";
+        } else {
+          facebookDom = matches[i].general.facebook;
+          instagramDom =  matches[i].general.instagram;
+        }
+
           popupInfo.innerHTML = `
             <h2> ${matches[i].name}</h2>
             <div class="infoMatch">
@@ -70,7 +81,10 @@ export async function renderMatchesPage(){
               <img class="blackCross" src="../PHP/DB/image/xmark-solid.svg" alt="black-cross">
               <div class="showContact"> 
                 <p> This is how you can contact me </p>
-                <div class="contactPhonenumber"> Phonenumber: ${matches[i].general.contact} </div>
+                <div class="contactPhonenumber"> Phonenumber: ${matches[i].general.tel} </div>
+                <div class="contactPhonenumber"> Facebook: ${facebookDom} </div>
+                <div class="contactPhonenumber"> Instagram: ${instagramDom} </div>
+
               </div>
               <div class="bioOfMatch"> ${matches[i].general.bio} </div>
               <div class="interestsOfMatch"> 

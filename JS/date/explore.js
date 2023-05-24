@@ -79,7 +79,52 @@ function renderCurrentDate(request, userDATA) {
       let response = await requestPOST.json();
 
       if (response != "no match") {
-          renderPopUpBoxExplore(response);
+
+        let popup = document.createElement("div");
+        let popupContent = document.createElement("div");
+        let popupBackground = document.createElement("div");
+        let bodyDom = document.querySelector("body");
+        bodyDom.append(popup);
+        popup.classList.add("popup");
+        mainDom.classList.add("makeContentLighter");
+        popup.append(popupBackground);
+        popupBackground.append(popupContent);
+        popupContent.classList.add("popup-content");
+
+        let facebookDom;
+        let instagramDom;
+
+        if(response.facebook === "" || response.instagram === ""){
+          facebookDom = "Not available";
+          instagramDom = "Not available";
+        } else {
+          facebookDom = response.facebook;
+          instagramDom = response.instagram;
+        }
+        
+        popupContent.innerHTML = 
+        `<img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross"></img>
+          <h1>It's a match! </h1>
+          <h3> Time to Make a Move... </h3>
+          <p> You can reach you're match via: </p>
+          <div id="exploreMatchBoxContact">
+            phone: ${response.phone}
+            <br>
+            facebook: ${facebookDom}
+            <br>
+            instagram: ${instagramDom}</p>
+          </div>
+
+          <p> (You can find you're match later under "matches" in the navigation-bar.)
+        </p>
+        `;
+
+        let whiteCross = document.querySelector(".white-cross");
+          whiteCross.addEventListener("click", e => {
+          const popup = document.querySelector(".popup");
+          popup.remove();
+          mainDom.classList.remove("makeContentLighter");
+        })
       }
 
       renderDatingPage();
@@ -133,42 +178,4 @@ function showUser(userDATA) {
 function closeExploreProfilePopup() {
   let profilePopup = document.querySelector(".profile-pop");
   profilePopup.classList.add("hide");
-}
-
-function renderPopUpBoxExplore(response){
-
-  let popup = document.createElement("div");
-  let popupContent = document.createElement("div");
-  let popupBackground = document.createElement("div");
-  let bodyDom = document.querySelector("body");
-  bodyDom.append(popup);
-  popup.classList.add("popup");
-  mainDom.classList.add("makeContentLighter");
-  popup.append(popupBackground);
-  popupBackground.append(popupContent);
-  popupContent.classList.add("popup-content");
-
-  popupContent.innerHTML = 
-  `<img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross"></img>
-    <h1>It's a match! </h1>
-    <h3> Time to Make a Move... </h3>
-    <p> You can reach you're match via: </p>
-    <div id="exploreMatchBoxContact">
-      phone: ${response.phone}
-      <br>
-      facebook: ${response.facebook}
-      <br>
-      instagram: ${response.instagram}</p>
-    </div>
-
-    <p> (You can find you're match later under "matches" in the navigation-bar.)
-  </p>
-  `;
-
-  let whiteCross = document.querySelector(".white-cross");
-    whiteCross.addEventListener("click", e => {
-    const popup = document.querySelector(".popup");
-    popup.remove();
-    mainDom.classList.remove("makeContentLighter");
-  })
 }

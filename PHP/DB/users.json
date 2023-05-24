@@ -58,7 +58,7 @@
             "ageOfMin": "18"
         },
         "matches": [
-            "64660bd13d77b"
+            "646deadfd3736"
         ]
     },
     {
@@ -112,8 +112,8 @@
         "general": {
             "bio": "Avid reader, coffee lover, and tech geek. Seeking someone to join me in intellectual conversations and endless cups of coffee. Let's explore the world of books and create our own story together.",
             "tel": "0768889431",
-            "facebook": "Derek",
-            "instagram": "Derek"
+            "facebook": "",
+            "instagram": "@dereksInsta"
         },
         "preference": {
             "genderOf": "female",
@@ -976,8 +976,281 @@
             "ageOfMax": "26",
             "ageOfMin": "18"
         },
+        "matches": []
+    },
+    {
+        "id": "646c99cb1f2fd",
+        "name": "lo",
+        "email": "lo",
+        "password": "lo",
+        "age": "23",
+        "city": "G\u00f6teborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "traveling",
+            "reading",
+            "yoga",
+            "movies",
+            "dancing"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "12345678",
+            "facebook": "lo",
+            "instagram": "lo"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "34",
+            "ageOfMin": "23"
+        },
+        "matches": []
+    },
+    {
+        "id": "646ca7b8d5e92",
+        "name": "Hanna",
+        "email": "Hanna@gmail.com",
+        "password": "Hanna",
+        "age": "23",
+        "city": "Norrk\u00f6ping",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "traveling",
+            "astrology",
+            "wine",
+            "beer",
+            "reading"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "0760345222",
+            "facebook": "Hanna",
+            "instagram": "Hanna"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "28",
+            "ageOfMin": "18"
+        },
+        "matches": []
+    },
+    {
+        "id": "646ca8604427b",
+        "name": "Liam",
+        "email": "liam@gmail.com",
+        "password": "liam",
+        "age": "31",
+        "city": "Link\u00f6ping",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "beer",
+            "stand-upcomedy",
+            "dancing",
+            "fishing",
+            "art"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "0763422913",
+            "facebook": "Liam",
+            "instagram": "Liam"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "35",
+            "ageOfMin": "18"
+        },
+        "matches": []
+    },
+    {
+        "id": "646caa7b0523e",
+        "name": "Sander",
+        "email": "sander@gmail.com",
+        "password": "sander",
+        "age": "24",
+        "city": "Eskilstuna",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "traveling",
+            "reading",
+            "yoga",
+            "movies",
+            "fishing"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "07604567822",
+            "facebook": "Sander",
+            "instagram": "Sander"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "29",
+            "ageOfMin": "18"
+        },
         "matches": [
-            "64660e5833550"
+            "6467638ae6997",
+            "64660d9225322",
+            "64660ecc168b7",
+            "646c7451e174e",
+            "64660f6cd01de",
+            "64660e2656c5d",
+            "64660f47636ce",
+            "64660ddeac576",
+            "64660d6fe59eb"
         ]
+    },
+    {
+        "id": "646cb029edc07",
+        "name": "Rosa",
+        "email": "Rosa@gmail.com",
+        "password": "rosaa",
+        "age": "24",
+        "city": "S\u00f6dert\u00e4lje",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "photographing",
+            "gaming",
+            "cooking",
+            "fashion",
+            "sailing"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "07345579685",
+            "facebook": "",
+            "instagram": ""
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "31",
+            "ageOfMin": "18"
+        },
+        "matches": [
+            "64660d9225322"
+        ]
+    },
+    {
+        "id": "646deadfd3736",
+        "name": "Lisa",
+        "email": "lisa@gmail.com",
+        "password": "lisa",
+        "age": "24",
+        "city": "G\u00f6teborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "reading",
+            "beer",
+            "dancing",
+            "yoga",
+            "movies"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "076045777",
+            "facebook": "",
+            "instagram": ""
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "35",
+            "ageOfMin": "18"
+        },
+        "matches": [
+            "64660d07a43ac"
+        ]
+    },
+    {
+        "id": "646deb16907f7",
+        "name": "Sam",
+        "email": "sam@gmail.com",
+        "password": "sam",
+        "age": "24",
+        "city": "G\u00f6teborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "beer",
+            "dancing",
+            "yoga",
+            "movies",
+            "reading"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "07622",
+            "facebook": "",
+            "instagram": ""
+        },
+        "preference": {
+            "genderOf": "both",
+            "ageOfMax": "30",
+            "ageOfMin": "18"
+        },
+        "matches": []
+    },
+    {
+        "id": "646deb570f905",
+        "name": "Gabbie",
+        "email": "gabbie@gmail.com",
+        "password": "gabbie",
+        "age": "20",
+        "city": "Malm\u00f6",
+        "gender": "both",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "traveling",
+            "astrology",
+            "beer",
+            "reading",
+            "yoga"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "076",
+            "facebook": "",
+            "instagram": ""
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "30",
+            "ageOfMin": "18"
+        },
+        "matches": []
+    },
+    {
+        "id": "646decc43ccbb",
+        "name": "a",
+        "email": "a",
+        "password": "a",
+        "age": "23",
+        "city": "G\u00f6teborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "traveling",
+            "reading",
+            "beer",
+            "dancing",
+            "yoga"
+        ],
+        "general": {
+            "bio": "bio",
+            "tel": "076",
+            "facebook": "",
+            "instagram": ""
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "26",
+            "ageOfMin": "18"
+        },
+        "matches": []
     }
 ]

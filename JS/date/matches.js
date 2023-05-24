@@ -21,9 +21,6 @@ export async function renderMatchesPage(){
 
 
   if(response.ok){
-    console.log(matches);
-    console.log(matches[0].name);
-
     mainDom.innerHTML = `
     <h1> Matches </h1>
     <div id="containerForMatches">
@@ -53,51 +50,53 @@ export async function renderMatchesPage(){
 
 
         divForMatch.addEventListener("click", e => {
-          let popupBackground = document.createElement("div");
-          popupBackground.classList.add("popupBackgroundMatch");
-          console.log("nu");
-    
+          let mainPopup = document.getElementById("matchesMain");
+          mainPopup.classList.add("makeContentLighter");
+
+          let bodyDom = document.querySelector("body");
           let popupInfo = document.createElement("div");
           popupInfo.classList.add("popupInfoMatch");
-
-          let main = document.getElementById("matchesMain");
-          main.append(popupBackground);
-          popupBackground.append(popupInfo);
-          console.log();
+          bodyDom.append(popupInfo);
 
           popupInfo.innerHTML = `
             <h2> ${matches[i].name}</h2>
             <div class="infoMatch">
-              <div class="showContact"
+              <div class="boxForImageMatch">
+                <img class="imageOfMatch" src="../${matches[i].imageSource}" alt="image-of-match">
+              </div>
+              <img class="blackCross" src="../PHP/DB/image/xmark-solid.svg" alt="black-cross">
+              <div class="showContact"> 
+                <p> This is how you can contact me </p>
+                <div class="contactPhonenumber"> Phonenumber: ${matches[i].general.contact} </div>
+              </div>
               <div class="bioOfMatch"> ${matches[i].general.bio} </div>
-            </div
+              <div class="interestsOfMatch"> 
+                <p> This is my interestes </p>
+                <div class="showAllInterests">
+                  <div class="eachInterests"> ${matches[i].interests[0]} </div>
+                  <div class="eachInterests"> ${matches[i].interests[1]} </div>
+                  <div class="eachInterests"> ${matches[i].interests[2]} </div>
+                  <div class="eachInterests"> ${matches[i].interests[3]} </div>
+                  <div class="eachInterests"> ${matches[i].interests[4]} </div>
+                </div>  
+              </div>
+              <div class="cityOfMatch"> 
+                <img class="locationIcon" src="../PHP/DB/image/location-icon.png" alt="location-icon">
+                <div class="showCity"> ${matches[i].city} </div>
+              </div>
+            </div>
             `;
-
+             
+            let blackCross = document.querySelector(".blackCross");
+            blackCross.addEventListener("click", e => {
+                const popup = document.querySelector(".popupInfoMatch");
+                const profileMain = document.getElementById("matchesMain");
+                popup.remove();
+                profileMain.classList.remove("makeContentLighter");
+            });
         });
-
       }
-
   }
-/*
-  function showMatchInfo() {
-      let popupBackground = document.createElement("div");
-      popupBackground.classList.add("popupBackgroundMatch");
-      console.log("nu");
-    
-      let popupInfo = document.createElement("div");
-      popupInfo.classList.add("popupInfoMatch");
-
-      let main = document.getElementById("matchesMain");
-      main.append(popupBackground);
-      popupBackground.append(popupInfo);
-
-      popupInfo.innerHTML = `
-      <h2> ${matches[i].imageSource}</h2>`;
-
-
-  }
-*/
-
 }
 
 

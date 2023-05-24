@@ -112,8 +112,8 @@
         "general": {
             "bio": "Avid reader, coffee lover, and tech geek. Seeking someone to join me in intellectual conversations and endless cups of coffee. Let's explore the world of books and create our own story together.",
             "tel": "0768889431",
-            "facebook": "Derek",
-            "instagram": "Derek"
+            "facebook": "",
+            "instagram": "@dereksInsta"
         },
         "preference": {
             "genderOf": "female",
@@ -1085,8 +1085,8 @@
         "general": {
             "bio": "",
             "tel": "07345579685",
-            "facebook": "Rosa",
-            "instagram": "Rosa"
+            "facebook": "",
+            "instagram": ""
         },
         "preference": {
             "genderOf": "male",
@@ -1094,9 +1094,7 @@
             "ageOfMin": "18"
         },
         "matches": [
-            "64660ddeac576",
-            "64660d9225322",
-            "64660f6cd01de"
+            "64660d9225322"
         ]
     },
     {

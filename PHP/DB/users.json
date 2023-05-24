@@ -735,7 +735,12 @@
             "ageOfMax": "27",
             "ageOfMin": "23"
         },
-        "matches": []
+        "matches": {
+            "yes": [],
+            "no": [
+                "64660f47636ce"
+            ]
+        }
     },
     {
         "id": "646772ebc8ebf",
@@ -764,7 +769,12 @@
             "ageOfMax": "27",
             "ageOfMin": "23"
         },
-        "matches": []
+        "matches": {
+            "yes": [
+                "646770185c2fc"
+            ],
+            "no": []
+        }
     },
     {
         "id": "6468f643de4ae",
@@ -793,7 +803,10 @@
             "ageOfMax": "65",
             "ageOfMin": "50"
         },
-        "matches": []
+        "matches": {
+            "yes": [],
+            "no": []
+        }
     },
     {
         "id": "646772ebc8ebf",
@@ -820,44 +833,78 @@
         "preference": {
             "genderOf": "male",
             "ageOfMax": "30",
-            "ageOfMin": "40"
+            "ageOfMin": "22"
         },
-        "matches": []
+        "matches": {
+            "yes": [],
+            "no": []
+        }
+    },
+    {
+        "id": "6468f7ab684a4",
+        "name": "esrdgth",
+        "email": "srdthfygj",
+        "password": "aesrfdgtfh",
+        "age": "22",
+        "city": "G\u00f6teborg",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
+        "interests": [
+            "reading",
+            "beer",
+            "yoga",
+            "dancing",
+            "fishing"
+        ],
+        "general": {
+            "bio": "aerstdg",
+            "contact": "2345678"
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "26",
+            "ageOfMin": "22"
+        },
+        "matches": {
+            "yes": [],
+            "no": []
+        }
     },
     {
         "id": "6468f8e5897f1",
-        "name": "Yvonne",
+        "name": "yvonne",
         "email": "yvonne@gmail.com",
         "password": "y",
-        "age": "28",
+        "age": "20",
         "city": "Malm\u00f6",
         "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/yvonne-mitchell.jpg",
+        "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
         "interests": [
             "traveling",
-            "movienight",
-            "photographing",
-            "boardgames",
-            "backpacking"
+            "yoga",
+            "astrology",
+            "dancing",
+            "art"
         ],
         "general": {
-            "bio": "Wanderlust-driven adventurer with a free spirit. I'm always planning my next solo travel expedition. Seeking a fellow explorer to share thrilling adventures, spontaneous road trips, and the joy of discovering new cultures.",
-            "tel": "98769876",
-            "facebook": "yvonneM",
-            "instagram": "yvonneM"
+            "bio": "Hi! This is Yvonne :)",
+            "contact": "1234567890"
         },
         "preference": {
-            "genderOf": "female",
-            "ageOfMax": "38",
-            "ageOfMin": "22"
+            "genderOf": "male",
+            "ageOfMax": "30",
+            "ageOfMin": "20"
         },
-        "matches": []
+        "matches": {
+            "yes": [],
+            "no": []
+        }
     },
     {
         "id": "646b2c76cdaea",
-        "name": "Emily",
-        "email": "emily@gmail.com",
-        "password": "emily",
+        "name": "hvj,hv",
+        "email": "anna@gmail.com",
+        "password": "anna123",
         "age": "34",
         "city": "Karlstad",
         "gender": "female",
@@ -871,23 +918,24 @@
         ],
         "general": {
             "bio": "",
-            "tel": "23456789",
-            "facebook": "Emily",
-            "instagram": "Emily"
+            "contact": "23456789"
         },
         "preference": {
             "genderOf": "female",
-            "ageOfMax": "40",
-            "ageOfMin": "28"
+            "ageOfMax": "45",
+            "ageOfMin": "34"
         },
-        "matches": []
+        "matches": {
+            "yes": [],
+            "no": []
+        }
     },
     {
         "id": "646b52d431182",
-        "name": "alexander",
-        "email": "alexander@gmail.com",
+        "name": "Sandra",
+        "email": "sandra@gmail.com",
         "password": "sandra",
-        "age": "29",
+        "age": "23",
         "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/alexander-allen.jpg",
@@ -900,16 +948,26 @@
         ],
         "general": {
             "bio": "",
-            "tel": "2344",
-            "facebook": "alexander",
-            "instagram": "alexander"
+            "contact": "2344"
         },
         "preference": {
-            "genderOf": "female",
-            "ageOfMax": "35",
-            "ageOfMin": "27"
+            "genderOf": "male",
+            "ageOfMax": "28",
+            "ageOfMin": "21"
         },
-        "matches": []
+        "matches": {
+            "yes": [
+                "64660f47636ce"
+            ],
+            "no": [
+                "64660f6cd01de",
+                "64660ecc168b7",
+                "64660d6fe59eb",
+                "64660e2656c5d",
+                "64660d9225322",
+                "64660ea70f618"
+            ]
+        }
     },
     {
         "id": "646c7451e174e",
@@ -929,9 +987,7 @@
         ],
         "general": {
             "bio": "",
-            "tel": "75842211",
-            "facebook": "a",
-            "instagram": "a"
+            "contact": "75842211"
         },
         "preference": {
             "genderOf": "female",

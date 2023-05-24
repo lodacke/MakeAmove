@@ -20,51 +20,81 @@ export async function renderMatchesPage(){
   let matches = await response.json();
 
 
-if(response.ok){
-  console.log(matches);
-  console.log(matches[0].name);
+  if(response.ok){
+    console.log(matches);
+    console.log(matches[0].name);
 
-  mainDom.innerHTML = `
-  <h1> Matches </h1>
-  <div id="containerForMatches">
-    <div id="allMatches"> 
-    </div>
-  </div>`;
-  
-  createDivForMatch(matches);
+    mainDom.innerHTML = `
+    <h1> Matches </h1>
+    <div id="containerForMatches">
+      <div id="allMatches"> 
+      </div>
+    </div>`;
+
+    createDivForMatch(matches);
 
   } else {
-  mainDom.innerHTML = `
-  <h1 id="noMatchesFound"> Sorry, you have no matches yet... </h1> `;
-}
+    mainDom.innerHTML = `
+    <h1 id="noMatchesFound"> Sorry, you have no matches yet... </h1> `;
+  }
 
-function createDivForMatch(matches) {
-    for(let i = 0; i < matches.length; i++) {
-      let divForMatch = document.createElement("div");
-      divForMatch.classList.add("userOfMatch");
-      divForMatch.classList.add(`match${i}`);
-      document.getElementById("allMatches").append(divForMatch);
-      divForMatch.style.backgroundImage = `url("${matches[i].imageSource}")`;
+  function createDivForMatch(matches) {
+      for(let i = 0; i < matches.length; i++) {
+        let divForMatch = document.createElement("div");
+        divForMatch.classList.add("userOfMatch");
+        divForMatch.classList.add(`match${i}`);
+        document.getElementById("allMatches").append(divForMatch);
+        divForMatch.style.backgroundImage = `url("${matches[i].imageSource}")`;
 
-      let pForMatch = document.createElement("p");
-      pForMatch.classList.add("nameOfMatch");
-      pForMatch.textContent = `${matches[i].name}`;
-      divForMatch.append(pForMatch);
-      
-      //divForMatch.addEventListener(showMatchInfo);
-    }
+        let pForMatch = document.createElement("p");
+        pForMatch.classList.add("nameOfMatch");
+        pForMatch.textContent = `${matches[i].name}`;
+        divForMatch.append(pForMatch);
 
+
+        divForMatch.addEventListener("click", e => {
+          let popupBackground = document.createElement("div");
+          popupBackground.classList.add("popupBackgroundMatch");
+          console.log("nu");
     
-  
-}
+          let popupInfo = document.createElement("div");
+          popupInfo.classList.add("popupInfoMatch");
+
+          let main = document.getElementById("matchesMain");
+          main.append(popupBackground);
+          popupBackground.append(popupInfo);
+          console.log();
+
+          popupInfo.innerHTML = `
+            <h2> ${matches[i].name}</h2>
+            <div class="infoMatch">
+              <div class="bioOfMatch"> ${matches[i].general.bio} </div>
+            </div
+            `;
+
+        });
+
+      }
+
+  }
 /*
-function showMatchInfo() {
-    let popup = document.createElement("div");
-    popup.classList.add("infoAboutUser");
-    console.log("nu");
-    mainDom.append(popup);
-  
-}
+  function showMatchInfo() {
+      let popupBackground = document.createElement("div");
+      popupBackground.classList.add("popupBackgroundMatch");
+      console.log("nu");
+    
+      let popupInfo = document.createElement("div");
+      popupInfo.classList.add("popupInfoMatch");
+
+      let main = document.getElementById("matchesMain");
+      main.append(popupBackground);
+      popupBackground.append(popupInfo);
+
+      popupInfo.innerHTML = `
+      <h2> ${matches[i].imageSource}</h2>`;
+
+
+  }
 */
 
 }

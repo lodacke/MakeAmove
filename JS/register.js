@@ -177,7 +177,7 @@ export function renderRegisterPage (){
 
     function QuestionPage(userData){
         mainDom.innerHTML = `
-            <h1>Get to Know Me Better</h1>
+            <h1>Interests</h1>
             <label for "bio">Bio:</label>
             <textarea name="bio" rows="7" id="registerBio" placeholder="Say something about yourself"></textarea>
 
@@ -275,7 +275,7 @@ export function renderRegisterPage (){
 
     function preferencePage(userData){
         mainDom.innerHTML = `
-            <h1>Ideal Match Preferences</h1>
+            <h1>Preferences</h1>
             <div id="lookingFor">
                 <div class="preferred-gender">
                     <lable for "genderOf">I am intrested in</lable>

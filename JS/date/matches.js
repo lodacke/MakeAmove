@@ -20,6 +20,7 @@ export async function renderMatchesPage(){
 
   let response = await fetch(`/PHP/date/showMatches.php?id=${getUserData().id}`);
   let matches = await response.json();
+  console.log(response);
 
 
   if(response.ok){

@@ -152,7 +152,10 @@
             "ageOfMax": "35",
             "ageOfMin": "22"
         },
-        "matches": []
+        "matches": [
+            "64663f0f47181",
+            "64660ddeac576"
+        ]
     },
     {
         "id": "64660ddeac576",
@@ -242,7 +245,9 @@
             "ageOfMax": "30",
             "ageOfMin": "20"
         },
-        "matches": []
+        "matches": [
+            "64660db9d6489"
+        ]
     },
     {
         "id": "64660e5833550",
@@ -271,7 +276,9 @@
             "ageOfMax": "31",
             "ageOfMin": "23"
         },
-        "matches": []
+        "matches": [
+            "64660db9d6489"
+        ]
     },
     {
         "id": "64660ea70f618",
@@ -474,7 +481,9 @@
             "ageOfMax": "25",
             "ageOfMin": "18"
         },
-        "matches": []
+        "matches": [
+            "64660db9d6489"
+        ]
     },
     {
         "id": "646748b1103a6",
@@ -735,12 +744,7 @@
             "ageOfMax": "27",
             "ageOfMin": "23"
         },
-        "matches": {
-            "yes": [],
-            "no": [
-                "64660f47636ce"
-            ]
-        }
+        "matches": []
     },
     {
         "id": "646772ebc8ebf",
@@ -769,12 +773,9 @@
             "ageOfMax": "27",
             "ageOfMin": "23"
         },
-        "matches": {
-            "yes": [
-                "646770185c2fc"
-            ],
-            "no": []
-        }
+        "matches": [
+            "646770185c2fc"
+        ]
     },
     {
         "id": "6468f643de4ae",
@@ -803,10 +804,7 @@
             "ageOfMax": "65",
             "ageOfMin": "50"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "646772ebc8ebf",
@@ -835,10 +833,7 @@
             "ageOfMax": "30",
             "ageOfMin": "22"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "6468f7ab684a4",
@@ -865,10 +860,7 @@
             "ageOfMax": "26",
             "ageOfMin": "22"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "6468f8e5897f1",
@@ -895,17 +887,14 @@
             "ageOfMax": "30",
             "ageOfMin": "20"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": []
     },
     {
         "id": "646b2c76cdaea",
         "name": "hvj,hv",
         "email": "anna@gmail.com",
         "password": "anna123",
-        "age": "34",
+        "age": "25",
         "city": "Karlstad",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/emily-foster.jpg",
@@ -918,17 +907,20 @@
         ],
         "general": {
             "bio": "",
-            "contact": "23456789"
+            "contact": "23456789",
+            "tel": "undefined",
+            "facebook": "undefined",
+            "instagram": "undefined"
         },
         "preference": {
             "genderOf": "female",
             "ageOfMax": "45",
-            "ageOfMin": "34"
+            "ageOfMin": "20"
         },
-        "matches": {
-            "yes": [],
-            "no": []
-        }
+        "matches": [
+            "64660bd13d77b",
+            "64660d07a43ac"
+        ]
     },
     {
         "id": "646b52d431182",
@@ -955,19 +947,9 @@
             "ageOfMax": "28",
             "ageOfMin": "21"
         },
-        "matches": {
-            "yes": [
-                "64660f47636ce"
-            ],
-            "no": [
-                "64660f6cd01de",
-                "64660ecc168b7",
-                "64660d6fe59eb",
-                "64660e2656c5d",
-                "64660d9225322",
-                "64660ea70f618"
-            ]
-        }
+        "matches": [
+            "64660f47636ce"
+        ]
     },
     {
         "id": "646c7451e174e",
@@ -994,11 +976,8 @@
             "ageOfMax": "26",
             "ageOfMin": "18"
         },
-        "matches": {
-            "yes": [
-                "64660e5833550"
-            ],
-            "no": []
-        }
+        "matches": [
+            "64660e5833550"
+        ]
     }
 ]

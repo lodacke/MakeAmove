@@ -22,7 +22,7 @@ $foundUser = $dataREQUEST["matchedUser"];
 
 forEach($users as &$user){
     if($loggedInUser === $user["id"]){
-       $user["matches"][] = ($foundUser);
+       $user["matches"][] = $foundUser;
         break;
     } 
 }
@@ -32,7 +32,8 @@ file_put_contents($fileName, $data);
 foreach ($users as &$user) {
     if ($foundUser === $user["id"]) {
         if (in_array($loggedInUser, $user["matches"])) {
-            $foundUserMatch = $user;
+            $foundUserMatch[] = ($user);
+            var_dump($foundUserMatch);
             break;
         } else {
             send(200, "no match");

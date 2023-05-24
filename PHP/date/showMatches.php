@@ -45,7 +45,7 @@ forEach($userToSend as &$user){
 send(200, $userToSend);
 
 } else {
-    abort(400, "No matches to show");
+    abort(300, "No matches to show");
 }
 
 

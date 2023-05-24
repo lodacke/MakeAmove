@@ -56,35 +56,55 @@ export async function renderMatchesPage(){
           let mainPopup = document.getElementById("matchesMain");
           mainPopup.classList.add("makeContentLighter");
 
-          let bodyDom = document.querySelector("body");
+          let popupBackground = document.createElement("div");
+          popupBackground.classList.add("popup-background");
           let popupInfo = document.createElement("div");
           popupInfo.classList.add("popupInfoMatch");
-          bodyDom.append(popupInfo);
 
-        let facebookDom;
-        let instagramDom;
+          let bodyDom = document.querySelector("body");
+          bodyDom.append(popupBackground);
+          popupBackground.append(popupInfo);
 
-        if(matches[i].general.facebook === "" || matches[i].general.instagram){
+          let facebookDom;
+          let instagramDom;
+
+        /*if(matches[i].general.facebook === "" && matches[i].general.instagram === ""){
           facebookDom = "Not availble";
           instagramDom = "Not availble";
         } else {
           facebookDom = matches[i].general.facebook;
           instagramDom =  matches[i].general.instagram;
+          */
+         if(matches[i].general.facebook !== "") {
+          facebookDom = matches[i].general.facebook;
+        } else {
+          facebookDom = "Not availble";
+        } if( matches[i].general.instagram !== "") {
+          instagramDom =  matches[i].general.instagram;
+        } else {
+          instagramDom = "Not availble";
         }
 
           popupInfo.innerHTML = `
-            <h2> ${matches[i].name}</h2>
+            <h2> ${matches[i].name} ${matches[i].age}</h2>
             <div class="infoMatch">
               <div class="boxForImageMatch">
                 <img class="imageOfMatch" src="../${matches[i].imageSource}" alt="image-of-match">
               </div>
               <img class="blackCross" src="../PHP/DB/image/xmark-solid.svg" alt="black-cross">
-              <div class="showContact"> 
+              <div class="contactOfMatch"> 
                 <p> This is how you can contact me </p>
-                <div class="contactPhonenumber"> Phonenumber: ${matches[i].general.tel} </div>
-                <div class="contactPhonenumber"> Facebook: ${facebookDom} </div>
-                <div class="contactPhonenumber"> Instagram: ${instagramDom} </div>
-
+                <div class="showContact">
+                  <div class="contactPhonenumber"> Phonenumber: ${matches[i].general.tel} </div>
+                  <div class="contactFacebook"> 
+                    <img class="facebookIcon" src="../PHP/DB/image/facebook.png" alt="facebook-icon"> 
+                    <p> ${facebookDom} </p>
+                  </div>
+                  <div class="contactInstagram"> 
+                    <img class="instagramIcon" src="../PHP/DB/image/instagram.png" alt="instagram-icon"> 
+                    <p> ${instagramDom} </p>
+                  </div>
+                </div>
               </div>
               <div class="bioOfMatch"> ${matches[i].general.bio} </div>
               <div class="interestsOfMatch"> 
@@ -106,10 +126,8 @@ export async function renderMatchesPage(){
              
             let blackCross = document.querySelector(".blackCross");
             blackCross.addEventListener("click", e => {
-                const popup = document.querySelector(".popupInfoMatch");
-                const profileMain = document.getElementById("matchesMain");
-                popup.remove();
-                profileMain.classList.remove("makeContentLighter");
+                popupBackground.remove();
+                mainPopup.classList.remove("makeContentLighter");
             });
         });
       }

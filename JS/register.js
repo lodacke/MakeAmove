@@ -205,9 +205,11 @@ export function renderRegisterPage (){
 
         interests.forEach(interest => {
             const div = document.createElement("div");
+            div.classList.add("checkbox-wrapper");
             const input = document.createElement("input");
             input.type = "checkbox";
             input.classList.add("required");
+            input.id = interest.toLowerCase().replace(" ", "");
             input.name = interest.toLowerCase().replace(" ", "");
             const label = document.createElement("label");
             label.htmlFor = input.name;

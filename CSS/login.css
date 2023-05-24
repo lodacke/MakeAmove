@@ -3,7 +3,8 @@
 }
 
 #loginPageHeader .logo {
-  height: 30vh;
+  height: 15vh;
+  margin-top: 10vh;
 }
 
 #loginPageMain {
@@ -32,17 +33,13 @@
   color: #fffc;
   font-size: 2.1vh;
   width: 100%;
-  margin: 10px 0 5px 0;
+  margin: 20px 0 5px 0;
   border-radius: 7px;
   border: 1px solid darkgrey;
   height: 7vh;
   font-weight: bold;
 }
-/*
-.loading {
-  height: 4vh;
-}
-*/
+
 .goToRegister {
   color: #ffffffe0;
   background-color: rgba(142, 142, 142, 0.8);
@@ -54,15 +51,14 @@
   border-radius: 5px;
   position: absolute;
   bottom: -2vh;
-  right: 1.5vw;
+  right: 3vw;
 }
 
 .loginKindWords {
   background-color: rgba(255, 255, 255, 0.47);
   color: #686868c9;
-  padding: 4vw;
+  padding: 2vw;
   line-height: 3vh;
   border-radius: 5px;
-  margin: 5vh 0 0 0;
-  width: 85vw;
+  width: 83vw;
 }

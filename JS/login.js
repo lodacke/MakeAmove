@@ -48,7 +48,7 @@ export function renderLoginPage() {
     <form class="login-form" action="PHP/login.php" method="POST">
       <div class="inputbox">
         <input type="text" name="email" class="required" required="required">
-        <label for "email"> Email-address </label>
+        <label for "email"> Email address </label>
       </div>
       <div class="inputbox">
         <input type="password" name="password" class="required" required="required">

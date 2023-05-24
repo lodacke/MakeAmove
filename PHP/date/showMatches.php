@@ -19,10 +19,10 @@ $loggedInUser = $_GET["id"];
 
 forEach($users as $user){
     if($user["id"] === $loggedInUser){
-    $userWhoLoggedInLikes = array_column($user["matches"]["yes"], null);
+    $userWhoLoggedInLikes = array_column($user["matches"], null);
     break;
     }
-    if(in_array($loggedInUser, $user["matches"]["yes"])){
+    if(in_array($loggedInUser, $user["matches"])){
        $othersMatches[] = $user["id"];
     }
 };

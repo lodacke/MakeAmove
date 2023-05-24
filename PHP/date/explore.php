@@ -16,7 +16,6 @@ $users = json_decode($json, true);
 $sortedUsers = [];
 $UserWhoLikesLoggedin = [];
 $userWhoLoggedInLikes = [];
-//$usersWhoLoggedinDisliked = [];
 
 $loggedInUser = $_GET["id"];
 
@@ -24,7 +23,7 @@ $loggedInUser = $_GET["id"];
 //Array av användare som gillar den inloggad användare 
 
 forEach ($users as &$user) {
-    if (in_array($loggedInUser, $user["matches"]["yes"])) {
+    if (in_array($loggedInUser, $user["matches"])) {
         $UserWhoLikesLoggedin[] = $user["id"];
     }
 }
@@ -38,16 +37,12 @@ forEach ($users as &$user) {
         $preferenceAgeMin = $user["preference"]["ageOfMin"];
         $gender = $user["gender"];
         $age = $user["age"];
-        if(count($user["matches"]["yes"]) >= 1){
-            foreach ($user["matches"]["yes"] as &$user) {
+        if(count($user["matches"]) >= 1){
+            foreach ($user["matches"] as &$user) {
             $userWhoLoggedInLikes[] = $user;
             }
         }
-        //if(count($user["matches"]["no"]) > 1){
-        //    foreach($user["matches"]["no"] as &$user) {
-        //    $usersWhoLoggedinDisliked[] = $user;                 <-- Ska vi ha en filtrering på dom som man sagt nej till?
-        //    }
-        //}
+
         break;
     }
 }

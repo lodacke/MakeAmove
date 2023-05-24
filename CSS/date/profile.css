@@ -57,9 +57,14 @@ body {
 .telephone-number,
 .facebook,
 .instagram,
-.age,
 .age-min,
 .age-max {
+  display: flex;
+  margin-bottom: 1vh;
+  padding: 4px;
+}
+
+.age {
   display: flex;
   margin-bottom: 1vh;
 }
@@ -69,7 +74,7 @@ body {
 .instagram input,
 .age input,
 .preferred-age input {
-  width: 20vw;
+  width: 44vw;
   margin-left: 1vw;
   outline: none;
   border-radius: 5px;
@@ -78,7 +83,7 @@ body {
 
 .facebook img,
 .instagram img {
-  height: 30px;
+  height: 33px;
 }
 
 .age input:focus,
@@ -89,13 +94,30 @@ body {
   border: 2px solid #c6ccff;
 }
 
-.preferred-age, .social-media {
-  display: flex;
-  justify-content: space-around;
+.preferred-age {
   background-color: #eee;
   padding-top: 5px;
   border-radius: 5px;
   margin-bottom: 1vh;
+}
+
+.contactMethods {
+  padding: 8px;
+  padding-bottom: 0;
+  margin-top: 5px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-bottom: 1vh;
+}
+
+.contactMethods div {
+  display: flex;
+  align-items: center;
+}
+
+.telephone-number .title {
+  padding-right: 8px;
+  font-size: 23px;
 }
 
 .profileBio {

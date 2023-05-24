@@ -41,20 +41,26 @@ export async function renderProfilePage() {
             userData.general.bio || ""
           }</textarea>
 
-          <div class="telephone-number">
-            <div class="title">Tel</div>
-            <input type="text" name="tel" value="${userData.general.tel}">
-          </div>
+          <div class="contactMethods">Contact Methods
+            <div class="telephone-number">
+              <div class="title">☎️</div>
+              <input type="text" name="tel" placeholder="Your phone number" value="${
+                userData.general.tel
+              }">
+            </div>
 
-          <div class="social-media">
             <div class="facebook">
               <img class="facebook-icon" src="../PHP/DB/image/facebook.png" alt="facebook-icon">
-              <input type="text" name="facebook" value="${userData.general.facebook}">
+              <input type="text" name="facebook" placeholder="Your Facebook username" value="${
+                userData.general.facebook
+              }">
             </div>
 
             <div class="instagram">
               <img class="instagram-icon" src="../PHP/DB/image/instagram.png" alt="instagram-icon">
-              <input type="text" name="instagram" value="${userData.general.instagram}">
+              <input type="text" name="instagram" placeholder="Your Instagram username" value="${
+                userData.general.instagram
+              }">
             </div>
           </div>
 

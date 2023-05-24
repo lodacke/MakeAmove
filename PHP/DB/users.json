@@ -837,7 +837,9 @@
             "ageOfMax": "30",
             "ageOfMin": "22"
         },
-        "matches": []
+        "matches": [
+            "646e47bedbb48"
+        ]
     },
     {
         "id": "6468f7ab684a4",
@@ -1293,5 +1295,36 @@
             "ageOfMin": "22"
         },
         "matches": []
+    },
+    {
+        "id": "646e47bedbb48",
+        "name": "Viktor",
+        "email": "viktor@gmail.com",
+        "password": "lo123dacke",
+        "age": "25",
+        "city": "Lund",
+        "gender": "male",
+        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "interests": [
+            "cooking",
+            "beer",
+            "sport",
+            "traveling",
+            "snus"
+        ],
+        "general": {
+            "bio": "Jag \u00e4r snygg OCH sexig. matcha min energi.",
+            "tel": "070123123123",
+            "facebook": "",
+            "instagram": "@jbytyqi"
+        },
+        "preference": {
+            "genderOf": "female",
+            "ageOfMax": "60",
+            "ageOfMin": "18"
+        },
+        "matches": [
+            "646772ebc8ebf"
+        ]
     }
 ]

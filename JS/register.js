@@ -177,7 +177,7 @@ export function renderRegisterPage (){
 
     function QuestionPage(userData){
         mainDom.innerHTML = `
-            <h1>Interests</h1>
+            <h1>Get to Know Me Better</h1>
             <label for "bio">Bio:</label>
             <textarea name="bio" rows="7" id="registerBio" placeholder="Say something about yourself"></textarea>
 

@@ -16,9 +16,11 @@ $users = json_decode($json, true);
 $sortedUsers = [];
 $UserWhoLikesLoggedin = [];
 $userWhoLoggedInLikes = [];
-$usersWhoLoggedinDisliked = [];
+//$usersWhoLoggedinDisliked = [];
 
 $loggedInUser = $_GET["id"];
+
+
 //Array av användare som gillar den inloggad användare 
 
 forEach ($users as &$user) {
@@ -27,6 +29,8 @@ forEach ($users as &$user) {
     }
 }
 
+//Skapar variabler för inloggad användares preferenser
+
 forEach ($users as &$user) {
     if ($user["id"] === $loggedInUser) {
         $preferenceGender = $user["preference"]["genderOf"];
@@ -34,7 +38,7 @@ forEach ($users as &$user) {
         $preferenceAgeMin = $user["preference"]["ageOfMin"];
         $gender = $user["gender"];
         $age = $user["age"];
-        if(count($user["matches"]["yes"]) > 1){
+        if(count($user["matches"]["yes"]) >= 1){
             foreach ($user["matches"]["yes"] as &$user) {
             $userWhoLoggedInLikes[] = $user;
             }
@@ -56,10 +60,10 @@ forEach ($users as &$user) {
         $user["id"] != $loggedInUser &&
         $user["age"] >= $preferenceAgeMin &&
         $user["age"] <= $preferenceAgeMax &&
-        $user["gender"] === $preferenceGender &&
+        ($user["gender"] === $preferenceGender || $preferenceGender === "both") &&
         $user["preference"]["ageOfMin"] <= $age &&
         $user["preference"]["ageOfMax"] >= $age &&
-        $user["preference"]["genderOf"] === $gender
+        ($user["preference"]["genderOf"] === $gender /*|| $user["preference"]["genderOf"] === "both"*/)
     ) {
         unset($user["general"]["tel"]);
         unset($user["password"]);

@@ -43,7 +43,7 @@ export function renderRegisterPage (){
 
             <div class="inputbox">
                 <input type="email" name="email" class="required" required="required">
-                <label for "email"> Email-adress </label>
+                <label for "email"> Email address </label>
             </div>
 
             <div class="inputbox">

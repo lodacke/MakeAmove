@@ -20,7 +20,6 @@ export async function renderDatingPage() {
   headerDOM.setAttribute("id", "date-header")
   headerDOM.innerHTML = `
     <img id="date-logo" src="/PHP/DB/image/logo.png" alt="appLogo">
-    <button class="logout">Logout</button>
   `;
 
   mainDom.innerHTML = `
@@ -154,14 +153,6 @@ function renderCurrentDate(request, userDATA) {
   </div>
   `;
   }
-}
-
-function logoutFromAccount() {
-  window.localStorage.removeItem("user");
-  renderFrontPage();
-
-  let navBar = document.querySelector(".sticky-nav");
-  navBar.classList.add("hide");
 }
 
 function showUser(userDATA) {

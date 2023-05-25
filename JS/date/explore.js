@@ -41,14 +41,16 @@ function renderCurrentDate(request, userDATA) {
   if (request.status == 200) {
     mainDom.innerHTML = `
     <div id="explore-main">
-      <img id="potentialMatchPic" src="${userDATA.imageSource}"></img>
-      <div id="potentialMatchInfo">
-        <div>${userDATA.name}</div>
-        <div>${userDATA.age} </div>
+      <div id="containerPotentialMatch">
+        <img class="potentialMatchPic" src="${userDATA.imageSource}"></img>
+        <div class="potentialMatchInfo">
+          <div>${userDATA.name},</div>
+          <div>${userDATA.age} </div>
+        </div>
       </div>
       <div id="matchButtons">
-        <button id="match">Yes</button>
         <button id="noMatch">No</button>
+        <button id="match">Yes</button>
       </div>
     </div>
   `;
@@ -58,7 +60,7 @@ function renderCurrentDate(request, userDATA) {
       renderDatingPage();
     });
     mainDom
-      .querySelector("#potentialMatchPic")
+      .querySelector(".potentialMatchPic")
       .addEventListener("click", () => showUser(userDATA));
 
 

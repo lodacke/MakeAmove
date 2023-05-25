@@ -16,26 +16,39 @@
     padding: 20px;
 }
 
-#potentialMatchPic {
-    border-radius: 16px;
-    border: 2px solid white;
+#containerPotentialMatch {
     height: 68vh;
-    object-fit: cover;
-    max-width: 90%;
+    width: 78vw;
+    border: 2px solid #d9d9d9b5;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
 }
 
-#potentialMatchInfo {
+.potentialMatchPic {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.potentialMatchInfo {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 3vh;
     display: flex;
     height: 7vh;
-    width: 300px;
     position: absolute;
-    bottom: 3vh;
-    background-color: rgba(255, 255, 255, 0.8);
-    justify-content: space-around;
+    bottom: 0;
+    background-color: #d6e6ffed;
     align-items: center;
-    border-radius: 56px;
+    border-radius: 5px;
+    width: 78vw;
+    gap: 10px;
+}
+
+.potentialMatchInfo > div:nth-child(1) {
+    margin-left: 7vw;
 }
 
 #matchButtons{
@@ -52,8 +65,6 @@
 
 #match, #noMatch {
     align-items: center;
-    background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
-    border: 0;
     color: #fff;
     cursor: pointer;
     display: flex;
@@ -65,18 +76,26 @@
     padding-right: 20px;
     padding-top: 3px;
     text-transform: uppercase;
-}
-
-#match {
-    width: 60px;
-    height: 120px;
-    border-radius: 0 12rem 12rem 0;
+    background-color: rgb(211, 215, 255);
 }
 
 #noMatch {
-    width: 60px;
+    height: 120px;
+    border-radius: 0 12rem 12rem 0;
+    border-top: 2px solid #f0efef;
+    border-left: 0;
+    border-right: 2px solid #f0efef;
+    border-bottom: 2px solid #f0efef;
+}
+
+
+#match {
     height: 120px;
     border-radius: 12rem 0 0 12rem;
+    border-top: 2px solid #f0efef;
+    border-right: 0;
+    border-left: 2px solid #f0efef;
+    border-bottom: 2px solid #f0efef;
 }
 
 #noPotentialMatch {

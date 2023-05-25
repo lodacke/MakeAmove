@@ -176,17 +176,27 @@ export function renderRegisterPage (){
                     imageMessage.textContent = "Good choice!";
                     const img = document.createElement("img");
                     img.src = data.source;
-                    userImage.appendChild(img);
-                }
+                    userImage.append(img);
+
+                    userData.image = data;
+                }              
             })
         });
 
         document.getElementById("nextPage").addEventListener( "click", e => {
-            QuestionPage(userData);
+            if(!userData.image === ""){
+                QuestionPage(userData);
+            } else {
+                imageMessage.textContent = "Please...";
+            }
+           
         });
     }
 
     function QuestionPage(userData){
+
+        console.log(userData);
+
         mainDom.innerHTML = `
             <h1>Interests</h1>
             <label for "bio">Bio:</label>

@@ -45,9 +45,6 @@ if(isset($_FILES["profilePicture"])) {
           $imageSource = ["source" => $destination];
   
           $AllImages[] = $imageSource;
-          
-          $json = json_encode($AllImages, JSON_PRETTY_PRINT);
-          file_put_contents($imagesJSON, $json);
           send(200, $imageSource);
       }
     } else {
@@ -57,40 +54,43 @@ if(isset($_FILES["profilePicture"])) {
   } else {
         $error = ["error" => "We only allow JPG and JPEG files."];
         send(405, $error);
+    }
+  } else {
+    $error = ["error" => "You need to upload a profile-photo."];
+    send(200, $error);
   }
+
+$fileName = "DB/users.json";
+$users = [];
+
+if(file_exists($fileName)){
+    $JSONusers = file_get_contents($fileName);
+    $users = json_decode($JSONusers, true);
+} else {
+    file_put_contents($fileName, $users);
 }
 
-  $fileName = "DB/users.json";
-  $users = [];
+$jsonREQUEST = file_get_contents("php://input");
+$dataREQUEST = json_decode($jsonREQUEST, true);
 
-  if(file_exists($fileName)){
-      $JSONusers = file_get_contents($fileName);
-      $users = json_decode($JSONusers, true);
-  } else {
-      file_put_contents($fileName, $users);
-  }
+$name = $dataREQUEST["name"];
+$email = $dataREQUEST["email"];
+$password = $dataREQUEST["password"];
+$age = $dataREQUEST["age"];
+$city = $dataREQUEST["city"];
+$gender = $dataREQUEST["gender"];
+$interests = array_values($dataREQUEST["interests"][0]);
+$bio = $dataREQUEST["general"][0]["bio"];
+$tel = $dataREQUEST["general"][0]["tel"];
+$facebook = $dataREQUEST["general"][0]["facebook"];
+$instagram = $dataREQUEST["general"][0]["instagram"];
+$genderOf = $dataREQUEST["preference"][0]["genderOf"];
+$ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
+$ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
 
- $jsonREQUEST = file_get_contents("php://input");
- $dataREQUEST = json_decode($jsonREQUEST, true);
-
- $name = $dataREQUEST["name"];
- $email = $dataREQUEST["email"];
- $password = $dataREQUEST["password"];
- $age = $dataREQUEST["age"];
- $city = $dataREQUEST["city"];
- $gender = $dataREQUEST["gender"];
- $interests = array_values($dataREQUEST["interests"][0]);
- $bio = $dataREQUEST["general"][0]["bio"];
- $tel = $dataREQUEST["general"][0]["tel"];
- $facebook = $dataREQUEST["general"][0]["facebook"];
- $instagram = $dataREQUEST["general"][0]["instagram"];
- $genderOf = $dataREQUEST["preference"][0]["genderOf"];
- $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
- $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
-
-  if($age < 18){
-    send(409, [$data = "You need to be over 18 to use this app"]);
-  }
+ if($age < 18){
+   send(409, [$data = "You need to be over 18 to use this app"]);
+}
 
 if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel == "" && $age == null && $city == null)){
 
@@ -136,10 +136,12 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel
 
   $data = json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
   file_put_contents($fileName, $data);
-  
-  send(200, $data = $userToSend);
+
+ send(200, $data = $userToSend);
   } else {
     send(401, [$data = "You need to fill in all the fields before you proceed."]);
- }
+  }
+
+
 
 ?>

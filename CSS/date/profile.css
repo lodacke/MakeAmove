@@ -74,6 +74,7 @@ body {
 .age input,
 .preferred-age input {
   width: 44vw;
+  height: 3vh;
   margin-left: 1vw;
   outline: none;
   border-radius: 5px;
@@ -107,7 +108,7 @@ body {
   margin-top: 5px;
   background-color: #eee;
   border-radius: 5px;
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 
 .contactMethods div {
@@ -129,6 +130,7 @@ body {
   border: 2px solid darkgray;
   padding: 4px;
   line-height: 19px;
+  margin-bottom: 2vh;
 }
 
 .profileBio:focus {
@@ -183,6 +185,7 @@ body {
 .interest {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2vh;
 }
 
 .interest-title-limit {

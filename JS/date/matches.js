@@ -68,6 +68,7 @@ export async function renderMatchesPage(){
 
           let facebookDom;
           let instagramDom;
+          let bioDom;
 
          if(matches[i].general.facebook !== ""){
             facebookDom = matches[i].general.facebook;
@@ -79,47 +80,54 @@ export async function renderMatchesPage(){
         } else {
           instagramDom = "Not available";
         }
-          popupInfo.innerHTML = `
-            <h2> ${matches[i].name}, ${matches[i].age}</h2>
-            <div class="infoMatch">
-              <div class="boxForImageMatch">
-                <img class="imageOfMatch" src="../${matches[i].imageSource}" alt="image-of-match">
-              </div>
-              <img class="blackCross" src="../PHP/DB/image/xmark-solid.svg" alt="black-cross">
-              <div class="contactOfMatch"> 
-                <p> This is how you can contact me </p>
-                <div class="showContact">
-                  <div class="contactPhonenumber"> 
-                  <img class="telephoneIcon" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
-                      ${matches[i].general.tel} </div>
-                  <div class="contactFacebook"> 
-                    <img class="facebookIcon" src="../PHP/DB/image/facebook.png" alt="facebook-icon"> 
-                    <p> ${facebookDom} </p>
-                  </div>
-                  <div class="contactInstagram"> 
-                    <img class="instagramIcon" src="../PHP/DB/image/instagram.png" alt="instagram-icon"> 
-                    <p> ${instagramDom} </p>
-                  </div>
+
+        if(matches[i].general.bio === ""){
+            bioDom = "Your match hasn't added a bio.";
+        } else {
+          bioDom = matches[i].general.bio;
+        }
+
+        popupInfo.innerHTML = `
+          <h2> ${matches[i].name}, ${matches[i].age}</h2>
+          <div class="infoMatch">
+            <div class="boxForImageMatch">
+              <img class="imageOfMatch" src="../${matches[i].imageSource}" alt="image-of-match">
+            </div>
+            <img class="blackCross" src="../PHP/DB/image/xmark-solid.svg" alt="black-cross">
+            <div class="contactOfMatch"> 
+              <p> This is how you can contact me </p>
+              <div class="showContact">
+                <div class="contactPhonenumber"> 
+                <img class="telephoneIcon" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
+                    ${matches[i].general.tel} </div>
+                <div class="contactFacebook"> 
+                  <img class="facebookIcon" src="../PHP/DB/image/facebook.png" alt="facebook-icon"> 
+                  <p> ${facebookDom} </p>
+                </div>
+                <div class="contactInstagram"> 
+                  <img class="instagramIcon" src="../PHP/DB/image/instagram.png" alt="instagram-icon"> 
+                  <p> ${instagramDom} </p>
                 </div>
               </div>
-              <div class="bioOfMatch"> ${matches[i].general.bio} </div>
-              <div class="interestsOfMatch"> 
-                <p> This is my interestes </p>
-                <div class="showAllInterests">
-                  <div class="eachInterests"> ${matches[i].interests[0]} </div>
-                  <div class="eachInterests"> ${matches[i].interests[1]} </div>
-                  <div class="eachInterests"> ${matches[i].interests[2]} </div>
-                  <div class="eachInterests"> ${matches[i].interests[3]} </div>
-                  <div class="eachInterests"> ${matches[i].interests[4]} </div>
-                </div>  
-              </div>
-              <div class="cityOfMatch"> 
-                <img class="locationIcon" src="../PHP/DB/image/location-icon.png" alt="location-icon">
-                <div class="showCity"> ${matches[i].city} </div>
-              </div>
             </div>
-            `;
-             
+            <div class="bioOfMatch"> ${bioDom} </div>
+            <div class="interestsOfMatch"> 
+              <p> This is my interestes </p>
+              <div class="showAllInterests">
+                <div class="eachInterests"> ${matches[i].interests[0]} </div>
+                <div class="eachInterests"> ${matches[i].interests[1]} </div>
+                <div class="eachInterests"> ${matches[i].interests[2]} </div>
+                <div class="eachInterests"> ${matches[i].interests[3]} </div>
+                <div class="eachInterests"> ${matches[i].interests[4]} </div>
+              </div>  
+            </div>
+            <div class="cityOfMatch"> 
+              <img class="locationIcon" src="../PHP/DB/image/location-icon.png" alt="location-icon">
+              <div class="showCity"> ${matches[i].city} </div>
+            </div>
+          </div>
+          `;
+           
             let blackCross = document.querySelector(".blackCross");
             blackCross.addEventListener("click", e => {
                 popupBackground.remove();

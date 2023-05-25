@@ -91,7 +91,7 @@ function renderCurrentDate(request, userDATA) {
         let popupBackground = document.createElement("div");
         let bodyDom = document.querySelector("body");
         bodyDom.append(popup);
-        popup.classList.add(".popup");
+        popup.classList.add("popup");
         mainDom.classList.add("makeContentLighter");
         popup.append(popupBackground);
         popupContent.classList.add("popup-content");
@@ -132,7 +132,7 @@ function renderCurrentDate(request, userDATA) {
             </div>
           </div>
 
-            <p> (You can find your match later under "matches" in the navigation-bar.)
+            <p> (You can find your match later under "match")
           </p>
         `;
 

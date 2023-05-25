@@ -1140,9 +1140,9 @@
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
             "photographing",
+            "fashion",
             "gaming",
             "cooking",
-            "fashion",
             "sailing"
         ],
         "general": {
@@ -1153,8 +1153,8 @@
         },
         "preference": {
             "genderOf": "male",
-            "ageOfMax": "31",
-            "ageOfMin": "18"
+            "ageOfMax": "22",
+            "ageOfMin": "22"
         },
         "matches": [
             "64660d9225322"
@@ -1372,5 +1372,34 @@
             "64660ef3195d9",
             "646748b1103a6"
         ]
+    },
+    {
+        "id": "646f412a98c70",
+        "name": "a",
+        "email": "a",
+        "password": "a",
+        "age": "24",
+        "city": "Malm\u00f6",
+        "gender": "female",
+        "imageSource": "PHP\/DB\/uploads\/realistic-photo.jpg",
+        "interests": [
+            "playinginstruments",
+            "sport",
+            "running",
+            "backpacking",
+            "gym"
+        ],
+        "general": {
+            "bio": "",
+            "tel": "07604566",
+            "facebook": "",
+            "instagram": ""
+        },
+        "preference": {
+            "genderOf": "male",
+            "ageOfMax": "31",
+            "ageOfMin": "23"
+        },
+        "matches": []
     }
 ]

@@ -9,10 +9,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 62vh;
     width: 80vw;
     background-color: #ffffff52;
     border-radius: 10px;
     border: 4px solid #cfd4ff;
+    overflow: scroll;
 }
 
 #allMatches {
@@ -20,8 +22,7 @@
     grid-template-columns: repeat(3, 22vw);
     grid-auto-rows: 20vh;
     gap: 10px;
-    width: 70vw;
-    height: 95vh;
+    height: 60vh;
     justify-content: center;
 }
 

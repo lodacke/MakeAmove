@@ -57,13 +57,16 @@ export async function renderMatchesPage(){
           let mainPopup = document.getElementById("matchesMain");
           mainPopup.classList.add("makeContentLighter");
 
+          let popup = document.createElement("div");
+          popup.classList.add("popup");
           let popupBackground = document.createElement("div");
           popupBackground.classList.add("popup-background");
           let popupInfo = document.createElement("div");
           popupInfo.classList.add("popupInfoMatch");
 
           let bodyDom = document.querySelector("body");
-          bodyDom.append(popupBackground);
+          bodyDom.append(popup);
+          popup.append(popupBackground);
           popupBackground.append(popupInfo);
 
           let facebookDom;
@@ -122,7 +125,7 @@ export async function renderMatchesPage(){
              
             let blackCross = document.querySelector(".blackCross");
             blackCross.addEventListener("click", e => {
-                popupBackground.remove();
+                popup.remove();
                 mainPopup.classList.remove("makeContentLighter");
             });
         });

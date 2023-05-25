@@ -767,7 +767,7 @@
         "email": "jakob@mail.com",
         "password": "jakob",
         "age": "36",
-        "city": "Malmö",
+        "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/jakob-addison.jpg",
         "interests": [
@@ -798,7 +798,7 @@
         "email": "yvonne@gmail.com",
         "password": "y",
         "age": "25",
-        "city": "Malmö",
+        "city": "Malm\u00f6",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/yvonne-mitchell.jpg",
         "interests": [
@@ -1033,7 +1033,7 @@
             "playinginstruments"
         ],
         "general": {
-            "bio": "Går gärna på en dejt!",
+            "bio": "G\u00e5r g\u00e4rna p\u00e5 en dejt!",
             "tel": "234567890",
             "facebook": "",
             "instagram": "@johanp"

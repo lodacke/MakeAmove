@@ -145,12 +145,16 @@
 
 #profilePicture {
     margin-top: 2vh;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #imageMessage {
     text-align: center;
     font-size: 20px;
-    margin-top: 10px;
 }
 
 #registerBio {

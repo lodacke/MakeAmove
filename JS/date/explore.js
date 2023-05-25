@@ -89,11 +89,12 @@ function renderCurrentDate(request, userDATA) {
         let popupBackground = document.createElement("div");
         let bodyDom = document.querySelector("body");
         bodyDom.append(popup);
-        popup.classList.add("popup");
+        popup.classList.add(".popup");
         mainDom.classList.add("makeContentLighter");
         popup.append(popupBackground);
-        popupBackground.append(popupContent);
         popupContent.classList.add("popup-content");
+        popupBackground.append(popupContent);
+        popupBackground.classList.add("popup-background");
 
         let facebookDom;
         let instagramDom;

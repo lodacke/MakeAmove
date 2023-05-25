@@ -307,7 +307,7 @@ async function saveNewPassword(event) {
     if (!response.ok) {
       message.textContent = data.message;
     } else {
-      message.textContent = "Password has been changed successfully! ≧◡≦";
+      message.innerHTML = `${data}'s password has been changed successfully! ≧◡≦`;
     }
   } catch (err) {
     message.textContent = `Error: ${err.message}`;

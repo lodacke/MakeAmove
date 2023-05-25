@@ -34,9 +34,6 @@ export async function renderDatingPage() {
   document.querySelector(".profile").addEventListener("click", renderProfilePage);
   document.querySelector(".match").addEventListener("click", renderMatchesPage);
   document.querySelector(".explore").classList.add("current-page");
-
-  let logout = document.querySelector(".logout");
-  logout.addEventListener("click", logoutFromAccount);
 }
 
 function renderCurrentDate(request, userDATA) {

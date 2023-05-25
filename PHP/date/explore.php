@@ -20,7 +20,7 @@ $userWhoLoggedInLikes = [];
 $loggedInUser = $_GET["id"];
 
 
-//Array av användare som gillar den inloggad användare 
+//Array av användare som gillar den inloggad användare
 
 forEach ($users as &$user) {
     if (in_array($loggedInUser, $user["matches"])) {
@@ -47,7 +47,7 @@ forEach ($users as &$user) {
     }
 }
 
-//Här filtreras fram de användarna som stämmer för den inloggades preferenser 
+//Här filtreras fram de användarna som stämmer för den inloggades preferenser
 //och läggs till en arrayen sortedUsers.
 
 forEach ($users as &$user) {
@@ -86,7 +86,7 @@ if (count($sortedUsers) > 0) {
     $randUser = $sortedUsers[$randIndex];
     send(200, $randUser);
 } else {
-    abort(400, "Not found");
+    abort(404, "Not found");
 }
 
 

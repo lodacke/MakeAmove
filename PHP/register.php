@@ -10,10 +10,10 @@ allowMethod("POST");
 $newUser = [];
 
 if(isset($_FILES["profilePicture"])) {
-    
+
   $imagesJSON = "DB/imageSource.json";
   $AllImages = [];
-  
+
   $file = $_FILES["profilePicture"];
 
   $fileName = $file["name"];
@@ -39,7 +39,7 @@ if(isset($_FILES["profilePicture"])) {
 
         $AllImages[] = $imageSource;
         send(200, $imageSource);
-        } 
+        }
       } else {
         $error = ["error" => "Something went wrong when uploading image."];
         abort(405, $error);
@@ -48,13 +48,13 @@ if(isset($_FILES["profilePicture"])) {
     } else {
         $error = ["error" => "The file you uploaded is to big."];
         abort(413, $error);
-    
+
     }
   } else {
         $error = ["error" => "We only allow JPG, JPEG & PNG files."];
         abort(405, $error);
     }
-  } 
+  }
 
 $fileName = "DB/users.json";
 $users = [];
@@ -96,7 +96,7 @@ forEach($users as $user){
 }
 
 if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel == "" && $age == null && $city == null)){
-  
+
   $newUser = [
     "id" => uniqid(),
     "name" => $name,
@@ -129,11 +129,9 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel
   $data = json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
   file_put_contents($fileName, $data);
 
- send(200, $data = $userToSend);
+ send(201, $data = $userToSend);
   } else {
-    abort(401, [$data = "You need to fill in all the fields before you proceed."]);
+    abort(400, [$data = "You need to fill in all the fields before you proceed."]);
   }
-
-
 
 ?>

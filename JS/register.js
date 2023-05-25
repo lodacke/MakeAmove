@@ -23,6 +23,17 @@ function renderPageNavigation(previousPage){
 };
 
 export function renderRegisterPage (){
+    let loginPageHeader = document.getElementById("loginPageHeader");
+
+    if (loginPageHeader !== null) {
+        loginPageHeader.setAttribute("id", "registerPageHeader");
+    }
+
+    let loginPageMain = document.getElementById("loginPageMain");
+
+    if (loginPageMain !== null) {
+      loginPageMain.setAttribute("id", "registerPageMain");
+    }
 
     let mainDom = document.querySelector("main");
 

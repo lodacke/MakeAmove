@@ -71,11 +71,10 @@ if(
 
   if ($userIsFound) {
     $users[$index] = $userToSend;
-
     $jsonData = json_encode($users, JSON_PRETTY_PRINT);
     file_put_contents("../DB/users.json", $jsonData);
 
-    send(200, $userToSend);
+    send(200, $userToSend["name"]);
   }
 }
 ?>

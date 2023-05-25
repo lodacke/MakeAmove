@@ -76,7 +76,7 @@ export async function renderProfilePage() {
 
           <div class="age">
             <div class="title">Age</div>
-            <input type="number" name="age-my" value="${userData.age}">
+            <input type="number" name="age-my" min="18" value="${userData.age}">
           </div>
 
         </div>
@@ -87,7 +87,7 @@ export async function renderProfilePage() {
           <div class="preferred-age">
             <div class="age-min">
               <div class="title">Minimum age</div>
-              <input type="number" name="age-min" value="${
+              <input type="number" name="age-min" min="18" value="${
                 userData.preference.ageOfMin
               }">
             </div>

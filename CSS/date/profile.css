@@ -318,9 +318,6 @@ input[type="checkbox"]:checked+label {
   width: 100vw;
   top: 0vw;
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .popup-content {
@@ -329,8 +326,8 @@ input[type="checkbox"]:checked+label {
   height: 65%;
   width: 77%;
   position: absolute;
-  /* top: 15%;
-  left: 6%; */
+  top: 15%;
+  left: 6%;
   border-radius: 14px;
   display: flex;
   flex-direction: column;

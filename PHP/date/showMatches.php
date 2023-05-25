@@ -16,7 +16,6 @@ $userWhoLoggedInLikes = [];
 $othersMatches = [];
 $loggedInUser = $_GET["id"];
 
-
 forEach($users as $user){
     if($user["id"] === $loggedInUser){
     if(count($user["matches"]) >= 1){
@@ -37,24 +36,22 @@ forEach($users as $user){
 $match = array_intersect($othersMatches, $userWhoLoggedInLikes);
 
 
-
-if($match){
-
-forEach($users as $user){
-    if(in_array($user["id"], $match)){
-        $userToSend[] = $user;
+if($match) {
+    forEach($users as $user){
+        if(in_array($user["id"], $match)){
+            $userToSend[] = $user;
+        }
     }
-}
 
-forEach($userToSend as &$user){
-    unset($user["password"]);
-    unset($user["email"]);
-}
+    forEach($userToSend as &$user){
+        unset($user["password"]);
+        unset($user["email"]);
+    }
 
-send(200, $userToSend);
+    send(200, $userToSend);
 
 } else {
     abort(300, "No matches to show");
 }
 
-
+?>

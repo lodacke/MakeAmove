@@ -14,9 +14,13 @@ const interests = [
 export async function renderProfilePage() {
   let response = await fetch(`../PHP/date/getProfile.php?id=${getUserData().id}`);
 
+  let mainDom = document.querySelector("main");
+    mainDom.innerHTML = `
+      <img id="loadingSpinner" src="/PHP/DB/image/spinner.svg" alt="spinningLogo">
+  `;
+
   const userData = await response.json();
 
-  let mainDom = document.querySelector("main");
 
   mainDom.innerHTML = `
     <form class="profile-page-container">

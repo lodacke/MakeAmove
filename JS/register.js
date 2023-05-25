@@ -189,7 +189,7 @@ export function renderRegisterPage (){
                 QuestionPage(userData);
                 imageMessage.textContent = "";
             } else {
-                console.log(userData);
+                imageMessage. textContent = "You need to upload one!"
             }
            
         });

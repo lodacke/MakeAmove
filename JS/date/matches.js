@@ -7,7 +7,11 @@ import { getUserData } from "../helper.js";
 
 export async function renderMatchesPage(){
   let mainDom = document.querySelector("main");
-  mainDom.innerHTML = ``;
+
+    mainDom.innerHTML = `
+      <img id="loadingSpinner" src="/PHP/DB/image/spinner.svg" alt="spinningLogo">
+  `;
+  
   mainDom.setAttribute("id", "matchesMain");
   let navBar = document.querySelector("nav");
 

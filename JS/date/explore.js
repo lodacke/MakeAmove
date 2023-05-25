@@ -16,8 +16,6 @@ export async function renderDatingPage() {
   navDom.classList.add("sticky-nav");
   navDom.innerHTML = stickyNav();
 
-    console.log(getUserData());
-
   let headerDOM = document.querySelector("header");
   headerDOM.setAttribute("id", "date-header")
   headerDOM.innerHTML = `
@@ -25,12 +23,14 @@ export async function renderDatingPage() {
     <button class="logout">Logout</button>
   `;
 
+  mainDom.innerHTML = `
+      <img id="loadingSpinner" src="/PHP/DB/image/spinner.svg" alt="spinningLogo">
+  `;
+
   let request = await fetch(`/PHP/date/explore.php?id=${getUserData().id}`);
   let userDATA = await request.json();
 
   renderCurrentDate(request, userDATA);
-
-  console.log(userDATA);
 
   document.querySelector(".profile").addEventListener("click", renderProfilePage);
   document.querySelector(".match").addEventListener("click", renderMatchesPage);

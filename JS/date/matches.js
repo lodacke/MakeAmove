@@ -11,7 +11,7 @@ export async function renderMatchesPage(){
     mainDom.innerHTML = `
       <img id="loadingSpinner" src="/PHP/DB/image/spinner.svg" alt="spinningLogo">
   `;
-  
+
   mainDom.setAttribute("id", "matchesMain");
   let navBar = document.querySelector("nav");
 
@@ -25,7 +25,6 @@ export async function renderMatchesPage(){
   let matches = await response.json();
 
   if(response.ok){
-    console.log(matches);
     mainDom.innerHTML = `
     <h1> Matches </h1>
     <div id="containerForMatches">

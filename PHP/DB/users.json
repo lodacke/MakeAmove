@@ -50,8 +50,8 @@
         "general": {
             "bio": "Film fanatic and cinephile. I'm drawn to the magic of cinema and enjoy dissecting the nuances of storytelling. Seeking a movie lover to share movie marathons, debate film theories, and make our own movie-worthy memories.",
             "tel": "0760373456",
-            "facebook": "Sara",
-            "instagram": "Sara"
+            "facebook": "",
+            "instagram": "@SaraJohannesson"
         },
         "preference": {
             "genderOf": "female",
@@ -402,7 +402,7 @@
             "bio": "Creative soul with a passion for art and music. Whether it's painting, playing an instrument, or attending live performances, I find inspiration in all forms of artistic expression. Seeking someone who appreciates the beauty in life.",
             "tel": "0768889431",
             "facebook": "Liam",
-            "instagram": "Liam"
+            "instagram": "@LiamsInsta"
         },
         "preference": {
             "genderOf": "female",
@@ -430,8 +430,8 @@
         "general": {
             "bio": "Fitness enthusiast and nature lover. I spend my free time hiking, running, and staying active. Searching for a partner who values a healthy lifestyle and enjoys outdoor adventures.",
             "tel": "0768889431",
-            "facebook": "John",
-            "instagram": "John"
+            "facebook": "",
+            "instagram": ""
         },
         "preference": {
             "genderOf": "female",
@@ -459,8 +459,8 @@
         "general": {
             "bio": "Bookworm and coffee enthusiast. I enjoy long conversations and deep connections. Seeking someone with a curious mind and a love for intellectual discussions.",
             "tel": "0768889431",
-            "facebook": "Harry",
-            "instagram": "Harry"
+            "facebook": "",
+            "instagram": ""
         },
         "preference": {
             "genderOf": "female",
@@ -489,7 +489,7 @@
             "bio": "Starry nights and telescope adventures fascinate me. As an amateur astronomer, I enjoy exploring the universe and contemplating life's mysteries. Seeking a stargazer to join me in unraveling the secrets of the cosmos.",
             "tel": "0764567822",
             "facebook": "Janko",
-            "instagram": "Janko"
+            "instagram": ""
         },
         "preference": {
             "genderOf": "female",
@@ -519,8 +519,8 @@
         "general": {
             "bio": "Food connoisseur and culinary enthusiast. Exploring flavors, cooking gourmet meals, and trying new restaurants fill my heart. Looking for a partner who appreciates the art of gastronomy and wants to indulge in culinary adventures.",
             "tel": "07421798411",
-            "facebook": "ava",
-            "instagram": "ava"
+            "facebook": "",
+            "instagram": ""
         },
         "preference": {
             "genderOf": "male",
@@ -548,8 +548,8 @@
         "general": {
             "bio": "History buff and museum enthusiast. I find solace in ancient artifacts and unraveling the mysteries of the past. Seeking someone who appreciates history's hidden treasures and wants to explore the world's cultural heritage.",
             "tel": "212",
-            "facebook": "albert",
-            "instagram": "albert"
+            "facebook": "",
+            "instagram": "@albertYTZ"
         },
         "preference": {
             "genderOf": "male",
@@ -577,8 +577,8 @@
         "general": {
             "bio": "Comedy lover and aspiring stand-up comedian. Laughter is the key to my heart, and I enjoy making others smile. Seeking someone who appreciates good humor and is ready for endless giggles and witty banter.",
             "tel": "23",
-            "facebook": "ben",
-            "instagram": "ben"
+            "facebook": "",
+            "instagram": ""
         },
         "preference": {
             "genderOf": "male",
@@ -607,7 +607,7 @@
             "bio": "Beach lover and sunseeker. I find solace in the sound of crashing waves and the warmth of the sun on my skin. Seeking a partner who enjoys lazy beach days, long walks by the shore, and watching vibrant sunsets together.",
             "tel": "232435435",
             "facebook": "leilani",
-            "instagram": "leilani"
+            "instagram": "@leilaniworldd"
         },
         "preference": {
             "genderOf": "female",
@@ -635,42 +635,13 @@
         "general": {
             "bio": "Avid traveler and cultural explorer. I've roamed the world, immersing myself in different cultures and embracing new experiences. Seeking a fellow globetrotter to embark on new adventures and create unforgettable memories.",
             "tel": "23",
-            "facebook": "Philipp",
-            "instagram": "Philipp"
+            "facebook": "",
+            "instagram": "@mrworldwidz"
         },
         "preference": {
             "genderOf": "male",
             "ageOfMax": "40",
             "ageOfMin": "20"
-        },
-        "matches": []
-    },
-    {
-        "id": "6467650373fa6",
-        "name": "a",
-        "email": "a",
-        "password": "a",
-        "age": "21",
-        "city": "Gävle",
-        "gender": "both",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": [
-            "reading",
-            "astrology",
-            "fishing",
-            "beer",
-            "yoga"
-        ],
-        "general": {
-            "bio": "",
-            "tel": "23",
-            "facebook": "a",
-            "instagram": "a"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "28",
-            "ageOfMin": "21"
         },
         "matches": []
     },
@@ -693,8 +664,8 @@
         "general": {
             "bio": "Tech-savvy geek with a passion for innovation. From coding to gaming, I'm at home in the digital world. Seeking someone who shares my love for technology and wants to geek out together on the latest gadgets and digital trends.",
             "tel": "21",
-            "facebook": "jasmine",
-            "instagram": "jasmine"
+            "facebook": "",
+            "instagram": "@jaaaszine"
         },
         "preference": {
             "genderOf": "male",
@@ -722,8 +693,8 @@
         "general": {
             "bio": "Technology geek and aspiring entrepreneur. From coding to brainstorming innovative ideas, I'm always at the forefront of digital innovation. Looking for a partner who shares my passion for tech and wants to build a future together.",
             "tel": "23",
-            "facebook": "David",
-            "instagram": "David"
+            "facebook": "",
+            "instagram": "techoz477"
         },
         "preference": {
             "genderOf": "female",
@@ -751,8 +722,8 @@
         "general": {
             "bio": "Science geek and astronomy enthusiast. Fascinated by the mysteries of the cosmos, I spend nights stargazing. Seeking a kindred spirit to join me in contemplating the universe's wonders and embark on celestial adventures.",
             "tel": "23",
-            "facebook": "james",
-            "instagram": "james"
+            "facebook": "",
+            "instagram": "starlightz1"
         },
         "preference": {
             "genderOf": "male",
@@ -762,44 +733,13 @@
         "matches": []
     },
     {
-        "id": "646772ebc8ebf",
-        "name": "a",
-        "email": "a",
-        "password": "a",
-        "age": "23",
-        "city": "Malmö",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog05.jpg",
-        "interests": [
-            "reading",
-            "astrology",
-            "fishing",
-            "wine",
-            "beer"
-        ],
-        "general": {
-            "bio": "",
-            "tel": "23",
-            "facebook": "a",
-            "instagram": "a"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "27",
-            "ageOfMin": "23"
-        },
-        "matches": [
-            "646770185c2fc"
-        ]
-    },
-    {
         "id": "6468f643de4ae",
-        "name": "ghj",
+        "name": "Chris",
         "email": "ghjk",
         "password": "12345",
-        "age": "22",
+        "age": "25",
         "city": "Göteborg",
-        "gender": "female",
+        "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
         "interests": [
             null,
@@ -809,21 +749,21 @@
             null
         ],
         "general": {
-            "bio": "2345",
+            "bio": "Naturens älskare som njuter av långa promenader i skogen och solnedgångar vid havet. Låt oss upptäcka den vackra världen tillsammans.",
             "tel": "234534567",
             "facebook": "ghj",
             "instagram": "ghj"
         },
         "preference": {
             "genderOf": "female",
-            "ageOfMax": "65",
-            "ageOfMin": "50"
+            "ageOfMax": "39",
+            "ageOfMin": "27"
         },
         "matches": []
     },
     {
         "id": "646772ebc8ebf",
-        "name": "jakob",
+        "name": "Jakob",
         "email": "jakob@mail.com",
         "password": "jakob",
         "age": "36",
@@ -840,8 +780,8 @@
         "general": {
             "bio": "Adventure seeker and adrenaline junkie. From skydiving to rock climbing, I'm always up for a thrill. Seeking someone with a daring spirit to join me on exhilarating escapades and create lifelong memories of shared excitement.",
             "tel": "23",
-            "facebook": "jakob",
-            "instagram": "jakob"
+            "facebook": "facebook/jakob.jakobsson",
+            "instagram": "@jakobjakobsson"
         },
         "preference": {
             "genderOf": "male",
@@ -851,33 +791,6 @@
         "matches": [
             "646e47bedbb48"
         ]
-    },
-    {
-        "id": "6468f7ab684a4",
-        "name": "esrdgth",
-        "email": "srdthfygj",
-        "password": "aesrfdgtfh",
-        "age": "22",
-        "city": "Göteborg",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
-        "interests": [
-            "reading",
-            "beer",
-            "yoga",
-            "dancing",
-            "fishing"
-        ],
-        "general": {
-            "bio": "aerstdg",
-            "contact": "2345678"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "26",
-            "ageOfMin": "22"
-        },
-        "matches": []
     },
     {
         "id": "6468f8e5897f1",
@@ -913,8 +826,8 @@
     },
     {
         "id": "646b2c76cdaea",
-        "name": "hvj,hv",
-        "email": "anna@gmail.com",
+        "name": "Heidi",
+        "email": "heidi@gmail.com",
         "password": "anna123",
         "age": "25",
         "city": "Karlstad",
@@ -928,11 +841,10 @@
             "art"
         ],
         "general": {
-            "bio": "",
-            "contact": "23456789",
-            "tel": "undefined",
-            "facebook": "undefined",
-            "instagram": "undefined"
+            "bio": "Skrattälskare som alltid har ett leende på läpparna. Låt oss dela skratt och glädje och skapa en positiv och humoristisk tillvaro.",
+            "tel": "076323564",
+            "facebook": "",
+            "instagram": "@heiediii"
         },
         "preference": {
             "genderOf": "female",
@@ -949,12 +861,12 @@
     },
     {
         "id": "646b52d431182",
-        "name": "Sandra",
+        "name": "Alle",
         "email": "sandra@gmail.com",
         "password": "sandra",
         "age": "23",
         "city": "Malmö",
-        "gender": "female",
+        "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/alexander-allen.jpg",
         "interests": [
             "reading",
@@ -964,8 +876,8 @@
             "movies"
         ],
         "general": {
-            "bio": "",
-            "contact": "2344"
+            "bio": "Djurälskare som har en speciell plats i mitt hjärta för fyrbenta vänner. Låt oss dela kärleken till djur och skapa ett hem fyllt av glädje och pälsiga kramar.",
+            "contact": "0736849321"
         },
         "preference": {
             "genderOf": "male",
@@ -977,120 +889,6 @@
         ]
     },
     {
-        "id": "646c7451e174e",
-        "name": "a",
-        "email": "a",
-        "password": "a",
-        "age": "23",
-        "city": "Göteborg",
-        "gender": "male",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
-        "interests": [
-            "traveling",
-            "beer",
-            "yoga",
-            "movies",
-            "fishing"
-        ],
-        "general": {
-            "bio": "",
-            "contact": "75842211"
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "26",
-            "ageOfMin": "18"
-        },
-        "matches": []
-    },
-    {
-        "id": "646c99cb1f2fd",
-        "name": "lo",
-        "email": "lo",
-        "password": "lo",
-        "age": "23",
-        "city": "Göteborg",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
-        "interests": [
-            "traveling",
-            "reading",
-            "yoga",
-            "movies",
-            "dancing"
-        ],
-        "general": {
-            "bio": "",
-            "tel": "12345678",
-            "facebook": "lo",
-            "instagram": "lo"
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "34",
-            "ageOfMin": "23"
-        },
-        "matches": []
-    },
-    {
-        "id": "646ca7b8d5e92",
-        "name": "Hanna",
-        "email": "Hanna@gmail.com",
-        "password": "Hanna",
-        "age": "23",
-        "city": "Norrköping",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
-        "interests": [
-            "traveling",
-            "astrology",
-            "wine",
-            "beer",
-            "reading"
-        ],
-        "general": {
-            "bio": "",
-            "tel": "0760345222",
-            "facebook": "Hanna",
-            "instagram": "Hanna"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "28",
-            "ageOfMin": "18"
-        },
-        "matches": []
-    },
-    {
-        "id": "646ca8604427b",
-        "name": "Liam",
-        "email": "liam@gmail.com",
-        "password": "liam",
-        "age": "31",
-        "city": "Linköping",
-        "gender": "male",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
-        "interests": [
-            "beer",
-            "stand-upcomedy",
-            "dancing",
-            "fishing",
-            "art"
-        ],
-        "general": {
-            "bio": "",
-            "tel": "0763422913",
-            "facebook": "Liam",
-            "instagram": "Liam"
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "35",
-            "ageOfMin": "18"
-        },
-        "matches": []
-    },
-    {
         "id": "646caa7b0523e",
         "name": "Sander",
         "email": "sander@gmail.com",
@@ -1098,7 +896,7 @@
         "age": "24",
         "city": "Eskilstuna",
         "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "imageSource": "PHP\/DB\/uploads\/alexander-allen.jpg",
         "interests": [
             "traveling",
             "reading",
@@ -1109,8 +907,8 @@
         "general": {
             "bio": "",
             "tel": "07604567822",
-            "facebook": "Sander",
-            "instagram": "Sander"
+            "facebook": "",
+            "instagram": "@SandersSaker"
         },
         "preference": {
             "genderOf": "male",
@@ -1130,37 +928,6 @@
         ]
     },
     {
-        "id": "646cb029edc07",
-        "name": "Rosa",
-        "email": "Rosa@gmail.com",
-        "password": "rosaa",
-        "age": "24",
-        "city": "Södertälje",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
-        "interests": [
-            "photographing",
-            "fashion",
-            "gaming",
-            "cooking",
-            "sailing"
-        ],
-        "general": {
-            "bio": "",
-            "tel": "07345579685",
-            "facebook": "",
-            "instagram": ""
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "22",
-            "ageOfMin": "22"
-        },
-        "matches": [
-            "64660d9225322"
-        ]
-    },
-    {
         "id": "646deadfd3736",
         "name": "Lisa",
         "email": "lisa@gmail.com",
@@ -1168,7 +935,7 @@
         "age": "24",
         "city": "Göteborg",
         "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "imageSource": "PHP\/DB\/uploads\/ava-collins.jpg",
         "interests": [
             "reading",
             "beer",
@@ -1199,7 +966,7 @@
         "age": "24",
         "city": "Göteborg",
         "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "imageSource": "",
         "interests": [
             "beer",
             "dancing",
@@ -1208,8 +975,8 @@
             "reading"
         ],
         "general": {
-            "bio": "",
-            "tel": "07622",
+            "bio": "Reseglad person som älskar att uppleva olika kulturer och traditioner. Låt oss packa våra väskor och skapa minnen från världens alla hörn.",
+            "tel": "07622432643",
             "facebook": "",
             "instagram": ""
         },
@@ -1228,7 +995,7 @@
         "age": "20",
         "city": "Malmö",
         "gender": "both",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
+        "imageSource": "PHP\/DB\/uploads\/realistic-girl.jpg",
         "interests": [
             "traveling",
             "astrology",
@@ -1238,8 +1005,8 @@
         ],
         "general": {
             "bio": "",
-            "tel": "076",
-            "facebook": "",
+            "tel": "0763548532",
+            "facebook": "Gabbie Laurie",
             "instagram": ""
         },
         "preference": {
@@ -1248,95 +1015,6 @@
             "ageOfMin": "18"
         },
         "matches": []
-    },
-    {
-        "id": "646decc43ccbb",
-        "name": "a",
-        "email": "a",
-        "password": "a",
-        "age": "23",
-        "city": "Göteborg",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
-        "interests": [
-            "traveling",
-            "reading",
-            "beer",
-            "dancing",
-            "yoga"
-        ],
-        "general": {
-            "bio": "bio",
-            "tel": "076",
-            "facebook": "",
-            "instagram": ""
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "26",
-            "ageOfMin": "18"
-        },
-        "matches": []
-    },
-    {
-        "id": "646e262edc92d",
-        "name": "sdfsd",
-        "email": "sdfsd",
-        "password": "sdf",
-        "age": "22",
-        "city": "Borås",
-        "gender": "male",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
-        "interests": [
-            "reading",
-            "beer",
-            "dancing",
-            "yoga",
-            "movies"
-        ],
-        "general": {
-            "bio": "",
-            "tel": "34567",
-            "facebook": "",
-            "instagram": ""
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "39",
-            "ageOfMin": "22"
-        },
-        "matches": []
-    },
-    {
-        "id": "646e47bedbb48",
-        "name": "Viktor",
-        "email": "viktor@gmail.com",
-        "password": "lo123dacke",
-        "age": "25",
-        "city": "Lund",
-        "gender": "male",
-        "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
-        "interests": [
-            "cooking",
-            "beer",
-            "sport",
-            "traveling",
-            "snus"
-        ],
-        "general": {
-            "bio": "Jag är snygg OCH sexig. matcha min energi.",
-            "tel": "070123123123",
-            "facebook": "",
-            "instagram": "@jbytyqi"
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "60",
-            "ageOfMin": "18"
-        },
-        "matches": [
-            "646772ebc8ebf"
-        ]
     },
     {
         "id": "646e59b876115",
@@ -1358,7 +1036,7 @@
             "bio": "Går gärna på en dejt!",
             "tel": "234567890",
             "facebook": "",
-            "instagram": "johanp"
+            "instagram": "@johanp"
         },
         "preference": {
             "genderOf": "female",
@@ -1428,64 +1106,6 @@
             "genderOf": "both",
             "ageOfMax": "40",
             "ageOfMin": "20"
-        },
-        "matches": []
-    },
-    {
-        "id": "646f53491ba96",
-        "name": "a",
-        "email": "a",
-        "password": "a",
-        "age": "23",
-        "city": "Malmö",
-        "gender": "female",
-        "imageSource": "PHP\/DB\/uploads\/Brian_Epstein.jpg",
-        "interests": [
-            "art",
-            "photographing",
-            "fashion",
-            "reading",
-            "poetry"
-        ],
-        "general": {
-            "bio": "aaa",
-            "tel": "2222",
-            "facebook": "",
-            "instagram": ""
-        },
-        "preference": {
-            "genderOf": "male",
-            "ageOfMax": "34",
-            "ageOfMin": "23"
-        },
-        "matches": []
-    },
-    {
-        "id": "646f56e2d1c9e",
-        "name": "z",
-        "email": "z",
-        "password": "z",
-        "age": "23",
-        "city": "Eskilstuna",
-        "gender": "male",
-        "imageSource": "PHP\/DB\/uploads\/realistic-photo.jpg",
-        "interests": [
-            "art",
-            "photographing",
-            "poetry",
-            "reading",
-            "fashion"
-        ],
-        "general": {
-            "bio": "",
-            "tel": "77",
-            "facebook": "",
-            "instagram": ""
-        },
-        "preference": {
-            "genderOf": "female",
-            "ageOfMax": "34",
-            "ageOfMin": "21"
         },
         "matches": []
     }

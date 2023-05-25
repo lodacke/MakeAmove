@@ -14,13 +14,6 @@ if(isset($_FILES["profilePicture"])) {
   $imagesJSON = "DB/imageSource.json";
   $AllImages = [];
   
-  if(!file_exists($imagesJSON)) {
-      file_put_contents($imagesJSON, $AllImages);
-  } else {
-      $json = file_get_contents($imagesJSON);
-      $AllImages = json_decode($json, true);
-  }
-  
   $file = $_FILES["profilePicture"];
 
   $fileName = $file["name"];
@@ -34,26 +27,33 @@ if(isset($_FILES["profilePicture"])) {
   $allowed = ["jpg", "jpeg"];
   if(in_array($fileExtension, $allowed)) {
 
-    if($fileError == 0) {
+    if($fileSize < 2000000) {
+      if($fileError === 0){
 
       $destination = "DB/uploads/".$fileName;
       $source = $fileTmpName;
 
       if(move_uploaded_file($source, $destination)) {
 
-          $destination = "PHP/DB/uploads/".$fileName;
-          $imageSource = ["source" => $destination];
-  
-          $AllImages[] = $imageSource;
-          send(200, $imageSource);
+        $destination = "PHP/DB/uploads/".$fileName;
+        $imageSource = ["source" => $destination];
+
+        $AllImages[] = $imageSource;
+        send(200, $imageSource);
+        } 
+      } else {
+        $error = ["error" => "Something went wrong when uploading image."];
+        abort(405, $error);
       }
+
     } else {
-          $error = ["error" => "Something went wrong when uploading image."];
-          send(405, $error);
+        $error = ["error" => "The file you tried to upload is to big."];
+        abort(413, $error);
+    
     }
   } else {
         $error = ["error" => "We only allow JPG and JPEG files."];
-        send(405, $error);
+        abort(405, $error);
     }
   } 
 
@@ -86,12 +86,12 @@ $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
 $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
 
  if($age < 18){
-   send(409, [$data = "You need to be over 18 to use this app"]);
+   abort(409, [$data = "You need to be over 18 to use this app"]);
 }
 
 forEach($users as $user){
   if($email === $user["email"]){
-    send(403, [$data = "This email already exists."]);
+    abort(403, [$data = "This email already exists."]);
   }
 }
 
@@ -99,11 +99,6 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel
 
   $imagesJSON = "DB/imageSource.json";
   $AllImages = [];
-
-  if(file_exists($imagesJSON)) {
-      $json = file_get_contents($imagesJSON);
-      $AllImages = json_decode($json, true);
-    }
 
   $image = end($AllImages);
   $imageSource = $image["source"];
@@ -142,7 +137,7 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel
 
  send(200, $data = $userToSend);
   } else {
-    send(401, [$data = "You need to fill in all the fields before you proceed."]);
+    abort(401, [$data = "You need to fill in all the fields before you proceed."]);
   }
 
 

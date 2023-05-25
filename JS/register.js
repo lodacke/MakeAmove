@@ -23,6 +23,13 @@ function renderPageNavigation(previousPage){
 };
 
 export function renderRegisterPage (){
+
+    let headerDom = document.querySelector("header")
+    headerDom.setAttribute("id","registerPageHeader");
+
+    let mainDom = document.querySelector("main");
+    mainDom.setAttribute("id", "registerPageMain");
+    
     let loginPageHeader = document.getElementById("loginPageHeader");
 
     if (loginPageHeader !== null) {
@@ -37,11 +44,6 @@ export function renderRegisterPage (){
 
     renderBasicInfoPage();
 
-    let headerDom = document.querySelector("header")
-    headerDom.setAttribute("id","registerPageHeader");
-
-    let mainDom = document.querySelector("main");
-    mainDom.setAttribute("id", "registerPageMain");
    
     function renderBasicInfoPage() {
 

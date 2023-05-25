@@ -24,7 +24,7 @@ if(isset($_FILES["profilePicture"])) {
 
   $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
 
-  $allowed = ["jpg", "jpeg"];
+  $allowed = ["jpg", "jpeg", "png"];
   if(in_array($fileExtension, $allowed)) {
 
     if($fileSize < 2000000) {
@@ -47,12 +47,12 @@ if(isset($_FILES["profilePicture"])) {
       }
 
     } else {
-        $error = ["error" => "The file you tried to upload is to big."];
+        $error = ["error" => "The file you uploaded is to big."];
         abort(413, $error);
     
     }
   } else {
-        $error = ["error" => "We only allow JPG and JPEG files."];
+        $error = ["error" => "We only allow JPG, JPEG & PNG files."];
         abort(405, $error);
     }
   } 

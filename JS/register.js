@@ -29,7 +29,7 @@ export function renderRegisterPage (){
 
     let mainDom = document.querySelector("main");
     mainDom.setAttribute("id", "registerPageMain");
-    
+
     let loginPageHeader = document.getElementById("loginPageHeader");
 
     if (loginPageHeader !== null) {
@@ -117,7 +117,7 @@ export function renderRegisterPage (){
                 nameDom.value != "" &&
                 emailDom.value != "" &&
                 passwordDom.value != "" && 
-                ageDom.value != null &&
+                ageDom.value != "" &&
                 genderDom.value != "none" &&
                 cityDom.value != "none"
             ){
@@ -344,7 +344,7 @@ export function renderRegisterPage (){
         document.getElementById("nextPage").innerText = "Start Dating!";
         document.getElementById("nextPage").addEventListener("click", e => {
 
-        if (genderOf.value != "none" && ageOfMin.value != null && ageOfMax.value != null){
+        if (genderOf.value != "none" && ageOfMin.value != "" && ageOfMax.value != ""){
             let preference = {
                 genderOf: genderOf.value,
                 ageOfMin: ageOfMin.value,

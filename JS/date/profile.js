@@ -1,6 +1,5 @@
 "use strict";
 
-import { stickyNav } from "./stickyNav.js";
 import { getUserData, renderCityDropdownList, formDataToJson } from "../helper.js";
 import { renderFrontPage } from "../index.js";
 import { renderDatingPage } from "./explore.js";

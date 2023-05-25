@@ -1,8 +1,7 @@
 "use strict";
 
-import { errorMessage } from "./helper.js";
+import { renderCityDropdownListReg, errorMessage } from "./helper.js";
 import { renderDatingPage } from "./date/explore.js";
-import { renderCityDropdownListReg } from "./helper.js";
 import { renderFrontPage } from "./index.js";
 
 function renderPageNavigation(previousPage){

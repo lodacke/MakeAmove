@@ -1,8 +1,8 @@
 "use strict";
 
 import { renderDatingPage } from "./date/explore.js";
-import { renderLoginPage } from "../JS/login.js";
-import { renderRegisterPage } from "../JS/register.js";
+import { renderLoginPage } from "./login.js";
+import { renderRegisterPage } from "./register.js";
 
 function checkIfUserLoggedIn() {
   if(window.localStorage.getItem("user")) {

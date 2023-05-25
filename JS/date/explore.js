@@ -2,7 +2,6 @@ import { stickyNav } from "./stickyNav.js";
 import { renderProfilePage } from "./profile.js";
 import { getUserData } from "../helper.js";
 import { renderMatchesPage } from "./matches.js";
-import { renderFrontPage } from "../index.js";
 
 let mainDom = document.querySelector("main");
 

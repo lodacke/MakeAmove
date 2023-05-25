@@ -110,25 +110,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 3vh;
-}
-
-.explore-profile-image {
-    border-radius: 50%;
-    border: 2px solid white;
-    height: 30vh;
-    max-width: 80vw;
-    object-fit: cover;
+    margin-bottom: 3vh;
 }
 
 .profile-pop {
-    height: 84vh;
-    width: 87vw;
-    border-radius: 14px;
+    height: 80vh;
+    width: 80vw;
+    border-radius: 15px;
     z-index: 1;
-    border: 9px dotted blanchedalmond;
     overflow-y: auto;
-    background: linear-gradient(35deg, #ccffff, #ffcccc);
+    background-color: rgb(227, 230, 255);
+    border: 2px solid #ddd;
 }
 
 .matchInfoBoxes{
@@ -148,12 +140,11 @@
 }
 
 .white-cross-explore {
-  position: absolute;
-  width: 1.5vh;
-  height: 2vh;
-  top: 10vh;
-  right: 10vw;
-  cursor: pointer;
+    position: absolute;
+    height: 2vh;
+    top: 11vh;
+    right: 12vw;
+    cursor: pointer;
 }
 
 .black-cross {
@@ -169,6 +160,14 @@
     padding: 10px;
     width: 70vw;
     background-color: rgba(255, 255, 255, 0.6);
+    line-height: 19px;
+    margin-top: 2vh;
+}
+
+.explore-profile > p:nth-child(4) {
+    font-size: 2.5vh;
+    margin: 3vh 0 0 0;
+    font-weight: bold;
 }
 
 .explore-interests-boxes {
@@ -181,10 +180,10 @@
 }
 
 .explore-interests-boxes li {
-    background-color: mediumslateblue;
-    color: white;
+    background-color: #c0c7ff;
     padding: 1vh;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 2.3vh;
 }
 
 #exploreMatchBoxContact{

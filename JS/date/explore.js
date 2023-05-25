@@ -101,12 +101,12 @@ function renderCurrentDate(request, userDATA) {
           facebookDom = response.facebook;
           instagramDom = response.instagram;
         }
-        
-        popupContent.innerHTML = 
-        `<img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross"></img>
-          <h1>It's a match! </h1>
-          <h3> Time to Make a Move... </h3>
-          <p> You can reach you're match via: </p>
+
+        popupContent.innerHTML = `
+          <img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross"></img>
+          <h1>It's a match!</h1>
+          <h3>Time to Make a Move...</h3>
+          <p>You can reach your match via:</p>
           <div id="exploreMatchBoxContact">
             phone: ${response.phone}
             <br>
@@ -115,8 +115,8 @@ function renderCurrentDate(request, userDATA) {
             instagram: ${instagramDom}</p>
           </div>
 
-          <p> (You can find you're match later under "matches" in the navigation-bar.)
-        </p>
+            <p> (You can find your match later under "matches" in the navigation-bar.)
+          </p>
         `;
 
         let whiteCross = document.querySelector(".white-cross");

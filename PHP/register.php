@@ -55,10 +55,7 @@ if(isset($_FILES["profilePicture"])) {
         $error = ["error" => "We only allow JPG and JPEG files."];
         send(405, $error);
     }
-  } else {
-    $error = ["error" => "You need to upload a profile-photo."];
-    send(200, $error);
-  }
+  } 
 
 $fileName = "DB/users.json";
 $users = [];

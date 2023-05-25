@@ -101,14 +101,15 @@
 }
 
 .profile-pop {
-    height: 90vh;
-    width: 89vw;
-    top: 1vh;
-    left: 2vh;
+    height: 84vh;
+    width: 87vw;
+    top: 7vh;
+    left: 2.5vh;
     border-radius: 14px;
     z-index: 1;
     border: 9px dotted blanchedalmond;
     position: absolute;
+    overflow-y: auto;
     background: linear-gradient(35deg, #ccffff, #ffcccc);
 }
 

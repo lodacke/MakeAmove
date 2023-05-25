@@ -148,11 +148,19 @@ function logoutFromAccount() {
 }
 
 function showUser(userDATA) {
-  let profilePopup = document.createElement("div");
-  mainDom.appendChild(profilePopup);
-  profilePopup.classList.add("profile-pop");
+  let container = document.getElementById("container");
+  let popup = document.createElement("div");
+  let popupBackground = document.createElement("div");
+  popupBackground.classList.add("popup-background");
+  let popupContent = document.createElement("div");
+  container.insertAdjacentElement("afterend", popup);
+  popup.appendChild(popupBackground);
+  popupBackground.appendChild(popupContent);
 
-  profilePopup.innerHTML = `
+  popup.classList.add("popup");
+  popupContent.classList.add("profile-pop");
+
+  popupContent.innerHTML = `
     <img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross">
     <div class="explore-profile">
       <h3>${userDATA.name}, ${userDATA.age}y/o (${userDATA.city})</h3>
@@ -170,12 +178,12 @@ function showUser(userDATA) {
     </div>
   `;
 
-  profilePopup
+  popupContent
     .querySelector(".white-cross")
     .addEventListener("click", closeExploreProfilePopup);
 }
 
 function closeExploreProfilePopup() {
-  let profilePopup = document.querySelector(".profile-pop");
-  profilePopup.classList.add("hide");
+  let popupContent = document.querySelector(".profile-pop");
+  popupContent.classList.add("hide");
 }

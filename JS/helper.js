@@ -31,9 +31,14 @@ export function renderCityDropdownList(userData) {
 export function errorMessage(){
 
     let RequiredInputs = document.querySelectorAll(".required");
+
     RequiredInputs.forEach(required => {
-        if (required.value == "" || required.value == "none" || required.checked === false){
+      required.removeAttribute("notAnswered");
+
+        if (required.value === "" || required.value === "none" || required.checked === false){
+
             required.setAttribute("id", "notAnswered");
+           
 
          switch(required.attributes.name.value){
             case "name":
@@ -56,9 +61,10 @@ export function errorMessage(){
                 break;
             case "ageOfMin":
                 required.placeholder = "Your preferred min age";
-            }
+                break;
+            } 
     }  else {
-            required.classList.remove("notAnswered");
+            required.removeAttribute("notAnswered");
         }
     })
 };

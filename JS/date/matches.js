@@ -68,23 +68,13 @@ export async function renderMatchesPage(){
           let facebookDom;
           let instagramDom;
 
-        /*if(matches[i].general.facebook === "" && matches[i].general.instagram === ""){
-          facebookDom = "Not availble";
-          instagramDom = "Not availble";
-        } else {
+         if(matches[i].general.facebook !== "" ||  matches[i].general.instagram !== "") {
           facebookDom = matches[i].general.facebook;
           instagramDom =  matches[i].general.instagram;
-          */
-         if(matches[i].general.facebook !== "") {
-          facebookDom = matches[i].general.facebook;
         } else {
-          facebookDom = "Not availble";
-        } if( matches[i].general.instagram !== "") {
-          instagramDom =  matches[i].general.instagram;
-        } else {
-          instagramDom = "Not availble";
+          facebookDom = "Not availible";
+          instagramDom = "Not availible";
         }
-
           popupInfo.innerHTML = `
             <h2> ${matches[i].name} ${matches[i].age}</h2>
             <div class="infoMatch">

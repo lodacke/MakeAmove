@@ -35,14 +35,14 @@ export function renderRegisterPage (){
       loginPageMain.setAttribute("id", "registerPageMain");
     }
 
-    let mainDom = document.querySelector("main");
-
     renderBasicInfoPage();
 
     let headerDom = document.querySelector("header")
     headerDom.setAttribute("id","registerPageHeader");
-    mainDom.setAttribute("id", "registerPageMain");
 
+    let mainDom = document.querySelector("main");
+    mainDom.setAttribute("id", "registerPageMain");
+   
     function renderBasicInfoPage() {
 
         mainDom.innerHTML = `

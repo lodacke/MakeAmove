@@ -55,10 +55,7 @@ if(isset($_FILES["profilePicture"])) {
         $error = ["error" => "We only allow JPG and JPEG files."];
         send(405, $error);
     }
-  } else {
-    $error = ["error" => "You need to upload a profile-photo."];
-    send(200, $error);
-  }
+  } 
 
 $fileName = "DB/users.json";
 $users = [];
@@ -90,6 +87,12 @@ $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
 
  if($age < 18){
    send(409, [$data = "You need to be over 18 to use this app"]);
+}
+
+forEach($users as $user){
+  if($email === $user["email"]){
+    send(403, [$data = "This email already exists."]);
+  }
 }
 
 if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel == "" && $age == null && $city == null)){

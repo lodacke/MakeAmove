@@ -16,6 +16,8 @@ export async function renderDatingPage() {
   navDom.classList.add("sticky-nav");
   navDom.innerHTML = stickyNav();
 
+    console.log(getUserData());
+
   let headerDOM = document.querySelector("header");
   headerDOM.setAttribute("id", "date-header")
   headerDOM.innerHTML = `
@@ -27,6 +29,8 @@ export async function renderDatingPage() {
   let userDATA = await request.json();
 
   renderCurrentDate(request, userDATA);
+
+  console.log(userDATA);
 
   document.querySelector(".profile").addEventListener("click", renderProfilePage);
   document.querySelector(".match").addEventListener("click", renderMatchesPage);

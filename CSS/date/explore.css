@@ -102,12 +102,6 @@
     object-fit: cover;
 }
 
-.popup-background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .profile-pop {
     height: 84vh;
     width: 87vw;

@@ -324,7 +324,7 @@ input[type="checkbox"]:checked+label {
 }
 
 .popup-content {
-  background-color: rgb(170, 179, 255);
+  background-color: rgb(199, 205, 249);
   color: white;
   height: 65%;
   width: 77%;

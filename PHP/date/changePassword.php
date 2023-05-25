@@ -22,12 +22,12 @@ $requestData = json_decode($requestJSON, true);
 
 if(
   !isset(
-    $requestData["email"],
+    $requestData["id"],
     $requestData["passwordOld"],
     $requestData["passwordNew"],
     $requestData["passwordRepeat"]
   ) || (
-    $requestData["email"] === "" ||
+    $requestData["id"] === "" ||
     $requestData["passwordOld"] === "" ||
     $requestData["passwordNew"] === "" ||
     $requestData["passwordRepeat"] === ""
@@ -36,7 +36,7 @@ if(
   $error = ["message" => "Password inputs can not be empty!"];
   abort(400, $error);
 } else {
-  $email = $requestData["email"];
+  $id = $requestData["id"];
   $oldPassword = $requestData["passwordOld"];
   $newPassword = $requestData["passwordNew"];
   $passwordRepeat = $requestData["passwordRepeat"];
@@ -48,7 +48,7 @@ if(
   foreach($users as $user) {
     $index = $index + 1;
 
-    if ($user["email"] === $email) {
+    if ($user["id"] === $id) {
       if ($user["password"] !== $oldPassword) {
         $error = ["message" => "Wrong old password! >_<"];
         abort(400, $error);

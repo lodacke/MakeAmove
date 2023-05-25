@@ -295,7 +295,7 @@ async function saveNewPassword(event) {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        email: getUserData().email,
+        id: getUserData().id,
         passwordOld: this.elements.passwordOld.value,
         passwordNew: this.elements.passwordNew.value,
         passwordRepeat: this.elements.passwordRepeat.value,

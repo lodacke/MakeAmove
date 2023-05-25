@@ -121,6 +121,15 @@
     background: linear-gradient(35deg, #ccffff, #ffcccc);
 }
 
+.white-cross-explore {
+  position: absolute;
+  width: 1.5vh;
+  height: 2vh;
+  top: 10vh;
+  right: 10vw;
+  cursor: pointer;
+}
+
 .black-cross {
     position: absolute;
     width: 1.5vh;

@@ -161,7 +161,7 @@ function showUser(userDATA) {
   popupContent.classList.add("profile-pop");
 
   popupContent.innerHTML = `
-    <img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross">
+    <img class="white-cross-explore" src="../PHP/DB/image/white-cross.svg" alt="white-cross-explore">
     <div class="explore-profile">
       <h3>${userDATA.name}, ${userDATA.age}y/o (${userDATA.city})</h3>
       <img class="explore-profile-image" src="${userDATA.imageSource}"></img>
@@ -179,7 +179,7 @@ function showUser(userDATA) {
   `;
 
   popupContent
-    .querySelector(".white-cross")
+    .querySelector(".white-cross-explore")
     .addEventListener("click", closeExploreProfilePopup);
 }
 

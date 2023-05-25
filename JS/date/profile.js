@@ -396,7 +396,7 @@ async function deleteUserAccount(event) {
     if (!response.ok) {
       message.textContent = data.message;
     } else {
-      message.textContent = "Your account is successfully deleted!";
+      message.textContent = data.message;
       renderFrontPage();
     }
   } catch (err) {

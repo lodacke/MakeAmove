@@ -24,7 +24,7 @@ if(isset($_FILES["profilePicture"])) {
 
   $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
 
-  $allowed = ["jpg", "jpeg"];
+  $allowed = ["jpg", "jpeg", "png"];
   if(in_array($fileExtension, $allowed)) {
 
     if($fileSize < 2000000) {

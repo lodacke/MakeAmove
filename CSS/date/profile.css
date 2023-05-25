@@ -121,13 +121,14 @@ body {
 }
 
 .profileBio {
-  height: 8vh;
+  height: 10vh;
   resize: vertical;
   outline: none;
   border-radius: 5px;
   width: 95%;
   border: 2px solid darkgray;
   padding: 4px;
+  line-height: 19px;
 }
 
 .profileBio:focus {

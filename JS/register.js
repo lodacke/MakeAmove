@@ -177,7 +177,7 @@ export function renderRegisterPage (){
                 } else {
                     imageMessage.textContent = "Good choice!";
                     const img = document.createElement("img");
-                    img.src = data.source;
+                    img.src = data;
                     userImage.append(img);
 
                     userData.image = data;

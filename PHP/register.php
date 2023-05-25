@@ -35,8 +35,7 @@ if(isset($_FILES["profilePicture"])) {
 
       if(move_uploaded_file($source, $destination)) {
 
-        $destination = "PHP/DB/uploads/".$fileName;
-        $imageSource = ["source" => $destination];
+        $imageSource = "PHP/DB/uploads/".$fileName;
 
         $AllImages[] = $imageSource;
         send(200, $imageSource);
@@ -76,6 +75,7 @@ $password = $dataREQUEST["password"];
 $age = $dataREQUEST["age"];
 $city = $dataREQUEST["city"];
 $gender = $dataREQUEST["gender"];
+$image = $dataREQUEST["image"];
 $interests = array_values($dataREQUEST["interests"][0]);
 $bio = $dataREQUEST["general"][0]["bio"];
 $tel = $dataREQUEST["general"][0]["tel"];
@@ -105,7 +105,7 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel
     "age" => $age,
     "city" => $city,
     "gender" => $gender,
-    "imageSource" => $imageSource,
+    "imageSource" => $image,
     "interests" => $interests,
     "general" => [
       "bio" => $bio,

@@ -98,6 +98,10 @@
     border-radius: 50%;
     border: 2px solid white;
     height: 30vh;
+.popup-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-pop {

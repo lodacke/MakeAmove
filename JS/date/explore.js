@@ -185,5 +185,7 @@ function showUser(userDATA) {
 
 function closeExploreProfilePopup() {
   let popupContent = document.querySelector(".profile-pop");
+  let popupBackground = document.querySelector(".popup-background");
   popupContent.classList.add("hide");
+  popupBackground.classList.add("hide");
 }

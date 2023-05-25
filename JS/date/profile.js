@@ -41,7 +41,7 @@ export async function renderProfilePage() {
             userData.general.bio || ""
           }</textarea>
 
-          <div class="contactMethods">Contact Methods
+          <div class="contactMethods"> My contact details
             <div class="telephone-number">
               <img class="telephone-icon" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
               <input type="text" name="tel" placeholder="Your phone number" value="${

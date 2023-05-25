@@ -47,6 +47,9 @@ export function renderRegisterPage (){
    
     function renderBasicInfoPage() {
 
+        let mainDom = document.querySelector("main");
+
+
         mainDom.innerHTML = `
             <h1>Basic Info</h1>
 

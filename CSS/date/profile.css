@@ -339,10 +339,9 @@ input[type="checkbox"]:checked+label {
 
 .white-cross {
   position: absolute;
-  width: 1.5vh;
   height: 2vh;
   top: 2vh;
-  right: 5vw;
+  right: 3vw;
   cursor: pointer;
 }
 

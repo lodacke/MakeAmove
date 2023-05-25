@@ -17,13 +17,11 @@ export async function renderMatchesPage(){
   document.querySelector(".profile").addEventListener("click", renderProfilePage);
   document.querySelector(".match").classList.add("current-page");
 
-
   let response = await fetch(`/PHP/date/showMatches.php?id=${getUserData().id}`);
   let matches = await response.json();
-  console.log(response);
-
 
   if(response.ok){
+    console.log(matches);
     mainDom.innerHTML = `
     <h1> Matches </h1>
     <div id="containerForMatches">
@@ -35,7 +33,7 @@ export async function renderMatchesPage(){
 
   } else {
     mainDom.innerHTML = `
-    <h1 id="noMatchesFound"> Sorry, you have no matches yet... </h1> `;
+    <h2 id="noMatchesFound"> Sorry, you have no matches yet... </h2> `;
   }
 
   function createDivForMatch(matches) {
@@ -68,12 +66,15 @@ export async function renderMatchesPage(){
           let facebookDom;
           let instagramDom;
 
-         if(matches[i].general.facebook !== "" ||  matches[i].general.instagram !== "") {
-          facebookDom = matches[i].general.facebook;
+         if(matches[i].general.facebook !== ""){
+            facebookDom = matches[i].general.facebook;
+         } else {
+            facebookDom = "Not available";
+         } 
+         if(matches[i].general.instagram !== "") {  
           instagramDom =  matches[i].general.instagram;
         } else {
-          facebookDom = "Not availible";
-          instagramDom = "Not availible";
+          instagramDom = "Not available";
         }
           popupInfo.innerHTML = `
             <h2> ${matches[i].name} ${matches[i].age}</h2>
@@ -85,7 +86,9 @@ export async function renderMatchesPage(){
               <div class="contactOfMatch"> 
                 <p> This is how you can contact me </p>
                 <div class="showContact">
-                  <div class="contactPhonenumber"> Phonenumber: ${matches[i].general.tel} </div>
+                  <div class="contactPhonenumber"> 
+                  <img class="telephoneIcon" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
+                      ${matches[i].general.tel} </div>
                   <div class="contactFacebook"> 
                     <img class="facebookIcon" src="../PHP/DB/image/facebook.png" alt="facebook-icon"> 
                     <p> ${facebookDom} </p>

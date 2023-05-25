@@ -94,12 +94,15 @@ function renderCurrentDate(request, userDATA) {
         let facebookDom;
         let instagramDom;
 
-        if(response.facebook === "" || response.instagram === ""){
-          facebookDom = "Not available";
-          instagramDom = "Not available";
+         if(response.facebook !== ""){
+            facebookDom = response.facebook;
+         } else {
+            facebookDom = "Not available";
+         } 
+         if(response.instagram !== "") {  
+          instagramDom =  response.instagram;
         } else {
-          facebookDom = response.facebook;
-          instagramDom = response.instagram;
+          instagramDom = "Not available";
         }
 
         popupContent.innerHTML = `
@@ -108,11 +111,18 @@ function renderCurrentDate(request, userDATA) {
           <h3>Time to Make a Move...</h3>
           <p>You can reach your match via:</p>
           <div id="exploreMatchBoxContact">
-            phone: ${response.phone}
-            <br>
-            facebook: ${facebookDom}
-            <br>
-            instagram: ${instagramDom}</p>
+          <div class="matchInfoBoxes">
+            <img class="telephoneIconMatch" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
+              ${response.phone}
+            </div>
+            <div class="matchInfoBoxes">
+          <img class="facebookIconMatch" src="../PHP/DB/image/facebook.png" alt="facebook-icon"> 
+            ${facebookDom}
+            </div>
+            <div class="matchInfoBoxes">
+          <img class="instagramIconMatch" src="../PHP/DB/image/instagram.png" alt="instagram-icon"> 
+            ${instagramDom}</p>
+            </div>
           </div>
 
             <p> (You can find your match later under "matches" in the navigation-bar.)

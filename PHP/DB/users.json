@@ -1140,9 +1140,9 @@
         "imageSource": "PHP\/DB\/uploads\/dog01.jpg",
         "interests": [
             "photographing",
+            "fashion",
             "gaming",
             "cooking",
-            "fashion",
             "sailing"
         ],
         "general": {
@@ -1153,8 +1153,8 @@
         },
         "preference": {
             "genderOf": "male",
-            "ageOfMax": "31",
-            "ageOfMin": "18"
+            "ageOfMax": "22",
+            "ageOfMin": "22"
         },
         "matches": [
             "64660d9225322"

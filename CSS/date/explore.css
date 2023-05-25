@@ -112,6 +112,22 @@
     background: linear-gradient(35deg, #ccffff, #ffcccc);
 }
 
+.matchInfoBoxes{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 3vw;
+}
+
+#telephoneIconMatch{
+    height: 3.2;
+}
+
+#instagramIconMatch,
+#facebookIconMatch{
+    height: 4.5vh;
+}
+
 .white-cross-explore {
   position: absolute;
   width: 1.5vh;

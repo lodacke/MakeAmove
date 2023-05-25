@@ -84,9 +84,7 @@ export function renderRegisterPage (){
                 <label for "age">Age:
                     <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
                 </label>
-
             </div>
-
         `;
 
         renderPageNavigation(renderFrontPage);
@@ -157,6 +155,7 @@ export function renderRegisterPage (){
         const form = document.getElementById("upload");
         const imageMessage = document.getElementById("imageMessage");
         const userImage = document.getElementById("userImage");
+        let addedImage = false;
 
         form.addEventListener("submit", function(event) {
             event.preventDefault();
@@ -179,15 +178,18 @@ export function renderRegisterPage (){
                     userImage.append(img);
 
                     userData.image = data;
+                    addedImage = true;
                 }              
             })
         });
 
         document.getElementById("nextPage").addEventListener( "click", e => {
-            if(!userData.image === ""){
+            console.log(userData.image);
+            if(addedImage === true){
                 QuestionPage(userData);
+                imageMessage.textContent = "";
             } else {
-                imageMessage.textContent = "Please...";
+                console.log(userData);
             }
            
         });

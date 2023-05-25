@@ -89,6 +89,12 @@ $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
    send(409, [$data = "You need to be over 18 to use this app"]);
 }
 
+forEach($users as $user){
+  if($email === $user["email"]){
+    send(403, [$data = "This email already exists."]);
+  }
+}
+
 if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel == "" && $age == null && $city == null)){
 
   $imagesJSON = "DB/imageSource.json";

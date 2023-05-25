@@ -315,15 +315,15 @@ export function renderRegisterPage (){
                 <div class="preferred-gender">
                     <lable for "genderOf">I am interested in</lable>
                     <select name="genderOf" class="required">
-                        <option value="none">this/these gender(s) 🧑</option>
+                        <option value="none">Options</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                         <option value="both">Both</option>
-                    </select>
+                    </select>   
                 </div>
 
                 <div class="preferred-min-max-age">
-                    <p>Age Range for Perfect Matches</p>
+                    <p>Pick your age-range</p>
                     <div class="preferred-min-max">
                         <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Minimum age">
                         <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Maximum age">
@@ -379,6 +379,4 @@ export function renderRegisterPage (){
     }
 }
 
-function errorMessageInterest(){
 
-}

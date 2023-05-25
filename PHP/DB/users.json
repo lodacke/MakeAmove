@@ -5,7 +5,7 @@
         "email": "aiony@mail.com",
         "password": "aiony",
         "age": "30",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/aiony-haust.jpg",
         "interests": [
@@ -37,7 +37,7 @@
         "email": "sara@gmail.com",
         "password": "sara",
         "age": "24",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/sara-doe.jpg",
         "interests": [
@@ -69,7 +69,7 @@
         "email": "brooke@gmail.com",
         "password": "brooke",
         "age": "27",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/brooke-cagle.jpg",
         "interests": [
@@ -136,7 +136,7 @@
         "email": "sofia@gmail.com",
         "password": "sofia",
         "age": "22",
-        "city": "G\u00e4vle",
+        "city": "Gävle",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/sofia-miller.jpg",
         "interests": [
@@ -170,7 +170,7 @@
         "email": "irene@gmail.com",
         "password": "irene",
         "age": "27",
-        "city": "\u00d6rebro",
+        "city": "Örebro",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/irene-strong.jpg",
         "interests": [
@@ -231,7 +231,7 @@
         "email": "ludovic@gmail.com",
         "password": "ludovic",
         "age": "25",
-        "city": "Lule\u00e5",
+        "city": "Luleå",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/ludovic-migneault.jpg",
         "interests": [
@@ -262,7 +262,7 @@
         "email": "scarlett@gmail.com",
         "password": "scarlett",
         "age": "23",
-        "city": "Ume\u00e5",
+        "city": "Umeå",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/scarlett-johnson.jpg",
         "interests": [
@@ -509,7 +509,7 @@
         "email": "ava@gmail.com",
         "password": "ava",
         "age": "23",
-        "city": "Sk\u00f6vde",
+        "city": "Skövde",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/ava-collins.jpg",
         "interests": [
@@ -538,7 +538,7 @@
         "email": "albert@gmail.com",
         "password": "albert",
         "age": "28",
-        "city": "Ume\u00e5",
+        "city": "Umeå",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/albert-dera.jpg",
         "interests": [
@@ -567,7 +567,7 @@
         "email": "ben@gmail.com",
         "password": "ben",
         "age": "23",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/ben-smith.jpg",
         "interests": [
@@ -596,7 +596,7 @@
         "email": "leilani@gmail.com",
         "password": "leilani",
         "age": "23",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/leilani-angel.jpg",
         "interests": [
@@ -625,7 +625,7 @@
         "email": "philipp@gmail.com",
         "password": "philipp",
         "age": "30",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/philipp-wuthrich.jpg",
         "interests": [
@@ -654,7 +654,7 @@
         "email": "jasmine@mail.com",
         "password": "jasmine",
         "age": "32",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/jasmine-hayes.jpg",
         "interests": [
@@ -683,7 +683,7 @@
         "email": "david@email.com",
         "password": "david",
         "age": "42",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/david-collins.jpg",
         "interests": [
@@ -741,7 +741,7 @@
         "email": "ghjk",
         "password": "12345",
         "age": "25",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/christopher-campbell-rDEOVtE7vOs-unsplash.jpg",
         "interests": [
@@ -752,7 +752,7 @@
             null
         ],
         "general": {
-            "bio": "Naturens \u00e4lskare som njuter av l\u00e5nga promenader i skogen och solnedg\u00e5ngar vid havet. L\u00e5t oss uppt\u00e4cka den vackra v\u00e4rlden tillsammans.",
+            "bio": "Naturens älskare som njuter av långa promenader i skogen och solnedgångar vid havet. Låt oss upptäcka den vackra världen tillsammans.",
             "tel": "234534567",
             "facebook": "ghj",
             "instagram": "ghj"
@@ -770,7 +770,7 @@
         "email": "jakob@mail.com",
         "password": "jakob",
         "age": "36",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/jakob-addison.jpg",
         "interests": [
@@ -801,7 +801,7 @@
         "email": "yvonne@gmail.com",
         "password": "y",
         "age": "25",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/yvonne-mitchell.jpg",
         "interests": [
@@ -844,7 +844,7 @@
             "art"
         ],
         "general": {
-            "bio": "Skratt\u00e4lskare som alltid har ett leende p\u00e5 l\u00e4pparna. L\u00e5t oss dela skratt och gl\u00e4dje och skapa en positiv och humoristisk tillvaro.",
+            "bio": "Skrattälskare som alltid har ett leende på läpparna. Låt oss dela skratt och glädje och skapa en positiv och humoristisk tillvaro.",
             "tel": "076323564",
             "facebook": "",
             "instagram": "@heiediii"
@@ -868,7 +868,7 @@
         "email": "sandra@gmail.com",
         "password": "sandra",
         "age": "23",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/alexander-allen.jpg",
         "interests": [
@@ -879,7 +879,7 @@
             "movies"
         ],
         "general": {
-            "bio": "Djur\u00e4lskare som har en speciell plats i mitt hj\u00e4rta f\u00f6r fyrbenta v\u00e4nner. L\u00e5t oss dela k\u00e4rleken till djur och skapa ett hem fyllt av gl\u00e4dje och p\u00e4lsiga kramar.",
+            "bio": "Djurälskare som har en speciell plats i mitt hjärta för fyrbenta vänner. Låt oss dela kärleken till djur och skapa ett hem fyllt av glädje och pälsiga kramar.",
             "contact": "0736849321"
         },
         "preference": {
@@ -926,7 +926,7 @@
         "email": "lisa@gmail.com",
         "password": "lisa",
         "age": "24",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/ava-collins.jpg",
         "interests": [
@@ -957,7 +957,7 @@
         "email": "sam@gmail.com",
         "password": "sam",
         "age": "24",
-        "city": "G\u00f6teborg",
+        "city": "Göteborg",
         "gender": "female",
         "imageSource": "",
         "interests": [
@@ -968,7 +968,7 @@
             "reading"
         ],
         "general": {
-            "bio": "Reseglad person som \u00e4lskar att uppleva olika kulturer och traditioner. L\u00e5t oss packa v\u00e5ra v\u00e4skor och skapa minnen fr\u00e5n v\u00e4rldens alla h\u00f6rn.",
+            "bio": "Reseglad person som älskar att uppleva olika kulturer och traditioner. Låt oss packa våra väskor och skapa minnen från världens alla hörn.",
             "tel": "07622432643",
             "facebook": "",
             "instagram": ""
@@ -986,7 +986,7 @@
         "email": "gabbie@gmail.com",
         "password": "gabbie",
         "age": "20",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "both",
         "imageSource": "PHP\/DB\/uploads\/realistic-girl.jpg",
         "interests": [
@@ -1015,7 +1015,7 @@
         "email": "johan@gmail.com",
         "password": "johan123",
         "age": "27",
-        "city": "G\u00e4vle",
+        "city": "Gävle",
         "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/realistic-photo.jpg",
         "interests": [
@@ -1026,7 +1026,7 @@
             "playinginstruments"
         ],
         "general": {
-            "bio": "G\u00e5r g\u00e4rna p\u00e5 en dejt!",
+            "bio": "Går gärna på en dejt!",
             "tel": "234567890",
             "facebook": "",
             "instagram": "@johanp"
@@ -1044,7 +1044,7 @@
         "email": "soffan@gmail.com",
         "password": "soffan",
         "age": "23",
-        "city": "Malm\u00f6",
+        "city": "Malmö",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/realistic-girl.jpg",
         "interests": [
@@ -1055,7 +1055,7 @@
             "boardgames"
         ],
         "general": {
-            "bio": "Ska vi g\u00e5 p\u00e5 en picknick dejt?",
+            "bio": "Ska vi gå på en picknick dejt?",
             "tel": "234567890",
             "facebook": "Sofia Larsson",
             "instagram": "sofia_L"
@@ -1073,7 +1073,7 @@
         "email": "hanna@gmail.com",
         "password": "hanna123",
         "age": "26",
-        "city": "Link\u00f6ping",
+        "city": "Linköping",
         "gender": "female",
         "imageSource": "PHP\/DB\/uploads\/photo-of-girl.jpg",
         "interests": [
@@ -1084,7 +1084,7 @@
             "boardgames"
         ],
         "general": {
-            "bio": "Vill p\u00e5 \u00e4ventyr!",
+            "bio": "Vill på äventyr!",
             "tel": "123456789",
             "facebook": "Hanna Nilsson",
             "instagram": "hanna_N35"

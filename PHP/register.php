@@ -96,12 +96,6 @@ forEach($users as $user){
 }
 
 if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel == "" && $age == null && $city == null)){
-
-  $imagesJSON = "DB/imageSource.json";
-  $AllImages = [];
-
-  $image = end($AllImages);
-  $imageSource = $image["source"];
   
   $newUser = [
     "id" => uniqid(),

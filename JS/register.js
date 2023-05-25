@@ -117,7 +117,7 @@ export function renderRegisterPage (){
                 nameDom.value != "" &&
                 emailDom.value != "" &&
                 passwordDom.value != "" && 
-                ageDom.value != "" &&
+                ageDom.value != null &&
                 genderDom.value != "none" &&
                 cityDom.value != "none"
             ){
@@ -344,7 +344,7 @@ export function renderRegisterPage (){
         document.getElementById("nextPage").innerText = "Start Dating!";
         document.getElementById("nextPage").addEventListener("click", e => {
 
-        if (genderOf.value != "none" && ageOfMin.value != "" && ageOfMax.value != ""){
+        if (genderOf.value != "none" && ageOfMin.value != "" && ageOfMax.value != null){
             let preference = {
                 genderOf: genderOf.value,
                 ageOfMin: ageOfMin.value,

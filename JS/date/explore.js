@@ -41,14 +41,16 @@ function renderCurrentDate(request, userDATA) {
   if (request.status == 200) {
     mainDom.innerHTML = `
     <div id="explore-main">
-      <img id="potentialMatchPic" src="${userDATA.imageSource}"></img>
-      <div id="potentialMatchInfo">
-        <div>${userDATA.name}</div>
-        <div>${userDATA.age} </div>
+      <div id="containerPotentialMatch">
+        <img class="potentialMatchPic" src="${userDATA.imageSource}"></img>
+        <div class="potentialMatchInfo">
+          <div>${userDATA.name},</div>
+          <div>${userDATA.age} </div>
+        </div>
       </div>
       <div id="matchButtons">
-        <button id="match">Yes</button>
         <button id="noMatch">No</button>
+        <button id="match">Yes</button>
       </div>
     </div>
   `;
@@ -58,7 +60,7 @@ function renderCurrentDate(request, userDATA) {
       renderDatingPage();
     });
     mainDom
-      .querySelector("#potentialMatchPic")
+      .querySelector(".potentialMatchPic")
       .addEventListener("click", () => showUser(userDATA));
 
 
@@ -173,11 +175,12 @@ function showUser(userDATA) {
   popupContent.innerHTML = `
     <img class="white-cross-explore" src="../PHP/DB/image/white-cross.svg" alt="white-cross-explore">
     <div class="explore-profile">
-      <h3>${userDATA.name}, ${userDATA.age}y/o (${userDATA.city})</h3>
-      <img class="explore-profile-image" src="${userDATA.imageSource}"></img>
-      <h3>Bio:</h3>
+      <h2>${userDATA.name}, ${userDATA.age}</h2>
+      <div class="boxForImageMatch">
+        <img class="imageOfMatch" src="${userDATA.imageSource}"></img>
+      </div>
       <div class="explore-bio">${userDATA.general.bio}</div>
-      <h3>Interests:</h3>
+      <p>Interests </p>
       <ul class="explore-interests-boxes">
         <li>${userDATA.interests[0]}</li>
         <li>${userDATA.interests[1]}</li>
@@ -185,6 +188,10 @@ function showUser(userDATA) {
         <li>${userDATA.interests[3]}</li>
         <li>${userDATA.interests[4]}</li>
       </ul>
+      <div class="cityOfMatch"> 
+        <img class="locationIcon" src="../PHP/DB/image/location-icon.png" alt="location-icon">
+      <div class="showCity"> ${userDATA.city} </div>
+      </div>
     </div>
   `;
 

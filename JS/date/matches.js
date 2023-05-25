@@ -77,7 +77,7 @@ export async function renderMatchesPage(){
           instagramDom = "Not available";
         }
           popupInfo.innerHTML = `
-            <h2> ${matches[i].name} ${matches[i].age}</h2>
+            <h2> ${matches[i].name}, ${matches[i].age}</h2>
             <div class="infoMatch">
               <div class="boxForImageMatch">
                 <img class="imageOfMatch" src="../${matches[i].imageSource}" alt="image-of-match">

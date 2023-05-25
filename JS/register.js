@@ -39,8 +39,9 @@ export function renderRegisterPage (){
 
     renderBasicInfoPage();
 
-    document.getElementById("startPageHeader").id = "registerPageHeader";
-    document.getElementById("startPageMain").id = "registerPageMain";
+    let headerDom = document.querySelector("header")
+    headerDom.setAttribute("id","registerPageHeader");
+    mainDom.setAttribute("id", "registerPageMain");
 
     function renderBasicInfoPage() {
 

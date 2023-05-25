@@ -110,6 +110,17 @@
     border: 1px solid red;
 }
 
+.notAnsweredInterest {
+     border: 1px solid red;
+     border-radius: 7px;
+     padding: 5px;
+}
+
+.checkbox-error{
+    border: 1px solid red;
+
+}
+
 #registerPageMain > form input {
     width: 50vw;
 }

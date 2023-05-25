@@ -50,8 +50,8 @@ if ($foundUserMatch) {
         "instagram" => $userMatch["general"]["instagram"],
     ];
   }
-
     send(200, $userContact);
+    
 } else {
     send(404, ["user not found"]);
 }

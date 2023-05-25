@@ -115,10 +115,10 @@ export function renderRegisterPage (){
             if(
                 nameDom.value != "" &&
                 emailDom.value != "" &&
-                passwordDom.value != ""
-                && ageDom.value != null &&
-                genderDom.value != "none"
-                && cityDom.value != "none"
+                passwordDom.value != "" && 
+                ageDom.value != null &&
+                genderDom.value != "none" &&
+                cityDom.value != "none"
             ){
                 let userData = {
                     image: {},
@@ -192,8 +192,8 @@ export function renderRegisterPage (){
             <label for "bio">Bio:</label>
             <textarea name="bio" rows="7" id="registerBio" placeholder="Say something about yourself"></textarea>
 
-            <p>Choose 5 interests</p>
-            <div id="interestsList" class="required">
+            <p id="interestP">Choose 5 interests</p>
+            <div id="interestsList">
             </div>
 
             <p>How do you want people to contact you?</p>
@@ -218,7 +218,6 @@ export function renderRegisterPage (){
             div.classList.add("checkbox-wrapper");
             const input = document.createElement("input");
             input.type = "checkbox";
-            input.classList.add("required");
             input.id = interest.toLowerCase().replace(" ", "");
             input.name = interest.toLowerCase().replace(" ", "");
             const label = document.createElement("label");
@@ -238,29 +237,31 @@ export function renderRegisterPage (){
         let count = 0;
         let checkedIntrests = [];
 
+
         for(let i = 0; i < interestsBoxes.length; i++) {
             interestsBoxes[i].addEventListener("change", e => {
-                if(interestsBoxes[i].checked === true){
-                    count++;
-                    checkedIntrests.push(interestsBoxes[i].name);
-                } else {
-                    count--;
-                    let index = checkedIntrests.indexOf(interestsBoxes[i].name);
-                    checkedIntrests.splice(index, 1);
-                }
-                if(count === 5){
-                    interestsBoxes.forEach(box => {
-                        if(!box.checked){
-                            box.disabled = true;
-                        }
-                    })
-                } else {
-                    interestsBoxes.forEach( box => {
-                        box.disabled = false;
-                    })
+            if(interestsBoxes[i].checked === true){
+                count++;
+                checkedIntrests.push(interestsBoxes[i].name);
+            } else {
+                count--;
+                let index = checkedIntrests.indexOf(interestsBoxes[i].name);
+                checkedIntrests.splice(index, 1);
+            }
+            if(count === 5){
+                interestsBoxes.forEach(box => {
+                    if(!box.checked){
+                        box.disabled = true;
+                    }
+                })
+            } else {
+                interestsBoxes.forEach( box => {
+                    box.disabled = false;
+                })
                 }
             })
         }
+
 
         document.getElementById("nextPage").addEventListener("click", e => {
             if(tel.value != "" && count === 5){
@@ -280,6 +281,14 @@ export function renderRegisterPage (){
 
             } else {
                 errorMessage();
+                const requiredIntrestBox = document.getElementById("interestsList");
+                const warning = document.getElementById("interestP");
+                let checkedChildren = Array.from(requiredIntrestBox.querySelectorAll("input[type='checkbox']:checked"));
+                if (checkedChildren.length < 5) {
+                warning.classList.add("notAnsweredInterest");                
+                } else {
+                warning.classList.remove("notAnsweredInterest");
+                }
             }
         })
     };
@@ -353,4 +362,8 @@ export function renderRegisterPage (){
                 error_message.textContent = JSONresponse;
         }
     }
+}
+
+function errorMessageInterest(){
+
 }

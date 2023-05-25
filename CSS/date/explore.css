@@ -98,6 +98,10 @@
     border-radius: 50%;
     border: 2px solid white;
     height: 30vh;
+    max-width: 80vw;
+    object-fit: cover;
+}
+
 .popup-background {
     display: flex;
     justify-content: center;

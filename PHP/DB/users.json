@@ -1077,15 +1077,17 @@
         ],
         "general": {
             "bio": "",
-            "tel": "2222",
+            "tel": "0760325768",
             "facebook": "facebook.com\/samuel_hughes",
             "instagram": "@samuel_hughes"
         },
         "preference": {
-            "genderOf": "male",
+            "genderOf": "both",
             "ageOfMax": "30",
             "ageOfMin": "20"
         },
-        "matches": []
+        "matches": [
+
+        ]
     }
 ]

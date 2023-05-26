@@ -38,9 +38,7 @@ foreach ($users as &$user) {
         } else {
             send(206, "no match");
         }
-    } else {
-    abort(404, ["user not found"]);
-}
+    } 
 }
 
 if ($foundUserMatch) {

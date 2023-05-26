@@ -87,7 +87,7 @@ if (count($sortedUsers) > 0) {
     $randUser = $sortedUsers[$randIndex];
     send(200, $randUser);
 } else {
-    abort(404, "Not found");
+    abort(206, "Not found");
 }
 
 ?>

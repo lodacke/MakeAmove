@@ -43,11 +43,8 @@ export function renderRegisterPage (){
 
     renderBasicInfoPage();
 
-
     function renderBasicInfoPage() {
-
         let mainDom = document.querySelector("main");
-
 
         mainDom.innerHTML = `
             <h1>Basic Info</h1>
@@ -69,7 +66,6 @@ export function renderRegisterPage (){
             </div>
 
             <div class="cityGenderAge">
-
                 <label for "city">City:
                     <select name="city" class="required city">
                         <option value="none" >Choose a city</option>
@@ -136,13 +132,13 @@ export function renderRegisterPage (){
                     preference: [],
                 };
 
-            imagePage(userData);
+                imagePage(userData);
             } else {
             } errorMessage();
         })
     }
 
-    function imagePage(userData){
+    function imagePage(userData) {
         mainDom.innerHTML = `
             <h1>Upload a profile picture</h1>
             <form id="upload" action="register.php" method="POST" enctype="multipart/form-data">
@@ -189,21 +185,16 @@ export function renderRegisterPage (){
         });
 
         document.getElementById("nextPage").addEventListener( "click", e => {
-            console.log(userData.image);
             if(addedImage === true){
                 QuestionPage(userData);
                 imageMessage.textContent = "";
             } else {
                 imageMessage. textContent = "You need to upload one!"
             }
-
         });
     }
 
     function QuestionPage(userData){
-
-        console.log(userData);
-
         mainDom.innerHTML = `
             <h1>Interests</h1>
             <label for "bio">Bio:</label>
@@ -249,46 +240,45 @@ export function renderRegisterPage (){
         let tel = mainDom.querySelector("input[name='tel']");
         let facebook = mainDom.querySelector("input[name='facebook']");
         let instagram = mainDom.querySelector("input[name='instagram']");
-
         let interestsBoxes = document.querySelectorAll("input[type='checkbox']");
+
         let count = 0;
         let checkedIntrests = [];
 
-
         for(let i = 0; i < interestsBoxes.length; i++) {
             interestsBoxes[i].addEventListener("change", e => {
-            if(interestsBoxes[i].checked === true){
-                count++;
-                checkedIntrests.push(interestsBoxes[i].name);
-            } else {
-                count--;
-                let index = checkedIntrests.indexOf(interestsBoxes[i].name);
-                checkedIntrests.splice(index, 1);
-            }
-            if(count === 5){
-                interestsBoxes.forEach(box => {
-                    if(!box.checked){
-                        box.disabled = true;
-                    }
-                })
-            } else {
-                interestsBoxes.forEach( box => {
-                    box.disabled = false;
-                })
+                if(interestsBoxes[i].checked === true) {
+                    count++;
+                    checkedIntrests.push(interestsBoxes[i].name);
+                } else {
+                    count--;
+                    let index = checkedIntrests.indexOf(interestsBoxes[i].name);
+                    checkedIntrests.splice(index, 1);
+                }
+
+                if(count === 5){
+                    interestsBoxes.forEach(box => {
+                        if(!box.checked) {
+                            box.disabled = true;
+                        }
+                    })
+                } else {
+                    interestsBoxes.forEach(box => {
+                        box.disabled = false;
+                    })
                 }
             })
         }
 
-
         document.getElementById("nextPage").addEventListener("click", e => {
-            if(tel.value != "" && count === 5){
+            if(tel.value != "" && count === 5) {
                 let interests = checkedIntrests.map((value) => value);
 
                 let general = {
-                bio: bio.value,
-                tel: tel.value,
-                facebook: facebook.value,
-                instagram: instagram.value,
+                    bio: bio.value,
+                    tel: tel.value,
+                    facebook: facebook.value,
+                    instagram: instagram.value,
                 };
 
                 userData.interests.push(interests);
@@ -302,15 +292,15 @@ export function renderRegisterPage (){
                 const warning = document.getElementById("interestP");
                 let checkedChildren = Array.from(requiredIntrestBox.querySelectorAll("input[type='checkbox']:checked"));
                 if (checkedChildren.length < 5) {
-                warning.classList.add("notAnsweredInterest");
+                    warning.classList.add("notAnsweredInterest");
                 } else {
-                warning.classList.remove("notAnsweredInterest");
+                    warning.classList.remove("notAnsweredInterest");
                 }
             }
         })
     };
 
-    function preferencePage(userData){
+    function preferencePage(userData) {
         mainDom.innerHTML = `
             <h1>Preferences</h1>
             <div id="lookingFor">
@@ -361,24 +351,22 @@ export function renderRegisterPage (){
         })
     };
 
-    async function addUser(userData){
+    async function addUser(userData) {
         let requestPOST = await fetch( new Request("PHP/register.php", {
-        method: "POST",
-        headers: {"Content-type":"application/json; charset=UTF-8"},
-        body: JSON.stringify(userData)
+            method: "POST",
+            headers: {"Content-type":"application/json; charset=UTF-8"},
+            body: JSON.stringify(userData)
         }));
 
         let JSONresponse = await requestPOST.json();
 
-        if(requestPOST.ok){
+        if(requestPOST.ok) {
             window.localStorage.setItem("user", JSON.stringify(JSONresponse));
             renderDatingPage();
-            } else {
-                let error_message = document.createElement("p");
-                mainDom.append(error_message);
-                error_message.textContent = JSONresponse;
+        } else {
+            let error_message = document.createElement("p");
+            mainDom.append(error_message);
+            error_message.textContent = JSONresponse;
         }
     }
 }
-
-

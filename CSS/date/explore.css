@@ -1,8 +1,8 @@
-
 #loadingSpinner{
     margin-top: 50%;
     height: 30%;
 }
+
 #explore-main {
     margin-top: 3vh;
     position: relative;
@@ -35,7 +35,6 @@
     object-position: center;
     height: 100%;
     width: 100%;
-    
 }
 
 .potentialMatchInfo {
@@ -92,7 +91,6 @@
     border-right: 2px solid #f0efef;
     border-bottom: 2px solid #f0efef;
 }
-
 
 #match {
     height: 120px;

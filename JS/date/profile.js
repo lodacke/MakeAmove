@@ -70,10 +70,10 @@ export async function renderProfilePage() {
             </div>
             <div class="interest-list-my required"></div>
           </div>
-
-          <div class="title">Location</div>
-          ${renderCityDropdownList(userData)}
-
+          <div class="location">
+            <img class="locationIconProfile" src="../PHP/DB/image/location-icon.png" alt="location-icon">
+            ${renderCityDropdownList(userData)}
+          </div>
           <div class="age">
             <div class="title">Age</div>
             <input type="number" name="age-my" min="18" value="${userData.age}">

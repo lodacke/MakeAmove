@@ -25,7 +25,7 @@ export function renderFrontPage() {
   frontMainDom.setAttribute("id", "startPageMain");
 
   headerDom.innerHTML = `
-    <img class=logo src="/PHP/DB/image/logo.jpg" alt="appLogo">
+    <img class=logo src="/PHP/DB/image/logo.png" alt="appLogo">
     <h1>Make A Move</h1>
   `;
 

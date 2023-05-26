@@ -14,6 +14,10 @@
     align-items: center;
 }
 
+#registerPageMain > h1:nth-child(1) {
+    font-size: 5vh;
+}
+
 .inputbox {
     position: relative;
     margin-top: 20px;
@@ -47,7 +51,7 @@
 
 .inputbox input:valid,
 .inputbox input:focus {
-    border: 3px solid #469dff;
+    border: 3px solid #b8befd;
 }
 
 .cityGenderAge {
@@ -58,7 +62,7 @@
     border-radius: 13px;
     border: 1px solid #a2a2a2;
     background-color: #ffffffa1;
-    height: 8vh;
+    height: 10vh;
     display: flex;
     justify-content: space-around;
     gap: 12px;
@@ -71,6 +75,11 @@
     border-radius: 5px;
 }
 
+.locationIconRegister {
+    height: 35px;
+    margin-left: 1vw;
+}
+
 .cityGenderAge input:first-child {
     width: 100%;
     margin-left: 25px;
@@ -78,8 +87,21 @@
 
 .cityGenderAge select {
     width: 100%;
-    display: flex;
     align-self: center;
+    height: 3vh;
+}
+
+.cityGenderAge > label:nth-child(3) {
+    margin: 1vh 0 1vh 0;
+}
+
+.cityGenderAge > label:nth-child(3) > input:nth-child(1) {
+    height: 2.5vh;
+    outline: none;
+}
+
+.cityGenderAge > label:nth-child(3) > input:nth-child(1):focus {
+    border: 3px solid #b8befd;
 }
 
 .cityGenderAge label {
@@ -88,13 +110,13 @@
 }
 
 .city {
-    margin-left: 26px;
+    margin-left: 3vw;
 }
 
 #pageNavigation {
     display: flex;
     height: 6vh;
-    width: 80%;
+    width: 95%;
     gap: 1vw;
     margin: 0 auto;
 }
@@ -139,7 +161,6 @@
     height: 40vh;
     width: 65vw;
     border-radius: 8px;
-    border: 2px solid white;
     object-fit: cover;
 }
 
@@ -169,7 +190,7 @@
 }
 
 #registerBio:focus {
-    border: 3px solid #469dff;
+    border: 3px solid #c0c6ff;
 }
 
 #registerPageMain p {
@@ -177,7 +198,7 @@
 }
 
 #interestsList {
-    height: 18vh;
+    height: 25vh;
     width: 85vw;
     box-sizing: content-box;
     border: 1px solid gray;
@@ -202,14 +223,15 @@
     width: 180px;
     border-radius: 5px;
     border: 1px solid gray;
+    outline: none;
+}
+
+.contact-methods input:focus {
+    border: 3px solid #b8befd;
 }
 
 .contact-methods input:last-child {
     margin-bottom: 2vh;
-}
-
-.contact-methods input:focus {
-    border: 2px solid #3593ff;
 }
 
 #interestsList > div {
@@ -272,14 +294,15 @@
 .preferred-min-max input[name="ageOfMin"],
 .preferred-min-max input[name="ageOfMax"] {
     width: 90%;
-    border-radius: 3px;
+    border-radius: 5px;
     border: 1px solid #a4a4a4;
     height: 3vh;
+    outline: none;
 }
 
 .preferred-min-max input[name="ageOfMin"]:focus,
 .preferred-min-max input[name="ageOfMax"]:focus {
-    border: 2px solid #469dff;
+    border: 3px solid #b8befd;
 }
 
 .preferred-min-max input[name="ageOfMin"]::placeholder,

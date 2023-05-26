@@ -70,7 +70,8 @@ export function renderRegisterPage (){
 
             <div class="cityGenderAge">
 
-                <label for "city">City:
+                <label for "city">
+                    <img class="locationIconRegister" src="../PHP/DB/image/location-icon.png" alt="location-icon">
                     <select name="city" class="required city">
                         <option value="none" >Choose a city</option>
                         ${renderCityDropdownListReg()}

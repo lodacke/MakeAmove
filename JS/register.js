@@ -166,7 +166,7 @@ export function renderRegisterPage (){
             event.preventDefault();
             userImage.innerHTML = "";
             const formData = new FormData(form);
-            const request = new Request("PHP/register.php", {
+            const request = new Request("PHP/profilePicture.php", {
                 method: "POST",
                 body: formData,
             });

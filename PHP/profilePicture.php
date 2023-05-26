@@ -1,4 +1,4 @@
-<?php 
+<?php
 ini_set("display_errors", 1);
 
 require_once("helper.php");
@@ -24,27 +24,21 @@ if(isset($_FILES["profilePicture"])) {
   if(in_array($fileExtension, $allowed)) {
 
     if($fileSize < 2000000) {
-      if($fileError === 0){
+      if($fileError === 0) {
+        $destination = "DB/uploads/".$fileName;
+        $source = $fileTmpName;
 
-      $destination = "DB/uploads/".$fileName;
-      $source = $fileTmpName;
-
-      if(move_uploaded_file($source, $destination)) {
-
-        $imageSource = "PHP/DB/uploads/".$fileName;
-
-        $AllImages[] = $imageSource;
-        send(200, $imageSource);
+        if(move_uploaded_file($source, $destination)) {
+          $imageSource = "PHP/DB/uploads/".$fileName;
+          send(200, $imageSource);
         }
       } else {
         $error = ["error" => "Something went wrong when uploading image."];
-        abort(405, $error);
+        abort(400, $error);
       }
-
     } else {
-        $error = ["error" => "The file you uploaded is to big."];
-        abort(413, $error);
-
+      $error = ["error" => "The file you uploaded is to big."];
+      abort(413, $error);
     }
   } else {
         $error = ["error" => "We only allow JPG, JPEG & PNG files."];

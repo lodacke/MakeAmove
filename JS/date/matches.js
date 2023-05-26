@@ -36,8 +36,7 @@ export async function renderMatchesPage() {
     createDivForMatch(matches);
   } else {
     mainDom.innerHTML = `
-      <h2 id="noMatchesFound"> Sorry, you have no matches yet... </h2>
-    `;
+    <h2 id="noPotentialMatch"> Sorry, you have no matches yet... </h2> `;
   }
 
   function createDivForMatch(matches) {

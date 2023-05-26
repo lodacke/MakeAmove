@@ -41,7 +41,7 @@ foreach ($users as &$user) {
     } else {
     abort(404, ["user not found"]);
 }
-} 
+}
 
 if ($foundUserMatch) {
   forEach($foundUserMatch as $userMatch) {

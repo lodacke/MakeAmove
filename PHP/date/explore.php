@@ -60,6 +60,8 @@ forEach ($users as &$user) {
         ($user["preference"]["genderOf"] === $gender)
     ) {
         unset($user["general"]["tel"]);
+        unset($user["general"]["instagram"]);
+        unset($user["general"]["facebook"]);
         unset($user["password"]);
         unset($user["email"]);
         unset($user["preference"]);

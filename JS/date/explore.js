@@ -78,7 +78,7 @@ function renderCurrentDate(request, userDATA) {
 
       let response = await requestPOST.json();
 
-      if (response != "no match") {
+      if (response === 200) {
         let popup = document.createElement("div");
         let popupContent = document.createElement("div");
         let popupBackground = document.createElement("div");

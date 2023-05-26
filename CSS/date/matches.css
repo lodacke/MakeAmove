@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Nuno;
+  src: url("../PHP/DB/Nunito/Nunito-VariableFont_wght.ttf");
+}
+
+#matchesMain h1{
+    font-family: Nuno;
+    font-weight: lighter;
+}
+
 #matchesMain {
     display: flex;
     flex-direction: column;

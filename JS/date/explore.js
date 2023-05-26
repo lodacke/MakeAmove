@@ -64,7 +64,7 @@ function renderCurrentDate(request, userDATA) {
 
     async function matches() {
       let requestPOST = await fetch(
-        new Request("../../PHP/date/matches.php", {
+        new Request("MakeAmove/../PHP/date/matches.php", {
           method: "POST",
           headers: { "Content-type": "application/json; charset=UTF-8" },
           body: JSON.stringify(match),
@@ -101,7 +101,7 @@ function renderCurrentDate(request, userDATA) {
         }
 
         popupContent.innerHTML = `
-          <img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross"></img>
+          <img class="white-cross" src=".MakeAmove/../PHP/DB/image/white-cross.svg" alt="white-cross"></img>
           <h1>It's a match!</h1>
           <h3>Time to Make a Move...</h3>
           <p>You can reach your match via:</p>

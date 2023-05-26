@@ -250,7 +250,7 @@ function renderChangePasswordBox(event) {
       <label>Repeated new password:</label>
       <div class="password-field">
         <input type="password" class="password-input" name="passwordRepeat" autocomplete="off">
-        <img src="MakeAmove/../../PHP/DB/image/eye.png" alt="show-password" id="show-password">
+        <img src="MakeAmove/../PHP/DB/image/eye.png" alt="show-password" id="show-password">
       </div>
     </div>
 
@@ -341,7 +341,7 @@ function renderConfirmDeleteAccountBox(event) {
   const popupContent = document.querySelector(".popup-content");
 
   popupContent.innerHTML = `
-    <img class="white-cross" src="MakeAmove/../../PHP/DB/image/white-cross.svg" alt="white-cross">
+    <img class="white-cross" src="MakeAmove/../PHP/DB/image/white-cross.svg" alt="white-cross">
     <div class="delete-content">
       <p class="confirm-question">Are you sure that you want to delete your account?</p>
       <button class="confirm-delete-yes">Yes</button>

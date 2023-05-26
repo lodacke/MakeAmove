@@ -1,5 +1,11 @@
-body {
-  position: relative;
+@font-face {
+  font-family: Nuno;
+  src: url("../PHP/DB/Nunito/Nunito-VariableFont_wght.ttf");
+}
+
+h3{
+  font-family: Nuno;
+  font-weight: lighter;
 }
 
 .profile-page-container {
@@ -28,6 +34,8 @@ body {
 .user-name {
   font-size: 4vh;
   margin: 2vh 0 0 0;
+  font-family: Nuno;
+  font-weight: lighter;
 }
 
 .profile-main {

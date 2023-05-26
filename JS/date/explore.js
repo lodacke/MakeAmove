@@ -1,3 +1,5 @@
+"use strict";
+
 import { stickyNav } from "./stickyNav.js";
 import { renderProfilePage } from "./profile.js";
 import { getUserData } from "../helper.js";
@@ -16,7 +18,7 @@ export async function renderDatingPage() {
   navDom.innerHTML = stickyNav();
 
   let headerDOM = document.querySelector("header");
-  headerDOM.setAttribute("id", "date-header")
+  headerDOM.setAttribute("id", "date-header");
   headerDOM.innerHTML = `
     <img id="date-logo" src="/PHP/DB/image/logo.png" alt="appLogo">
   `;
@@ -36,32 +38,29 @@ export async function renderDatingPage() {
 }
 
 function renderCurrentDate(request, userDATA) {
-
   if (request.status == 200) {
     mainDom.innerHTML = `
-    <div id="explore-main">
-      <div id="containerPotentialMatch">
-        <img class="potentialMatchPic" src="${userDATA.imageSource}"></img>
-        <div class="potentialMatchInfo">
-          <div>${userDATA.name},</div>
-          <div>${userDATA.age} </div>
+      <div id="explore-main">
+        <div id="containerPotentialMatch">
+          <img class="potentialMatchPic" src="${userDATA.imageSource}"></img>
+          <div class="potentialMatchInfo">
+            <div>${userDATA.name},</div>
+            <div>${userDATA.age} </div>
+          </div>
+        </div>
+        <div id="matchButtons">
+          <button id="noMatch">No</button>
+          <button id="match">Yes</button>
         </div>
       </div>
-      <div id="matchButtons">
-        <button id="noMatch">No</button>
-        <button id="match">Yes</button>
-      </div>
-    </div>
-  `;
+    `;
 
     mainDom.querySelector("#match").addEventListener("click", matches);
-    mainDom.querySelector("#noMatch").addEventListener("click", e => {
+    mainDom.querySelector("#noMatch").addEventListener("click", (e) => {
       renderDatingPage();
     });
-    mainDom
-      .querySelector(".potentialMatchPic")
-      .addEventListener("click", () => showUser(userDATA));
 
+    mainDom.querySelector(".potentialMatchPic").addEventListener("click", () => showUser(userDATA));
 
     let match = {
       loggedInUser: getUserData().id,
@@ -80,7 +79,6 @@ function renderCurrentDate(request, userDATA) {
       let response = await requestPOST.json();
 
       if (response != "no match") {
-
         let popup = document.createElement("div");
         let popupContent = document.createElement("div");
         let popupBackground = document.createElement("div");
@@ -96,13 +94,13 @@ function renderCurrentDate(request, userDATA) {
         let facebookDom;
         let instagramDom;
 
-         if(response.facebook !== ""){
-            facebookDom = response.facebook;
-         } else {
-            facebookDom = "Not available";
-         } 
-         if(response.instagram !== "") {  
-          instagramDom =  response.instagram;
+        if (response.facebook !== "") {
+          facebookDom = response.facebook;
+        } else {
+          facebookDom = "Not available";
+        }
+        if (response.instagram !== "") {
+          instagramDom = response.instagram;
         } else {
           instagramDom = "Not available";
         }
@@ -113,41 +111,41 @@ function renderCurrentDate(request, userDATA) {
           <h3>Time to Make a Move...</h3>
           <p>You can reach your match via:</p>
           <div id="exploreMatchBoxContact">
-          <div class="matchInfoBoxes">
-            <img class="telephoneIconMatch" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
-              ${response.phone}
-            </div>
             <div class="matchInfoBoxes">
-          <img class="facebookIconMatch" src="../PHP/DB/image/facebook.png" alt="facebook-icon"> 
-            ${facebookDom}
+              <img class="telephoneIconMatch" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
+                ${response.phone}
             </div>
+
             <div class="matchInfoBoxes">
-          <img class="instagramIconMatch" src="../PHP/DB/image/instagram.png" alt="instagram-icon"> 
-            ${instagramDom}</p>
+              <img class="facebookIconMatch" src="../PHP/DB/image/facebook.png" alt="facebook-icon">
+              ${facebookDom}
+            </div>
+
+            <div class="matchInfoBoxes">
+              <img class="instagramIconMatch" src="../PHP/DB/image/instagram.png" alt="instagram-icon">
+              ${instagramDom}
             </div>
           </div>
 
-            <p> (You can find your match later under "match")
-          </p>
+          <p>(You can find your match later under "match")</p>
         `;
 
         let whiteCross = document.querySelector(".white-cross");
-          whiteCross.addEventListener("click", e => {
+        whiteCross.addEventListener("click", (e) => {
           const popup = document.querySelector(".popup");
           popup.remove();
           mainDom.classList.remove("makeContentLighter");
-        })
+        });
       }
 
       renderDatingPage();
     }
-
   } else {
     mainDom.innerHTML = `
-  <div id="noPotentialMatch">
-    <p> No potential matches are found right now :(</p>
-  </div>
-  `;
+      <div id="noPotentialMatch">
+        <p> No potential matches are found right now :(</p>
+      </div>
+    `;
   }
 }
 
@@ -180,16 +178,14 @@ function showUser(userDATA) {
         <li>${userDATA.interests[3]}</li>
         <li>${userDATA.interests[4]}</li>
       </ul>
-      <div class="cityOfMatch"> 
+      <div class="cityOfMatch">
         <img class="locationIcon" src="../PHP/DB/image/location-icon.png" alt="location-icon">
       <div class="showCity"> ${userDATA.city} </div>
       </div>
     </div>
   `;
 
-  popupContent
-    .querySelector(".white-cross-explore")
-    .addEventListener("click", closeExploreProfilePopup);
+  popupContent.querySelector(".white-cross-explore").addEventListener("click", closeExploreProfilePopup);
 }
 
 function closeExploreProfilePopup() {

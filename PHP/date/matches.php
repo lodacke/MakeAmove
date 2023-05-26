@@ -36,12 +36,12 @@ foreach ($users as &$user) {
             $foundUserMatch[] = ($user);
             break;
         } else {
-            send(200, "no match");
+            send(206, "no match");
         }
     } else {
     abort(404, ["user not found"]);
 }
-} 
+}
 
 if ($foundUserMatch) {
   forEach($foundUserMatch as $userMatch) {

@@ -271,6 +271,7 @@ function renderChangePasswordBox(event) {
   });
 
   whiteCross.addEventListener("click", closePopUpBox);
+  
   popupContent.addEventListener("submit", saveNewPassword);
 }
 

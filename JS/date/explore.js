@@ -38,7 +38,7 @@ export async function renderDatingPage() {
 }
 
 function renderCurrentDate(request, userDATA) {
-  if (request.status == 200) {
+  if (request.status === 200) {
     mainDom.innerHTML = `
       <div id="explore-main">
         <div id="containerPotentialMatch">

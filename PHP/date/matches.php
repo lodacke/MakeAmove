@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 ini_set("display_errors", 1);
 
@@ -6,7 +6,6 @@ require_once("../helper.php");
 
 allowCORS();
 allowMethod("POST");
-
 
 $fileName = "../DB/users.json";
 
@@ -21,15 +20,16 @@ $foundUserMatch = null;
 $loggedInUser = $dataREQUEST["loggedInUser"];
 $foundUser = $dataREQUEST["matchedUser"];
 
-forEach($users as &$user){
-    if($loggedInUser === $user["id"]){
+forEach($users as &$user) {
+    if($loggedInUser === $user["id"]) {
        $user["matches"][] = $foundUser;
         break;
-    } 
+    }
 }
 
 $data = json_encode($users, JSON_PRETTY_PRINT);
 file_put_contents($fileName, $data);
+
 foreach ($users as &$user) {
     if ($foundUser === $user["id"]) {
         if (in_array($loggedInUser, $user["matches"])) {
@@ -42,16 +42,14 @@ foreach ($users as &$user) {
 }
 
 if ($foundUserMatch) {
-
-  forEach($foundUserMatch as $userMatch){
+  forEach($foundUserMatch as $userMatch) {
         $userContact = [
-        "phone" => $userMatch["general"]["tel"],
-        "facebook" => $userMatch["general"]["facebook"],
-        "instagram" => $userMatch["general"]["instagram"],
-    ];
+            "phone" => $userMatch["general"]["tel"],
+            "facebook" => $userMatch["general"]["facebook"],
+            "instagram" => $userMatch["general"]["instagram"],
+        ];
   }
     send(200, $userContact);
-    
 } else {
     send(404, ["user not found"]);
 }
@@ -59,4 +57,4 @@ if ($foundUserMatch) {
 $data = json_encode($users, JSON_PRETTY_PRINT);
 file_put_contents($fileName, $data);
 
-?> 
+?>

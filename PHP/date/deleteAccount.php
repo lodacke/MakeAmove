@@ -20,17 +20,20 @@ if (file_exists($filename)) {
 $requestJSON = file_get_contents("php://input");
 $requestData = json_decode($requestJSON, true);
 
-if (isset($requestData["email"])) {
-  $email = $requestData["email"];
+if(!isset($requestData["id"])) {
+  $error = ["error" => "Something goes wrong to delete your account. Please try again!"];
+  abort(400, $error);
+  }
 
-  foreach ($users as $index => $user) {
-    if ($user["email"] == $email) {
-      array_splice($users, $index, 1);
-      $json = json_encode($users, JSON_PRETTY_PRINT);
-      file_put_contents($filename, $json);
-      $deleteMessage = ["message" => "Your account is successfully deleted! Good luck with your love journey (ﾉ´ з `)ノ"];
-      send(200, $deleteMessage);
-    }
+$id = $requestData["id"];
+
+foreach ($users as $index => $user) {
+  if ($user["id"] == $id) {
+    array_splice($users, $index, 1);
+    $json = json_encode($users, JSON_PRETTY_PRINT);
+    file_put_contents($filename, $json);
+    $deleteMessage = ["message" => "Your account is successfully deleted! Good luck with your love journey (ﾉ´ з `)ノ"];
+    send(200, $deleteMessage);
   }
 }
 

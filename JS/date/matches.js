@@ -24,7 +24,7 @@ export async function renderMatchesPage() {
   let response = await fetch(`/PHP/date/showMatches.php?id=${getUserData().id}`);
   let matches = await response.json();
 
-  if(response.ok) {
+  if(response.status === 200){
     mainDom.innerHTML = `
       <h1> Matches </h1>
       <div id="containerForMatches">

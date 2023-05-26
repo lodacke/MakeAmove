@@ -49,7 +49,7 @@ if($match) {
 
     send(200, $userToSend);
 } else {
-    abort(300, "No matches to show");
+    abort(206, "No matches to show");
 }
 
 ?>

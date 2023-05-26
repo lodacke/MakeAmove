@@ -372,7 +372,7 @@ async function deleteUserAccount(event) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        id: getUserData().email,
+        id: getUserData().id,
       }),
     });
 

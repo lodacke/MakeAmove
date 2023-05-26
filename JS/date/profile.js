@@ -20,14 +20,11 @@ export async function renderProfilePage() {
 
   const userData = await response.json();
 
-
   mainDom.innerHTML = `
     <form class="profile-page-container">
 
       <div class="profile-top">
-        <img class="user-picture" src="${
-          userData.imageSource
-        }" alt="user-picture">
+        <img class="user-picture" src="${userData.imageSource}" alt="user-picture">
         <h2 class="user-name">${userData.name}</h2>
       </div>
 
@@ -37,29 +34,22 @@ export async function renderProfilePage() {
 
           <div class="title">Bio</div>
           <textarea class="profileBio" name="bio" placeholder="Write something about yourself">${
-            userData.general.bio || ""
-          }</textarea>
+            userData.general.bio || ""}</textarea>
 
           <div class="contactMethods"> My contact details
             <div class="telephone-number">
               <img class="telephone-icon" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
-              <input type="text" name="tel" placeholder="Your phone number" value="${
-                userData.general.tel
-              }">
+              <input type="text" name="tel" placeholder="Your phone number" value="${userData.general.tel}">
             </div>
 
             <div class="facebook">
               <img class="facebook-icon" src="../PHP/DB/image/facebook.png" alt="facebook-icon">
-              <input type="text" name="facebook" placeholder="Your Facebook username" value="${
-                userData.general.facebook
-              }">
+              <input type="text" name="facebook" placeholder="Your Facebook username" value="${userData.general.facebook}">
             </div>
 
             <div class="instagram">
               <img class="instagram-icon" src="../PHP/DB/image/instagram.png" alt="instagram-icon">
-              <input type="text" name="instagram" placeholder="Your Instagram username" value="${
-                userData.general.instagram
-              }">
+              <input type="text" name="instagram" placeholder="Your Instagram username" value="${userData.general.instagram}">
             </div>
           </div>
 
@@ -87,15 +77,11 @@ export async function renderProfilePage() {
           <div class="preferred-age">
             <div class="age-min">
               <div class="title">Minimum age</div>
-              <input type="number" name="age-min" min="18" value="${
-                userData.preference.ageOfMin
-              }">
+              <input type="number" name="age-min" min="18" value="${userData.preference.ageOfMin}">
             </div>
             <div class="age-max">
               <div class="title">Maximum age</div>
-              <input type="number" name="age-max" value="${
-                userData.preference.ageOfMax
-              }">
+              <input type="number" name="age-max" value="${userData.preference.ageOfMax}">
             </div>
           </div>
           <div class="title">I am looking for</div>
@@ -164,7 +150,6 @@ function logoutFromAccount() {
 
 function checkMyChosenInterestAtRegister(myChosenInterestAtRegister) {
   const interestsArray = Object.values(myChosenInterestAtRegister);
-
   const myInterestLabels = document.querySelectorAll(".my-interest");
 
   myInterestLabels.forEach(function (label) {
@@ -284,6 +269,7 @@ function renderChangePasswordBox(event) {
   allShowPasswordIcons.forEach(icon => {
     icon.addEventListener("click", () => togglePassword(icon));
   });
+
   whiteCross.addEventListener("click", closePopUpBox);
   popupContent.addEventListener("submit", saveNewPassword);
 }

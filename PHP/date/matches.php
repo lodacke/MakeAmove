@@ -38,8 +38,10 @@ foreach ($users as &$user) {
         } else {
             send(200, "no match");
         }
-    }
+    } else {
+    abort(404, ["user not found"]);
 }
+} 
 
 if ($foundUserMatch) {
   forEach($foundUserMatch as $userMatch) {
@@ -51,7 +53,7 @@ if ($foundUserMatch) {
   }
     send(200, $userContact);
 } else {
-    send(404, ["user not found"]);
+    abort(404, ["user not found"]);
 }
 
 $data = json_encode($users, JSON_PRETTY_PRINT);

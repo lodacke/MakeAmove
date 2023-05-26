@@ -1,8 +1,7 @@
 "use strict";
 
-import { errorMessage } from "./helper.js";
+import { renderCityDropdownListReg, errorMessage } from "./helper.js";
 import { renderDatingPage } from "./date/explore.js";
-import { renderCityDropdownListReg } from "./helper.js";
 import { renderFrontPage } from "./index.js";
 
 function renderPageNavigation(previousPage){
@@ -44,7 +43,7 @@ export function renderRegisterPage (){
 
     renderBasicInfoPage();
 
-   
+
     function renderBasicInfoPage() {
 
         let mainDom = document.querySelector("main");
@@ -88,7 +87,7 @@ export function renderRegisterPage (){
                 </label>
 
                 <label for "age">Age:
-                    <input type="number" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
+                    <input type="number" min="18" name="age" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="required">
                 </label>
             </div>
         `;
@@ -119,7 +118,7 @@ export function renderRegisterPage (){
             if(
                 nameDom.value != "" &&
                 emailDom.value != "" &&
-                passwordDom.value != "" && 
+                passwordDom.value != "" &&
                 ageDom.value != null &&
                 genderDom.value != "none" &&
                 cityDom.value != "none"
@@ -185,7 +184,7 @@ export function renderRegisterPage (){
 
                     userData.image = data;
                     addedImage = true;
-                }              
+                }
             })
         });
 
@@ -197,7 +196,7 @@ export function renderRegisterPage (){
             } else {
                 imageMessage. textContent = "You need to upload one!"
             }
-           
+
         });
     }
 
@@ -303,7 +302,7 @@ export function renderRegisterPage (){
                 const warning = document.getElementById("interestP");
                 let checkedChildren = Array.from(requiredIntrestBox.querySelectorAll("input[type='checkbox']:checked"));
                 if (checkedChildren.length < 5) {
-                warning.classList.add("notAnsweredInterest");                
+                warning.classList.add("notAnsweredInterest");
                 } else {
                 warning.classList.remove("notAnsweredInterest");
                 }
@@ -322,14 +321,14 @@ export function renderRegisterPage (){
                         <option value="female">Female</option>
                         <option value="male">Male</option>
                         <option value="both">Both</option>
-                    </select>   
+                    </select>
                 </div>
 
                 <div class="preferred-min-max-age">
                     <p>Pick your age-range</p>
                     <div class="preferred-min-max">
-                        <input name="ageOfMin" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Minimum age">
-                        <input name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Maximum age">
+                        <input type="number" name="ageOfMin" min="18" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Minimum age">
+                        <input type="number" name="ageOfMax" class="required" onkeypress="return event.charCode >= 48 && event.charCode <= 57" placeholder="Maximum age">
                     </div>
                 </div>
 

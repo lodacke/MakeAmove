@@ -10,7 +10,6 @@ allowMethod("POST");
 $newUser = [];
 
 if(isset($_FILES["profilePicture"])) {
-
   $imagesJSON = "DB/imageSource.json";
   $AllImages = [];
 
@@ -23,22 +22,18 @@ if(isset($_FILES["profilePicture"])) {
   $fileType = $file["type"];
 
   $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
-
   $allowed = ["jpg", "jpeg", "png"];
+
   if(in_array($fileExtension, $allowed)) {
-
     if($fileSize < 2000000) {
-      if($fileError === 0){
+      if($fileError === 0) {
+        $destination = "DB/uploads/".$fileName;
+        $source = $fileTmpName;
 
-      $destination = "DB/uploads/".$fileName;
-      $source = $fileTmpName;
-
-      if(move_uploaded_file($source, $destination)) {
-
-        $imageSource = "PHP/DB/uploads/".$fileName;
-
-        $AllImages[] = $imageSource;
-        send(200, $imageSource);
+        if(move_uploaded_file($source, $destination)) {
+          $imageSource = "PHP/DB/uploads/".$fileName;
+          $AllImages[] = $imageSource;
+          send(200, $imageSource);
         }
       } else {
         $error = ["error" => "Something went wrong when uploading image."];
@@ -46,24 +41,23 @@ if(isset($_FILES["profilePicture"])) {
       }
 
     } else {
-        $error = ["error" => "The file you uploaded is to big."];
-        abort(413, $error);
-
+      $error = ["error" => "The file you uploaded is to big."];
+      abort(413, $error);
     }
   } else {
-        $error = ["error" => "We only allow JPG, JPEG & PNG files."];
-        abort(405, $error);
-    }
+    $error = ["error" => "We only allow JPG, JPEG & PNG files."];
+    abort(405, $error);
   }
+}
 
 $fileName = "DB/users.json";
 $users = [];
 
-if(file_exists($fileName)){
-    $JSONusers = file_get_contents($fileName);
-    $users = json_decode($JSONusers, true);
+if(file_exists($fileName)) {
+  $JSONusers = file_get_contents($fileName);
+  $users = json_decode($JSONusers, true);
 } else {
-    file_put_contents($fileName, $users);
+  file_put_contents($fileName, $users);
 }
 
 $jsonREQUEST = file_get_contents("php://input");
@@ -85,17 +79,17 @@ $genderOf = $dataREQUEST["preference"][0]["genderOf"];
 $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
 $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
 
- if($age < 18){
-   abort(409, [$data = "You need to be over 18 to use this app"]);
+if($age < 18) {
+  abort(409, [$data = "You need to be over 18 to use this app"]);
 }
 
-forEach($users as $user){
+forEach($users as $user) {
   if($email === $user["email"]){
     abort(403, [$data = "This email already exists."]);
   }
 }
 
-if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel == "" && $age == null && $city == null)){
+if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel == "" && $age == null && $city == null)) {
 
   $newUser = [
     "id" => uniqid(),
@@ -129,9 +123,9 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel
   $data = json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
   file_put_contents($fileName, $data);
 
- send(201, $data = $userToSend);
-  } else {
-    abort(400, [$data = "You need to fill in all the fields before you proceed."]);
-  }
+  send(201, $data = $userToSend);
+} else {
+  abort(400, [$data = "You need to fill in all the fields before you proceed."]);
+}
 
 ?>

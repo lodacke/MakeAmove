@@ -117,7 +117,7 @@ export function renderRegisterPage (){
                 nameDom.value != "" &&
                 emailDom.value != "" &&
                 emailDom.value.includes("@") &&
-                passwordDom.value != "" &&
+                passwordDom.value.length >= 8 &&
                 ageDom.value != null &&
                 genderDom.value != "none" &&
                 cityDom.value != "none"

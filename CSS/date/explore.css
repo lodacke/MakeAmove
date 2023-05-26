@@ -108,6 +108,7 @@
     display: flex;
     justify-content: center;
     margin-top: 50%;
+    font-size: 3vh;
 }
 
 .explore-profile {

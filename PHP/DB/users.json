@@ -340,8 +340,7 @@
             "64660ea70f618",
             "646e59b876115",
             "64660f47636ce",
-            "64660e2656c5d",
-            "64660d6fe59eb"
+            "64660e2656c5d"
         ]
     },
     {
@@ -861,7 +860,7 @@
         "password": "isaac",
         "age": "24",
         "city": "Eskilstuna",
-        "gender": "female",
+        "gender": "male",
         "imageSource": "PHP\/DB\/uploads\/isaac-gray.jpg",
         "interests": [
             "traveling",

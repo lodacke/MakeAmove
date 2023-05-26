@@ -47,7 +47,7 @@ forEach($users as $user){
   }
 }
 
-if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel == "" && $age == null && $city == null)){
+if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel == "" && $age == "" && $city == "none")){
 
   $newUser = [
     "id" => uniqid(),

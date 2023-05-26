@@ -7,7 +7,6 @@ require_once("../helper.php");
 allowCORS();
 allowMethod("POST");
 
-
 $fileName = "../DB/users.json";
 
 $json = file_get_contents($fileName);
@@ -38,8 +37,10 @@ foreach ($users as &$user) {
         } else {
             send(200, "no match");
         }
-    }
+    } else {
+    abort(404, ["user not found"]);
 }
+} 
 
 if ($foundUserMatch) {
 
@@ -53,7 +54,7 @@ if ($foundUserMatch) {
     send(200, $userContact);
     
 } else {
-    send(404, ["user not found"]);
+    abort(404, ["user not found"]);
 }
 
 $data = json_encode($users, JSON_PRETTY_PRINT);

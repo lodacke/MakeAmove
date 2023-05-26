@@ -119,6 +119,7 @@ export function renderRegisterPage (){
             if(
                 nameDom.value != "" &&
                 emailDom.value != "" &&
+                emailDom.value.includes("@") &&
                 passwordDom.value != "" &&
                 ageDom.value != null &&
                 genderDom.value != "none" &&
@@ -282,7 +283,7 @@ export function renderRegisterPage (){
 
 
         document.getElementById("nextPage").addEventListener("click", e => {
-            if(tel.value != "" && count === 5){
+            if(tel.value.length >= 7 && count === 5){
                 let interests = checkedIntrests.map((value) => value);
 
                 let general = {

@@ -11,11 +11,11 @@ $fileName = "DB/users.json";
 $users = [];
 $newUser = [];
 
-if(file_exists($fileName)){
-    $JSONusers = file_get_contents($fileName);
-    $users = json_decode($JSONusers, true);
+if(file_exists($fileName)) {
+  $JSONusers = file_get_contents($fileName);
+  $users = json_decode($JSONusers, true);
 } else {
-    file_put_contents($fileName, $users);
+  file_put_contents($fileName, $users);
 }
 
 $jsonREQUEST = file_get_contents("php://input");
@@ -37,11 +37,11 @@ $genderOf = $dataREQUEST["preference"][0]["genderOf"];
 $ageOfMax = $dataREQUEST["preference"][0]["ageOfMax"];
 $ageOfMin = $dataREQUEST["preference"][0]["ageOfMin"];
 
- if($age < 18){
-   abort(409, [$data = "You need to be over 18 to use this app"]);
+if($age < 18) {
+  abort(409, [$data = "You need to be over 18 to use this app"]);
 }
 
-forEach($users as $user){
+forEach($users as $user) {
   if($email === $user["email"]){
     abort(403, [$data = "This email already exists."]);
   }
@@ -81,9 +81,9 @@ if(!($name == "" && $email == "" && $password == "" && $gender == "none" && $tel
   $data = json_encode($users, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
   file_put_contents($fileName, $data);
 
- send(201, $data = $userToSend);
-  } else {
-    abort(400, [$data = "You need to fill in all the fields before you proceed."]);
-  }
+  send(201, $data = $userToSend);
+} else {
+  abort(400, [$data = "You need to fill in all the fields before you proceed."]);
+}
 
 ?>

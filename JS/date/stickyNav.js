@@ -1,3 +1,5 @@
+"use strict";
+
 export function stickyNav() {
   return `
     <ul>

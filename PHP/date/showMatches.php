@@ -35,7 +35,6 @@ forEach($users as $user){
 
 $match = array_intersect($othersMatches, $userWhoLoggedInLikes);
 
-
 if($match) {
     forEach($users as $user){
         if(in_array($user["id"], $match)){
@@ -49,7 +48,6 @@ if($match) {
     }
 
     send(200, $userToSend);
-
 } else {
     abort(206, "No matches to show");
 }

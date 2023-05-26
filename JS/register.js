@@ -66,7 +66,9 @@ export function renderRegisterPage (){
             </div>
 
             <div class="cityGenderAge">
-                <label for "city">City:
+
+                <label for "city">
+                    <img class="locationIconRegister" src="../PHP/DB/image/location-icon.png" alt="location-icon">
                     <select name="city" class="required city">
                         <option value="none" >Choose a city</option>
                         ${renderCityDropdownListReg()}
@@ -162,7 +164,7 @@ export function renderRegisterPage (){
             event.preventDefault();
             userImage.innerHTML = "";
             const formData = new FormData(form);
-            const request = new Request("PHP/register.php", {
+            const request = new Request("PHP/profilePicture.php", {
                 method: "POST",
                 body: formData,
             });

@@ -35,8 +35,17 @@ body {
 }
 
 .title {
-  margin-bottom: -5px;
-  margin-left: 2px;
+  margin-left: 2vw;
+  display: flex;
+  align-items: center;
+}
+
+.location {
+  display: flex;
+}
+
+.locationIconProfile {
+  height: 5vh;
 }
 
 .category {
@@ -70,9 +79,9 @@ body {
 .instagram input,
 .age input,
 .preferred-age input {
-  width: 44vw;
+  width: 43vw;
   height: 3vh;
-  margin-left: 1vw;
+  margin-left: 1.5vw;
   outline: none;
   border-radius: 5px;
   border: 2px solid #a9a9a9;
@@ -175,6 +184,7 @@ body {
   border: 2px solid darkgray;
   border-radius: 4px;
   margin-bottom: 2vh;
+  margin-top: 1vh;
 }
 
 .interest {

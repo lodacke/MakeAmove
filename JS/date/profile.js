@@ -6,11 +6,11 @@ const interests = [
 ];
 
 async function renderProfilePage() {
-  let response = await fetch(`../PHP/date/getProfile.php?id=${getUserData().id}`);
+  let response = await fetch(`MakeAmove/../PHP/date/getProfile.php?id=${getUserData().id}`);
 
   let mainDom = document.querySelector("main");
     mainDom.innerHTML = `
-      <img id="loadingSpinner" src="/PHP/DB/image/spinner.svg" alt="spinningLogo">
+      <img id="loadingSpinner" src="MakeAmove/../PHP/DB/image/spinner.svg" alt="spinningLogo">
   `;
 
   const userData = await response.json();
@@ -33,17 +33,17 @@ async function renderProfilePage() {
 
           <div class="contactMethods"> My contact details
             <div class="telephone-number">
-              <img class="telephone-icon" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
+              <img class="telephone-icon" src="MakeAmove/../PHP/DB/image/telephone.png" alt="telephone-icon">
               <input type="text" name="tel" placeholder="Your phone number" value="${userData.general.tel}">
             </div>
 
             <div class="facebook">
-              <img class="facebook-icon" src="../PHP/DB/image/facebook.png" alt="facebook-icon">
+              <img class="facebook-icon" src="MakeAmove/../PHP/DB/image/facebook.png" alt="facebook-icon">
               <input type="text" name="facebook" placeholder="Your Facebook username" value="${userData.general.facebook}">
             </div>
 
             <div class="instagram">
-              <img class="instagram-icon" src="../PHP/DB/image/instagram.png" alt="instagram-icon">
+              <img class="instagram-icon" src="MakeAmove/../PHP/DB/image/instagram.png" alt="instagram-icon">
               <input type="text" name="instagram" placeholder="Your Instagram username" value="${userData.general.instagram}">
             </div>
           </div>
@@ -56,7 +56,7 @@ async function renderProfilePage() {
             <div class="interest-list-my required"></div>
           </div>
           <div class="location">
-            <img class="locationIconProfile" src="../PHP/DB/image/location-icon.png" alt="location-icon">
+            <img class="locationIconProfile" src="MakeAmove/../PHP/DB/image/location-icon.png" alt="location-icon">
             ${renderCityDropdownList(userData)}
           </div>
           <div class="age">
@@ -228,13 +228,13 @@ function renderChangePasswordBox(event) {
   const popupContent = document.querySelector(".popup-content");
 
   popupContent.innerHTML = `
-    <img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross">
+    <img class="white-cross" src="MakeAmove/../PHP/DB/image/white-cross.svg" alt="white-cross">
 
     <div class="password-row">
       <label>Old password:</label>
       <div class="password-field">
         <input type="password" class="password-input" name="passwordOld" autocomplete="off">
-        <img src="../PHP/DB/image/eye.png" alt="show-password" id="show-password">
+        <img src="MakeAmove/../PHP/DB/image/eye.png" alt="show-password" id="show-password">
       </div>
     </div>
 
@@ -242,7 +242,7 @@ function renderChangePasswordBox(event) {
       <label>New password:</label>
       <div class="password-field">
         <input type="password" class="password-input" name="passwordNew" autocomplete="off">
-        <img src="../PHP/DB/image/eye.png" alt="show-password" id="show-password">
+        <img src="MakeAmove/../PHP/DB/image/eye.png" alt="show-password" id="show-password">
       </div>
     </div>
 
@@ -250,7 +250,7 @@ function renderChangePasswordBox(event) {
       <label>Repeated new password:</label>
       <div class="password-field">
         <input type="password" class="password-input" name="passwordRepeat" autocomplete="off">
-        <img src="../PHP/DB/image/eye.png" alt="show-password" id="show-password">
+        <img src="MakeAmove/../../PHP/DB/image/eye.png" alt="show-password" id="show-password">
       </div>
     </div>
 
@@ -276,7 +276,7 @@ async function saveNewPassword(event) {
   let message = document.querySelector(".password-message");
 
   try {
-    let response = await fetch("../PHP/date/changePassword.php", {
+    let response = await fetch("MakeAmove/../PHP/date/changePassword.php", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -341,7 +341,7 @@ function renderConfirmDeleteAccountBox(event) {
   const popupContent = document.querySelector(".popup-content");
 
   popupContent.innerHTML = `
-    <img class="white-cross" src="../PHP/DB/image/white-cross.svg" alt="white-cross">
+    <img class="white-cross" src="MakeAmove/../../PHP/DB/image/white-cross.svg" alt="white-cross">
     <div class="delete-content">
       <p class="confirm-question">Are you sure that you want to delete your account?</p>
       <button class="confirm-delete-yes">Yes</button>
@@ -362,7 +362,7 @@ async function deleteUserAccount(event) {
   let message = document.querySelector(".delete-content");
 
   try {
-    const response = await fetch("../PHP/date/deleteAccount.php", {
+    const response = await fetch("MakeAmove/../PHP/date/deleteAccount.php", {
       method: "DELETE",
       headers: {
         'Content-Type': 'application/json'
@@ -450,7 +450,7 @@ async function saveProfile(event) {
   const jsonData = formDataToJson(formData);
 
   try {
-    let response = await fetch("../PHP/date/updateProfile.php", {
+    let response = await fetch("MakeAmove/../PHP/date/updateProfile.php", {
       method: "PATCH",
       body: jsonData,
       headers: {

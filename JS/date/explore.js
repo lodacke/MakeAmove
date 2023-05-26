@@ -15,14 +15,14 @@ async function renderDatingPage() {
   let headerDOM = document.querySelector("header");
   headerDOM.setAttribute("id", "date-header");
   headerDOM.innerHTML = `
-    <img id="date-logo" src="/PHP/DB/image/logo.png" alt="appLogo">
+    <img id="date-logo" src="MakeAmove/../PHP/DB/image/logo.png" alt="appLogo">
   `;
 
   mainDom.innerHTML = `
-      <img id="loadingSpinner" src="/PHP/DB/image/spinner.svg" alt="spinningLogo">
+      <img id="loadingSpinner" src="MakeAmove/..//PHP/DB/image/spinner.svg" alt="spinningLogo">
   `;
 
-  let request = await fetch(`/PHP/date/explore.php?id=${getUserData().id}`);
+  let request = await fetch(`MakeAmove/../PHP/date/explore.php?id=${getUserData().id}`);
   let userDATA = await request.json();
 
   renderCurrentDate(request, userDATA);
@@ -64,7 +64,7 @@ function renderCurrentDate(request, userDATA) {
 
     async function matches() {
       let requestPOST = await fetch(
-        new Request("/PHP/date/matches.php", {
+        new Request("../../PHP/date/matches.php", {
           method: "POST",
           headers: { "Content-type": "application/json; charset=UTF-8" },
           body: JSON.stringify(match),
@@ -107,17 +107,17 @@ function renderCurrentDate(request, userDATA) {
           <p>You can reach your match via:</p>
           <div id="exploreMatchBoxContact">
             <div class="matchInfoBoxes">
-              <img class="telephoneIconMatch" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
+              <img class="telephoneIconMatch" src="MakeAmove/../PHP/DB/image/telephone.png" alt="telephone-icon">
                 ${response.phone}
             </div>
 
             <div class="matchInfoBoxes">
-              <img class="facebookIconMatch" src="../PHP/DB/image/facebook.png" alt="facebook-icon">
+              <img class="facebookIconMatch" src="MakeAmove/../PHP/DB/image/facebook.png" alt="facebook-icon">
               ${facebookDom}
             </div>
 
             <div class="matchInfoBoxes">
-              <img class="instagramIconMatch" src="../PHP/DB/image/instagram.png" alt="instagram-icon">
+              <img class="instagramIconMatch" src="MakeAmove/../PHP/DB/image/instagram.png" alt="instagram-icon">
               ${instagramDom}
             </div>
           </div>
@@ -158,7 +158,7 @@ function showUser(userDATA) {
   popupContent.classList.add("profile-pop");
 
   popupContent.innerHTML = `
-    <img class="white-cross-explore" src="../PHP/DB/image/white-cross.svg" alt="white-cross-explore">
+    <img class="white-cross-explore" src="MakeAmove/../PHP/DB/image/white-cross.svg" alt="white-cross-explore">
     <div class="explore-profile">
       <h2>${userDATA.name}, ${userDATA.age}</h2>
       <div class="boxForImageMatch">
@@ -174,7 +174,7 @@ function showUser(userDATA) {
         <li>${userDATA.interests[4]}</li>
       </ul>
       <div class="cityOfMatch">
-        <img class="locationIcon" src="../PHP/DB/image/location-icon.png" alt="location-icon">
+        <img class="locationIcon" src="MakeAmove/../PHP/DB/image/location-icon.png" alt="location-icon">
       <div class="showCity"> ${userDATA.city} </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ async function renderMatchesPage() {
   let mainDom = document.querySelector("main");
 
   mainDom.innerHTML = `
-    <img id="loadingSpinner" src="/PHP/DB/image/spinner.svg" alt="spinningLogo">
+    <img id="loadingSpinner" src="MakeAmove/../PHP/DB/image/spinner.svg" alt="spinningLogo">
   `;
 
   mainDom.setAttribute("id", "matchesMain");
@@ -16,7 +16,7 @@ async function renderMatchesPage() {
   document.querySelector(".profile").addEventListener("click", renderProfilePage);
   document.querySelector(".match").classList.add("current-page");
 
-  let response = await fetch(`/PHP/date/showMatches.php?id=${getUserData().id}`);
+  let response = await fetch(`MakeAmove/..//PHP/date/showMatches.php?id=${getUserData().id}`);
   let matches = await response.json();
 
   if(response.status === 200){
@@ -89,26 +89,26 @@ async function renderMatchesPage() {
           <h2>${matches[i].name}, ${matches[i].age}</h2>
           <div class="infoMatch">
             <div class="boxForImageMatch">
-              <img class="imageOfMatch" src="../${matches[i].imageSource}" alt="image-of-match">
+              <img class="imageOfMatch" src="MakeAmove/../${matches[i].imageSource}" alt="image-of-match">
             </div>
 
-            <img class="blackCross" src="../PHP/DB/image/xmark-solid.svg" alt="black-cross">
+            <img class="blackCross" src="MakeAmove/../PHP/DB/image/xmark-solid.svg" alt="black-cross">
 
             <div class="contactOfMatch">
               <p>This is how you can contact me</p>
               <div class="showContact">
                 <div class="contactPhonenumber">
-                  <img class="telephoneIcon" src="../PHP/DB/image/telephone.png" alt="telephone-icon">
+                  <img class="telephoneIcon" src="MakeAmove/../PHP/DB/image/telephone.png" alt="telephone-icon">
                     ${matches[i].general.tel}
                 </div>
 
                 <div class="contactFacebook">
-                  <img class="facebookIcon" src="../PHP/DB/image/facebook.png" alt="facebook-icon">
+                  <img class="facebookIcon" src="MakeAmove/../PHP/DB/image/facebook.png" alt="facebook-icon">
                   <p>${facebookDom}</p>
                 </div>
 
                 <div class="contactInstagram">
-                  <img class="instagramIcon" src="../PHP/DB/image/instagram.png" alt="instagram-icon">
+                  <img class="instagramIcon" src="MakeAmove/../PHP/DB/image/instagram.png" alt="instagram-icon">
                   <p> ${instagramDom} </p>
                 </div>
               </div>
@@ -127,7 +127,7 @@ async function renderMatchesPage() {
             </div>
 
             <div class="cityOfMatch">
-              <img class="locationIcon" src="../PHP/DB/image/location-icon.png" alt="location-icon">
+              <img class="locationIcon" src="MakeAmove/../PHP/DB/image/location-icon.png" alt="location-icon">
               <div class="showCity"> ${matches[i].city} </div>
             </div>
           </div>

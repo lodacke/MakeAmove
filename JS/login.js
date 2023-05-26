@@ -6,7 +6,7 @@ async function submitLogin(event) {
   let message = document.querySelector(".message");
 
   try {
-    let response = await fetch("../PHP/login.php", {
+    let response = await fetch("../MakeAmove/PHP/login.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -34,7 +34,7 @@ function renderLoginPage() {
   mainDom.setAttribute("id", "loginPageMain");
 
   headerDom.innerHTML = `
-    <img class="logo" src="PHP/DB/image/logo.png" alt="appLogo">
+    <img class="logo" src="../MakeAmove/PHP/DB/image/logo.png" alt="appLogo">
   `;
 
   mainDom.innerHTML = `

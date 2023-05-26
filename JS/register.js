@@ -58,13 +58,13 @@ function renderPageNavigation(previousPage){
             <div class="inputbox">
                 <input type="password" name="password" class="required password-input-register" required="required">
                 <label for "password">Password</label>
-                <img src="../PHP/DB/image/eye.png" alt="show-password" class="show-password-register">
+                <img src="../MakeAmove/PHP/DB/image/eye.png" alt="show-password" class="show-password-register">
             </div>
 
             <div class="cityGenderAge">
 
                 <label for "city">
-                    <img class="locationIconRegister" src="../PHP/DB/image/location-icon.png" alt="location-icon">
+                    <img class="locationIconRegister" src="../MakeAmove/PHP/DB/image/location-icon.png" alt="location-icon">
                     <select name="city" class="required city">
                         <option value="none" >Choose a city</option>
                         ${renderCityDropdownListReg()}
@@ -161,7 +161,7 @@ function renderPageNavigation(previousPage){
             event.preventDefault();
             userImage.innerHTML = "";
             const formData = new FormData(form);
-            const request = new Request("PHP/profilePicture.php", {
+            const request = new Request("../MakeAmove/PHP/profilePicture.php", {
                 method: "POST",
                 body: formData,
             });
@@ -351,7 +351,7 @@ function renderPageNavigation(previousPage){
     };
 
     async function addUser(userData) {
-        let requestPOST = await fetch( new Request("PHP/register.php", {
+        let requestPOST = await fetch( new Request("../MakeAmove/PHP/register.php", {
             method: "POST",
             headers: {"Content-type":"application/json; charset=UTF-8"},
             body: JSON.stringify(userData)

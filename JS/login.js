@@ -1,7 +1,5 @@
 "use strict";
 
-import { renderDatingPage } from "./date/explore.js";
-import { renderRegisterPage } from "./register.js";
 
 async function submitLogin(event) {
   event.preventDefault();
@@ -29,7 +27,7 @@ async function submitLogin(event) {
   }
 }
 
-export function renderLoginPage() {
+function renderLoginPage() {
   let headerDom = document.querySelector("header");
   headerDom.setAttribute("id", "loginPageHeader");
   let mainDom = document.querySelector("main");

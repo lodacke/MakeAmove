@@ -1,16 +1,11 @@
 "use strict";
 
-import { getUserData, renderCityDropdownList, formDataToJson } from "../helper.js";
-import { renderFrontPage } from "../index.js";
-import { renderDatingPage } from "./explore.js";
-import { renderMatchesPage } from "./matches.js";
-
 const genders = ["female", "male", "both"];
 const interests = [
   "Art", "Photographing", "Fashion", "Writing", "Poetry", "Reading", "Movies & TV shows", "Music Festivals", "Stand-up Comedy", "Board Games", "Gaming", "Cooking", "Beer", "Wine", "Night Out", "Dancing", "Singing", "Playing Instruments", "Sport", "Running", "Hiking", "Yoga", "Gym", "Backpacking", "Traveling", "Sailing", "Gardening", "Fishing", "Smoking", "Snus", "Astrology",
 ];
 
-export async function renderProfilePage() {
+async function renderProfilePage() {
   let response = await fetch(`../PHP/date/getProfile.php?id=${getUserData().id}`);
 
   let mainDom = document.querySelector("main");

@@ -1,11 +1,6 @@
 "use strict";
 
-import { stickyNav } from "./stickyNav.js";
-import { renderProfilePage } from "./profile.js";
-import { renderDatingPage } from "./explore.js";
-import { getUserData } from "../helper.js";
-
-export async function renderMatchesPage() {
+async function renderMatchesPage() {
   let mainDom = document.querySelector("main");
 
   mainDom.innerHTML = `

@@ -1,6 +1,6 @@
 "use strict";
 
-export function stickyNav() {
+function stickyNav() {
   return `
     <ul>
       <li class="profile page">

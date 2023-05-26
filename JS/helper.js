@@ -1,13 +1,11 @@
 "use strict";
 
-import { cities } from "./date/cities.js";
-
-export function getUserData() {
+function getUserData() {
   const userData = localStorage.getItem("user");
   return JSON.parse(userData);
 }
 
-export function renderCityDropdownListReg(){
+function renderCityDropdownListReg(){
   const options = cities.map(city => `
     <option value="${city}">${city}</option>
   `).join('');
@@ -15,7 +13,7 @@ export function renderCityDropdownListReg(){
   return options;
 }
 
-export function renderCityDropdownList(userData) {
+function renderCityDropdownList(userData) {
   const options = cities.map(city => `
     <option value="${city}">${city}</option>
   `).join('');
@@ -28,7 +26,7 @@ export function renderCityDropdownList(userData) {
   `;
 }
 
-export function errorMessage() {
+function errorMessage() {
   let requiredInputs = document.querySelectorAll(".required");
 
   requiredInputs.forEach(required => {
@@ -66,7 +64,7 @@ export function errorMessage() {
     })
 };
 
-export function formDataToJson(formData) {
+function formDataToJson(formData) {
   const jsonData = {};
 
   for (const [key, value] of formData.entries()) {

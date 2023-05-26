@@ -1,6 +1,6 @@
 "use strict";
 
-export const cities = [
+const cities = [
     "Stockholm",
     "Göteborg",
     "Malmö",

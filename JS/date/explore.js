@@ -1,13 +1,8 @@
 "use strict";
 
-import { stickyNav } from "./stickyNav.js";
-import { renderProfilePage } from "./profile.js";
-import { getUserData } from "../helper.js";
-import { renderMatchesPage } from "./matches.js";
-
 let mainDom = document.querySelector("main");
 
-export async function renderDatingPage() {
+async function renderDatingPage() {
   mainDom.innerHTML = ``;
   mainDom.setAttribute("id", "date-main");
 

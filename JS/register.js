@@ -1,9 +1,5 @@
 "use strict";
 
-import { renderCityDropdownListReg, errorMessage } from "./helper.js";
-import { renderDatingPage } from "./date/explore.js";
-import { renderFrontPage } from "./index.js";
-
 function renderPageNavigation(previousPage){
 
     let pageNavDom = document.querySelector("nav");
@@ -21,7 +17,7 @@ function renderPageNavigation(previousPage){
     });
 };
 
-export function renderRegisterPage (){
+ function renderRegisterPage (){
 
     let headerDom = document.querySelector("header")
     headerDom.setAttribute("id","registerPageHeader");

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Nuno;
+  src: url("../PHP/DB/Nunito/Nunito-VariableFont_wght.ttf");
+}
+
 body {
   background: radial-gradient(311px at 8.6% 27.9%, rgba(62, 147, 252, 0.57) 12.9%, rgba(239, 183, 192, 0.44) 91.2%) no-repeat fixed center;
   text-align: center;
@@ -21,9 +26,10 @@ body {
 }
 
 #startPageHeader h1 {
-  font-family: 'Brush Script MT', cursive;
+  font-family: Nuno;
   font-size: 7vh;
   margin: 3vh;
+  font-weight: lighter;
 }
 
 #startPageMain {

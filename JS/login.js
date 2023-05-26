@@ -36,7 +36,7 @@ export function renderLoginPage() {
   mainDom.setAttribute("id", "loginPageMain");
 
   headerDom.innerHTML = `
-    <img class="logo" src="/PHP/DB/image/logo.png" alt="appLogo">
+    <img class="logo" src="/PHP/DB/image/logo.jpg" alt="appLogo">
   `;
 
   mainDom.innerHTML = `

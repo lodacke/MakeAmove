@@ -20,7 +20,7 @@ export async function renderDatingPage() {
   let headerDOM = document.querySelector("header");
   headerDOM.setAttribute("id", "date-header");
   headerDOM.innerHTML = `
-    <img id="date-logo" src="/PHP/DB/image/logo.png" alt="appLogo">
+    <img id="date-logo" src="/PHP/DB/image/logo.jpg" alt="appLogo">
   `;
 
   mainDom.innerHTML = `
